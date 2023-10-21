@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-text-reverse {
+    background: linear-gradient(-18deg, #946AD7 -3.22%, #FFF 45.13%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text {
+    background: linear-gradient(18deg, #51ADC2 -3.22%, #FFF 45.13%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-1 {
+    top: -11%;
+    left: -26%;
+    position: absolute;
+    width: 703px;
+    height: 670px;
+    flex-shrink: 0;
+    border-radius: 703px;
+    background: radial-gradient(37.54% 37.54% at 50.07% 47.01%, rgba(141, 42, 159, 0.30) 0%, rgba(141, 42, 159, 0.00) 100%);
+}
+
+.gradient-2 {
+    top: 50%;
+    right: 0;
+    position: absolute;
+    transform: translate(50%, -50%);
+    width: 725px;
+    height: 690px;
+    flex-shrink: 0;
+    border-radius: 725px;
+    background: radial-gradient(37.54% 37.54% at 50.07% 47.01%, rgba(36, 93, 137, 0.50) 0%, rgba(36, 93, 137, 0.00) 100%);
+}
+
+.linear-1 {
+    background: linear-gradient(146deg, #1F1F20 7.4%, #000 99.5%);
+}
+
+html {
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+}
