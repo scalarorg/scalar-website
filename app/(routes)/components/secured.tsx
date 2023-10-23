@@ -11,10 +11,10 @@ export function Secured({
           title: "max-w-none",
           description: "max-w-md",
         }}
-        title="Secured by the SCALAR"
-        description="In return for securing the services on the Scalar Hub, transaction fees and staking rewards are distributed to Scalar stakers."
+        title="Scalability Meets the Future"
+        description="Join us on this transformative journey towards a blockchain that transcends boundaries and serves the global community."
         ctas={[
-          { label: "Start starking", href: "#" },
+          { label: "Join Scalar", href: "#" },
           { label: "Learn more", href: "#" },
         ]}
       />

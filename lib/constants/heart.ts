@@ -1,22 +1,22 @@
 export const HEART_ITEMS = [
   {
-    title: "Marketplace",
+    title: "Gas-Free Future: Low to No Gas Fees",
     description:
-      "Set to operate a next-gen decentralized exchange, swapping digital assets from across the Interchain, with very low fees and instant transaction confirmation.",
+      "Say goodbye to exorbitant gas fees. Scalar prioritizes user accessibility by keeping transaction costs low, ensuring that participating in the ecosystem remains accessible to all.",
   },
   {
-    title: "Security provider",
+    title: "Revolutionizing Transactions: Parallel Processing",
     description:
-      "With the upcoming Interchain Security feature, ATOM will soon be securing many chains, in exchange for additional staking rewards.",
+      "Scalar introduces non-sequential transaction processing, unlocking the potential for higher throughput. Imagine two individuals sending funds simultaneously to two recipients, all executed optimistically and validated post-execution.",
   },
   {
-    title: "Router",
+    title: "Dev-Friendly & Hack-Resistant",
     description:
-      "A core mission of the Hub – to connect chains by establishing IBC connections with compatible chains and operating decentralized bridges with chains like Ethereum and Bitcoin.",
+      "With a novel approach to horizontal scalability, Scalar minimizes the potential for developer errors and vulnerabilities. This enables faster iteration and a more secure environment for building cutting-edge applications.",
   },
   {
-    title: "Custodian",
+    title: "Seamless Interoperability: EVM & Non-EVM Chains",
     description:
-      "Located at the crossroads of the Interchain, the Hub is extremely secure, the best place to hold digital assets and manage accounts across many many chains.",
+      "Scalar bridges the gap between EVM and non-EVM chains, offering a unified experience across different blockchain ecosystems. Achieve true interoperability with seamless cross chain messaging.",
   },
 ];

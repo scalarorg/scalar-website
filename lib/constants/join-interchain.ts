@@ -1,20 +1,24 @@
 export const JOIN_INTERCHAIN_ITEMS = [
   {
-    title: "One secure account for all your digital assets",
+    title: "Cross Chain Native Bridge",
     href: "#",
     image: "/secure-account.webp",
+    description: "Seamlessly connect with other chains for uninterrupted asset flow"
   },
   {
-    title: "Swap tokens & collectibles",
+    title: "Cross Chain DEX",
     href: "#",
     image: "/swap-token.webp",
+    description: "Trade assets from various chains in a secure and decentralized environment"
   },
   {
-    title: "Provide liquidity Earn rewards",
+    title: "Zksnarks Enabled Darkpool",
     href: "#",
+    description: "Prioritize privacy with secure, shielded transactions for both EVM and non-EVM chains"
   },
   {
-    title: "+ Ethereum. + Bitcoin.",
+    title: "DAO Creator & Secure DAO Chat",
     href: "#",
+    description: "Empowering decentralized governance and secure communications for the community."
   },
 ];

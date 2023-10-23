@@ -58,7 +58,7 @@ export function HeadingSection({
       {prefix ? (
         <TypingText
           className={twMerge(
-            "text-neutral-500 text-sm font-bold",
+            "text-neutral-500 uppercase text-sm font-bold",
             classNames?.prefix,
           )}
           title={prefix}

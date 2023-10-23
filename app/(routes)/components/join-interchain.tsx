@@ -1,12 +1,12 @@
-import { HeadingSection } from "@/app/(routes)/components/heading-section";
-import { cva, VariantProps } from "class-variance-authority";
-import { HTMLAttributes } from "react";
+import {HeadingSection} from "@/app/(routes)/components/heading-section";
+import {cva, VariantProps} from "class-variance-authority";
+import {HTMLAttributes} from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { JOIN_INTERCHAIN_ITEMS } from "@/lib/constants/join-interchain";
-import { twMerge } from "tailwind-merge";
+import {JOIN_INTERCHAIN_ITEMS} from "@/lib/constants/join-interchain";
+import {twMerge} from "tailwind-merge";
 import JoinBackground from "@/public/join-background.webp";
-import { ArrowRightIcon } from "@/components/icon/arrow-right";
+import {ArrowRightIcon} from "@/components/icon/arrow-right";
 
 export function JoinInterchain({
   className,
@@ -22,9 +22,8 @@ export function JoinInterchain({
           }}
           className="mx-auto"
           variant="centered"
-          title="Join the Interchain."
+          title="Pioneering Dapps in Progress"
           description="Serving as the economic center of the Interchain, the Scalar Hub is a blockchain that provides vital ecosystem services."
-          ctas={[{ label: "Powerful features", href: "#" }]}
         />
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-12 sm:mt-20">
           {JOIN_INTERCHAIN_ITEMS.map((item, index) => (
@@ -32,15 +31,14 @@ export function JoinInterchain({
               key={index}
               className={twMerge(
                 "first:row-span-2 first:col-span-2",
-                index === 1 && "col-span-2 max-md:row-span-2",
-                index > 1 && "max-md:col-span-2 max-md:row-span-2",
+                index === 1 && "col-span-2 max-xl:row-span-2",
+                index > 1 && "max-xl:col-span-2 max-xl:row-span-2",
               )}
-              direction={index > 1 ? "reverse" : "default"}
+              description={item.description}
               shape={index === 1 ? "default" : "square"}
               title={item.title}
               href={item.href}
               image={item.image}
-              first={index === 0}
             />
           ))}
         </div>
@@ -64,7 +62,7 @@ const joinInterchainItemVariants = cva(
   {
     variants: {
       shape: {
-        default: "md:aspect-[2] max-md:aspect-square",
+        default: "xl:aspect-[2] max-xl:aspect-square",
         square: "aspect-square",
       },
       direction: {
@@ -86,6 +84,7 @@ type JoinInterchainItemVariantProps = VariantProps<
   href: string;
   image?: string;
   first?: boolean;
+  description?: string;
 };
 
 type JoinInterchainItemProps = JoinInterchainItemVariantProps &
@@ -99,6 +98,7 @@ export function JoinInterchainItem({
   shape,
   direction,
   first,
+                                     description,
   ...props
 }: JoinInterchainItemProps): React.JSX.Element {
   return (
@@ -118,7 +118,7 @@ export function JoinInterchainItem({
         {title}
       </div>
       <div className="flex gap-1 items-center">
-        <div className="text-neutral-400 font-medium text-sm">Coming soon</div>
+        <div className="text-neutral-400 line-clamp-3 font-medium text-sm">{description || "Coming soon"}</div>
         {first && (
           <ArrowRightIcon className="ease-in text-neutral-400 group-hover/join:translate-x-1 transition-transform" />
         )}
