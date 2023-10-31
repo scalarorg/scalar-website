@@ -1,14 +1,15 @@
-import {Header} from "./components/header";
-import {Hero} from "./components/hero";
-import {EnterUniverse} from "./components/enter-universe";
-import {Heart} from "./components/heart";
-import {Secured} from "./components/secured";
-import {JoinInterchain} from "./components/join-interchain";
-import {BuildValue} from "@/app/(routes)/components/build-value";
+import { Header } from "./components/header";
+import { Hero } from "./components/hero";
+import { EnterUniverse } from "./components/enter-universe";
+import { Heart } from "./components/heart";
+import { Secured } from "./components/secured";
+import { BuildValue } from "@/app/(routes)/components/build-value";
+import Image from "next/image";
+import JoinBackground from "@/public/join-background.webp";
 
 export default function Home() {
   return (
-    <main className={'overflow-hidden'}>
+    <main className="overflow-hidden">
       <div className="relative z-0">
         <Header />
         <Hero />
@@ -19,9 +20,17 @@ export default function Home() {
         <EnterUniverse />
         <Heart />
       </div>
-      <Secured />
-      <JoinInterchain />
-      <BuildValue />
+      <div className="relative z-0">
+        <Image
+          fill
+          src={JoinBackground}
+          className="-z-10 object-bottom object-cover"
+          alt="Join interchain background"
+        />
+        <Secured />
+        {/*<JoinInterchain />*/}
+        <BuildValue />
+      </div>
     </main>
   );
 }
