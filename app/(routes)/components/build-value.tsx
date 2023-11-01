@@ -1,5 +1,4 @@
 import { HeadingSection } from "@/app/(routes)/components/heading-section";
-import { EnterUniverseItem } from "./enter-universe";
 import { twMerge } from "tailwind-merge";
 
 export function BuildValue({
@@ -23,13 +22,13 @@ export function BuildValue({
         description="Scalar - a state-of-the-art blockchain framework that powers the Scalar Hub and its rapidly expanding orbit of sovereign chains.
 With Scalar SDK, you're ready to build innovative applications and create value in the internet of blockchains."
       />
-      <div className="flex lg:flex-col justify-between gap-3 sm:gap-4">
-        <EnterUniverseItem title="$48B" description="PROOF-OF-STAKE" />
-        <EnterUniverseItem
-          title="7 sec"
-          description="Digital assets under management."
-        />
-      </div>
+      {/*<div className="flex lg:flex-col justify-between gap-3 sm:gap-4">*/}
+      {/*  /!*<EnterUniverseItem title="$48B" description="PROOF-OF-STAKE" />*!/*/}
+      {/*  <EnterUniverseItem*/}
+      {/*    title="7 sec"*/}
+      {/*    description="Digital assets under management."*/}
+      {/*  />*/}
+      {/*</div>*/}
     </section>
   );
 }
