@@ -1,8 +1,8 @@
 import Image from "next/image";
 import HeartBackground from "@/public/heart-section.webp";
-import { HeadingSection } from "@/app/(routes)/components/heading-section";
-import { cx } from "class-variance-authority";
-import { HEART_ITEMS } from "@/lib/constants/heart";
+import {HeadingSection} from "@/app/(routes)/components/heading-section";
+import {cx} from "class-variance-authority";
+import {HEART_ITEMS} from "@/lib/constants/heart";
 
 export function Heart({
   className,
@@ -24,10 +24,9 @@ export function Heart({
           }}
           className="mx-auto"
           variant="centered"
-          prefix="ENTER THE SCALAR HUB"
-          title="The heart of the Interchain"
-          description="Serving as the economic center of the Interchain, the Scalar Hub is a blockchain that provides vital ecosystem services."
-          ctas={[{ label: "Scalar Hub", href: "#" }]}
+          prefix="The Most Innovative Architecture"
+          title="Novel DAG Structure & Ultra-Light Client"
+          description="Our blockchain boasts a novel Directed Acyclic Graph (DAG) structure supporting parallel transactions, ensuring lightning-fast transactions. With an ultra-light client, resource efficiency is maximized, ensuring seamless operation across devices."
         />
       </div>
 
