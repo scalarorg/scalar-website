@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-import { baumans, inter } from "@/fonts";
+import { dm_sans } from "@/fonts";
 import { WEBSITE_URL } from "@/lib/constants/links";
 
 const title = "Scalar - The Future of Scalable Blockchain";
@@ -78,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${baumans.variable} font-sans bg-neutral-900 text-neutral-0`}
+        className={`${dm_sans.variable} font-dm bg-neutral-900 text-neutral-0`}
       >
         {children}
       </body>
