@@ -9,7 +9,7 @@ import JoinBackground from "@/public/join-background.webp";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden text-white">
       <div className="relative z-0">
         <Header />
         <Hero />

@@ -6,7 +6,7 @@ import MilkyWay from "@/public/milky-way-1.webp";
 
 export default function HomePage() {
   return (
-    <div className={"bg-black relative"}>
+    <div className={"bg-black relative overflow-hidden"}>
       <HeroSolarSystem />
       <div className={"relative"}>
         <BuildingValue />
