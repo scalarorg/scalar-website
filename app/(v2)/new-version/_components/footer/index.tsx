@@ -40,7 +40,7 @@ export function Footer({
       </div>
 
       {/* Footer copyright */}
-      <div className={cn("w-full flex gap-1 text-neutral-7 font-bold xl:text-[22px] xl:leading-[33px]")}>
+      <div className={cn("w-full flex gap-1 text-neutral-7 text-xs md:text-[13px] font-bold xl:text-[22px] xl:leading-[33px]")}>
         Copyright ©
         <span className="text-white">Scalar</span>
         | Designed by Scalar

@@ -28,7 +28,7 @@ export default function FooterColumn({
       className={footerColumnVariants({ className })}
       key={index}
     >
-      <label className={cn('capitalize text-[16px] xl:text-[22px] leading-6 xl:leading-[33px] font-bold text-gray-100 shadow-text')}>
+      <label className={cn('capitalize text-[16px] xl:text-[22px] leading-6 xl:leading-[33px] font-bold text-gray-100')}>
         {column.title}
       </label>
 
