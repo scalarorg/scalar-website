@@ -3,11 +3,19 @@ import Image from "next/image";
 import DagBackground from "@/public/dag-background.webp";
 import EarthDag from "@/public/earth-dag.webp";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { SolarNavigate } from "@/app/(v2)/new-version/_components/hero-solar-system/solar-navigate";
 import Navigator from "@/public/icon/navigator.svg";
 import { motion } from "framer-motion";
 import { figmaSlow } from "@/components/motion/transition";
+import EarthBacklight from "@/public/earth-backlight.webp";
+import EarthLight from "@/public/earth-light.webp";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const CONTENTS = [
   {
@@ -43,44 +51,60 @@ export function Dag() {
   const [selected, setSelected] = useState(0);
 
   return (
-    <div className={"relative z-0 h-[1458px]"}>
-      <Image
-        src={DagBackground}
-        alt={"Dag background"}
-        className={"absolute inset-0 object-cover -z-10"}
-      />
-      <Image
-        src={DagBackground}
-        alt={"Dag background"}
-        className={"absolute inset-0 object-cover -z-10"}
-      />
+    <Fragment>
+      {/*Mobile*/}
+      <Accordion
+        type="multiple"
+        // collapsible
+        defaultValue={["item-0"]}
+        className="w-full md:hidden px-5 text-neutral-1 py-14"
+      >
+        {CONTENTS.map(({ title, description }, index) => (
+          <AccordionItem key={index} value={`item-${index}`}>
+            <AccordionTrigger>
+              <div className={"flex items-center gap-4"}>
+                <div className={"font-normal"}>0{index + 1}</div>
+                <div>{title}</div>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent
+              className={cn(
+                "text-sm leading-tight",
+                index === selected && "opacity-100",
+              )}
+            >
+              <div dangerouslySetInnerHTML={{ __html: description }} />
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
 
-      <Image
-        src={EarthDag}
-        alt={"Earth dag"}
-        className={
-          "absolute top-1/2 left-0 aspect-square w-[65vw] transition-transform"
-        }
-        style={{
-          transform: `translateX(-60%) translateY(-50%) rotate(${rotateDegrees[selected]}deg)`,
-          animationDuration: "800ms",
-        }}
-      />
+      {/*Desktop*/}
       <div
         className={
-          "absolute top-1/2 -translate-top-1/2 left-0 -translate-x-[70%] w-[60vw] h"
-        }
-      ></div>
-      <div
-        className={
-          "absolute top-1/2 -translate-y-1/2 w-[54vw] left-0 -translate-x-[60%] aspect-square"
+          "relative z-0 2xl:h-[1458px] xl:h-[1200px] lg:h-[1000px] md:h-[800px] max-md:hidden"
         }
       >
+        {/*Background*/}
+        <Image
+          src={DagBackground}
+          alt={"Dag background"}
+          className={"absolute inset-0 object-cover -z-10"}
+        />
+        <Image
+          src={DagBackground}
+          alt={"Dag background"}
+          className={"absolute inset-0 object-cover -z-10"}
+        />
+
+        {/*Earth*/}
         <motion.div
-          className={cn(
-            "absolute inset-0 border-neutral-7 rounded-full border-dotted border-[3px]",
-          )}
+          className="absolute top-1/2 left-0 aspect-square w-[80vw]"
           transition={figmaSlow}
+          initial={{
+            translateX: "-60%",
+            translateY: "-50%",
+          }}
           style={{
             rotate: `0deg`,
             animationDuration: "800ms",
@@ -89,58 +113,110 @@ export function Dag() {
             rotate: `${rotateDegrees[selected]}deg`,
           }}
         >
-          <Image
-            className={"absolute top-1/2 -translate-y-1/2 -right-[2em]"}
-            src={Navigator}
-            alt={"Navigator"}
-          />
+          <Image src={EarthDag} alt={"Earth dag"} fill />
         </motion.div>
+        <Image
+          src={EarthBacklight}
+          alt={"Earth backlight"}
+          className={
+            "absolute top-1/2 left-0 -translate-x-[52%] w-[60vw] -translate-y-1/2 -z-10"
+          }
+        />
+        <Image
+          src={EarthLight}
+          alt={"Earth light"}
+          className={
+            "absolute top-1/2 left-0 aspect-square w-[56vw] -translate-x-[64%] -translate-y-1/2 mix-blend-hard-light"
+          }
+        />
 
-        {CONTENTS.map((content, index) => (
-          <div
-            key={index}
-            className={cn(
-              "absolute transition-all leading-tight text-neutral-7 font-bold text-[28px] cursor-pointer !duration-[800ms] ease-in aspect-square max-w-[330px] right-0 top-1/2",
-              index === 0 &&
-                "translate-x-[90%] -translate-y-[120%] max-w-[325px]",
-              index === 1 && "translate-x-[130%] -translate-y-[80%]",
-              index === 2 && "translate-x-[125%] -translate-y-[5%]",
-              index === 3 &&
-                "translate-x-[115%] translate-y-[60%] max-w-[300px]",
-              index === 4 && "translate-x-[80%] translate-y-[106%]",
-              selected === index &&
-                "text-neutral-1 text-[32px] cursor-default select-none",
-            )}
-            onClick={() => setSelected(index)}
-          >
-            {content.title}
-          </div>
-        ))}
-      </div>
-
-      {/*Content*/}
-      <div
-        className={
-          "left-1/2 top-1/2 -translate-y-1/2 absolute space-y-8 w-full max-w-2xl"
-        }
-      >
-        {CONTENTS.map(({ description }, index) => (
-          <p
-            key={index}
-            className={cn(
-              "text-neutral-6 text-xl absolute opacity-0 transition-opacity duration-[800ms]",
-              index === selected && "opacity-100",
-            )}
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
-        ))}
-
-        <SolarNavigate
-          className={"text-2xl text-neutral-1 absolute -bottom-[160px]"}
+        {/*Circular Navigator*/}
+        <div
+          className={
+            "absolute top-1/2 -translate-y-1/2 w-[52vw] left-0 -translate-x-[58%] aspect-square"
+          }
         >
-          Learn more
-        </SolarNavigate>
+          <motion.div
+            className="absolute inset-0 border-neutral-7 rounded-full border-dotted border-[3px]"
+            transition={figmaSlow}
+            style={{
+              rotate: `0deg`,
+              animationDuration: "800ms",
+            }}
+            animate={{
+              rotate: `${rotateDegrees[selected]}deg`,
+            }}
+          >
+            <Image
+              className={"absolute top-1/2 -translate-y-1/2 -right-[2em]"}
+              src={Navigator}
+              alt={"Navigator"}
+            />
+          </motion.div>
+
+          {CONTENTS.map((content, index) => (
+            <motion.div
+              key={index}
+              className={cn(
+                "absolute leading-tight text-neutral-7 font-bold cursor-pointer ease-in aspect-square right-0 top-1/2",
+                "2xl:text-[28px] xl:text-xl lg:text-lg",
+                "2xl:max-w-[330px] xl:max-w-[210px] lg:max-w-[190px] md:max-w-[170px]",
+                index === 0 &&
+                  "md:translate-x-[80%] md:-translate-y-[120%] lg:translate-x-[85%] lg:-translate-y-[140%] lg:max-w-[190px] xl:translate-x-[90%] xl:-translate-y-[120%] 2xl:max-w-[325px] xl:max-w-[260px]",
+                index === 1 && "translate-x-[130%] -translate-y-[80%]",
+                index === 2 && "translate-x-[125%] -translate-y-[5%]",
+                index === 3 &&
+                  "translate-x-[115%] translate-y-[60%] 2xl:max-w-[300px]",
+                index === 4 &&
+                  "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
+                selected === index &&
+                  "text-neutral-1 scale-[105%] cursor-default select-none",
+              )}
+              transition={figmaSlow}
+              style={{
+                transitionDuration: "650ms",
+              }}
+              onClick={() => setSelected(index)}
+            >
+              {content.title}
+            </motion.div>
+          ))}
+        </div>
+
+        {/*Content*/}
+        <div
+          className={
+            "left-1/2 top-1/2 -translate-y-[45%] absolute space-y-8 w-full md:max-w-xs lg:max-w-md 2xl:max-w-2xl xl:max-w-xl"
+          }
+        >
+          {CONTENTS.map(({ description }, index) => (
+            <motion.p
+              key={index}
+              className={cn(
+                "text-neutral-6 text-lg xl:text-xl absolute -translate-y-1/2",
+                index === selected && "opacity-100",
+              )}
+              transition={figmaSlow}
+              style={{
+                opacity: 0,
+                animationDuration: "800ms",
+              }}
+              animate={{
+                opacity: index === selected ? 1 : 0,
+              }}
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+          ))}
+
+          <SolarNavigate
+            className={
+              "text-lg lg:text-xl xl:text-2xl text-neutral-1 absolute lg:-bottom-[80px] -bottom-[110px]"
+            }
+          >
+            Learn more
+          </SolarNavigate>
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 }
