@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.shadow-title {
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
