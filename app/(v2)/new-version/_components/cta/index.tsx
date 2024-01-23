@@ -21,10 +21,10 @@ export function Cta({
 
   return (
     <div className={ctaVariants({ className })}>
-      <div className="flex flex-col px-[20px] gap-[44px] bg-transparent border-none">
+      <div className="flex flex-col px-[20px] gap-[44px] bg-transparent border-none md:w-[750px]">
         <div className={cn('flex flex-col gap-[28px]')}>
           <label
-            className={cn('font-bold text-[31px] leading-[46.5px] text-neutral-1')}
+            className={cn('font-bold text-[31px] md:[text-34px] leading-[46.5px] md:leading-[47.6px] text-neutral-1')}
           >
             Your <span className={cn('text-cyan-500')}>Business</span> Ready For The Blockchain
           </label>
@@ -36,16 +36,16 @@ export function Cta({
         </div>
         <form className={cn('relative')}>
           <Input
-            className={cn("bg-transparent h-[48px] outline-none text-neutral-5 text-[18px] leading-[27px] flex justify-between items-center rounded-xl border border-cyan-400 px-[16px]")}
+            className={cn("bg-transparent h-[48px] md:h-[93px] outline-none text-neutral-5 text-[18px] leading-[27px] flex justify-between items-center rounded-xl border border-cyan-400 px-[16px] md:py-[16px]")}
             placeholder="Your email"
             type="email"
           />
 
           <Button
             itemType="submit"
-            className={cn('absolute top-1/2 -translate-y-1/2 right-[20px] py-[6px] px-[20px] bg-cyan-400 text-white rounded-lg border-none')}
+            className={cn('absolute top-1/2 -translate-y-1/2 right-[20px] py-[6px] px-[20px] md:py-[14px] md:px-[32px] bg-cyan-400 text-white rounded-lg border-none')}
           >
-            Subscribe
+            <span className="md:text-[22px] md:leading-[33px] md:text-neutral-10">Subscribe</span>
           </Button>
         </form>
       </div>
