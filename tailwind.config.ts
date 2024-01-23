@@ -162,6 +162,9 @@ const config = {
       },
       boxShadow: {
         'title': '0px 4px 4px 0px #00000040',
+      },
+      backgroundImage: {
+        'star': "url('/star-background.svg')"
       }
     },
   },
