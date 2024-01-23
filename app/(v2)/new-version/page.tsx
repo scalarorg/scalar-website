@@ -3,6 +3,7 @@ import { BuildingValue } from "./_components/building-value";
 import { Dag } from "./_components/dag";
 import Image from "next/image";
 import MilkyWay from "@/public/milky-way-1.webp";
+import { Cta } from "./_components/cta";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,7 @@ export default function HomePage() {
         />
       </div>
       <Dag />
+      <Cta />
     </div>
   );
 }
