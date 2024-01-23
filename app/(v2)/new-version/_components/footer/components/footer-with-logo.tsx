@@ -33,7 +33,7 @@ export function FooterWithLogo({
           alt={"Scalar logo"}
         />
 
-        <p className={cn('w-[394px] text-[11px] leading-4 lg:text-[18px] lg:leading-[27px]')}>
+        <p className={cn('text-[11px] leading-4 lg:w-[394px] lg:text-[18px] lg:leading-[27px]')}>
           Scalar Protocol is the next gen L1 blockchain
           built from the ground up with limitless
           scalability, high throughput by separating consensus and computation.
