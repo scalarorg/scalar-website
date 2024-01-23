@@ -5,7 +5,7 @@ import Link from "next/link";
 import { HTMLAttributes } from "react";
 
 const footerColumnVariants = cva(
-  "flex flex-col gap-2 lg:gap-[18px]",
+  "flex flex-col gap-2 xl:gap-[18px]",
 );
 
 interface AdditionalProps {
@@ -28,7 +28,7 @@ export default function FooterColumn({
       className={footerColumnVariants({ className })}
       key={index}
     >
-      <label className={cn('capitalize text-[16px] lg:text-[22px] leading-6 lg:leading-[33px] font-bold text-gray-100 shadow-text')}>
+      <label className={cn('capitalize text-[16px] xl:text-[22px] leading-6 xl:leading-[33px] font-bold text-gray-100 shadow-text')}>
         {column.title}
       </label>
 
@@ -37,7 +37,7 @@ export default function FooterColumn({
           <Link
             key={i}
             href={item.link}
-            className={cn('capitalize text-[13px] lg:text-[22px] leading-5 lg:leading-[33px] text-neutral-6')}
+            className={cn('capitalize text-[13px] xl:text-[22px] leading-5 xl:leading-[33px] text-neutral-6 hover:text-white ease-linear transition-all')}
           >
             {item.name}
           </Link>

@@ -11,7 +11,7 @@ import Link from "next/link";
  * ------------------------------------------------------------------------------------------------------------------ */
 
 const footerWithLogoVariants = cva(
-  "flex flex-col gap-3 lg:gap-[28px] lg:w-[394px] w-full border-b border-neutral-8 pb-3 lg:pb-0 lg:border-none",
+  "flex flex-col gap-3 xl:gap-[28px] xl:w-[394px] w-full border-b border-neutral-8 pb-3 xl:pb-0 xl:border-none",
 );
 
 type FooterVariantProps = VariantProps<typeof footerWithLogoVariants>;
@@ -25,28 +25,32 @@ export function FooterWithLogo({
 }: FooterWithLogoProps): React.JSX.Element {
   return (
     <div className={footerWithLogoVariants({ className })}>
-      <div className={cn('w-full flex flex-col font-normal gap-3 lg:gap-[22px] text-neutral-7')}>
-        <Image
-          sizes="100vw"
-          className="w-[188px] h-[21px] lg:w-[280px] lg:h-[32px]"
-          src={Logo}
-          alt={"Scalar logo"}
-        />
+      <div className={cn('w-full flex flex-col font-normal gap-3 xl:gap-[22px] text-neutral-7')}>
+        <Link
+          href='/'
+        >
+          <Image
+            sizes="100vw"
+            className="w-[188px] h-[21px] xl:w-[280px] xl:h-[32px] hover:cursor-pointer"
+            src={Logo}
+            alt={"Scalar logo"}
+          />
+        </Link>
 
-        <p className={cn('text-[11px] leading-4 lg:w-[394px] lg:text-[18px] lg:leading-[27px]')}>
+        <p className={cn('text-[11px] leading-4 xl:w-[394px] xl:text-[18px] xl:leading-[27px]')}>
           Scalar Protocol is the next gen L1 blockchain
           built from the ground up with limitless
           scalability, high throughput by separating consensus and computation.
         </p>
       </div>
 
-      <div className={cn('w-[188px] lg:w-[280px] flex lg:gap-x-[38px] items-center justify-between lg:justify-start')}>
+      <div className={cn('w-[188px] xl:w-[280px] flex xl:gap-x-[38px] items-center justify-between xl:justify-start')}>
         {FooterSocialLink.map((item, index) =>
-          <Link href={item.link}>
+          <Link href={item.link} className={cn('hover:opacity-90 hover:scale-110 transition-all ease-in')}>
             <Image
               src={item.icon}
               sizes="100vw"
-              className="w-[20px] h-[19px] lg:w-[33px] lg:h-[33px]"
+              className="w-[20px] h-[19px] xl:w-[33px] xl:h-[33px]"
               key={index}
               alt="icon"
             />

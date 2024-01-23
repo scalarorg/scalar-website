@@ -10,7 +10,7 @@ import { FooterWithLogo } from "./components/footer-with-logo";
  * ------------------------------------------------------------------------------------------------------------------ */
 
 const footerVariants = cva(
-  "bg-transparent flex flex-col gap-3 lg:gap-[24px] h-full px-[18px] lg:px-[115px] py-[32px] lg:py-[117px]",
+  "bg-transparent flex flex-col gap-3 xl:gap-[24px] h-full px-[18px] xl:px-[115px] py-[32px] xl:py-[117px]",
 );
 
 type FooterVariantProps = VariantProps<typeof footerVariants>;
@@ -27,12 +27,12 @@ export function Footer({
       className={footerVariants({ className })}
       {...props}
     >
-      <div className={cn('flex flex-col gap-6 lg:flex-row lg:gap-[161px] lg:justify-between')}>
+      <div className={cn('flex flex-col gap-6 xl:flex-row xl:gap-[161px] xl:justify-between')}>
         {/* Footer column with Logo */}
         <FooterWithLogo />
 
         {/* Footer column */}
-        <div className={cn("w-full grid grid-cols-2 pb-3 lg:pb-0 border-b border-neutral-8 lg:border-none lg:flex gap-x-2 gap-y-3 lg:justify-between")}>
+        <div className={cn("w-full grid grid-cols-2 md:grid-cols-4 pb-3 xl:pb-0 border-b border-neutral-8 xl:border-none xl:flex gap-x-2 gap-y-3 xl:justify-between")}>
           {FooterContent.map((column: FooterContent, index: number) =>
             <FooterColumn column={column} index={index} />
           )}
@@ -40,7 +40,7 @@ export function Footer({
       </div>
 
       {/* Footer copyright */}
-      <div className={cn("w-full flex gap-1 text-neutral-7 font-bold lg:text-[22px] lg:leading-[33px]")}>
+      <div className={cn("w-full flex gap-1 text-neutral-7 font-bold xl:text-[22px] xl:leading-[33px]")}>
         Copyright ©
         <span className="text-white">Scalar</span>
         | Designed by Scalar
