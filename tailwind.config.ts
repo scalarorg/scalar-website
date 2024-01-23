@@ -160,6 +160,9 @@ const config = {
         "center-gradient-show": "center-gradient-show 0.2s ease-out",
         "center-gradient-hide": "center-gradient-hide 0.2s ease-out both",
       },
+      boxShadow: {
+        'title': '0px 4px 4px 0px #00000040',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
