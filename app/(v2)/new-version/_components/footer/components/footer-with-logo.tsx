@@ -25,7 +25,7 @@ export function FooterWithLogo({
   ...props
 }: FooterWithLogoProps): React.JSX.Element {
   return (
-    <div className={footerWithLogoVariants({ className })}>
+    <div className={footerWithLogoVariants({ className })} {...props}>
       <div
         className={cn(
           "w-full flex flex-col font-normal gap-3 xl:gap-[22px] text-neutral-7",
