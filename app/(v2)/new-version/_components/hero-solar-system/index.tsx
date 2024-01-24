@@ -11,6 +11,8 @@ import { Step2Content } from "@/app/(v2)/new-version/_components/hero-solar-syst
 import CENTER_RADIANT from "@/public/center-gradient.webp";
 import Link from "next/link";
 import Mars from "@/public/mars.webp";
+import Mouse from "@/public/icon/mouse.svg";
+import VisualCue from "@/public/gif/visual-cue.gif";
 
 const planets = [
   // "/mars.webp",
@@ -140,13 +142,7 @@ export function HeroSolarSystem() {
         )}
       ></div>
 
-      {/*Front Light*/}
-      {/*<div*/}
-      {/*  className={*/}
-      {/*    "w-[1867px] h-[2116px] z-50 left-0 mix-blend-hard-light absolute top-1/2 -translate-y-1/2 bg-[radial-gradient(46.26%_45.3%_at_48.8%_51.72%,#49A8FF_0%,rgba(0,0,0,0.00)_100%)]"*/}
-      {/*  }*/}
-      {/*></div>*/}
-
+      {/*Center radiant*/}
       <Image
         width={1309}
         height={1310}
@@ -154,9 +150,7 @@ export function HeroSolarSystem() {
           "cursor-pointer transition-all object-center duration-500 absolute z-20 left-1/2 w-[1309px] h-[1310px] top-1/2 -translate-y-1/2 -translate-x-1/2",
           tweenValues[PLANET_CONTENT_INDEX] > 0.9 && step === 0
             ? "animate-center-gradient-show"
-            : // : tweenValues[2] < 0.85
-              // ? "hidden"
-              "animate-center-gradient-hide",
+            : "animate-center-gradient-hide",
         )}
         src={CENTER_RADIANT}
         alt={"Center radiant"}
@@ -183,7 +177,6 @@ export function HeroSolarSystem() {
         alt={"Mars"}
         className={cn(
           "absolute top-1/2 -left-[30%] w-[40%] aspect-square pointer-events-none",
-          // `translate-x-${scrollProgress * 100}%`,
           step === 0 ? "z-20" : "z-0  transition-transform duration-500",
         )}
         style={{
@@ -196,7 +189,7 @@ export function HeroSolarSystem() {
       {/*Title*/}
       <div
         className={
-          "absolute bottom-10 w-full flex items-center justify-between gap-12 z-20"
+          "absolute bottom-28 w-full flex items-center justify-between gap-12 z-20"
         }
       >
         <div
@@ -226,6 +219,39 @@ export function HeroSolarSystem() {
           )}
         ></div>
       </div>
+
+      {/*Scroll Down*/}
+      <div
+        className={cn(
+          "transition-opacity duration-500",
+          tweenValues[PLANET_CONTENT_INDEX] < 0.9 && step === 0
+            ? "animate-center-gradient-show"
+            : "animate-center-gradient-hide",
+          "absolute bottom-[12px] left-1/2 -translate-x-1/2 ",
+        )}
+      >
+        <div className={"flex flex-col space-y-2 items-center justify-center"}>
+          <Image src={Mouse} alt={"Mouse"} />
+          <div className={"text-lg text-neutral-6"}>Scroll down to skip</div>
+        </div>
+      </div>
+
+      {/*Visual Cue*/}
+      <Image
+        src={VisualCue}
+        alt={"Visual cue"}
+        className={cn(
+          "absolute right-[1%] top-1/2 z-20",
+          step === 0
+            ? "animate-center-gradient-show"
+            : "animate-center-gradient-hide",
+        )}
+        style={{
+          transform: `translateX(${
+            scrollProgress * -87
+          }vw) translateY(-50%) scale(55%)`,
+        }}
+      />
 
       {/*Slides*/}
       <div className="absolute z-0 top-1/2 -translate-y-1/2" ref={emblaRef}>
