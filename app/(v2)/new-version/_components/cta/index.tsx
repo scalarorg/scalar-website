@@ -5,9 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import SectionTitle from "@/components/ui/section-title";
 import { CarouselLogo } from "./components/carousel";
+import CardsClick from "./components/cards-click";
 
 const ctaVariants = cva(
-  "relative z-0 h-screen w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col items-center justify-around",
+  "relative z-0 py-[117px]  gap-[60px] w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col items-center justify-around",
 );
 
 type CtaVariantProps = VariantProps<typeof ctaVariants>;
@@ -22,6 +23,12 @@ export function Cta({
   return (
     <div className={ctaVariants({ className })}>
       {/* Hackathons & Grants Won Section */}
+      <div className={cn('w-full flex flex-col gap-[24px] items-center px-5 md:px-0')}>
+        <SectionTitle>Hackathons & Grants Won</SectionTitle>
+
+        {/* Card Click Section */}
+        <CardsClick />
+      </div>
 
 
       {/* Team Background */}
