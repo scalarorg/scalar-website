@@ -25,7 +25,7 @@ export function Permissionless({
 
   return (
     <div className={permissionlessVariants({ className })}>
-      <div className={cn("lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-[328px] md:w-[580px] lg:w-[750px] flex flex-col gap-[16px] lg:gap-[45px]")}>
+      <div className={cn("lg:absolute lg:top-1/2 lg:-translate-y-1/2 md:left-[278px] lg:left-[328px] md:w-[580px] lg:w-[750px] flex flex-col gap-[16px] lg:gap-[45px]")}>
         <SectionTitle className="text-left">Permissionless Interoperability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3760F2] to-[#0EF1F1]">Massbit</span></SectionTitle>
 
         <p className="text-[13px] leading-[19.5px] text-neutral-6 lg:text-[18px] lg:leading-[28px] xl:text-[22px] xl:leading-[33px]">
