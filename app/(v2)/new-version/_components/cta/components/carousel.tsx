@@ -14,7 +14,7 @@ export function CarouselLogo() {
       {infiniteLogoBrand.map((item, index) => (
         <Image
           sizes="100vw"
-          className="w-fit px-2 h-[26px] xl:h-[33px]"
+          className="w-fit px-2 lg:px-4 h-[26px] xl:h-[57px]"
           src={item.src}
           alt={item.alt}
           key={index}
