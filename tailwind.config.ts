@@ -153,12 +153,21 @@ const config = {
           "99%": { opacity: "0", display: "block" },
           "100%": { opacity: "0", display: "none" },
         },
+        "infinity-scroll": {
+          from: {
+            transform: "translateX(0)"
+          },
+          to :{
+            transform: "translateX(-100%)"
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-in-out",
         "accordion-up": "accordion-up 0.2s ease-in-out",
         "center-gradient-show": "center-gradient-show 0.2s ease-out",
         "center-gradient-hide": "center-gradient-hide 0.2s ease-out both",
+        "infinity-scroll": "infinity-scroll linear infinite 30s"
       },
       boxShadow: {
         'title': '0px 4px 4px 0px #00000040',
