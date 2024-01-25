@@ -282,6 +282,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
               className={cn(
                 `flex-[0_0_52%]`,
                 `min-w-0 pl-4 relative transition-transform duration-1000 select-none ease-in-out`,
+                index === PLANET_CONTENT_INDEX && "cursor-pointer",
                 index !== PLANET_CONTENT_INDEX
                   ? "cursor-grab"
                   : step === 0
