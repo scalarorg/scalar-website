@@ -53,31 +53,36 @@ export function Dag() {
   return (
     <Fragment>
       {/*Mobile*/}
-      <Accordion
-        type="multiple"
-        // collapsible
-        defaultValue={["item-0"]}
-        className="w-full md:hidden px-5 text-neutral-1 py-14"
+      <div
+        className={
+          "md:hidden bg-[url(/hero-background-bottom.webp)] object-cover object-center z-0 relative"
+        }
       >
-        {CONTENTS.map(({ title, description }, index) => (
-          <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger>
-              <div className={"flex items-center gap-4"}>
-                <div className={"font-normal"}>0{index + 1}</div>
-                <div>{title}</div>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent
-              className={cn(
-                "text-sm leading-tight",
-                index === selected && "opacity-100",
-              )}
-            >
-              <div dangerouslySetInnerHTML={{ __html: description }} />
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+        <Accordion
+          type="multiple"
+          defaultValue={["item-0"]}
+          className="w-full px-5 text-neutral-1 py-14"
+        >
+          {CONTENTS.map(({ title, description }, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger>
+                <div className={"flex items-center gap-4"}>
+                  <div className={"font-normal"}>0{index + 1}</div>
+                  <div>{title}</div>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent
+                className={cn(
+                  "text-sm leading-tight",
+                  index === selected && "opacity-100",
+                )}
+              >
+                <div dangerouslySetInnerHTML={{ __html: description }} />
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
 
       {/*Desktop*/}
       <div
