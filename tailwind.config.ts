@@ -165,8 +165,8 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-in-out",
         "accordion-up": "accordion-up 0.2s ease-in-out",
-        "center-gradient-show": "1s center-gradient-show 0.2s ease-out both",
-        "center-gradient-hide": "1s center-gradient-hide 0.2s ease-out both",
+        "center-gradient-show": "0.2s center-gradient-show ease-out both",
+        "center-gradient-hide": "0.2s center-gradient-hide ease-out both",
         "infinity-scroll": "infinity-scroll linear infinite 30s",
       },
       boxShadow: {

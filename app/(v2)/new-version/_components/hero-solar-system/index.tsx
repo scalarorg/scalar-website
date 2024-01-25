@@ -35,7 +35,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
   const [step, setStep] = useState<number>(0);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    // align: "center",
+    align: "center",
     containScroll: false,
   });
 
@@ -237,7 +237,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
             <div
               className={cn(
                 `flex-[0_0_52%]`,
-                `min-w-0 pl-4 relative transition-transform duration-700 select-none ease-in-out`,
+                `min-w-0 pl-4 relative transition-transform duration-1000 select-none ease-in-out`,
                 index !== PLANET_CONTENT_INDEX
                   ? "cursor-grab"
                   : step === 0
@@ -321,7 +321,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
       {/*Content Step 1*/}
       <div
         className={cn(
-          "transition-opacity duration-500",
+          "",
           step === 1
             ? "animate-center-gradient-show"
             : "animate-center-gradient-hide",
