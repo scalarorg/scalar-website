@@ -15,6 +15,8 @@ import ADVANTAGE_MARS_LARGE from '@/public/advantage-mars-large.svg'
 import ADVANTAGE_EARTH_LARGE from '@/public/advantage-earth-large.svg'
 import ADVANTAGE_MOON_LARGE from '@/public/advantage-moon-large.svg'
 import Image from 'next/image';
+import { ScalarAdvantageContent } from '@/lib/constants/scalar-advantage-content';
+import AdvantageItem from './advantage-item';
 
 const ScalarAdvantageVariants = cva(
   "relative z-10 flex justify-center h-[60vh] mb-[220px] border-0 xl:border-2 xl:border-neutral-11 xl:border-t-0 xl:border-l-0 xl:border-r-0 xl:rounded-[120%]",
@@ -90,114 +92,12 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
         <SectionTitle className='z-10'>Scalar Advantage</SectionTitle>
 
         <div className="w-full flex flex-col lg:flex-row justify-between gap-[24px] lg:gap-0 2xl:relative">
-          {/* Content 1 */}
-          <div className={cn("grid grid-cols-2 lg:flex lg:flex-col lg:jusitfy-center gap-[24px] lg:gap-[40px] px-[30px] py-[18px] border-b lg:border-none border-neutral-12 z-10 lg:order-2 2xl:absolute 2xl:top-[72px] 2xl:left-1/2 2xl:-translate-x-1/2")}>
-            <div className={cn("flex flex-col gap-[28px] item-start lg:gap-[40px] lg:items-center")}>
-              <Image
-                src={LOGO_SMALL}
-                width={50.29}
-                height={40}
-                alt='Logo'
-                className={cn('md:hidden select-none')}
-              />
-
-              <Image
-                src={LOGO}
-                width={280}
-                height={32}
-                alt='Logo'
-                className={cn('hidden md:block select-none')}
-              />
-
-              <div className={cn("flex flex-col lg:items-center")}>
-                <p className={cn("font-medium text-[16px] leading-[24px] text-neutral-6")}>Transactional Throughout</p>
-                <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>20 fps</label>
-              </div>
-            </div>
-            <div className={cn("flex flex-col gap-[14px] item-start z-10")}>
-              <div className={cn("flex flex-col lg:items-center")}>
-                <p className={cn("font-medium text-[16px] leading-[24px] text-neutral-6")}>Transactional Finality</p>
-                <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>380 ms</label>
-              </div>
-
-              <div className={cn("flex flex-col lg:items-center")}>
-                <p className={cn("font-medium text-[16px] leading-[24px] text-neutral-6")}>Processing style</p>
-                <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>Parallelized</label>
-              </div>
-            </div>
-          </div>
-
-          {/* Content 2 */}
-          <div className={cn("grid grid-cols-2 lg:flex lg:flex-col lg:justify-between gap-[24px] lg:gap-[40px] px-[30px] py-[18px] border-b border-neutral-12 lg:border-none z-10 lg:order-1 2xl:absolute 2xl:top-[212px]")}>
-            <div className={cn("flex flex-col gap-[28px] item-start lg:gap-[40px] lg:items-center")}>
-              <Image
-                src={SUI_MARK_SMALL}
-                width={31}
-                height={39}
-                alt='Logo'
-                className={cn('md:hidden select-none')}
-              />
-              <Image
-                src={SUI_MARK}
-                width={100}
-                height={46}
-                alt='Logo'
-                className={cn('hidden md:block select-none')}
-              />
-
-              <div className={cn("flex flex-col lg:items-center")}>
-                <p className={cn("font-medium text-[16px] leading-[24px] text-neutral-6")}>Transactional Throughout</p>
-                <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>20 fps</label>
-              </div>
-            </div>
-            <div className={cn("flex flex-col gap-[14px] item-start z-10")}>
-              <div className={cn("flex flex-col lg:items-center")}>
-                <p className={cn("font-medium text-[16px] leading-[24px] text-neutral-6")}>Transactional Finality</p>
-                <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>380 ms</label>
-              </div>
-
-              <div className={cn("flex flex-col lg:items-center")}>
-                <p className={cn("font-medium text-[16px] leading-[24px] text-neutral-6")}>Processing style</p>
-                <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>Parallelized</label>
-              </div>
-            </div>
-          </div>
-
-          {/* Content 3 */}
-          <div className={cn("grid grid-cols-2 lg:flex lg:flex-col lg:justify-between gap-[24px] lg:gap-[40px] px-[30px] py-[18px] border-b border-neutral-12 lg:border-none z-10 lg:order-3 2xl:absolute 2xl:top-[212px] 2xl:right-0")}>
-            <div className={cn("flex flex-col gap-[28px] item-start lg:gap-[40px] lg:items-center")}>
-              <Image
-                src={APTOS_MARK_SMALL}
-                width={40}
-                height={39}
-                alt='Logo'
-                className={cn('md:hidden select-none')}
-              />
-              <Image
-                src={APTOS_MARK}
-                width={146}
-                height={36}
-                alt='Logo'
-                className={cn('hidden md:block select-none')}
-              />
-
-              <div className={cn("flex flex-col lg:items-center")}>
-                <p className={cn("font-medium text-[16px] leading-[24px] text-neutral-6")}>Transactional Throughout</p>
-                <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>20 fps</label>
-              </div>
-            </div>
-            <div className={cn("flex flex-col gap-[14px] item-start z-10")}>
-              <div className={cn("flex flex-col lg:items-center")}>
-                <p className={cn("font-medium text-[16px] leading-[24px] text-neutral-6")}>Transactional Finality</p>
-                <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>380 ms</label>
-              </div>
-
-              <div className={cn("flex flex-col lg:items-center")}>
-                <p className={cn("font-medium text-[16px] leading-[24px] text-neutral-6")}>Processing style</p>
-                <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>Parallelized</label>
-              </div>
-            </div>
-          </div>
+          {ScalarAdvantageContent.map((item, index) =>
+            <AdvantageItem
+              item={item}
+              key={index}
+            />
+          )}
         </div>
       </div>
     </div>
