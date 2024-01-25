@@ -12,7 +12,7 @@ import HackathonBackground from "@/public/hackathon.webp";
  * Component: HackathonMobile
  * ------------------------------------------------------------------------------------------------------------------ */
 
-const hackathonMobileVariants = cva("container");
+const hackathonMobileVariants = cva("container space-y-4");
 
 type HackathonMobileVariantProps = VariantProps<typeof hackathonMobileVariants>;
 
@@ -45,7 +45,9 @@ export function HackathonMobile({
  * Component: HackathonItem
  * ------------------------------------------------------------------------------------------------------------------ */
 
-const hackathonItemVariants = cva("select-none z-0 relative");
+const hackathonItemVariants = cva(
+  "select-none z-0 relative overflow-hidden rounded-xl",
+);
 
 type HackathonItemVariantProps = VariantProps<typeof hackathonItemVariants> & {
   icon: string;
@@ -71,15 +73,17 @@ function HackathonItem({
     <div
       className={cn(
         hackathonItemVariants({ className }),
-        !selected ? "overflow-hidden cursor-pointer" : "",
+        !selected ? "cursor-pointer" : "",
       )}
       // style={{ flex: selected ? 1 : "none", animationDuration: "0.8s" }}
       onClick={onClick}
     >
       <Image
-        className={"absolute inset-0 -z-10"}
+        className={
+          "absolute inset-0 object-center w-full h-full object-cover -z-10"
+        }
         src={HackathonBackground}
-        alt={"Hackathon background"}
+        alt={"Hackathon background object-center"}
       />
       <div className={"py-6 px-8"}>
         <Image

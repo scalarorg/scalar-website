@@ -9,10 +9,14 @@ import { InfoCarousel } from "@/app/(v2)/new-version/_components/hero-solar-syst
 import { cn } from "@/lib/utils";
 import { Step2Content } from "@/app/(v2)/new-version/_components/hero-solar-system/step-2-content";
 import CENTER_RADIANT from "@/public/center-gradient.webp";
-import Link from "next/link";
 import Mars from "@/public/mars.webp";
 import Mouse from "@/public/icon/mouse.svg";
 import VisualCue from "@/public/gif/visual-cue.gif";
+import { EXPLORE_ONE, EXPLORE_THREE } from "@/lib/constants/hero-explore";
+import MouseWhite from "@/public/icon/mouse-white.svg";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import { figmaSlow } from "@/components/motion/transition";
 
 const planets = [
   // "/mars.webp",
@@ -29,10 +33,9 @@ const PLANET_CONTENT_INDEX = 1;
 
 export function HeroSolarSystem({ className }: { className?: string }) {
   const [step, setStep] = useState<number>(0);
-  const [prevStep, setPrevStep] = useState<number>(0);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "center",
+    // align: "center",
     containScroll: false,
   });
 
@@ -68,7 +71,6 @@ export function HeroSolarSystem({ className }: { className?: string }) {
     // if user scrolls to the other side of the planet, set step to 0
     if (styles[PLANET_CONTENT_INDEX] < 0.93) {
       if (step !== 0) {
-        setPrevStep(step);
         setStep(0);
       }
     }
@@ -84,6 +86,12 @@ export function HeroSolarSystem({ className }: { className?: string }) {
     });
     emblaApi.on("reInit", onScroll);
   }, [emblaApi, onScroll]);
+
+  const router = useRouter();
+  const onScrollDown = useCallback(() => {
+    // scroll down to the #intro section
+    router.push("#intro", { scroll: true });
+  }, [router]);
 
   return (
     <div className={cn("relative z-0 h-screen overflow-hidden", className)}>
@@ -108,34 +116,32 @@ export function HeroSolarSystem({ className }: { className?: string }) {
         )}
       ></div>
 
-      {/*Center radiant*/}
-      <Image
-        width={1309}
-        height={1310}
-        className={cn(
-          "cursor-pointer transition-all object-center duration-500 absolute z-20 left-1/2 w-[1309px] h-[1310px] top-1/2 -translate-y-1/2 -translate-x-1/2",
-          tweenValues[PLANET_CONTENT_INDEX] > 0.9 && step === 0
-            ? "animate-center-gradient-show"
-            : "animate-center-gradient-hide",
-        )}
-        src={CENTER_RADIANT}
-        alt={"Center radiant"}
-        onClick={() => {
-          setStep(1);
-          setPrevStep(0);
-        }}
-      />
-
       {/*Background stars*/}
-      <Image
-        className={"-z-10"}
-        style={{
-          transform: `translateX(${-scrollProgress * 10}%)`,
+      <motion.div
+        className={"absolute inset-0 -z-10"}
+        animate={{
+          transform:
+            step === 0
+              ? "none"
+              : `translateX(${
+                  -scrollProgress * 10 + 10 * (step % 2 === 0 ? 1 : -1)
+                }%) scale(${140 + step * 10}%)`,
         }}
-        fill
-        src={STARS_BACKGROUND}
-        alt={"Star background"}
-      />
+        transition={figmaSlow}
+      >
+        <Image
+          className={"-z-10"}
+          fill
+          style={{
+            transform:
+              step === 0
+                ? `translateX(${-scrollProgress * 10}%) scale(140%)`
+                : "none",
+          }}
+          src={STARS_BACKGROUND}
+          alt={"Star background"}
+        />
+      </motion.div>
 
       {/*Mars*/}
       <Image
@@ -154,36 +160,41 @@ export function HeroSolarSystem({ className }: { className?: string }) {
 
       {/*Title*/}
       <div
-        className={
-          "absolute bottom-28 w-full flex items-center justify-between gap-12 z-20"
-        }
+        className={cn(
+          "absolute bottom-28 w-full z-20",
+          step === 0
+            ? "animate-center-gradient-show"
+            : "animate-center-gradient-hide",
+        )}
       >
-        <div
-          className={cn(
-            "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",
-            step !== 0 && "w-0",
-          )}
-        ></div>
-        <div
-          className={cn(
-            "opacity-100 transition-opacity duration-500",
-            step !== 0 && "opacity-0",
-          )}
-        >
+        <div className={"flex items-center justify-between gap-12"}>
           <div
-            className={
-              "font-dm z-20 text-center whitespace-nowrap font-bold text-3xl text-white"
-            }
+            className={cn(
+              "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",
+              step !== 0 && "w-0",
+            )}
+          ></div>
+          <div
+            className={cn(
+              "opacity-100 transition-opacity duration-500",
+              step !== 0 && "opacity-0",
+            )}
           >
-            The Future of Scalable
+            <div
+              className={
+                "font-dm z-20 text-center whitespace-nowrap font-bold text-3xl text-white"
+              }
+            >
+              The Future of Scalable
+            </div>
           </div>
+          <div
+            className={cn(
+              "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",
+              step !== 0 && "w-0",
+            )}
+          ></div>
         </div>
-        <div
-          className={cn(
-            "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",
-            step !== 0 && "w-0",
-          )}
-        ></div>
       </div>
 
       {/*Scroll Down*/}
@@ -236,18 +247,18 @@ export function HeroSolarSystem({ className }: { className?: string }) {
                 step === 1
                   ? index === 0
                     ? "scale-[30%] -translate-x-1/2"
-                    : "scale-[170%] ease-[cubic-bezier(0.61,0.02,0.3,1)]"
+                    : "scale-[170%] ease-[cubic-bezier(0.31,0.01,0.44,0.99)] duration-1000"
                   : "",
                 step === 2 &&
                   index === PLANET_CONTENT_INDEX &&
                   "scale-[190%] -translate-x-[50%]",
                 step === 2 &&
                   index === PLANET_CONTENT_INDEX + 1 &&
-                  "translate-x-1/2 scale-[90%] ease-[cubic-bezier(0.61,0.02,0.3,1)] duration-[10000ms]",
+                  "translate-x-1/2 scale-[90%] ease-[cubic-bezier(0.31,0.01,0.44,0.99)] duration-1000",
                 // STEP 3
                 step === 3 &&
                   index === PLANET_CONTENT_INDEX &&
-                  "translate-x-[72%] translate-y-[75%] scale-[300%]",
+                  "translate-x-[72%] translate-y-[75%] scale-[300%] ease-[cubic-bezier(0.31,0.01,0.44,0.99)] duration-1000",
                 step === 3 &&
                   index === PLANET_CONTENT_INDEX + 1 &&
                   "translate-x-1/2 scale-[90%]",
@@ -259,10 +270,26 @@ export function HeroSolarSystem({ className }: { className?: string }) {
               onClick={() => {
                 if (index !== PLANET_CONTENT_INDEX) return;
                 setStep(1);
-                setPrevStep(0);
               }}
               key={index}
             >
+              {index == PLANET_CONTENT_INDEX && (
+                <Image
+                  width={1309}
+                  height={1310}
+                  className={cn(
+                    "cursor-pointer transition-all !ease-[cubic-bezier(0.31,0.01,0.44,0.99)] object-center duration-1000 absolute z-20 left-1/2 w-[1309px] h-[1310px] top-1/2 -translate-y-1/2 -translate-x-1/2",
+                    tweenValues[PLANET_CONTENT_INDEX] > 0.9 && step === 0
+                      ? "animate-center-gradient-show"
+                      : "animate-center-gradient-hide",
+                  )}
+                  src={CENTER_RADIANT}
+                  alt={"Center radiant"}
+                  onClick={() => {
+                    setStep(1);
+                  }}
+                />
+              )}
               <div
                 style={{
                   ...(step !== 0
@@ -294,32 +321,25 @@ export function HeroSolarSystem({ className }: { className?: string }) {
       {/*Content Step 1*/}
       <div
         className={cn(
-          "opacity-0 transition-opacity duration-500",
-          step === 1 && "opacity-100  delay-500",
+          "transition-opacity duration-500",
+          step === 1
+            ? "animate-center-gradient-show"
+            : "animate-center-gradient-hide",
         )}
       >
-        <div className={"absolute bottom-32 right-32 space-y-4"}>
-          <div className={"font-semibold max-w-[150px] text-white text-3xl"}>
-            Scalar's milestones
-          </div>
+        <div className={"absolute bottom-28 right-32 space-y-4"}>
           <SolarNavigate
             onClick={() => {
               setStep(2);
-              setPrevStep(1);
             }}
           >
-            Title 02
+            Explore
           </SolarNavigate>
         </div>
-        <InfoCarousel className={"absolute bottom-32 left-32"} />
-      </div>
-      <div
-        className={cn(
-          "absolute opacity-0 top-[15%] left-[5%] text-xl text-white select-none transition-opacity duration-500 delay-500",
-          step === 1 && "opacity-100",
-        )}
-      >
-        Title 1
+        <InfoCarousel
+          content={EXPLORE_ONE}
+          className={"absolute bottom-40 left-32"}
+        />
       </div>
 
       {/*Content Step 2*/}
@@ -336,17 +356,10 @@ export function HeroSolarSystem({ className }: { className?: string }) {
           )}
         />
       </div>
+
       <div
         className={cn(
-          "absolute opacity-0 top-[15%] left-[5%] text-xl text-white select-none transition-opacity duration-500 delay-500",
-          step === 2 && "opacity-100",
-        )}
-      >
-        Title 2
-      </div>
-      <div
-        className={cn(
-          "absolute bottom-24 left-[5%] hidden",
+          "absolute bottom-28 left-32 hidden",
           step === 2 && "block",
         )}
       >
@@ -357,17 +370,19 @@ export function HeroSolarSystem({ className }: { className?: string }) {
           )}
           onClick={() => {
             setStep(1);
-            setPrevStep(2);
           }}
-          variant={"back"}
+          variant={"next"}
         >
-          Title 1
+          Back
         </SolarNavigate>
       </div>
       <div
         className={cn(
-          "absolute bottom-24 right-[5%] hidden",
+          "absolute bottom-28 right-32 hidden",
           step === 2 && "block",
+          step === 2
+            ? "animate-center-gradient-show"
+            : "animate-center-gradient-hide",
         )}
       >
         <SolarNavigate
@@ -377,16 +392,16 @@ export function HeroSolarSystem({ className }: { className?: string }) {
           )}
           onClick={() => {
             setStep(3);
-            setPrevStep(2);
           }}
-          variant={"next"}
+          variant={"back"}
         >
-          Title 3
+          Explore
         </SolarNavigate>
       </div>
 
       {/*Content Step 3*/}
       <InfoCarousel
+        content={EXPLORE_THREE}
         className={cn(
           "absolute bottom-[30%] left-1/2 -translate-x-1/2 hidden",
           "opacity-0 transition-opacity duration-500 delay-500",
@@ -395,7 +410,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
       />
       <div
         className={cn(
-          "absolute bottom-24 left-[5%] hidden",
+          "absolute bottom-28 left-32 hidden",
           step === 3 && "block",
         )}
       >
@@ -406,55 +421,29 @@ export function HeroSolarSystem({ className }: { className?: string }) {
           )}
           onClick={() => {
             setStep(2);
-            setPrevStep(3);
           }}
+          variant={"next"}
         >
-          Title 2
+          Back
         </SolarNavigate>
       </div>
       <div
         className={cn(
-          "absolute bottom-24 left-1/2 -translate-x-1/2 hidden",
+          "absolute bottom-10 left-1/2 -translate-x-1/2 hidden",
           step === 3 && "block",
         )}
       >
-        <SolarNavigate
-          className={cn(
-            "w-fit opacity-0 transition-opacity text-white duration-500 delay-500",
-            step === 3 && "opacity-100",
-          )}
-          onClick={() => {
-            setStep(0);
-            setPrevStep(3);
-          }}
-        >
-          Explore Scalar
-        </SolarNavigate>
-      </div>
-      <Link href={"/new-version#intro"} passHref scroll>
         <div
-          className={cn(
-            "absolute bottom-24 right-[5%] hidden",
-            step === 3 && "block",
-          )}
+          className={
+            "flex flex-col space-y-2 items-center justify-center cursor-pointer"
+          }
+          onClick={onScrollDown}
         >
-          <SolarNavigate
-            className={cn(
-              "opacity-0 transition-opacity text-white duration-500 delay-500",
-              step === 3 && "opacity-100",
-            )}
-          >
-            Explore more
-          </SolarNavigate>
+          <Image src={MouseWhite} alt={"Mouse"} />
+          <div className={"text-lg text-neutral-6 text-center"}>
+            Scroll down
+          </div>
         </div>
-      </Link>
-      <div
-        className={cn(
-          "absolute opacity-0 top-[15%] left-[5%] text-xl text-white select-none transition-opacity duration-500 delay-500",
-          step === 3 && "opacity-100",
-        )}
-      >
-        Title 3
       </div>
     </div>
   );

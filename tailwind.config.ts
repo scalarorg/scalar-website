@@ -155,26 +155,26 @@ const config = {
         },
         "infinity-scroll": {
           from: {
-            transform: "translateX(0)"
+            transform: "translateX(0)",
           },
-          to :{
-            transform: "translateX(-100%)"
-          }
-        }
+          to: {
+            transform: "translateX(-100%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-in-out",
         "accordion-up": "accordion-up 0.2s ease-in-out",
-        "center-gradient-show": "center-gradient-show 0.2s ease-out",
-        "center-gradient-hide": "center-gradient-hide 0.2s ease-out both",
-        "infinity-scroll": "infinity-scroll linear infinite 30s"
+        "center-gradient-show": "1s center-gradient-show 0.2s ease-out both",
+        "center-gradient-hide": "1s center-gradient-hide 0.2s ease-out both",
+        "infinity-scroll": "infinity-scroll linear infinite 30s",
       },
       boxShadow: {
-        'title': '0px 4px 4px 0px #00000040',
+        title: "0px 4px 4px 0px #00000040",
       },
       backgroundImage: {
-        'star': "url('/star-background.svg')"
-      }
+        star: "url('/star-background.svg')",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
