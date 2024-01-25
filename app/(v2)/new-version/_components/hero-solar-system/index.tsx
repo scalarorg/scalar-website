@@ -27,7 +27,7 @@ const numberWithinRange = (number: number, min: number, max: number): number =>
 const TWEEN_FACTOR = 0.15;
 const PLANET_CONTENT_INDEX = 1;
 
-export function HeroSolarSystem() {
+export function HeroSolarSystem({ className }: { className?: string }) {
   const [step, setStep] = useState<number>(0);
   const [prevStep, setPrevStep] = useState<number>(0);
 
@@ -85,42 +85,8 @@ export function HeroSolarSystem() {
     emblaApi.on("reInit", onScroll);
   }, [emblaApi, onScroll]);
 
-  // useEffect(() => {
-  //   if (step === 1 && prevStep === 0) {
-  //     // set tween values of PLANET_CONTENT increase 70% of their current values, and the rest decrease 70% of their current values
-  //     setTimeout(() => {
-  //       setTweenValues([
-  //         ...tweenValues.map((value, index) => {
-  //           if (index !== PLANET_CONTENT_INDEX) {
-  //             return value * 0.3;
-  //           } else {
-  //             return value * 1.7;
-  //           }
-  //         }),
-  //       ]);
-  //     }, 0);
-  //   }
-
-  // if (step === 2 && prevStep === 1) {
-  //   // set tween values of PLANET_CONTENT increase 10% of their current values, the left one decrease 90%, and the rest decrease 70% of their current values
-  //   setTimeout(() => {
-  //     setTweenValues([
-  //       ...tweenValues.map((value, index) => {
-  //         if (index !== PLANET_CONTENT_INDEX) {
-  //           return value;
-  //         } else if (index === PLANET_CONTENT_INDEX + 1) {
-  //           return value * 0.8;
-  //         } else {
-  //           return value;
-  //         }
-  //       }),
-  //     ]);
-  //   }, 500);
-  // }
-  // }, [step, prevStep]);
-
   return (
-    <div className={"relative z-0 h-screen overflow-hidden"}>
+    <div className={cn("relative z-0 h-screen overflow-hidden", className)}>
       {/*Colorful background*/}
       <div
         className={
