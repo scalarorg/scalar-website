@@ -35,9 +35,14 @@ export function HeroSolarSystem({ className }: { className?: string }) {
   const [step, setStep] = useState<number>(0);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "center",
+    // align: "center",
     containScroll: false,
+    startIndex: 0,
+    // skipSnaps: true,
   });
+
+  const [isEmblaRendered, setIsEmblaRendered] = useState(false);
+  const [isEmblaLoaded, setIsEmblaLoaded] = useState(false);
 
   const [tweenValues, setTweenValues] = useState<number[]>([]);
 
@@ -76,6 +81,19 @@ export function HeroSolarSystem({ className }: { className?: string }) {
     }
     setScrollProgress(scrollProgress);
   }, [emblaApi, setTweenValues, step]);
+
+  useEffect(() => {
+    if (!isEmblaRendered) {
+      setIsEmblaRendered(true);
+
+      // after 0.5s, set isEmblaLoaded to true
+      setTimeout(() => {
+        setIsEmblaLoaded(true);
+      }, 500);
+
+      return;
+    }
+  }, [isEmblaRendered]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -148,8 +166,11 @@ export function HeroSolarSystem({ className }: { className?: string }) {
         src={Mars}
         alt={"Mars"}
         className={cn(
-          "absolute top-1/2 -left-[30%] w-[40%] aspect-square pointer-events-none",
-          step === 0 ? "z-20" : "z-0  transition-transform duration-500",
+          "absolute top-1/2 -left-[30%] w-[40%] aspect-square pointer-events-none opacity-0",
+          step === 0 ? "z-20" : "z-0",
+          isEmblaRendered && "opacity-100 scale-100",
+          !isEmblaLoaded &&
+            "transition-[opacity,transform] scale-90 duration-500",
         )}
         style={{
           transform: `translateX(${
@@ -201,38 +222,60 @@ export function HeroSolarSystem({ className }: { className?: string }) {
       {/*Scroll Down*/}
       <div
         className={cn(
-          "transition-opacity duration-500",
-          tweenValues[PLANET_CONTENT_INDEX] < 0.9 && step === 0
-            ? "animate-center-gradient-show"
-            : "animate-center-gradient-hide",
-          "absolute bottom-[12px] left-1/2 -translate-x-1/2 ",
+          "opacity-0 transition-opacity",
+          isEmblaRendered && "opacity-100",
         )}
       >
-        <div className={"flex flex-col space-y-2 items-center justify-center"}>
-          <Image src={Mouse} alt={"Mouse"} />
-          <div className={"text-lg text-neutral-6"}>Scroll down to skip</div>
+        <div
+          className={cn(
+            "transition-opacity duration-500",
+            tweenValues[PLANET_CONTENT_INDEX] < 0.9 && step === 0
+              ? "animate-center-gradient-show"
+              : "animate-center-gradient-hide",
+            "absolute bottom-[12px] left-1/2 -translate-x-1/2 ",
+          )}
+        >
+          <div
+            className={"flex flex-col space-y-2 items-center justify-center"}
+          >
+            <Image src={Mouse} alt={"Mouse"} />
+            <div className={"text-lg text-neutral-6"}>Scroll down to skip</div>
+          </div>
         </div>
       </div>
 
       {/*Visual Cue*/}
-      <Image
-        src={VisualCue}
-        alt={"Visual cue"}
+      <div
         className={cn(
-          "absolute right-[1%] top-1/2 z-20",
-          step === 0
-            ? "animate-center-gradient-show"
-            : "animate-center-gradient-hide",
+          "transition-opacity opacity-0",
+          isEmblaRendered && "opacity-100",
         )}
-        style={{
-          transform: `translateX(${
-            scrollProgress * -87
-          }vw) translateY(-50%) scale(55%)`,
-        }}
-      />
+      >
+        <Image
+          src={VisualCue}
+          alt={"Visual cue"}
+          className={cn(
+            "absolute right-[1%] top-1/2 z-20",
+            step === 0
+              ? "animate-center-gradient-show"
+              : "animate-center-gradient-hide",
+          )}
+          style={{
+            transform: `translateX(${
+              scrollProgress * -87
+            }vw) translateY(-50%) scale(55%)`,
+          }}
+        />
+      </div>
 
       {/*Slides*/}
-      <div className="absolute z-0 top-1/2 -translate-y-1/2" ref={emblaRef}>
+      <div
+        className={cn(
+          "absolute z-0 top-1/2 -translate-y-1/2 opacity-0 transition-[opacity,transform] duration-500 scale-90",
+          isEmblaRendered && "opacity-100 scale-100",
+        )}
+        ref={emblaRef}
+      >
         <div className="flex touch-pan-y">
           {planets.map((image, index) => (
             <div
@@ -321,27 +364,29 @@ export function HeroSolarSystem({ className }: { className?: string }) {
       </div>
 
       {/*Content Step 1*/}
-      <div
-        className={cn(
-          "",
-          step === 1
-            ? "animate-center-gradient-show"
-            : "animate-center-gradient-hide",
-        )}
-      >
-        <div className={"absolute bottom-28 right-32 space-y-4"}>
-          <SolarNavigate
-            onClick={() => {
-              setStep(2);
-            }}
-          >
-            Explore
-          </SolarNavigate>
+      <div className={cn("opacity-0", isEmblaRendered && "opacity-100")}>
+        <div
+          className={cn(
+            "",
+            step === 1
+              ? "animate-center-gradient-show"
+              : "animate-center-gradient-hide",
+          )}
+        >
+          <div className={"absolute bottom-28 right-32 space-y-4"}>
+            <SolarNavigate
+              onClick={() => {
+                setStep(2);
+              }}
+            >
+              Explore
+            </SolarNavigate>
+          </div>
+          <InfoCarousel
+            content={EXPLORE_ONE}
+            className={"absolute bottom-40 left-32"}
+          />
         </div>
-        <InfoCarousel
-          content={EXPLORE_ONE}
-          className={"absolute bottom-40 left-32"}
-        />
       </div>
 
       {/*Content Step 2*/}
