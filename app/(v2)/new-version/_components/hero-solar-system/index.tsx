@@ -313,7 +313,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
               )}
               onClick={() => {
                 if (index !== PLANET_CONTENT_INDEX) return;
-                setStep(1);
+                setStep((step) => (step === 3 ? 1 : step + 1));
               }}
               key={index}
             >
@@ -330,8 +330,9 @@ export function HeroSolarSystem({ className }: { className?: string }) {
                   )}
                   src={CENTER_RADIANT}
                   alt={"Center radiant"}
-                  onClick={() => {
+                  onClick={(e) => {
                     setStep(1);
+                    e.stopPropagation();
                   }}
                 />
               )}
