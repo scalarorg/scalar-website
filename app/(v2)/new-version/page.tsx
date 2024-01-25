@@ -28,7 +28,7 @@ export default function HomePage() {
           src={MilkyWay}
           alt={"Milky way"}
           className={
-            "absolute bottom-0 translate-y-1/2 -rotate-[10deg] left-1/2 -translate-x-1/2"
+            "absolute w-full bottom-0 translate-y-1/2 -rotate-[10deg] left-1/2 -translate-x-1/2"
           }
         />
       </div>
