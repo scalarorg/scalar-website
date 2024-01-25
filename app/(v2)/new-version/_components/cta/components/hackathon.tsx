@@ -55,7 +55,6 @@ type HackathonItemProps = HackathonItemVariantProps &
 
 function HackathonItem({
   className,
-  children,
   icon,
   title,
   description,

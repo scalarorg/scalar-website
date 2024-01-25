@@ -8,34 +8,6 @@ import { flushSync } from "react-dom";
  * Component: InfoCarousel
  * ------------------------------------------------------------------------------------------------------------------ */
 
-const slides = [
-  {
-    title: "Lorem ipsum dolor sit",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Rhoncus metus ut etiam magna nunc vel amet. Condimentum duis quisque lacus eros fermentum sed. Et vitae est curabitur rhoncus iaculis elit scelerisque tristique.",
-  },
-  {
-    title: "Lorem ipsum dolor sit",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Rhoncus metus ut etiam magna nunc vel amet. Condimentum duis quisque lacus eros fermentum sed. Et vitae est curabitur rhoncus iaculis elit scelerisque tristique.",
-  },
-  {
-    title: "Lorem ipsum dolor sit",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Rhoncus metus ut etiam magna nunc vel amet. Condimentum duis quisque lacus eros fermentum sed. Et vitae est curabitur rhoncus iaculis elit scelerisque tristique.",
-  },
-  {
-    title: "Lorem ipsum dolor sit",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Rhoncus metus ut etiam magna nunc vel amet. Condimentum duis quisque lacus eros fermentum sed. Et vitae est curabitur rhoncus iaculis elit scelerisque tristique.",
-  },
-  {
-    title: "Lorem ipsum dolor sit",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Rhoncus metus ut etiam magna nunc vel amet. Condimentum duis quisque lacus eros fermentum sed. Et vitae est curabitur rhoncus iaculis elit scelerisque tristique.",
-  },
-];
-
 const TWEEN_FACTOR = 1.2;
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
