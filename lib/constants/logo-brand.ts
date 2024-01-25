@@ -1,10 +1,10 @@
-import Amazon from '@/public/logo-brand/amazon.png'
-import Facebook from '@/public/logo-brand/facebook.png'
-import Google from '@/public//logo-brand/google.png'
-import Harmony from '@/public//logo-brand/harmony.png'
-import JPMorgan from '@/public//logo-brand/jpmorgan.png'
-import MIT from '@/public//logo-brand/mit.png'
-import Stanfo from '@/public//logo-brand/stanfo.png'
+import Amazon from '@/public/logo-brand/amazon.webp'
+import Facebook from '@/public/logo-brand/facebook.webp'
+import Google from '@/public//logo-brand/google.webp'
+import Harmony from '@/public//logo-brand/harmony.webp'
+import JPMorgan from '@/public//logo-brand/jpmorgan.webp'
+import MIT from '@/public//logo-brand/mit.webp'
+import Stanfo from '@/public//logo-brand/stanfo.webp'
 import { StaticImageData } from 'next/image'
 
 export interface LogoBrandProps {
