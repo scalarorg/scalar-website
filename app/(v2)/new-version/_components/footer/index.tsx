@@ -15,7 +15,8 @@ const footerVariants = cva(
 
 type FooterVariantProps = VariantProps<typeof footerVariants>;
 
-type FooterProps = FooterVariantProps & Omit<HTMLAttributes<HTMLDivElement>, keyof FooterVariantProps>;
+type FooterProps = FooterVariantProps &
+  Omit<HTMLAttributes<HTMLDivElement>, keyof FooterVariantProps>;
 
 export function Footer({
   className,
@@ -23,27 +24,35 @@ export function Footer({
   ...props
 }: FooterProps): React.JSX.Element {
   return (
-    <div
-      className={footerVariants({ className })}
-      {...props}
-    >
-      <div className={cn('flex flex-col gap-6 xl:flex-row xl:gap-[161px] xl:justify-between')}>
+    <div className={footerVariants({ className })} {...props}>
+      <div
+        className={cn(
+          "flex flex-col gap-6 xl:flex-row xl:gap-[161px] xl:justify-between",
+        )}
+      >
         {/* Footer column with Logo */}
         <FooterWithLogo />
 
         {/* Footer column */}
-        <div className={cn("w-full grid grid-cols-2 md:grid-cols-4 pb-3 xl:pb-0 border-b border-neutral-8 xl:border-none xl:flex gap-x-2 gap-y-3 xl:justify-between")}>
-          {FooterContent.map((column: FooterContent, index: number) =>
-            <FooterColumn column={column} index={index} />
+        <div
+          className={cn(
+            "w-full grid grid-cols-2 md:grid-cols-4 pb-3 xl:pb-0 border-b border-neutral-8 xl:border-none xl:flex gap-x-2 gap-y-3 xl:justify-between",
           )}
+        >
+          {FooterContent.map((column: FooterContent, index: number) => (
+            <FooterColumn column={column} key={`column-${index}`} />
+          ))}
         </div>
       </div>
 
       {/* Footer copyright */}
-      <div className={cn("w-full flex gap-1 text-neutral-7 text-xs md:text-[13px] font-bold xl:text-[22px] xl:leading-[33px]")}>
-        Copyright ©
-        <span className="text-white">Scalar</span>
-        | Designed by Scalar
+      <div
+        className={cn(
+          "w-full flex gap-1 text-neutral-7 text-xs md:text-[13px] font-bold xl:text-[22px] xl:leading-[33px]",
+        )}
+      >
+        Copyright ©<span className="text-white">Scalar</span>| Designed by
+        Scalar
       </div>
     </div>
   );
