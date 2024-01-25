@@ -156,6 +156,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
             scrollProgress * (step === 0 ? 300 : 330)
           }%) translateY(-50%)`,
         }}
+        priority={true}
       />
 
       {/*Title*/}
@@ -277,6 +278,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
                 <Image
                   width={1309}
                   height={1310}
+                  priority={true}
                   className={cn(
                     "cursor-pointer transition-all !ease-[cubic-bezier(0.31,0.01,0.44,0.99)] object-center duration-1000 absolute z-20 left-1/2 w-[1309px] h-[1310px] top-1/2 -translate-y-1/2 -translate-x-1/2",
                     tweenValues[PLANET_CONTENT_INDEX] > 0.9 && step === 0

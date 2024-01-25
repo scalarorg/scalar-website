@@ -46,13 +46,15 @@ export function Sidebar({
         )}
       >
         <div className={"max-w-full flex justify-between items-center"}>
-          <Image
-            src={LogoWhite}
-            width={124.59}
-            height={99.1}
-            className={"aspect-[124.59/99.1] w-[124.59px]"}
-            alt={"Scalar logo white"}
-          />
+          <Link href={"/"} passHref>
+            <Image
+              src={LogoWhite}
+              width={124.59}
+              height={99.1}
+              className={"aspect-[124.59/99.1] w-[124.59px]"}
+              alt={"Scalar logo white"}
+            />
+          </Link>
           <Image
             src={SidebarClose}
             alt={"Sidebar close"}
