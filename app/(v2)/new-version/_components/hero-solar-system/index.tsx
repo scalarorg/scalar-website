@@ -451,6 +451,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
       {/*Content Step 3*/}
       <InfoCarousel
         content={EXPLORE_THREE}
+        showNavigation={true}
         className={cn(
           "absolute bottom-[30%] left-1/2 -translate-x-1/2 hidden",
           "opacity-0 transition-opacity duration-500 delay-500",

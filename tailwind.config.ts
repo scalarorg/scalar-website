@@ -171,6 +171,8 @@ const config = {
       },
       boxShadow: {
         title: "0px 4px 4px 0px #00000040",
+        "button-hover": "0px 0px 10px 0px #0EF1F1",
+        "button-active": "0px 0px 10px 0px #FFF",
       },
       backgroundImage: {
         star: "url('/star-background.svg')",

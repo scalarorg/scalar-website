@@ -224,22 +224,35 @@ export function Navigator({
           </AnimatePresence>
         </div>
       ))}
-      <div key={"social"} className={"flex gap-8 justify-end items-center"}>
+      <div
+        key={"social"}
+        className={"flex gap-4 sm:gap-[33px] justify-end items-center"}
+      >
         {/*TODO: Update social icons with real links*/}
         <XIcon
-          className={"cursor-pointer transition-colors hover:text-neutral-1"}
+          className={
+            "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
+          }
         />
         <GithubIcon
-          className={"cursor-pointer transition-colors hover:text-neutral-1"}
+          className={
+            "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
+          }
         />
         <DiscordIcon
-          className={"cursor-pointer transition-colors hover:text-neutral-1"}
+          className={
+            "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
+          }
         />
         <MediumIcon
-          className={"cursor-pointer transition-colors hover:text-neutral-1"}
+          className={
+            "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
+          }
         />
         <TelegramIcon
-          className={"cursor-pointer transition-colors hover:text-neutral-1"}
+          className={
+            "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
+          }
         />
       </div>
     </div>

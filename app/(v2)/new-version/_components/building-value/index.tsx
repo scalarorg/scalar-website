@@ -3,6 +3,7 @@ import BuildingValueBackground from "@/public/building-value.webp";
 import MilkyWay from "@/public/milky-way-1.webp";
 import Image from "next/image";
 import HeroBackgroundBottom from "@/public/hero-background-bottom.webp";
+import { cn } from "@/lib/utils";
 
 const VALUES = [
   {
@@ -63,15 +64,16 @@ export function BuildingValue() {
         >
           <h1
             className={
-              "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold max-w-3xl leading-tight sm:leading-normal"
+              "[text-shadow:4px_4px_0px_rgba(0,0,0,0.25)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-4xl !leading-normal sm:leading-normal"
             }
           >
-            The Future of Scalable{" "}
-            <span className={"text-primary-cyan-500"}>Blockchain</span>
+            The Future of
+            <br />
+            Scalable <span className={"text-primary-cyan-500"}>Blockchain</span>
           </h1>
           <p
             className={
-              "text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-neutral-1 sm:max-w-sm md:max-w-4xl"
+              "text-[13px] sm:text-base md:text-lg lg:text-xl xl:text-2xl text-neutral-1 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
             }
           >
             <span className={"text-primary-cyan-500"}>
@@ -81,10 +83,15 @@ export function BuildingValue() {
             throughput.
           </p>
         </div>
-        <div className={"flex justify-center"}>
-          <div className={"grid grid-cols-2 gap-6 sm:gap-8"}>
-            {VALUES.map((value) => (
+        <div className={"flex justify-center items-center"}>
+          <div
+            className={
+              "grid grid-cols-2 sm:gap-y-10 max-sm:gap-x-3 gap-y-4 md:gap-y-16 lg:gap-y-20 xl:gap-y-24 2xl:gap-y-32"
+            }
+          >
+            {VALUES.map((value, index) => (
               <ValueItem
+                className={cn(index % 2 === 0 && "md:justify-self-center")}
                 icon={value.icon}
                 value={value.value}
                 description={value.description}

@@ -3,6 +3,8 @@ import { cva, VariantProps } from "class-variance-authority";
 import { HTMLAttributes, useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { flushSync } from "react-dom";
+import { cn } from "@/lib/utils";
+import { EmblaCarouselType } from "embla-carousel";
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: InfoCarousel
@@ -17,6 +19,7 @@ const infoCarouselVariants = cva("");
 
 type InfoCarouselVariantProps = VariantProps<typeof infoCarouselVariants> & {
   content: { title: string; description: string }[];
+  showNavigation?: boolean;
 };
 
 type InfoCarouselProps = InfoCarouselVariantProps &
@@ -26,6 +29,7 @@ export function InfoCarousel({
   className,
   children,
   content,
+  showNavigation = false,
   ...props
 }: InfoCarouselProps): React.JSX.Element {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -35,6 +39,7 @@ export function InfoCarousel({
   });
 
   const [tweenValues, setTweenValues] = useState<number[]>([]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const onScroll = useCallback(() => {
     if (!emblaApi) return;
@@ -79,6 +84,18 @@ export function InfoCarousel({
     [emblaApi],
   );
 
+  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onSelect(emblaApi);
+    emblaApi.on("reInit", onSelect);
+    emblaApi.on("select", onSelect);
+  }, [emblaApi, onSelect]);
+
   return (
     <div {...props} className={infoCarouselVariants({ className })}>
       <div
@@ -104,6 +121,35 @@ export function InfoCarousel({
           </div>
         </div>
       </div>
+      {showNavigation && (
+        <div className={"flex gap-14 mt-10 justify-center"}>
+          {Array.from(Array(Math.ceil(content.length / 2))).map((_, index) => {
+            let navigationLength = Math.ceil(content.length / 2);
+
+            return (
+              <div
+                className={cn(
+                  "cursor-pointer transition-colors text-neutral-1/30 text-3xl font-bold",
+                  (index === selectedIndex ||
+                    index === selectedIndex - navigationLength) &&
+                    "text-neutral-1",
+                )}
+                key={index}
+                onClick={() => {
+                  if (index === selectedIndex) return;
+                  if (selectedIndex < navigationLength) {
+                    onThumbClick(index);
+                    return;
+                  }
+                  onThumbClick(index + navigationLength);
+                }}
+              >
+                {index + 1}
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

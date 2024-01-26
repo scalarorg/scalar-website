@@ -37,7 +37,11 @@ export function ValueItem({
         height={50}
       />
       <div className={"mt-2 sm:mt-3 md:mt-4 text-neutral-1"}>
-        <div className={"text-xl sm:text-2xl lg:text-4xl font-bold"}>
+        <div
+          className={
+            "text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[54px] font-bold !leading-tight"
+          }
+        >
           {value}
         </div>
         <div className={"text-base lg:text-lg"}>{description}</div>
