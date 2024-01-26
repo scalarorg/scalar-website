@@ -1,8 +1,11 @@
 import type { Config } from "tailwindcss";
 
 const config = {
-  darkMode: ["class"],
-  content: ["./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}"],
+  // darkMode: ["class"],
+  content: [
+    "./components/**/*.{ts,tsx,html,js,jsx}",
+    "./app/**/*.{ts,tsx,html,js,jsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -184,7 +187,11 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("tailwindcss-textshadow")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwindcss-textshadow"),
+    require("tailwind-scrollbar"),
+  ],
 } satisfies Config;
 
 export default config;

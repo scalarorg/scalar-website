@@ -17,7 +17,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import ScalarAdvantage from "./components/scalar-advantage";
+import dynamic from "next/dynamic";
+
+const ScalarAdvantage = dynamic(() => import("./components/scalar-advantage"), {
+  ssr: false,
+});
 
 const CONTENTS = [
   {

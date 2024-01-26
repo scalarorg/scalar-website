@@ -78,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dm_sans.variable} font-dm bg-neutral-900 text-neutral-0`}
+        className={`${dm_sans.variable} font-dm bg-neutral-900 text-neutral-0 scrollbar-thumb-primary-blue-900 scrollbar-track-accent-info-900/90 scrollbar-thin`}
       >
         {children}
       </body>
