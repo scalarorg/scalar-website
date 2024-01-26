@@ -12,7 +12,7 @@ const AdvantageItem = ({ item, size }: AdditionalProps) => {
   return (
     <Fragment>
       {/* Mobile */}
-      <div className={`grid grid-cols-2 lg:hidden gap-[24px] px-[30px] py-[18px] border-b border-neutral-12 z-10`}>
+      <div className={`grid grid-cols-2 lg:hidden gap-[10px] px-[30px] py-[18px] border-b border-neutral-12 z-10`}>
         <div className={cn("flex flex-col gap-[28px] item-start")}>
           <Image
             src={item.imageSmall.image}
@@ -29,14 +29,24 @@ const AdvantageItem = ({ item, size }: AdditionalProps) => {
             alt='Logo'
             className={cn('hidden md:block select-none')}
           />
+
+          <div className={cn("flex flex-col")} >
+            <p className={cn("font-normal text-[16px] leading-[24px] text-neutral-6")}>{item.dataMobile[0].title}</p>
+            <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>{item.dataMobile[0].data}</label>
+          </div>
         </div>
 
-        {item.dataMobile.map((item, i) => (
-          <div className={cn("flex flex-col")} key={i}>
-            <p className={cn("font-normal text-[16px] leading-[24px] text-neutral-6")}>{item.title}</p>
-            <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>{item.data}</label>
+        <div className="flex flex-col gap-[14px]">
+          <div className={cn("flex flex-col")} >
+            <p className={cn("font-normal text-[16px] leading-[24px] text-neutral-6")}>{item.dataMobile[1].title}</p>
+            <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>{item.dataMobile[1].data}</label>
           </div>
-        ))}
+
+          <div className={cn("flex flex-col")} >
+            <p className={cn("font-normal text-[16px] leading-[24px] text-neutral-6")}>{item.dataMobile[2].title}</p>
+            <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>{item.dataMobile[2].data}</label>
+          </div>
+        </div>
       </div>
 
       {/* Desktop */}

@@ -1,4 +1,4 @@
-import LOGO_SMALL from '@/public/logo-small.webp'
+import LOGO_SMALL from '@/public/logo-small.svg'
 import SUI_MARK_SMALL from '@/public/sui-mark-small.webp'
 import APTOS_MARK_SMALL from '@/public/aptos-mark-small.webp'
 import LOGO from '@/public/icon/logo.svg'
