@@ -25,30 +25,12 @@ export function Permissionless({
 
   return (
     <div className={permissionlessVariants({ className })}>
-      <div className={cn("lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-[278px] xl:left-[328px] md:w-[660px] xl:w-[750px] flex flex-col gap-[16px] lg:gap-[45px]")}>
-        <SectionTitle className="text-left">Permissionless Interoperability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3760F2] to-[#0EF1F1]">Massbit</span></SectionTitle>
-
-        <p className="text-[13px] leading-[19.5px] text-neutral-6 lg:text-[18px] lg:leading-[28px] xl:text-[22px] xl:leading-[33px]">
-          Scalar’s massbit serves as an interoperability protocol with planned support to connect <span className={cn("text-cyan-500")}>over 20+ EVM</span> and <span className={cn("text-cyan-500")}>non EVM blockchains</span>,
-          providing developers the capability to create unified interoperable experiences. The protocol utilizes immutable on-chain
-          standardized endpoints and a permissionless set of oracle nodes to facilitate the transfer of censorship-resistant
-          messages/data/assets between various chains.
-        </p>
-
-        <button className={(cn("text-neutral-1 text-[18px] leading-[27px] lg:text-[34px] lg:leading-[47px] h-[27px] w-fit  lg:w-[200px] flex gap-[10px] justify-between items-center border-none bg-transparent p-0"))}>
-          Learn more
-          <ChevronRight
-            width={11}
-            height={13}
-            className={cn("pt-0.5")} />
-        </button>
-      </div>
       {/* Background Mobile */}
       {/* Moon */}
       <Image
         src={MOON_BACKGROUND}
         sizes="100vw"
-        className={cn('absolute select-none w-[60px] h-[60px] lg:hidden top-[12px] left-[80px] -z-10')}
+        className={cn('absolute select-none w-[80px] h-[80px] lg:hidden top-[12px] left-[80px] -z-10')}
         alt="moon"
       />
 
@@ -56,7 +38,7 @@ export function Permissionless({
       <Image
         src={MASSBIT}
         sizes="100vw"
-        className={cn('absolute select-none -right-20 -top-[117px] lg:right-0 -z-10 lg:hidden')}
+        className={cn('absolute select-none right-0 -top-[0] md:w-3/5 md:-top-3/4  lg:right-0 -z-10 lg:hidden')}
         alt=""
       />
 
@@ -78,7 +60,6 @@ export function Permissionless({
         className={cn('absolute hidden lg:block select-none left-[268px] top-1/2 -translate-y-[187px] -z-10')}
         alt=""
       />
-
       <Image
         src={STAR_BACKGROUND}
         width={40}
@@ -86,7 +67,6 @@ export function Permissionless({
         className={cn('absolute hidden lg:block select-none right-[720px] top-1/2 -translate-y-[570px] -z-10')}
         alt=""
       />
-
       <Image
         src={STAR_BACKGROUND}
         width={40}
@@ -102,6 +82,27 @@ export function Permissionless({
         className={cn('absolute hidden lg:block lg:w-3/5 select-none right-0 top-1/2 -translate-y-1/2 -z-10')}
         alt=""
       />
+
+
+      {/* Block Content */}
+      <div className={cn("lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-[278px] xl:left-[328px] md:w-[660px] xl:w-[750px] flex flex-col gap-[16px] lg:gap-[45px]")}>
+        <SectionTitle className="text-left">Permissionless Interoperability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3760F2] to-[#0EF1F1]">Massbit</span></SectionTitle>
+
+        <p className="text-[16px] leading-[24.5px] text-neutral-6 lg:text-[18px] lg:leading-[28px] xl:text-[22px] xl:leading-[33px]">
+          Scalar’s massbit serves as an interoperability protocol with planned support to connect <span className={cn("text-primary-cyan-500")}>over 20+ EVM</span> and <span className={cn("text-primary-cyan-500")}>non EVM blockchains</span>,
+          providing developers the capability to create unified interoperable experiences. The protocol utilizes immutable on-chain
+          standardized endpoints and a permissionless set of oracle nodes to facilitate the transfer of censorship-resistant
+          messages/data/assets between various chains.
+        </p>
+
+        <button className={(cn("text-neutral-1 text-[18px] leading-[27px] lg:text-[34px] lg:leading-[47px] h-[27px] w-fit lg:w-[200px] flex gap-[10px] justify-between items-center border-none bg-transparent p-0 hover:opacity-80 transition-all"))}>
+          Learn more
+          <ChevronRight
+            width={11}
+            height={13}
+            className={cn("pt-0.5")} />
+        </button>
+      </div>
     </div>
   )
 }
