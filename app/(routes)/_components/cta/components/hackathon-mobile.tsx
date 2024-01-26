@@ -12,7 +12,7 @@ import HackathonBackground from "@/public/hackathon.webp";
  * Component: HackathonMobile
  * ------------------------------------------------------------------------------------------------------------------ */
 
-const hackathonMobileVariants = cva("container space-y-4");
+const hackathonMobileVariants = cva("space-y-4");
 
 type HackathonMobileVariantProps = VariantProps<typeof hackathonMobileVariants>;
 
@@ -79,7 +79,7 @@ function HackathonItem({
     >
       <Image
         className={
-          "absolute inset-0 object-center w-full h-full object-cover -z-10"
+          "absolute inset-0 object-center w-full h-full object-cover -z-10 brightness-75"
         }
         src={HackathonBackground}
         alt={"Hackathon background object-center"}

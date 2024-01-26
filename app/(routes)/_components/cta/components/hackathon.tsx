@@ -11,10 +11,10 @@ import { HACKATHON_CONTENT } from "@/lib/constants/hackathon";
 export function Hackathon({ className }: HTMLAttributes<HTMLDivElement>) {
   const [selected, setSelected] = useState(0);
   return (
-    <div className={cn("container", className)}>
+    <div className={cn("", className)}>
       <div className={"flex relative z-0 overflow-hidden"}>
         <Image
-          className={"absolute inset-0 -z-10"}
+          className={"absolute inset-0 -z-10 brightness-75"}
           src={HackathonBackground}
           alt={"hackathon"}
         />

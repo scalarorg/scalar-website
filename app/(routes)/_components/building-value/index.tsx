@@ -13,7 +13,7 @@ const VALUES = [
   },
   {
     icon: "/icon/low-to-no.svg",
-    value: "Low-to-no",
+    value: "< $0.001",
     description: "Gas fees",
   },
   {
@@ -64,7 +64,7 @@ export function BuildingValue() {
         >
           <h1
             className={
-              "[text-shadow:4px_4px_0px_rgba(0,0,0,0.25)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-4xl !leading-normal sm:leading-normal"
+              "text-shadow-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-4xl !leading-normal sm:leading-normal"
             }
           >
             The Future of

@@ -179,9 +179,12 @@ const config = {
         advantage: "url('/background-advantage.svg')",
         star_dark: "url('/background-star-dark.svg')",
       },
+      textShadow: {
+        h1: "4px 4px 4px rgba(0, 0, 0, 0.25)",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-textshadow")],
 } satisfies Config;
 
 export default config;

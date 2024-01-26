@@ -1,139 +1,139 @@
-import XTwitter from '@/public/icon/x-twitter.svg'
-import Github from '@/public/icon/github.svg'
-import Discord from '@/public/icon/discord.svg'
-import Medium from '@/public/icon/medium.svg'
-import Telegram from '@/public/icon/telegram.svg'
-import { StaticImageData } from 'next/image'
+import XTwitter from "@/public/icon/x-twitter.svg";
+import Github from "@/public/icon/github.svg";
+import Discord from "@/public/icon/discord.svg";
+import Medium from "@/public/icon/medium.svg";
+import Telegram from "@/public/icon/telegram.svg";
+import { StaticImageData } from "next/image";
 
 export interface FooterLink {
-  name: string
-  link: string
+  name: string;
+  link: string;
 }
 
 export interface FooterContent {
-  title: string
-  links: FooterLink[]
+  title: string;
+  links: FooterLink[];
 }
 
 export const FooterContent: FooterContent[] = [
   {
-    title: 'platform',
+    title: "platform",
     links: [
       {
-        name: 'consensus',
-        link: '/'
+        name: "consensus",
+        link: "/",
       },
       {
-        name: 'interoperable layer',
-        link: '/'
+        name: "interoperable layer",
+        link: "/",
       },
       {
-        name: 'EVM conspatibility',
-        link: '/'
+        name: "EVM compatibility",
+        link: "/",
       },
       {
-        name: 'network scan',
-        link: '/'
+        name: "network scan",
+        link: "/",
       },
-    ]
+    ],
   },
   {
-    title: 'projects',
+    title: "projects",
     links: [
       {
-        name: 'decentralized API\'s',
-        link: '/'
+        name: "decentralized API's",
+        link: "/",
       },
       {
-        name: 'wallet',
-        link: '/'
+        name: "wallet",
+        link: "/",
       },
       {
-        name: 'bridge',
-        link: '/'
+        name: "bridge",
+        link: "/",
       },
       {
-        name: 'RWA protocal',
-        link: '/'
+        name: "RWA protocol",
+        link: "/",
       },
-    ]
+    ],
   },
   {
-    title: 'build',
+    title: "build",
     links: [
       {
-        name: 'get started',
-        link: '/'
+        name: "get started",
+        link: "/",
       },
       {
-        name: 'docs',
-        link: '/'
+        name: "docs",
+        link: "/",
       },
       {
-        name: 'examples & toturials',
-        link: '/'
+        name: "examples & tutorials",
+        link: "/",
       },
       {
-        name: 'grants',
-        link: '/'
+        name: "grants",
+        link: "/",
       },
-    ]
+    ],
   },
   {
-    title: 'community',
+    title: "community",
     links: [
       {
-        name: 'govermance',
-        link: '/'
+        name: "governance",
+        link: "/",
       },
       {
-        name: 'social',
-        link: '/'
+        name: "social",
+        link: "/",
       },
       {
-        name: 'blog',
-        link: '/'
+        name: "blog",
+        link: "/",
       },
       {
-        name: 'whitepapers',
-        link: '/'
+        name: "whitepaper",
+        link: "/",
       },
       {
-        name: 'careers',
-        link: '/'
+        name: "careers",
+        link: "/",
       },
       {
-        name: 'contact us',
-        link: '/'
+        name: "contact us",
+        link: "/",
       },
-    ]
-  }
-]
+    ],
+  },
+];
 
 export interface FooterSocialLink {
-  icon: StaticImageData
-  link: string
+  icon: StaticImageData;
+  link: string;
 }
 
 export const FooterSocialLink: FooterSocialLink[] = [
   {
     icon: XTwitter,
-    link: '/'
+    link: "/",
   },
   {
     icon: Github,
-    link: '/'
+    link: "/",
   },
   {
     icon: Discord,
-    link: '/'
+    link: "/",
   },
   {
     icon: Medium,
-    link: '/'
+    link: "/",
   },
   {
     icon: Telegram,
-    link: '/'
-  }
-]
+    link: "/",
+  },
+];

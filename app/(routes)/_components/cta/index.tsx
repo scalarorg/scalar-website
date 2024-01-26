@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from "../../../../lib/utils";
+import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { HTMLAttributes } from "react";
 import { Input } from "@/components/ui/input";
@@ -12,7 +12,7 @@ import { HackathonMobile } from "@/app/(routes)/_components/cta/components/hacka
 import { Resolver, useForm } from "react-hook-form";
 
 const ctaVariants = cva(
-  "relative z-0 py-[117px]  gap-[60px] w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col items-center justify-around",
+  "relative z-0 py-[117px] gap-[60px] w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col items-center justify-around",
 );
 
 type CtaVariantProps = VariantProps<typeof ctaVariants>;
@@ -46,16 +46,15 @@ export function Cta({ className }: CtaProps) {
   return (
     <div className={ctaVariants({ className })}>
       {/* Hackathons & Grants Won Section */}
-      <div
-        className={cn(
-          "w-full flex flex-col gap-[24px] items-center px-5 md:px-0",
-        )}
-      >
-        <SectionTitle>Hackathons & Grants Won</SectionTitle>
+      <div className={cn("w-full flex flex-col gap-[24px] items-center")}>
+        <SectionTitle className={"max-sm:text-center"}>
+          Hackathons & <br className={"sm:hidden"} />
+          Grants Won
+        </SectionTitle>
 
         {/* Card Section */}
-        <Hackathon className={"max-lg:hidden"} />
-        <HackathonMobile className={"lg:hidden"} />
+        <Hackathon className={"max-lg:hidden container"} />
+        <HackathonMobile className={"lg:hidden container"} />
       </div>
 
       {/* Team Background */}
@@ -71,7 +70,7 @@ export function Cta({ className }: CtaProps) {
       </div>
 
       {/* Form Submit Email */}
-      <div className="flex flex-col px-[20px] gap-[44px] bg-transparent border-none md:w-[750px]">
+      <div className="flex flex-col container gap-[44px] bg-transparent border-none md:w-[750px]">
         <div className={cn("flex flex-col gap-[28px]")}>
           <label
             className={cn(
