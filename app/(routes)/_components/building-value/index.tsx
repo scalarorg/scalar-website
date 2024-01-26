@@ -13,8 +13,8 @@ const VALUES = [
   },
   {
     icon: "/icon/low-to-no.svg",
-    value: "< $0.001",
-    description: "Gas fees",
+    value: "20+ Chains",
+    description: "& EVN Compatible",
   },
   {
     icon: "/icon/hybrid.svg",
