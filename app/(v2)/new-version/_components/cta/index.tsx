@@ -53,18 +53,15 @@ export function Cta({ className }: CtaProps) {
               "font-bold text-[31px] md:[text-34px] leading-[46.5px] md:leading-[47.6px] text-neutral-1",
             )}
           >
-            Your <span className={cn("text-cyan-500")}>Business</span> Ready For
-            The Blockchain
+            Don't Miss Out,{" "}
+            <span className={cn("text-cyan-500")}>Subscribe</span> Today!
           </label>
           <label
-            className={cn(
-              "text-[18px] leading-[27px] text-neutral-4 text-left",
-            )}
+            className={cn("text-lg leading-[27px] text-neutral-4 text-left")}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. At sit ut
-            nulla eu stetur eget. Nec, ac, sollicitudin aliquam ut egestas duis
-            dolor. Congue suspendisse aliquam ut egestas duis dolor. Congue
-            suspendisse
+            Stay updated and be among the first to receive exciting
+            announcements, exclusive updates, and special offers from our
+            project. Join us at the forefront of new discoveries!
           </label>
         </div>
         <form className={cn("relative")}>

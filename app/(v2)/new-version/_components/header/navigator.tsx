@@ -213,7 +213,7 @@ export function Navigator({
                       <span>{subItem.title}</span>
                       <div
                         className={
-                          "absolute -right-0 transition-opacity top-1/2 opacity-0 group-hover/navigate:opacity-100 blur-[25px] -translate-y-1/2 w-[45px] h-[45px] rounded-full bg-[linear-gradient(265deg,#00FFBD_-5.84%,#025B8C_111.58%)]"
+                          "absolute -right-0 transition-opacity top-1/2 opacity-0 group-hover/navigate:opacity-100 blur-[12px] sm:blur-[25px] -translate-y-1/2 w-[20px] h-[20px] sm:w-[45px] sm:h-[45px] rounded-full bg-[linear-gradient(265deg,#00FFBD_-5.84%,#025B8C_111.58%)]"
                         }
                       ></div>
                     </Link>

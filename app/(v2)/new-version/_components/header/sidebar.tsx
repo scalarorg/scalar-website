@@ -12,6 +12,7 @@ import Logo from "@/public/icon/logo.svg";
 import LogoSmall from "@/public/icon/logo-small.svg";
 import { LongArrowRightIcon } from "@/components/icon/long-arrow-right";
 import CloseMobile from "@/public/icon/close-mobile.svg";
+import Link from "next/link";
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Sidebar
@@ -39,19 +40,21 @@ export function Sidebar({
       />
       <div
         className={cn(
-          "w-full top-0 fixed inset-x-0 container pt-[3vh] z-[8] bg-transparent invisible opacity-0 transition-opacity duration-700",
+          "w-full top-0 fixed inset-x-0 container pt-4 sm:pt-[3vh] z-[8] bg-transparent invisible opacity-0 transition-opacity duration-700",
           selected && "opacity-100 visible",
           "max-sm:hidden",
         )}
       >
         <div className={"max-w-full flex justify-between items-center"}>
-          <Image
-            src={LogoWhite}
-            width={124.59}
-            height={99.1}
-            className={"aspect-[124.59/99.1] w-[124.59px]"}
-            alt={"Scalar logo white"}
-          />
+          <Link href={"/"} passHref>
+            <Image
+              src={LogoWhite}
+              width={124.59}
+              height={99.1}
+              className={"aspect-[124.59/99.1] w-[124.59px]"}
+              alt={"Scalar logo white"}
+            />
+          </Link>
           <Image
             src={SidebarClose}
             alt={"Sidebar close"}
@@ -63,41 +66,49 @@ export function Sidebar({
       <div
         className={cn(
           "flex items-center justify-between container",
-          "w-full top-0 fixed inset-x-0 container mt-[48px] z-[8] bg-transparent invisible opacity-0 transition-opacity duration-700",
+          "w-full top-0 fixed inset-x-0 container mt-4 sm:mt-[48px] z-[8] bg-transparent invisible opacity-0 transition-opacity duration-700",
           selected && "opacity-100 visible",
           "sm:hidden",
         )}
       >
-        <Image
-          width={280}
-          height={30.86}
-          src={Logo}
-          className={"aspect-[280/30.86] max-md:w-[200px] max-sm:hidden"}
-          alt={"Scalar logo"}
-        />
-        <div className={"sm:hidden flex gap-2 items-center"}>
+        <Link className={"max-sm:hidden"} href={"/"} passHref>
           <Image
-            width={35}
-            height={27.84}
-            src={LogoSmall}
-            className={"aspect-[35/27.84]"}
+            width={280}
+            height={30.86}
+            src={Logo}
+            className={"aspect-[280/30.86] max-md:w-[200px]"}
             alt={"Scalar logo"}
           />
-          <div className={"text-[11px] font-bold text-neutral-3"}>
-            The Future of
-            <br />
-            Scalable
+        </Link>
+        <Link className={"sm:hidden"} href={"/"} passHref>
+          <div className={"flex gap-2 items-center"}>
+            <Image
+              width={35}
+              height={27.84}
+              src={LogoSmall}
+              className={"aspect-[35/27.84]"}
+              alt={"Scalar logo"}
+            />
+            <div className={"text-[11px] font-bold text-neutral-3"}>
+              The Future of
+              <br />
+              Scalable
+            </div>
           </div>
-        </div>
+        </Link>
 
         <div className={"flex gap-6 sm:gap-8 items-center"}>
           <button
             className={cn(
-              "xl:px-8 px-3 sm:px-4 md:px-6 xl:py-3 py-2 [border-image-slice:6] sm:[border-image-slice:5] [border-image-width:5px] [border-image-repeat:round] [border-image-source:url(/icon/border-gradient.svg)] font-bold text-sm sm:text-base md:text-lg text-white border-2 flex gap-2 sm:gap-2.5 items-center",
+              "xl:px-8 px-3 sm:px-4 md:px-6 xl:py-3 group/tokens py-2 [border-image-slice:6] sm:[border-image-slice:5] [border-image-width:5px] [border-image-repeat:round] [border-image-source:url(/icon/border-gradient.svg)] font-bold text-sm sm:text-base md:text-lg text-white border-2 flex gap-2 sm:gap-2.5 items-center",
             )}
           >
             <div>Explore tokens</div>
-            <LongArrowRightIcon className={"max-sm:w-4 aspect-[3/2]"} />
+            <LongArrowRightIcon
+              className={
+                "max-sm:w-4 aspect-[3/2] transition-transform group-hover/tokens:translate-x-1 sm:group-hover/tokens:translate-x-2"
+              }
+            />
           </button>
           <Image
             className={"w-[24px] h-[24px] cursor-pointer scale-125"}
@@ -109,7 +120,7 @@ export function Sidebar({
       </div>
       <div
         className={cn(
-          "w-full flex justify-end top-0 fixed inset-x-0 container mt-[20vh] z-[8] bg-transparent invisible opacity-0 transition-all duration-300",
+          "w-full flex justify-end top-0 fixed inset-x-0 container mt-[15vh] sm:mt-[20vh] z-[8] bg-transparent invisible opacity-0 transition-all duration-300",
           selected && "opacity-100 visible",
         )}
       >

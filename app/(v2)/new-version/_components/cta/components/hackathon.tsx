@@ -12,7 +12,7 @@ export function Hackathon({ className }: HTMLAttributes<HTMLDivElement>) {
   const [selected, setSelected] = useState(0);
   return (
     <div className={cn("container", className)}>
-      <div className={"flex max-md:flex-col relative z-0 overflow-hidden"}>
+      <div className={"flex relative z-0 overflow-hidden"}>
         <Image
           className={"absolute inset-0 -z-10"}
           src={HackathonBackground}
@@ -55,7 +55,6 @@ type HackathonItemProps = HackathonItemVariantProps &
 
 function HackathonItem({
   className,
-  children,
   icon,
   title,
   description,

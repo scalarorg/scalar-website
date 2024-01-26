@@ -8,34 +8,6 @@ import { flushSync } from "react-dom";
  * Component: InfoCarousel
  * ------------------------------------------------------------------------------------------------------------------ */
 
-const slides = [
-  {
-    title: "Lorem ipsum dolor sit",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Rhoncus metus ut etiam magna nunc vel amet. Condimentum duis quisque lacus eros fermentum sed. Et vitae est curabitur rhoncus iaculis elit scelerisque tristique.",
-  },
-  {
-    title: "Lorem ipsum dolor sit",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Rhoncus metus ut etiam magna nunc vel amet. Condimentum duis quisque lacus eros fermentum sed. Et vitae est curabitur rhoncus iaculis elit scelerisque tristique.",
-  },
-  {
-    title: "Lorem ipsum dolor sit",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Rhoncus metus ut etiam magna nunc vel amet. Condimentum duis quisque lacus eros fermentum sed. Et vitae est curabitur rhoncus iaculis elit scelerisque tristique.",
-  },
-  {
-    title: "Lorem ipsum dolor sit",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Rhoncus metus ut etiam magna nunc vel amet. Condimentum duis quisque lacus eros fermentum sed. Et vitae est curabitur rhoncus iaculis elit scelerisque tristique.",
-  },
-  {
-    title: "Lorem ipsum dolor sit",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Rhoncus metus ut etiam magna nunc vel amet. Condimentum duis quisque lacus eros fermentum sed. Et vitae est curabitur rhoncus iaculis elit scelerisque tristique.",
-  },
-];
-
 const TWEEN_FACTOR = 1.2;
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
@@ -43,7 +15,9 @@ const numberWithinRange = (number: number, min: number, max: number): number =>
 
 const infoCarouselVariants = cva("");
 
-type InfoCarouselVariantProps = VariantProps<typeof infoCarouselVariants>;
+type InfoCarouselVariantProps = VariantProps<typeof infoCarouselVariants> & {
+  content: { title: string; description: string }[];
+};
 
 type InfoCarouselProps = InfoCarouselVariantProps &
   Omit<HTMLAttributes<HTMLDivElement>, keyof InfoCarouselVariantProps>;
@@ -51,6 +25,7 @@ type InfoCarouselProps = InfoCarouselVariantProps &
 export function InfoCarousel({
   className,
   children,
+  content,
   ...props
 }: InfoCarouselProps): React.JSX.Element {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -111,11 +86,11 @@ export function InfoCarousel({
           "relative [mask-image:linear-gradient(90deg,rgba(196,196,196,0.00)_2.82%,rgba(196,196,196,0.40)_28.13%,#C4C4C4_33.19%,#C4C4C4_65.55%,rgba(196,196,196,0.40)_70.83%,rgba(196,196,196,0.00)_97.48%)]"
         }
       >
-        <div className="overflow-hidden max-w-3xl" ref={emblaRef}>
+        <div className="overflow-hidden max-w-5xl" ref={emblaRef}>
           <div className="flex touch-pan-y -ml-4 [backface-visibility:hidden]">
-            {slides.map((content, index) => (
+            {content.map((content, index) => (
               <div
-                className="flex-[0_0_80%] cursor-pointer min-w-0 pl-4 text-white space-y-2.5 max-w-xs"
+                className="flex-[0_0_90%] cursor-pointer min-w-0 pl-4 text-white space-y-2.5 max-w-sm"
                 key={index}
                 style={{
                   ...(tweenValues.length && { opacity: tweenValues[index] }),
