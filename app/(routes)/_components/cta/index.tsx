@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "../../../../lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { HTMLAttributes } from "react";
 import { Input } from "@/components/ui/input";
@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import SectionTitle from "@/components/ui/section-title";
 import { CarouselLogo } from "./components/carousel";
 import { Hackathon } from "./components/hackathon";
-import { HackathonMobile } from "@/app/(v2)/new-version/_components/cta/components/hackathon-mobile";
+import { HackathonMobile } from "@/app/(routes)/_components/cta/components/hackathon-mobile";
 
 const ctaVariants = cva(
   "relative z-0 py-[117px]  gap-[60px] w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col items-center justify-around",

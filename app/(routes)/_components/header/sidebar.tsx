@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import SidebarClose from "@/public/icon/sidebar-close.svg";
 import LogoWhite from "@/public/icon/logo-white.svg";
-import { Navigator } from "@/app/(v2)/new-version/_components/header/navigator";
+import { Navigator } from "@/app/(routes)/_components/header/navigator";
 import Logo from "@/public/icon/logo.svg";
 import LogoSmall from "@/public/icon/logo-small.svg";
 import CloseMobile from "@/public/icon/close-mobile.svg";

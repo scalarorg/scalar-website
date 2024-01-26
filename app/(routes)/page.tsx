@@ -1,36 +1,40 @@
-import { Header } from "./components/header";
-import { Hero } from "./components/hero";
-import { EnterUniverse } from "./components/enter-universe";
-import { Heart } from "./components/heart";
-import { Secured } from "./components/secured";
-import { BuildValue } from "@/app/(routes)/components/build-value";
+import { HeroSolarSystem } from "./_components/hero-solar-system";
+import { BuildingValue } from "./_components/building-value";
+import { Dag } from "./_components/dag";
 import Image from "next/image";
-import JoinBackground from "@/public/join-background.webp";
+import MilkyWay from "@/public/milky-way-1.webp";
+import { Cta } from "./_components/cta";
+import { Permissionless } from "./_components/permisstionless";
+import HighlightRight from "@/public/icon/highlight-right.svg";
+import HighlightLeft from "@/public/icon/highlight-left.svg";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="overflow-hidden text-white">
-      <div className="relative z-0">
-        <Header />
-        <Hero />
-      </div>
-      <div className="relative z-0">
-        <div className="gradient-1 max-sm:-translate-x-1/4 -z-10" />
-        <div className="gradient-2 z-0 max-sm:translate-x-1/2 max-sm:-translate-y-3/4 max-sm:scale-50" />
-        <EnterUniverse />
-        <Heart />
-      </div>
-      <div className="relative z-0">
+    <div className={"bg-black relative overflow-hidden"}>
+      <HeroSolarSystem className={"max-xl:hidden"} />
+      <div className={"relative"}>
         <Image
-          fill
-          src={JoinBackground}
-          className="-z-10 object-bottom object-cover"
-          alt="Join interchain background"
+          src={HighlightRight}
+          alt={"Highlight right"}
+          className={"absolute top-0 -right-[10%]"}
         />
-        <Secured />
-        {/*<JoinInterchain />*/}
-        <BuildValue />
+        <Image
+          src={HighlightLeft}
+          alt={"Highlight left"}
+          className={"absolute top-0 -left-[10%]"}
+        />
+        <BuildingValue />
+        <Image
+          src={MilkyWay}
+          alt={"Milky way"}
+          className={
+            "absolute w-full bottom-0 translate-y-1/2 -rotate-[10deg] left-1/2 -translate-x-1/2"
+          }
+        />
       </div>
-    </main>
+      <Dag />
+      <Permissionless />
+      <Cta />
+    </div>
   );
 }
