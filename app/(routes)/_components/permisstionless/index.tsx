@@ -1,8 +1,10 @@
+"use client"
+
 import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, useState } from "react";
 import SectionTitle from "@/components/ui/section-title";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
 import Image from "next/image";
 import MASSBIT from "@/public/massbit.webp"
 import MASSBIT_BACKGROUND_2 from "@/public/massbit-background-2.webp"
@@ -22,6 +24,7 @@ type permissionlessProps = permissionlessVariantProps & Omit<HTMLAttributes<HTML
 export function Permissionless({
   className
 }: permissionlessProps) {
+  const [isHovered, setHovered] = useState(false);
 
   return (
     <div className={permissionlessVariants({ className })}>
@@ -95,12 +98,29 @@ export function Permissionless({
           messages/data/assets between various chains.
         </p>
 
-        <button className={(cn("text-neutral-1 text-[18px] leading-[27px] lg:text-[34px] lg:leading-[47px] h-[27px] w-fit lg:w-[200px] flex gap-[10px] justify-between items-center border-none bg-transparent p-0 hover:opacity-80 transition-all"))}>
+        <button
+          className={(cn("text-neutral-1 text-[18px] leading-[27px] lg:text-[34px] lg:leading-[47px] h-[27px] w-fit lg:w-[260px] flex gap-[10px] items-center border-none bg-transparent p-0 hover:transition-all hover:ease-in-out hover:delay-500"))}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
+          <ChevronsLeft
+            width={20}
+            height={30}
+            className={cn(`pt-0.5 ${isHovered ? 'block transition-all ease-in-out delay-500' : 'hidden'}`)}
+          />
           Learn more
           <ChevronRight
             width={11}
             height={13}
-            className={cn("pt-0.5")} />
+            className={cn(`pt-0.5 ${isHovered && 'hidden'}`)}
+          />
+
+          <ChevronsRight
+            width={20}
+            height={30}
+            className={cn(`pt-0.5 ${isHovered ? 'block transition-all ease-in-out delay-500' : 'hidden'}`)}
+          />
+
         </button>
       </div>
     </div>
