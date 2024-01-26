@@ -12,7 +12,7 @@ export const HEART_ITEMS = [
   {
     title: "Dev-Friendly & Hack-Resistant",
     description:
-      "With a novel approach to horizontal scalability, Scalar minimizes the potential for developer errors and vulnerabilities. This enables faster iteration and a more secure environment for building cutting-edge applications.",
+      "Scalar minimizes the potential for developer errors and vulnerabilities. This enables faster iteration and a more secure environment for building cutting-edge applications.",
   },
   {
     title: "Seamless Interoperability: EVM & Non-EVM Chains",

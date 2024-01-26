@@ -14,7 +14,7 @@ export function Hackathon({ className }: HTMLAttributes<HTMLDivElement>) {
     <div className={cn("container", className)}>
       <div className={"flex relative z-0 overflow-hidden"}>
         <Image
-          className={"absolute inset-0 -z-10"}
+          className={"absolute inset-0 -z-10 brightness-75"}
           src={HackathonBackground}
           alt={"hackathon"}
         />

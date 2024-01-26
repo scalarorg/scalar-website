@@ -28,7 +28,11 @@ export function Header({
 }: HeaderProps): React.JSX.Element {
   return (
     <div {...props} className={headerVariants({ className })}>
-      <div className={"flex items-center justify-between container"}>
+      <div
+        className={
+          "flex items-center justify-between container max-sm:!px-[1rem]"
+        }
+      >
         <Link href={"/"} className={"max-sm:hidden"}>
           <Image
             width={280}
@@ -55,14 +59,14 @@ export function Header({
           </div>
         </Link>
 
-        <div className={"flex gap-4 sm:gap-6 lg:gap-8 items-center"}>
+        <div className={"flex gap-2 sm:gap-4 md:gap-6 lg:gap-8 items-center"}>
           <button
             className={cn(
-              "xl:px-8 hover:shadow-button-hover transition-all rounded-xl active:bg-neutral-12 px-3 sm:px-4 md:px-6 xl:py-3 py-2 [border-image-slice:6] sm:[border-image-slice:5] [border-image-width:5px] [border-image-repeat:round] [border-image-source:url(/icon/border-gradient.svg)] font-bold text-sm sm:text-base md:text-lg text-white border-2 flex gap-2 sm:gap-2.5 md:gap-4 lg:gap-6 xl:gap-8 items-center",
+              "xl:px-8 hover:shadow-button-hover transition-all rounded-xl active:bg-neutral-12 px-2 sm:px-4 md:px-6 xl:py-3 py-1.5 [border-image-slice:6] sm:[border-image-slice:5] [border-image-width:5px] [border-image-repeat:round] [border-image-source:url(/icon/border-gradient.svg)] font-bold text-sm sm:text-base md:text-lg text-white border-2 flex gap-2 sm:gap-2.5 md:gap-4 lg:gap-6 xl:gap-8 items-center",
             )}
           >
             <div>Explore more</div>
-            <ArrowTopRightIcon className={"w-3 aspect-square"} />
+            <ArrowTopRightIcon className={"w-2.5 sm:w-3 aspect-square"} />
           </button>
           <Sidebar />
         </div>

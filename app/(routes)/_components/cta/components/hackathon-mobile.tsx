@@ -79,7 +79,7 @@ function HackathonItem({
     >
       <Image
         className={
-          "absolute inset-0 object-center w-full h-full object-cover -z-10"
+          "absolute inset-0 object-center w-full h-full object-cover -z-10 brightness-75"
         }
         src={HackathonBackground}
         alt={"Hackathon background object-center"}

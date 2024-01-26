@@ -26,19 +26,19 @@ const CONTENTS = [
       "Our blockchain boasts a novel <span class='text-primary-cyan-500'>Directed Acyclic Graph (DAG)</span> structure supporting parallel transactions, ensuring lightning-fast transactions. With an ultra-light client, resource efficiency is maximized, ensuring seamless operation across devices.",
   },
   {
-    title: "Gas-free Future",
+    title: "Low to No Gas Fees",
     description:
       "Say goodbye to exorbitant gas fees. Scalar <span class='text-primary-cyan-500'>prioritizes</span> user <span class='text-primary-cyan-500'>accessibility</span> by keeping transaction costs low, ensuring that participating in the ecosystem remains accessible to all.",
   },
   {
-    title: "Revolutionizing Transactions",
+    title: "Parallel Transactions",
     description:
       "Scalar introduces <span class='text-primary-cyan-500'>non-sequential</span> transaction processing, unlocking the potential for higher throughput. Imagine two individuals sending funds simultaneously to two recipients, all executed optimistically and validated post-execution.",
   },
   {
     title: "Dev-Friendly & Hack-Resistant",
     description:
-      "With a novel approach to horizontal scalability, Scalar minimizes the potential for developer errors and vulnerabilities. This enables <span class='text-primary-cyan-500'>faster iteration</span> and a <span class='text-primary-cyan-500'>more secure</span> environment for building cutting-edge applications.",
+      "Scalar minimizes the potential for developer errors and vulnerabilities. This enables <span class='text-primary-cyan-500'>faster iteration</span> and a <span class='text-primary-cyan-500'>more secure</span> environment for building cutting-edge applications.",
   },
   {
     title: "Seamless Interoperability",

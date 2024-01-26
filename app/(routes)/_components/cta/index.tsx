@@ -1,4 +1,4 @@
-import { cn } from "../../../../lib/utils";
+import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { HTMLAttributes } from "react";
 import { Input } from "@/components/ui/input";
@@ -26,7 +26,10 @@ export function Cta({ className }: CtaProps) {
           "w-full flex flex-col gap-[24px] items-center px-5 md:px-0",
         )}
       >
-        <SectionTitle>Hackathons & Grants Won</SectionTitle>
+        <SectionTitle className={"max-sm:text-center"}>
+          Hackathons & <br className={"sm:hidden"} />
+          Grants Won
+        </SectionTitle>
 
         {/* Card Section */}
         <Hackathon className={"max-lg:hidden"} />
