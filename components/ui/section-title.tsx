@@ -1,9 +1,8 @@
-import { cn } from '@/lib/utils'
 import { VariantProps, cva } from 'class-variance-authority';
 import React, { HTMLAttributes } from 'react'
 
 const sectionTitleVariants = cva(
-  "text-white text-[31px] leading-[46.5px] lg:text-[48px] lg:leading-[66px] xl:text-[84px] xl:leading-[105px] font-bold",
+  "text-white text-[36px] leading-[52.5px] lg:text-[48px] lg:leading-[66px] xl:text-[84px] xl:leading-[105px] font-bold",
 );
 
 type sectionTitleVariantProps = VariantProps<typeof sectionTitleVariants>;
