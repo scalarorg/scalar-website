@@ -74,9 +74,9 @@ export const ScalarAdvantageContent: ScalarAdvantageContentItem[] = [
       }
     ],
     position: {
-      top: '[72px]',
-      left: '1/2',
-      transform: '1/2'
+      top: '72px',
+      left: '50%',
+      transform: 'translateX(-50%)'
     }
   },
   {
@@ -119,7 +119,7 @@ export const ScalarAdvantageContent: ScalarAdvantageContentItem[] = [
       }
     ],
     position: {
-      top: "[212px]",
+      top: "212px",
     }
   },
   {
@@ -162,7 +162,7 @@ export const ScalarAdvantageContent: ScalarAdvantageContentItem[] = [
       }
     ],
     position: {
-      top: "[212px]",
+      top: "212px",
       right: "0"
     }
   }

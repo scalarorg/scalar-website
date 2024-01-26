@@ -1,13 +1,7 @@
 import SectionTitle from '@/components/ui/section-title';
 import { cn } from '@/lib/utils'
 import { VariantProps, cva } from 'class-variance-authority';
-import React, { HTMLAttributes } from 'react'
-import LOGO_SMALL from '@/public/logo-small.webp'
-import SUI_MARK_SMALL from '@/public/sui-mark-small.webp'
-import APTOS_MARK_SMALL from '@/public/aptos-mark-small.webp'
-import LOGO from '@/public/icon/logo.svg'
-import SUI_MARK from '@/public/sui-mark.svg'
-import APTOS_MARK from '@/public/aptos-mark.svg'
+import React, { HTMLAttributes, useEffect, useState } from 'react'
 import ADVANTAGE_EARTH_SMALL from '@/public/advantage-earth-small.webp'
 import ADVANTAGE_MARS_SMALL from '@/public/advantage-mars-small.webp'
 import GROW_EFFECT from '@/public/grow-effect.svg'
@@ -27,6 +21,16 @@ type ScalarAdvantageVariantProps = VariantProps<typeof ScalarAdvantageVariants>;
 type ScalarAdvantageProps = ScalarAdvantageVariantProps & Omit<HTMLAttributes<HTMLDivElement>, keyof ScalarAdvantageVariantProps>;
 
 const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
+  const [widthScreen, setWidthScreen] = useState<number>(window.innerWidth)
+
+  const handleResizeWidth = () => setWidthScreen(window.innerWidth)
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResizeWidth);
+
+    return () => window.removeEventListener('resize', handleResizeWidth);
+  }, []);
+
   return (
     <div className={ScalarAdvantageVariants({ className })}>
       {/* Background */}
@@ -96,6 +100,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
             <AdvantageItem
               item={item}
               key={index}
+              size={widthScreen}
             />
           )}
         </div>

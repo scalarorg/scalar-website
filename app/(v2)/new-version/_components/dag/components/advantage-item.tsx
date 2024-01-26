@@ -1,48 +1,76 @@
 import { cn } from '@/lib/utils'
-import React from 'react'
+import React, { Fragment } from 'react'
 import Image from 'next/image';
 import { ScalarAdvantageContentItem } from '@/lib/constants/scalar-advantage-content';
 
 interface AdditionalProps {
-  item: ScalarAdvantageContentItem
+  item: ScalarAdvantageContentItem,
+  size: number
 }
 
-const AdvantageItem = ({ item }: AdditionalProps) => {
+const AdvantageItem = ({ item, size }: AdditionalProps) => {
   return (
-    <div
-      className={`grid grid-cols-2 lg:flex lg:flex-col lg:jusitfy-center gap-[24px] lg:gap-[40px] px-[30px] py-[18px] border-b lg:border-none border-neutral-12 z-10 lg:order-2 2xl:absolute 
-      ${item.position.top && `2xl:top-${item.position.top}`} 
-      ${item.position.bottom && `2xl:bottom-${item.position.bottom}`} 
-      ${item.position.left && `2xl:left-${item.position.left}`} 
-      ${item.position.right && `2xl:right-${item.position.right}`} 
-      ${item.position.transform && `2xl:-translate-x-${item.position.transform}`}
-    `}
-    >
-      <div className={cn("flex flex-col gap-[28px] item-start lg:gap-[40px] lg:items-center")}>
-        <Image
-          src={item.imageSmall.image}
-          width={item.imageSmall.width}
-          height={item.imageSmall.height}
-          alt='Logo'
-          className={cn('md:hidden select-none')}
-        />
+    <Fragment>
+      {/* Mobile */}
+      <div className={`grid grid-cols-2 lg:hidden gap-[24px] px-[30px] py-[18px] border-b border-neutral-12 z-10`}>
+        <div className={cn("flex flex-col gap-[28px] item-start")}>
+          <Image
+            src={item.imageSmall.image}
+            width={item.imageSmall.width}
+            height={item.imageSmall.height}
+            alt='Logo'
+            className={cn('md:hidden select-none')}
+          />
 
-        <Image
-          src={item.imageLarge.image}
-          width={item.imageLarge.width}
-          height={item.imageLarge.height}
-          alt='Logo'
-          className={cn('hidden md:block select-none')}
-        />
+          <Image
+            src={item.imageLarge.image}
+            width={item.imageLarge.width}
+            height={item.imageLarge.height}
+            alt='Logo'
+            className={cn('hidden md:block select-none')}
+          />
+        </div>
+
+        {item.dataMobile.map((item, i) => (
+          <div className={cn("flex flex-col")} key={i}>
+            <p className={cn("font-normal text-[16px] leading-[24px] text-neutral-6")}>{item.title}</p>
+            <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>{item.data}</label>
+          </div>
+        ))}
       </div>
 
-      {item.dataMobile.map((item, i) => (
-        <div className={cn("flex flex-col lg:items-center")} key={i}>
-          <p className={cn("font-normal text-[16px] leading-[24px] text-neutral-6")}>{item.title}</p>
-          <label className={cn("font-bold text-[20px] leading-[30px] text-white")}>{item.data}</label>
+      {/* Desktop */}
+      <div
+        className={`hidden lg:flex flex-col jusitfy-center gap-[40px] px-[30px] py-[18px] border-none z-10 2xl:absolute`}
+        style={size >= 1536 ? item.position : {}}
+      >
+        <div className={cn("flex flex-col gap-[40px] items-center")}>
+          <Image
+            src={item.imageSmall.image}
+            width={item.imageSmall.width}
+            height={item.imageSmall.height}
+            alt='Logo'
+            className={cn('md:hidden select-none')}
+          />
+
+          <Image
+            src={item.imageLarge.image}
+            width={item.imageLarge.width}
+            height={item.imageLarge.height}
+            alt='Logo'
+            className={cn('hidden md:block select-none')}
+          />
         </div>
-      ))}
-    </div>
+
+        {item.dataDesktop.map((item, i) => (
+          <div className={cn("flex flex-col items-center")} key={i}>
+            <p className={cn("font-normal text-[20px] leading-[30px] text-neutral-6")}>{item.title}</p>
+            <label className={cn("font-bold text-[28px] leading-[40px] text-white")}>{item.data}</label>
+          </div>
+        ))}
+      </div>
+    </Fragment>
+
   )
 }
 
