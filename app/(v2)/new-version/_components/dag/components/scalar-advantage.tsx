@@ -23,7 +23,7 @@ type ScalarAdvantageVariantProps = VariantProps<typeof ScalarAdvantageVariants>;
 type ScalarAdvantageProps = ScalarAdvantageVariantProps & Omit<HTMLAttributes<HTMLDivElement>, keyof ScalarAdvantageVariantProps>;
 
 const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
-  const [widthScreen, setWidthScreen] = useState<number>(() => (typeof window === 'undefined') ? 0 : window.innerWidth)
+  const [widthScreen, setWidthScreen] = useState<number>(() => (typeof window === 'undefined') ? 1540 : window.innerWidth)
 
   const handleResizeWidth = () => setWidthScreen(window.innerWidth)
 
