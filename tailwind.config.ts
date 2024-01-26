@@ -174,6 +174,7 @@ const config = {
       },
       backgroundImage: {
         star: "url('/star-background.svg')",
+        advantage: "url('/background-advantage.svg')",
       },
     },
   },

@@ -10,12 +10,14 @@ import { motion } from "framer-motion";
 import { figmaSlow } from "@/components/motion/transition";
 import EarthBacklight from "@/public/earth-backlight.webp";
 import EarthLight from "@/public/earth-light.webp";
+import MilkyWay from "@/public/milky-way-1.webp";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ScalarAdvantage from "./components/scalar-advantage";
 
 const CONTENTS = [
   {
@@ -52,6 +54,7 @@ export function Dag() {
 
   return (
     <Fragment>
+      {/* ====================================== DAG EARTH ======================================== */}
       {/*Mobile*/}
       <div
         className={
@@ -87,19 +90,28 @@ export function Dag() {
       {/*Desktop*/}
       <div
         className={
-          "relative z-0 2xl:h-[1458px] xl:h-[1200px] lg:h-[1000px] md:h-[800px] max-md:hidden"
+          "relative w-full z-0 2xl:h-[1458px] xl:h-[1200px] lg:h-[1000px] md:h-[800px] max-md:hidden"
         }
       >
         {/*Background*/}
         <Image
           src={DagBackground}
+          sizes="100vw"
           alt={"Dag background"}
-          className={"absolute inset-0 object-cover -z-10"}
+          className={"absolute w-full left-0 -z-10"}
         />
         <Image
           src={DagBackground}
+          sizes="100vw"
           alt={"Dag background"}
-          className={"absolute inset-0 object-cover -z-10"}
+          className={"absolute w-full left-0 -z-10"}
+        />
+
+        {/* Line Milky Way Background */}
+        <Image
+          src={MilkyWay}
+          alt={"Milky Way Line"}
+          className={"hidden lg:block absolute bottom-0 3xl:translate-y-[80%] w-full"}
         />
 
         {/*Earth*/}
@@ -167,15 +179,15 @@ export function Dag() {
                 "2xl:text-[28px] xl:text-xl lg:text-lg",
                 "2xl:max-w-[330px] xl:max-w-[210px] lg:max-w-[190px] md:max-w-[170px]",
                 index === 0 &&
-                  "md:translate-x-[80%] md:-translate-y-[120%] lg:translate-x-[85%] lg:-translate-y-[140%] lg:max-w-[190px] xl:translate-x-[90%] xl:-translate-y-[120%] 2xl:max-w-[325px] xl:max-w-[260px]",
+                "md:translate-x-[80%] md:-translate-y-[120%] lg:translate-x-[85%] lg:-translate-y-[140%] lg:max-w-[190px] xl:translate-x-[90%] xl:-translate-y-[120%] 2xl:max-w-[325px] xl:max-w-[260px]",
                 index === 1 && "translate-x-[130%] -translate-y-[80%]",
                 index === 2 && "translate-x-[125%] -translate-y-[5%]",
                 index === 3 &&
-                  "translate-x-[115%] translate-y-[60%] 2xl:max-w-[300px]",
+                "translate-x-[115%] translate-y-[60%] 2xl:max-w-[300px]",
                 index === 4 &&
-                  "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
+                "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
                 selected === index &&
-                  "text-neutral-1 scale-[105%] cursor-default select-none",
+                "text-neutral-1 scale-[105%] cursor-default select-none",
               )}
               transition={figmaSlow}
               style={{
@@ -222,6 +234,9 @@ export function Dag() {
           </SolarNavigate>
         </div>
       </div>
+
+      {/* ====================================== SCALAR ADVENTAGE ======================================== */}
+      <ScalarAdvantage />
     </Fragment>
   );
 }

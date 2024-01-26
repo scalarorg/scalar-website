@@ -99,7 +99,7 @@ export function Permissionless({
       <Image
         src={MASSBIT_BACKGROUND_LARGE}
         sizes="100vh"
-        className={cn('absolute hidden lg:block lg:w-3/5 xl:w-fit select-none right-0 top-1/2 -translate-y-1/2 -z-10')}
+        className={cn('absolute hidden lg:block lg:w-3/5 select-none right-0 top-1/2 -translate-y-1/2 -z-10')}
         alt=""
       />
     </div>
