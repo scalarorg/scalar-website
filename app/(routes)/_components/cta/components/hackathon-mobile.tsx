@@ -12,7 +12,7 @@ import HackathonBackground from "@/public/hackathon.webp";
  * Component: HackathonMobile
  * ------------------------------------------------------------------------------------------------------------------ */
 
-const hackathonMobileVariants = cva("container space-y-4");
+const hackathonMobileVariants = cva("space-y-4");
 
 type HackathonMobileVariantProps = VariantProps<typeof hackathonMobileVariants>;
 
