@@ -91,7 +91,7 @@ export function Permissionless({
       <div className={cn("lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-[278px] xl:left-[328px] md:w-[750px] flex flex-col gap-[16px] lg:gap-[45px]")}>
         <SectionTitle className="text-left">Permissionless Interoperability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3760F2] to-[#0EF1F1]">Massbit</span></SectionTitle>
 
-        <p className="text-[16px] leading-[24.5px] text-neutral-6 lg:text-[18px] lg:leading-[28px] xl:text-[22px] xl:leading-[33px]">
+        <p className="text-[16px] leading-[24.5px] text-neutral-6 lg:text-[18px] lg:leading-[28px] xl:text-[20px] xl:leading-[30px]">
           Scalar’s massbit serves as an interoperability protocol with planned support to connect <span className={cn("text-primary-cyan-500")}>over 20+ EVM</span> and <span className={cn("text-primary-cyan-500")}>non EVM blockchains</span>,
           providing developers the capability to create unified interoperable experiences. The protocol utilizes immutable on-chain
           standardized endpoints and a permissionless set of oracle nodes to facilitate the transfer of censorship-resistant

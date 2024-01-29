@@ -110,12 +110,17 @@ export function Cta({ className }: CtaProps) {
             <button
               type="submit"
               className={cn(
-                `absolute top-1/2 -translate-y-1/2 right-[20px] py-[6px] px-[20px] lg:py-[14px] lg:px-[32px] bg-primary-cyan-500 text-white rounded-lg border-2 border-primary-cyan-500 hover:text-white hover:bg-black font-bold
-                ${errors.email && 'bg-accent-warning-50 border-accent-warning-50'}                
-                `,
+                `absolute top-1/2 -translate-y-1/2 right-[16px] py-[6px] px-[20px] lg:py-[14px] lg:px-[32px] bg-primary-cyan-500 text-white rounded-lg border-2 border-primary-cyan-500 hover:text-white hover:bg-black font-bold
+                ${errors.email && 'bg-accent-warning-50 border-accent-warning-50 hover:bg-accent-warning-50'}                
+                `
               )}
+              disabled={errors.email && true}
             >
-              <span className="lg:text-[22px] lg:leading-[33px] lg:text-neutral-10">
+              <span
+                className={`lg:text-[22px] lg:leading-[33px] lg:text-neutral-10
+                ${errors.email && 'hover:text-neutral-10'} 
+                `}
+              >
                 Subscribe
               </span>
             </button>
