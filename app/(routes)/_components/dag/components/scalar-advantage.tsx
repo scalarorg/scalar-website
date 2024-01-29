@@ -19,7 +19,7 @@ import AdvantageItem from "./advantage-item";
 import { FadeIn } from "@/components/motion/fade-in";
 
 const ScalarAdvantageVariants = cva(
-  "relative z-10 flex justify-center mb-[60px] lg:h-[90vh] lg:pb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[160%]",
+  "relative flex z-0 justify-center mb-[60px] lg:h-[90vh] lg:pb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[160%]",
 );
 
 type ScalarAdvantageVariantProps = VariantProps<typeof ScalarAdvantageVariants>;
@@ -54,7 +54,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           alt=""
           sizes="100vw"
           className={cn(
-            "xl:hidden absolute select-none -z-10 max-sm:top-0 -top-[22%] -left-[30%]",
+            "xl:hidden pointer-events-none absolute select-none -z-10 max-sm:top-0 -top-[22%] -left-[30%]",
           )}
         />
         <Image
@@ -79,7 +79,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           alt=""
           sizes="100vw"
           className={cn(
-            "hidden xl:block absolute select-none -z-10 -top-1/2 xl:-top-[60%] -left-[140px]",
+            "hidden pointer-events-none xl:block absolute select-none -z-10 -top-1/2 xl:-top-[60%] -left-[140px]",
           )}
         />
 
