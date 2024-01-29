@@ -11,8 +11,12 @@ import ADVANTAGE_MARS_LARGE from "@/public/advantage-mars-large.svg";
 import ADVANTAGE_EARTH_LARGE from "@/public/advantage-earth-large.svg";
 import ADVANTAGE_MOON_LARGE from "@/public/advantage-moon-large.svg";
 import Image from "next/image";
-import { ScalarAdvantageContentDesktop, ScalarAdvantageContentMobile } from "@/lib/constants/scalar-advantage-content";
+import {
+  ScalarAdvantageContentDesktop,
+  ScalarAdvantageContentMobile,
+} from "@/lib/constants/scalar-advantage-content";
 import AdvantageItem from "./advantage-item";
+import { FadeIn } from "@/components/motion/fade-in";
 
 const ScalarAdvantageVariants = cva(
   "relative z-10 flex justify-center mb-[60px] lg:h-[90vh] lg:pb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[160%]",
@@ -37,7 +41,11 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
   }, []);
 
   return (
-    <div className={cn("w-full h-[100vh] bg-advantage bg-center bg-no-repeat bg-cover")}>
+    <div
+      className={cn(
+        "w-full h-[100vh] bg-advantage bg-center bg-no-repeat bg-cover",
+      )}
+    >
       <div className={ScalarAdvantageVariants({ className })}>
         {/* Background */}
         {/* Mobile */}
@@ -110,17 +118,36 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
         <div className="px-5 lg:px-0 py-[60px] w-full flex flex-col items-center gap-[16px] lg:gap-[64px] 2xl:gap-0 z-10 container lg:relative">
           <SectionTitle className="z-10">Scalar Advantage</SectionTitle>
 
-          <div className="lg:hidden w-full flex flex-col justify-between gap-[24px">
-            {ScalarAdvantageContentMobile.map((item, index) => (
-              <AdvantageItem item={item} key={index} size={widthScreen} />
-            ))}
-          </div>
+          <FadeIn
+            options={{
+              direction: "up",
+              duration: 0.65,
+              type: "tween",
+              delay: 0.2,
+            }}
+          >
+            <div className="lg:hidden w-full flex flex-col justify-between gap-[24px]">
+              {ScalarAdvantageContentMobile.map((item, index) => (
+                <AdvantageItem item={item} key={index} size={widthScreen} />
+              ))}
+            </div>
+          </FadeIn>
 
-          <div className="hidden w-full lg:flex flex-row justify-between lg:gap-0 2xl:relative">
-            {ScalarAdvantageContentDesktop.map((item, index) => (
-              <AdvantageItem item={item} key={index} size={widthScreen} />
-            ))}
-          </div>
+          <FadeIn
+            className={"relative w-full"}
+            options={{
+              direction: "up",
+              duration: 0.65,
+              type: "tween",
+              delay: 0.2,
+            }}
+          >
+            <div className="hidden w-full lg:flex flex-row justify-between lg:gap-0 2xl:relative">
+              {ScalarAdvantageContentDesktop.map((item, index) => (
+                <AdvantageItem item={item} key={index} size={widthScreen} />
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </div>
     </div>
