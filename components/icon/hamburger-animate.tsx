@@ -17,8 +17,8 @@ export const HamburgerAnimateIcon = ({ className, ...props }: any) => {
         isHover && "!items-start",
         className,
       )}
-      onHoverStart={(isHover) => setIsHover(true)}
-      onHoverEnd={(isHover) => setIsHover(false)}
+      onHoverStart={() => setIsHover(true)}
+      onHoverEnd={() => setIsHover(false)}
       {...props}
     >
       <div className={cn(line)}></div>
