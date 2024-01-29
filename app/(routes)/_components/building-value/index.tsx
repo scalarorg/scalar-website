@@ -4,6 +4,7 @@ import MilkyWay from "@/public/milky-way-1.webp";
 import Image from "next/image";
 import HeroBackgroundBottom from "@/public/hero-background-bottom.webp";
 import { cn } from "@/lib/utils";
+import { FadeIn } from "@/components/motion/fade-in";
 
 const VALUES = [
   {
@@ -14,7 +15,7 @@ const VALUES = [
   {
     icon: "/icon/low-to-no.svg",
     value: "20+ Chains",
-    description: "& EVN Compatible",
+    description: "& EVM Compatible",
   },
   {
     icon: "/icon/hybrid.svg",
@@ -62,26 +63,45 @@ export function BuildingValue() {
             "space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 xl:space-y-10 text-center flex flex-col items-center"
           }
         >
-          <h1
-            className={
-              "text-shadow-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-4xl !leading-normal sm:leading-normal"
-            }
+          <FadeIn
+            options={{
+              direction: "right",
+              duration: 0.65,
+              type: "tween",
+              delay: 0,
+            }}
           >
-            The Future of
-            <br />
-            Scalable <span className={"text-primary-cyan-500"}>Blockchain</span>
-          </h1>
-          <p
-            className={
-              "text-[13px] sm:text-base md:text-lg lg:text-xl xl:text-2xl text-neutral-1 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
-            }
+            <h1
+              className={
+                "text-shadow-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-4xl !leading-normal sm:leading-normal"
+              }
+            >
+              The Future of
+              <br />
+              Scalable{" "}
+              <span className={"text-primary-cyan-500"}>Blockchain</span>
+            </h1>
+          </FadeIn>
+          <FadeIn
+            options={{
+              direction: "right",
+              duration: 0.6,
+              type: "tween",
+              delay: 0.2,
+            }}
           >
-            <span className={"text-primary-cyan-500"}>
-              Redefine what’s possible
-            </span>{" "}
-            with limitless scalability, interconnectivity and unrivaled
-            throughput.
-          </p>
+            <p
+              className={
+                "text-[13px] sm:text-base md:text-lg lg:text-xl xl:text-2xl text-neutral-1 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
+              }
+            >
+              <span className={"text-primary-cyan-500"}>
+                Redefine what’s possible
+              </span>{" "}
+              with limitless scalability, interconnectivity and unrivaled
+              throughput.
+            </p>
+          </FadeIn>
         </div>
         <div className={"flex justify-center items-center"}>
           <div
@@ -90,13 +110,22 @@ export function BuildingValue() {
             }
           >
             {VALUES.map((value, index) => (
-              <ValueItem
-                className={cn(index % 2 === 0 && "md:justify-self-center")}
-                icon={value.icon}
-                value={value.value}
-                description={value.description}
+              <FadeIn
+                options={{
+                  direction: "right",
+                  duration: 0.6,
+                  type: "tween",
+                  delay: index % 2 === 0 ? 0 : 0.2,
+                }}
                 key={value.value}
-              />
+              >
+                <ValueItem
+                  className={cn(index % 2 === 0 && "md:justify-self-center")}
+                  icon={value.icon}
+                  value={value.value}
+                  description={value.description}
+                />
+              </FadeIn>
             ))}
           </div>
         </div>

@@ -11,19 +11,13 @@ import { Step2Content } from "@/app/(routes)/_components/hero-solar-system/step-
 import CENTER_RADIANT from "@/public/center-gradient.webp";
 import Mars from "@/public/mars.webp";
 import Mouse from "@/public/icon/mouse.svg";
-import VisualCue from "@/public/gif/visual-cue.gif";
 import { EXPLORE_ONE, EXPLORE_THREE } from "@/lib/constants/hero-explore";
 import MouseWhite from "@/public/icon/mouse-white.svg";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { figmaSlow } from "@/components/motion/transition";
 
-const planets = [
-  // "/mars.webp",
-  "/moon.webp",
-  "/earth-left.webp",
-  // "/earth-right.webp",
-];
+const planets = ["/moon.webp", "/earth-left.webp"];
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
   Math.min(Math.max(number, min), max);
@@ -193,7 +187,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
           <div
             className={cn(
               "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",
-              step !== 0 && "w-0",
+              (tweenValues[PLANET_CONTENT_INDEX] > 0.9 || step !== 0) && "w-0",
             )}
           ></div>
           <div
@@ -213,10 +207,33 @@ export function HeroSolarSystem({ className }: { className?: string }) {
           <div
             className={cn(
               "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",
-              step !== 0 && "w-0",
+              (tweenValues[PLANET_CONTENT_INDEX] > 0.9 || step !== 0) && "w-0",
             )}
           ></div>
         </div>
+      </div>
+      <div
+        className={cn(
+          "absolute bottom-28 left-32 hidden z-30",
+          tweenValues[PLANET_CONTENT_INDEX] > 0.9 && step == 0
+            ? "block animate-center-gradient-show"
+            : "animate-center-gradient-hide",
+        )}
+      >
+        <SolarNavigate
+          className={cn(
+            "opacity-0 transition-opacity text-white duration-500 delay-500",
+            tweenValues[PLANET_CONTENT_INDEX] > 0.9 &&
+              step === 0 &&
+              "opacity-100",
+          )}
+          onClick={() => {
+            emblaApi?.scrollTo(PLANET_CONTENT_INDEX - 1);
+          }}
+          variant={"next"}
+        >
+          Back
+        </SolarNavigate>
       </div>
 
       {/*Scroll Down*/}
@@ -244,30 +261,6 @@ export function HeroSolarSystem({ className }: { className?: string }) {
         </div>
       </div>
 
-      {/*Visual Cue*/}
-      <div
-        className={cn(
-          "transition-opacity opacity-0",
-          isEmblaRendered && "opacity-100",
-        )}
-      >
-        <Image
-          src={VisualCue}
-          alt={"Visual cue"}
-          className={cn(
-            "absolute right-[1%] top-1/2 z-20",
-            step === 0
-              ? "animate-center-gradient-show"
-              : "animate-center-gradient-hide",
-          )}
-          style={{
-            transform: `translateX(${
-              scrollProgress * -87
-            }vw) translateY(-50%) scale(55%)`,
-          }}
-        />
-      </div>
-
       {/*Slides*/}
       <div
         className={cn(
@@ -284,7 +277,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
                 `min-w-0 pl-4 relative transition-transform duration-1000 select-none ease-in-out`,
                 index === PLANET_CONTENT_INDEX && "cursor-pointer",
                 index !== PLANET_CONTENT_INDEX
-                  ? "cursor-grab"
+                  ? "cursor-pointer"
                   : step === 0
                   ? "cursor-pointer"
                   : "select-none",
@@ -313,7 +306,18 @@ export function HeroSolarSystem({ className }: { className?: string }) {
                 step == 0 && index === 0 ? "z-30" : "z-10",
               )}
               onClick={() => {
-                if (index !== PLANET_CONTENT_INDEX) return;
+                if (index !== PLANET_CONTENT_INDEX) {
+                  if (step === 0 && tweenValues[PLANET_CONTENT_INDEX] > 0.9) {
+                    emblaApi?.scrollTo(index);
+                    return;
+                  }
+                  emblaApi?.scrollTo(PLANET_CONTENT_INDEX);
+                  return;
+                }
+                if (step === 0 && tweenValues[PLANET_CONTENT_INDEX] < 0.9) {
+                  emblaApi?.scrollTo(PLANET_CONTENT_INDEX);
+                  return;
+                }
                 setStep((step) => (step === 3 ? 1 : step + 1));
               }}
               key={index}
@@ -359,6 +363,17 @@ export function HeroSolarSystem({ className }: { className?: string }) {
                   src={image}
                   alt="Your alt text"
                 />
+                <AnimatePresence initial>
+                  {step === 1 && index === PLANET_CONTENT_INDEX && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 0.5 }}
+                      exit={{ opacity: 0 }}
+                      transition={figmaSlow}
+                      className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[radial-gradient(69.53%_45.93%_at_49.99%_50.69%,#49A8FF_0%,#000_100%)] bg-fixed opacity-50 mix-blend-hard-light rounded-full scale-[80%]"
+                    ></motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
           ))}
@@ -366,6 +381,25 @@ export function HeroSolarSystem({ className }: { className?: string }) {
       </div>
 
       {/*Content Step 1*/}
+      <div
+        className={cn(
+          "absolute bottom-28 left-32 hidden",
+          step === 1 && "block",
+        )}
+      >
+        <SolarNavigate
+          className={cn(
+            "opacity-0 transition-opacity text-white duration-500 delay-500",
+            step === 1 && "opacity-100",
+          )}
+          onClick={() => {
+            setStep(0);
+          }}
+          variant={"next"}
+        >
+          Back
+        </SolarNavigate>
+      </div>
       <div className={cn("opacity-0", isEmblaRendered && "opacity-100")}>
         <div
           className={cn(
