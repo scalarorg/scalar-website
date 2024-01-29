@@ -15,7 +15,7 @@ import { ScalarAdvantageContentDesktop, ScalarAdvantageContentMobile } from "@/l
 import AdvantageItem from "./advantage-item";
 
 const ScalarAdvantageVariants = cva(
-  "relative z-10 flex justify-center mb-[60px] lg:h-screen lg:mb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[120%]",
+  "relative z-10 flex justify-center mb-[60px] lg:h-[90vh] lg:pb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[160%]",
 );
 
 type ScalarAdvantageVariantProps = VariantProps<typeof ScalarAdvantageVariants>;
@@ -93,7 +93,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           alt=""
           sizes="100vw"
           className={cn(
-            "hidden lg:block w-[234px] h-[247px] 2xl:w-[354px] 2xl:h-[367px] absolute select-none -z-10 left-0 bottom-0",
+            "hidden lg:block w-[234px] h-[247px] 2xl:w-[354px] 2xl:h-[367px] absolute select-none -z-10 -left-[30px] bottom-0",
           )}
         />
 
@@ -104,7 +104,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           width={477}
           height={456}
           className={cn(
-            "hidden lg:block w-[341px] h-[327px] 2xl:w-[477px] 2xl:h-[456px] absolute select-none -z-10 left-[283px] 2xl:left-[472px] -bottom-[18%] 2xl:-bottom-[26%]",
+            "hidden lg:block w-[341px] h-[327px] 2xl:w-[477px] 2xl:h-[456px] absolute select-none -z-10 left-[283px] 2xl:left-[593px] -bottom-[18%] 2xl:-bottom-[24%]",
           )}
         />
 
@@ -114,7 +114,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           width={392}
           height={404}
           className={cn(
-            "hidden lg:block w-[322px] h-[347px] 2xl:w-[392px] 2xl:h-[404px] absolute select-none -z-10 right-0 top-[30%]",
+            "hidden lg:block w-[322px] h-[347px] 2xl:w-[392px] 2xl:h-[404px] absolute select-none -z-10 -right-[64px] top-[18%]",
           )}
         />
 
