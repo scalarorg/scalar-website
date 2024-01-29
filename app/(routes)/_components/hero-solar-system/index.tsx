@@ -463,9 +463,9 @@ export function HeroSolarSystem({ className }: { className?: string }) {
         className={cn(
           "absolute bottom-28 right-32 hidden",
           step === 2 && "block",
-          step === 2
-            ? "animate-center-gradient-show"
-            : "animate-center-gradient-hide",
+          // step === 2
+          //   ? "animate-center-gradient-show"
+          //   : "animate-center-gradient-hide",
         )}
       >
         <SolarNavigate
