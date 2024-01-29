@@ -64,6 +64,7 @@ export function Cta({ className }: CtaProps) {
             type: "tween",
             delay: 0.1,
           }}
+          className={"w-full"}
         >
           <Hackathon className={"max-lg:hidden container"} />
           <HackathonMobile className={"lg:hidden container"} />
