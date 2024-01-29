@@ -37,11 +37,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
   }, []);
 
   return (
-    <div
-      className={cn(
-        "w-full bg-advantage bg-center bg-no-repeat bg-cover xl:bg-none xl:bg-transparent",
-      )}
-    >
+    <div className={cn("w-full h-[100vh] bg-advantage bg-center bg-no-repeat bg-cover")}>
       <div className={ScalarAdvantageVariants({ className })}>
         {/* Background */}
         {/* Mobile */}
@@ -75,15 +71,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           alt=""
           sizes="100vw"
           className={cn(
-            "hidden xl:block absolute select-none -z-10 -top-1/3 -left-[140px]",
-          )}
-        />
-        <Image
-          src={GROW_EFFECT}
-          alt=""
-          sizes="100vw"
-          className={cn(
-            "hidden xl:block absolute select-none -z-10 -top-1/3 -left-[140px]",
+            "hidden xl:block absolute select-none -z-10 -top-1/2 xl:-top-[60%] -left-[140px]",
           )}
         />
 
