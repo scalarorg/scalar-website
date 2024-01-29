@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { cva, VariantProps } from "class-variance-authority";
 import { Fragment, HTMLAttributes, useState } from "react";
-import { HamburgerIcon } from "@/components/icon/hamburger";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import SidebarClose from "@/public/icon/sidebar-close.svg";
@@ -13,6 +12,7 @@ import LogoSmall from "@/public/icon/logo-small.svg";
 import CloseMobile from "@/public/icon/close-mobile.svg";
 import Link from "next/link";
 import { ArrowTopRightIcon } from "@/components/icon/arrow-top-right";
+import { HamburgerAnimateIcon } from "@/components/icon/hamburger-animate";
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Sidebar
@@ -34,7 +34,7 @@ export function Sidebar({
   const [selected, setSelected] = useState(false);
   return (
     <Fragment>
-      <HamburgerIcon
+      <HamburgerAnimateIcon
         onClick={() => setSelected((selected) => !selected)}
         className={cn("text-white aspect-square max-sm:w-5 cursor-pointer")}
       />

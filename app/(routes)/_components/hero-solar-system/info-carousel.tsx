@@ -100,7 +100,7 @@ export function InfoCarousel({
     <div {...props} className={infoCarouselVariants({ className })}>
       <div
         className={
-          "relative [mask-image:linear-gradient(90deg,rgba(196,196,196,0.00)_2.82%,rgba(196,196,196,0.40)_28.13%,#C4C4C4_33.19%,#C4C4C4_65.55%,rgba(196,196,196,0.40)_70.83%,rgba(196,196,196,0.00)_97.48%)]"
+          "relative z-0 [mask-image:linear-gradient(90deg,rgba(196,196,196,0.00)_2.82%,rgba(196,196,196,0.40)_28.13%,#C4C4C4_33.19%,#C4C4C4_65.55%,rgba(196,196,196,0.40)_70.83%,rgba(196,196,196,0.00)_97.48%)]"
         }
       >
         <div className="overflow-hidden max-w-5xl" ref={emblaRef}>
@@ -120,6 +120,13 @@ export function InfoCarousel({
             ))}
           </div>
         </div>
+        {!showNavigation && (
+          <div
+            className={
+              "absolute -z-10 w-[150%] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 inset-0 h-[150%] bg-[rgba(5,5,5,30%)] blur-[100px]"
+            }
+          ></div>
+        )}
       </div>
       {showNavigation && (
         <div className={"flex gap-14 mt-10 justify-center"}>

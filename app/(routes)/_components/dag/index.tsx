@@ -129,7 +129,7 @@ export function Dag() {
             translateY: "-50%",
           }}
           style={{
-            rotate: `0deg`,
+            rotate: `-38deg`,
             animationDuration: "800ms",
           }}
           animate={{
@@ -163,7 +163,7 @@ export function Dag() {
             className="absolute inset-0 border-neutral-7 rounded-full border-dotted border-[3px]"
             transition={figmaSlow}
             style={{
-              rotate: `0deg`,
+              rotate: `-38deg`,
               animationDuration: "800ms",
             }}
             animate={{
