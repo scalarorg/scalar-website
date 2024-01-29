@@ -24,7 +24,7 @@ export default function FooterColumn({
     <div className={footerColumnVariants({ className })}>
       <label
         className={cn(
-          "capitalize text-[16px] xl:text-[22px] leading-6 xl:leading-[33px] font-bold text-gray-100",
+          "capitalize text-[16px] xl:text-[22px] leading-6 xl:leading-[33px] font-bold text-gray-100 hover:text-primary-cyan-500 cursor-pointer",
         )}
       >
         {column.title}
@@ -36,7 +36,7 @@ export default function FooterColumn({
             key={`footer-column-${i}-${item.name}`}
             href={item.link}
             className={cn(
-              "capitalize text-[13px] xl:text-[22px] leading-5 xl:leading-[33px] text-neutral-6 hover:text-white ease-linear transition-all",
+              "capitalize text-[13px] xl:text-[22px] leading-5 xl:leading-[33px] text-neutral-6 hover:text-primary-cyan-800 ease-linear transition-all",
             )}
           >
             {item.name}
