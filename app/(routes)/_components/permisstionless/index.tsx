@@ -13,7 +13,7 @@ import STAR_BACKGROUND from "@/public/star.webp"
 import MOON_BACKGROUND from "@/public/moon-background.webp"
 
 const permissionlessVariants = cva(
-  "bg-star_dark bg-no-repeat bg-cover xl:bg-transparent relative lg:h-screen pb-[120px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
+  "bg-star_dark bg-no-repeat bg-cover xl:bg-none relative lg:h-screen pb-[120px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
 );
 
 type permissionlessVariantProps = VariantProps<typeof permissionlessVariants>;
