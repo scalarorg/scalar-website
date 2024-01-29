@@ -10,6 +10,7 @@ import { CarouselLogo } from "./components/carousel";
 import { Hackathon } from "./components/hackathon";
 import { HackathonMobile } from "@/app/(routes)/_components/cta/components/hackathon-mobile";
 import { Resolver, useForm } from "react-hook-form";
+import { AlertTriangleIcon } from "lucide-react";
 
 const ctaVariants = cva(
   "relative z-0 py-[117px] gap-[60px] w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col items-center justify-around",
@@ -95,9 +96,9 @@ export function Cta({ className }: CtaProps) {
           onSubmit={onSubmit}
         >
           <div className={cn("relative")} >
-            <Input
+            <input
               className={cn(
-                `bg-transparent h-[48px] md:h-[93px] text-neutral-5 text-[18px] leading-[27px] flex justify-between items-center rounded-xl border border-primary-cyan-500 px-[16px] lg:py-[16px] focus:border-2 focus:border-primary-cyan-500 hover:border-primary-cyan-800 focus:shadow-primary-cyan-500
+                `w-full bg-transparent h-[48px] md:h-[93px] outline-none text-neutral-5 text-[18px] leading-[27px] px-[16px] lg:py-[16px] border border-primary-cyan-500 hover:border-primary-cyan-800 rounded-xl select:hidden hover:transition focus:border-2 fo focus:shadow-button-active focus:border-primary-cyan-500
                 ${errors.email && 'border-accent-warning-500'}
                 `
               )}
@@ -106,21 +107,25 @@ export function Cta({ className }: CtaProps) {
               {...register('email')}
             />
 
-            <Button
-              itemType="submit"
+            <button
+              type="submit"
               className={cn(
-                `absolute top-1/2 -translate-y-1/2 right-[20px] py-[6px] px-[20px] lg:py-[14px] lg:px-[32px] bg-primary-cyan-500 text-white rounded-lg border-none
-                ${errors.email && 'bg-accent-warning-50'}                
+                `absolute top-1/2 -translate-y-1/2 right-[20px] py-[6px] px-[20px] lg:py-[14px] lg:px-[32px] bg-primary-cyan-500 text-white rounded-lg border-2 border-primary-cyan-500 hover:text-white hover:bg-black font-bold
+                ${errors.email && 'bg-accent-warning-50 border-accent-warning-50'}                
                 `,
               )}
             >
               <span className="lg:text-[22px] lg:leading-[33px] lg:text-neutral-10">
                 Subscribe
               </span>
-            </Button>
+            </button>
           </div>
 
-          {errors?.email && <p className={cn("font-normal text-[18px] leading-[27px] text-accent-warning-500")}>{errors.email.message}</p>}
+          {errors?.email &&
+            <p className={cn("flex gap-[10px] font-normal text-[18px] leading-[27px] text-accent-warning-500")}>
+              <AlertTriangleIcon />
+              {errors.email.message}
+            </p>}
         </form>
       </div>
     </div>
