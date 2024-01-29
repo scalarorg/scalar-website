@@ -13,7 +13,7 @@ import STAR_BACKGROUND from "@/public/star.webp"
 import MOON_BACKGROUND from "@/public/moon-background.webp"
 
 const permissionlessVariants = cva(
-  "bg-star_dark bg-no- bg-cover xl:bg-transparent relative lg:h-screen pb-[120px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
+  "bg-star_dark bg-no-repeat bg-cover xl:bg-transparent relative lg:h-screen pb-[120px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
 );
 
 type permissionlessVariantProps = VariantProps<typeof permissionlessVariants>;
@@ -81,14 +81,14 @@ export function Permissionless({
       {/* Background Right */}
       <Image
         src={MASSBIT_BACKGROUND_LARGE}
-        sizes="100vh"
-        className={cn('absolute hidden lg:block lg:w-3/5 select-none right-0 top-1/2 -translate-y-1/2 -z-10')}
+        sizes="100vw"
+        className={cn('absolute hidden lg:block lg:w-1/2 select-none right-0 top-1/2 -translate-y-1/2 -z-10')}
         alt=""
       />
 
 
       {/* Block Content */}
-      <div className={cn("lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-[278px] xl:left-[328px] md:w-[660px] xl:w-[750px] flex flex-col gap-[16px] lg:gap-[45px]")}>
+      <div className={cn("lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-[278px] xl:left-[328px] md:w-[750px] flex flex-col gap-[16px] lg:gap-[45px]")}>
         <SectionTitle className="text-left">Permissionless Interoperability <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3760F2] to-[#0EF1F1]">Massbit</span></SectionTitle>
 
         <p className="text-[16px] leading-[24.5px] text-neutral-6 lg:text-[18px] lg:leading-[28px] xl:text-[22px] xl:leading-[33px]">

@@ -11,11 +11,11 @@ import ADVANTAGE_MARS_LARGE from "@/public/advantage-mars-large.svg";
 import ADVANTAGE_EARTH_LARGE from "@/public/advantage-earth-large.svg";
 import ADVANTAGE_MOON_LARGE from "@/public/advantage-moon-large.svg";
 import Image from "next/image";
-import { ScalarAdvantageContent } from "@/lib/constants/scalar-advantage-content";
+import { ScalarAdvantageContentDesktop, ScalarAdvantageContentMobile } from "@/lib/constants/scalar-advantage-content";
 import AdvantageItem from "./advantage-item";
 
 const ScalarAdvantageVariants = cva(
-  "relative z-10 flex justify-center mb-[60px] lg:h-screen lg:mb-[220px] border-0 lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[120%]",
+  "relative z-10 flex justify-center mb-[60px] lg:h-screen lg:mb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[120%]",
 );
 
 type ScalarAdvantageVariantProps = VariantProps<typeof ScalarAdvantageVariants>;
@@ -119,11 +119,17 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
         />
 
         {/* Block content */}
-        <div className="px-5 lg:px-0 py-[60px] w-full flex flex-col items-center gap-[16px] z-10 container lg:relative">
+        <div className="px-5 lg:px-0 py-[60px] w-full flex flex-col items-center gap-[16px] lg:gap-[64px] 2xl:gap-0 z-10 container lg:relative">
           <SectionTitle className="z-10">Scalar Advantage</SectionTitle>
 
-          <div className="w-full flex flex-col lg:flex-row justify-between gap-[24px] lg:gap-0 2xl:relative">
-            {ScalarAdvantageContent.map((item, index) => (
+          <div className="lg:hidden w-full flex flex-col justify-between gap-[24px">
+            {ScalarAdvantageContentMobile.map((item, index) => (
+              <AdvantageItem item={item} key={index} size={widthScreen} />
+            ))}
+          </div>
+
+          <div className="hidden w-full lg:flex flex-row justify-between lg:gap-0 2xl:relative">
+            {ScalarAdvantageContentDesktop.map((item, index) => (
               <AdvantageItem item={item} key={index} size={widthScreen} />
             ))}
           </div>

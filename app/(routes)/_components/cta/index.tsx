@@ -70,7 +70,7 @@ export function Cta({ className }: CtaProps) {
       </div>
 
       {/* Form Submit Email */}
-      <div className="flex flex-col container gap-[44px] bg-transparent border-none md:w-[750px]">
+      <div className="flex flex-col container gap-[44px] bg-transparent border-none md:w-[750px] md:px-0">
         <div className={cn("flex flex-col gap-[28px]")}>
           <label
             className={cn(

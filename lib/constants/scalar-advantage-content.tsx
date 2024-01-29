@@ -26,27 +26,19 @@ export interface ImageData {
 }
 
 export interface ScalarAdvantageContentItem {
-  imageSmall: ImageData;
-  imageLarge: ImageData;
-  dataMobile: ScalarAdvantageContentData[];
-  dataDesktop: ScalarAdvantageContentData[];
+  image: ImageData;
+  data: ScalarAdvantageContentData[];
   position: PositionItem;
 }
 
-export const ScalarAdvantageContent: ScalarAdvantageContentItem[] = [
+export const ScalarAdvantageContentMobile: ScalarAdvantageContentItem[] = [
   {
-    imageSmall: {
-      // image: LOGO_SMALL,
+    image: {
       image: LOGO_COLOR,
       width: 50.29,
       height: 40,
     },
-    imageLarge: {
-      image: LOGO,
-      width: 280,
-      height: 32,
-    },
-    dataMobile: [
+    data: [
       {
         title: "Transactional Throughout",
         data: "20 fps",
@@ -60,7 +52,95 @@ export const ScalarAdvantageContent: ScalarAdvantageContentItem[] = [
         data: "Parallelized",
       },
     ],
-    dataDesktop: [
+    position: {
+      top: "72px",
+      left: "50%",
+      transform: "translateX(-50%)",
+    },
+  },
+  {
+    image: {
+      image: SUI_MARK_SMALL,
+      width: 31,
+      height: 39,
+    },
+    data: [
+      {
+        title: "Transactional Throughout",
+        data: "20 fps",
+      },
+      {
+        title: "Transactional Finality",
+        data: "380 ms",
+      },
+      {
+        title: "Processing style",
+        data: "Parallelized",
+      },
+    ],
+    position: {
+      top: "212px",
+    },
+  },
+  {
+    image: {
+      image: APTOS_MARK_SMALL,
+      width: 40,
+      height: 39,
+    },
+    data: [
+      {
+        title: "Transactional Throughout",
+        data: "20 fps",
+      },
+      {
+        title: "Transactional Finality",
+        data: "380 ms",
+      },
+      {
+        title: "Processing style",
+        data: "Parallelized",
+      },
+    ],
+    position: {
+      top: "212px",
+      right: "0",
+    },
+  },
+];
+
+export const ScalarAdvantageContentDesktop: ScalarAdvantageContentItem[] = [
+  {
+    image: {
+      image: SUI_MARK,
+      width: 100,
+      height: 46,
+    },
+    data: [
+      {
+        title: "Transactions per second",
+        data: "120,000",
+      },
+      {
+        title: "Average fee per transaction",
+        data: "<$0.015",
+      },
+      {
+        title: "New blockchain deployable",
+        data: "No",
+      },
+    ],
+    position: {
+      top: "212px",
+    },
+  },
+  {
+    image: {
+      image: LOGO,
+      width: 280,
+      height: 32,
+    },
+    data: [
       {
         title: "Transactions per second",
         data: "240,000",
@@ -81,74 +161,12 @@ export const ScalarAdvantageContent: ScalarAdvantageContentItem[] = [
     },
   },
   {
-    imageSmall: {
-      image: SUI_MARK_SMALL,
-      width: 31,
-      height: 39,
-    },
-    imageLarge: {
-      image: SUI_MARK,
-      width: 100,
-      height: 46,
-    },
-    dataMobile: [
-      {
-        title: "Transactional Throughout",
-        data: "20 fps",
-      },
-      {
-        title: "Transactional Finality",
-        data: "380 ms",
-      },
-      {
-        title: "Processing style",
-        data: "Parallelized",
-      },
-    ],
-    dataDesktop: [
-      {
-        title: "Transactions per second",
-        data: "120,000",
-      },
-      {
-        title: "Average fee per transaction",
-        data: "<$0.015",
-      },
-      {
-        title: "New blockchain deployable",
-        data: "No",
-      },
-    ],
-    position: {
-      top: "212px",
-    },
-  },
-  {
-    imageSmall: {
-      image: APTOS_MARK_SMALL,
-      width: 40,
-      height: 39,
-    },
-    imageLarge: {
+    image: {
       image: APTOS_MARK,
       width: 146,
       height: 36,
     },
-    dataMobile: [
-      {
-        title: "Transactional Throughout",
-        data: "20 fps",
-      },
-      {
-        title: "Transactional Finality",
-        data: "380 ms",
-      },
-      {
-        title: "Processing style",
-        data: "Parallelized",
-      },
-    ],
-    dataDesktop: [
+    data: [
       {
         title: "Transactions per second",
         data: "160,000",
