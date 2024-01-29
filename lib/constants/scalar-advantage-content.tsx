@@ -40,16 +40,16 @@ export const ScalarAdvantageContentMobile: ScalarAdvantageContentItem[] = [
     },
     data: [
       {
-        title: "Transactional Throughout",
-        data: "20 fps",
+        title: "Transactions per second",
+        data: "120,000",
       },
       {
-        title: "Transactional Finality",
-        data: "380 ms",
+        title: "Average fee per transaction",
+        data: "<$0.015",
       },
       {
-        title: "Processing style",
-        data: "Parallelized",
+        title: "New blockchain deployable",
+        data: "No",
       },
     ],
     position: {
@@ -66,16 +66,16 @@ export const ScalarAdvantageContentMobile: ScalarAdvantageContentItem[] = [
     },
     data: [
       {
-        title: "Transactional Throughout",
-        data: "20 fps",
+        title: "Transactions per second",
+        data: "240,000",
       },
       {
-        title: "Transactional Finality",
-        data: "380 ms",
+        title: "Average fee per transaction",
+        data: "<$0.0001",
       },
       {
-        title: "Processing style",
-        data: "Parallelized",
+        title: "New blockchain deployable",
+        data: "Yes",
       },
     ],
     position: {
@@ -90,16 +90,16 @@ export const ScalarAdvantageContentMobile: ScalarAdvantageContentItem[] = [
     },
     data: [
       {
-        title: "Transactional Throughout",
-        data: "20 fps",
+        title: "Transactions per second",
+        data: "160,000",
       },
       {
-        title: "Transactional Finality",
-        data: "380 ms",
+        title: "Average fee per transaction",
+        data: "<$0.0003",
       },
       {
-        title: "Processing style",
-        data: "Parallelized",
+        title: "New blockchain deployable",
+        data: "No",
       },
     ],
     position: {
