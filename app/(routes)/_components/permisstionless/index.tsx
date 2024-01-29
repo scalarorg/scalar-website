@@ -13,7 +13,7 @@ import STAR_BACKGROUND from "@/public/star.webp"
 import MOON_BACKGROUND from "@/public/moon-background.webp"
 
 const permissionlessVariants = cva(
-  "relative lg:h-screen pb-[120px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
+  "bg-star_dark bg-no- bg-cover xl:bg-transparent relative lg:h-screen pb-[120px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
 );
 
 type permissionlessVariantProps = VariantProps<typeof permissionlessVariants>;
@@ -41,7 +41,7 @@ export function Permissionless({
       <Image
         src={MASSBIT}
         sizes="100vw"
-        className={cn('absolute select-none right-0 -top-[0] md:w-3/5 md:-top-3/4  lg:right-0 -z-10 lg:hidden')}
+        className={cn('absolute select-none right-0 -top-[60px] md:w-3/5 md:-top-3/4 lg:right-0 -z-10 lg:hidden')}
         alt=""
       />
 

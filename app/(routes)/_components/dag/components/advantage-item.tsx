@@ -12,7 +12,7 @@ const AdvantageItem = ({ item, size }: AdditionalProps) => {
   return (
     <Fragment>
       {/* Mobile */}
-      <div className={`grid grid-cols-2 lg:hidden gap-[10px] px-[30px] py-[18px] border-b border-neutral-12 z-10`}>
+      <div className={`grid grid-cols-2 lg:hidden gap-[10px] px-[30px] py-[18px] border-dashed border-b border-neutral-12 z-10`}>
         <div className={cn("flex flex-col gap-[28px] item-start")}>
           <Image
             src={item.imageSmall.image}

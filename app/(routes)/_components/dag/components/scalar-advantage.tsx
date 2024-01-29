@@ -58,7 +58,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           alt="Earth"
           width={98}
           height={121}
-          className={cn("lg:hidden absolute -right-[10px] top-1/4 z-0")}
+          className={cn("lg:hidden absolute -right-[10px] top-[28%] z-0")}
         />
 
         <Image
@@ -66,7 +66,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           alt="Mars"
           width={60}
           height={63}
-          className={cn("lg:hidden absolute left-0 bottom-[102px] z-0")}
+          className={cn("lg:hidden absolute left-0 bottom-[27%] z-0")}
         />
 
         {/* Desktop */}
