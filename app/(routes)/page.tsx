@@ -7,6 +7,7 @@ import { Cta } from "./_components/cta";
 import { Permissionless } from "./_components/permisstionless";
 import HighlightRight from "@/public/icon/highlight-right.svg";
 import HighlightLeft from "@/public/icon/highlight-left.svg";
+import Framework from "./_components/framework";
 
 export default function HomePage() {
   return (
@@ -31,6 +32,7 @@ export default function HomePage() {
             "absolute w-full bottom-0 translate-y-1/2 -rotate-[10deg] left-1/2 -translate-x-1/2"
           }
         />
+        <Framework />
       </div>
       <Dag />
       <Permissionless />
