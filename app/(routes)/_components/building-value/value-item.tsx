@@ -44,7 +44,7 @@ export function ValueItem({
         >
           {value}
         </div>
-        <div className={"text-base lg:text-lg"}>{description}</div>
+        <div className={"text-sm sm:text-base lg:text-lg"}>{description}</div>
       </div>
     </div>
   );

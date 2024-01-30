@@ -6,12 +6,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import ArrowLeftGradient from "@/public/icon/arrow-left-gradient.svg";
 import Image from "next/image";
 import { XIcon } from "@/components/icon/x";
-import { GithubIcon } from "@/components/icon/github";
 import { DiscordIcon } from "@/components/icon/discord";
-import { MediumIcon } from "@/components/icon/medium";
 import { TelegramIcon } from "@/components/icon/telegram";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { DISCORD_URL, TELEGRAM_URL, X_URL } from "@/lib/constants/links";
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Navigator
@@ -226,34 +225,42 @@ export function Navigator({
       ))}
       <div
         key={"social"}
-        className={"flex gap-4 sm:gap-[33px] justify-end items-center"}
+        className={
+          "flex gap-4 sm:gap-[33px] justify-end items-center text-black"
+        }
       >
         {/*TODO: Update social icons with real links*/}
-        <XIcon
-          className={
-            "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
-          }
-        />
-        <GithubIcon
-          className={
-            "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
-          }
-        />
-        <DiscordIcon
-          className={
-            "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
-          }
-        />
-        <MediumIcon
-          className={
-            "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
-          }
-        />
-        <TelegramIcon
-          className={
-            "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
-          }
-        />
+        <Link href={X_URL} target={"_blank"}>
+          <XIcon
+            className={
+              "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
+            }
+          />
+        </Link>
+        {/*<GithubIcon*/}
+        {/*  className={*/}
+        {/*    "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"*/}
+        {/*  }*/}
+        {/*/>*/}
+        <Link href={DISCORD_URL} target={"_blank"}>
+          <DiscordIcon
+            className={
+              "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
+            }
+          />
+        </Link>
+        {/*<MediumIcon*/}
+        {/*  className={*/}
+        {/*    "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"*/}
+        {/*  }*/}
+        {/*/>*/}
+        <Link href={TELEGRAM_URL} target={"_blank"}>
+          <TelegramIcon
+            className={
+              "cursor-pointer w-6 sm:w-[33px] aspect-[33/34.32] transition-colors hover:text-neutral-1"
+            }
+          />
+        </Link>
       </div>
     </div>
   );

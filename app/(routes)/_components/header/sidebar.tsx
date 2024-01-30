@@ -132,7 +132,9 @@ export function Sidebar({
         )}
       >
         <motion.span
-          className={"fixed top-[5vh] right-[14vw] aspect-square w-[27px]"}
+          className={
+            "fixed top-[5vh] max-sm:opacity-50 right-[14vw] aspect-square w-[27px]"
+          }
           style={{
             animationDuration: "1000ms",
             animationTimingFunction: "ease",
