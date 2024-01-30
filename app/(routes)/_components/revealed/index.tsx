@@ -1,7 +1,10 @@
 import { FadeIn } from "@/components/motion/fade-in";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
+import Image from "next/image";
 import React, { HTMLAttributes } from "react";
+import REVEALED__VIDEO_PREVIEW from '@/public/scalar-revealed-preview.svg'
 
 const RevealedVariants = cva(
   "w-full flex flex-col lg:flex-row gap-[60px] lg:items-center justify-center px-5 py-[192px] z-0",
@@ -35,14 +38,42 @@ export default function Revealed({ className }: RevealedProps) {
           delay: .6,
         }}
       >
-        <iframe
-          src="https://player.vimeo.com/video/880633911?h=1bba3547a9"
-          title="video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          className={cn("rounded-[24px] border border-neutral-6 w-full max-w-[628px] lg:w-[628px] aspect-video z-10 mx-auto")}
-        >
-        </iframe>
+        <Dialog>
+          <DialogTrigger asChild>
+            <button
+              title="video player"
+              className={cn("relative rounded-[24px] border border-neutral-6 w-full max-w-[628px] lg:w-[628px] aspect-video z-10 mx-auto overflow-hidden")}
+            >
+              <Image
+                sizes="100vw"
+                className={cn("absolute left-0 right-0 top-0 bottom-0")}
+                src={REVEALED__VIDEO_PREVIEW}
+                alt="preview"
+              />
+
+              <div className={cn("flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[126px] h-[126px] rounded-full bg-primary-cyan-50 shadow-inner")}>
+                <div className={cn("flex items-center justify-center w-[67.85px] h-[67.85px]")}>
+                  <Image
+                    width={33}
+                    height={25.21}
+                    src='/icon/play.svg'
+                    alt="Play icon"
+                  />
+                </div>
+              </div>
+            </button>
+          </DialogTrigger>
+
+          <DialogContent className="w-full">
+            <iframe
+              src="https://player.vimeo.com/video/880633911?h=1bba3547a9"
+              title="video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className={cn("rounded-[24px] border border-neutral-6 w-full max-w-[628px] lg:w-[628px] aspect-video z-10 mx-auto")}
+            />
+          </DialogContent>
+        </Dialog>
       </FadeIn>
     </div>
   );
