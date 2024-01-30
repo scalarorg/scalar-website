@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { LayoutGroup, motion } from "framer-motion";
 import { figmaGentle } from "@/components/motion/transition";
 import { HACKATHON_CONTENT } from "@/lib/constants/hackathon";
+import Expand from "@/public/icon/expand.svg";
 
 export function Hackathon({ className }: HTMLAttributes<HTMLDivElement>) {
   const [selected, setSelected] = useState(0);
@@ -66,7 +67,7 @@ function HackathonItem({
       layout
       className={cn(
         hackathonItemVariants({ className }),
-        !selected ? "overflow-hidden cursor-pointer" : "",
+        !selected ? "overflow-hidden cursor-pointer relative" : "",
       )}
       transition={figmaGentle}
       style={{ flex: selected ? 2 : 1, animationDuration: "0.8s" }}
@@ -86,6 +87,14 @@ function HackathonItem({
           </div>
         </div>
       </div>
+      <Image
+        src={Expand}
+        alt={"Expand icon"}
+        className={cn(
+          "absolute bottom-10 right-10 hover:scale-105 opacity-100 duration-500 transition-[transform,opacity]",
+          selected && "opacity-0",
+        )}
+      />
     </motion.div>
   );
 }
