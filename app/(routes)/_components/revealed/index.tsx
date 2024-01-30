@@ -14,7 +14,7 @@ type RevealedProps = RevealedVariantProps & Omit<HTMLAttributes<HTMLDivElement>,
 export default function Revealed({ className }: RevealedProps) {
   return (
     <div className={RevealedVariants({ className })}>
-      <label className={cn('font-bold text-[30px] leading-[45px] lg:text-[43px] lg:leading-[55.9px] w-[631px]')}>
+      <label className={cn('font-bold text-[30px] leading-[45px] lg:text-[43px] lg:leading-[55.9px] max-w-[631px]')}>
         <FadeIn
           options={{
             direction: "left",
@@ -40,7 +40,7 @@ export default function Revealed({ className }: RevealedProps) {
           title="video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-          className={cn("rounded-[24px] border border-neutral-6 w-full lg:w-[628px] aspect-video z-10")}
+          className={cn("rounded-[24px] border border-neutral-6 w-full max-w-[628px] lg:w-[628px] aspect-video z-10 mx-auto")}
         >
         </iframe>
       </FadeIn>
