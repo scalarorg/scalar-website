@@ -29,11 +29,11 @@ const resolver: Resolver<FormValues> = async (values) => {
     values: values.email ? values : {},
     errors: !values.email
       ? {
-          email: {
-            type: "required",
-            message: "This is required.",
-          },
-        }
+        email: {
+          type: "required",
+          message: "This is required.",
+        },
+      }
       : {},
   };
 };
@@ -147,11 +147,10 @@ export function Cta({ className }: CtaProps) {
               <button
                 type="submit"
                 className={cn(
-                  `absolute top-1/2 -translate-y-1/2 right-[16px] py-[6px] px-[20px] lg:py-[14px] lg:px-[32px] bg-primary-cyan-500 text-white rounded-lg border border-primary-cyan-500 hover:text-white hover:bg-black font-bold hover:transition-all duration-500 lg:text-neutral-10 lg:hover:text-primary-cyan-500 hover:shadow-button-hover
-                ${
-                  errors.email &&
+                  `absolute top-1/2 -translate-y-1/2 right-2.5 lg:right-[16px] py-[6px] px-[20px] lg:py-[14px] lg:px-[32px] bg-primary-cyan-500 text-white rounded-lg border border-primary-cyan-500 hover:text-white hover:bg-black font-bold hover:transition-all duration-500 lg:text-neutral-10 lg:hover:text-primary-cyan-500 hover:shadow-button-hover
+                ${errors.email &&
                   "bg-accent-warning-50 border-accent-warning-50 hover:bg-accent-warning-50 lg:hover:text-neutral-10"
-                }                
+                  }                
                 `,
                 )}
                 disabled={errors.email && true}
