@@ -185,7 +185,7 @@ export function Dag() {
               className={cn(
                 "absolute text-neutral-7 !leading-snug font-normal cursor-pointer ease-in aspect-square right-0 top-1/2",
                 "2xl:text-[28px] xl:text-xl lg:text-lg",
-                "2xl:max-w-[340px] xl:max-w-[210px] lg:max-w-[190px] md:max-w-[170px]",
+                "2xl:max-w-[320px] xl:max-w-[210px] lg:max-w-[190px] md:max-w-[170px]",
                 index === 0 &&
                   "md:translate-x-[80%] md:-translate-y-[120%] lg:translate-x-[85%] lg:-translate-y-[140%] lg:max-w-[190px] xl:translate-x-[90%] xl:-translate-y-[120%] 2xl:max-w-[325px] xl:max-w-[260px]",
                 index === 1 && "translate-x-[130%] -translate-y-[80%]",
