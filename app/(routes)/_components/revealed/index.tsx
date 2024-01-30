@@ -42,7 +42,7 @@ export default function Revealed({ className }: RevealedProps) {
           <DialogTrigger asChild>
             <button
               title="video player"
-              className={cn("relative rounded-[24px] border border-neutral-6 w-full max-w-[628px] lg:w-[628px] aspect-video z-10 mx-auto overflow-hidden")}
+              className={cn("relative rounded-[24px] border border-neutral-6 w-full max-w-[628px] lg:w-[628px] aspect-video z-10 mx-auto overflow-hidden hover:scale-105 transition-all duration-300")}
             >
               <Image
                 sizes="100vw"
@@ -51,7 +51,7 @@ export default function Revealed({ className }: RevealedProps) {
                 alt="preview"
               />
 
-              <div className={cn("flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[126px] h-[126px] rounded-full bg-primary-cyan-50 shadow-inner")}>
+              <div className={cn("flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[126px] h-[126px] rounded-full bg-primary-cyan-50 shadow-inner hover:scale-105 transition-all duration-300")}>
                 <div className={cn("flex items-center justify-center w-[67.85px] h-[67.85px]")}>
                   <Image
                     width={33}
@@ -64,13 +64,14 @@ export default function Revealed({ className }: RevealedProps) {
             </button>
           </DialogTrigger>
 
-          <DialogContent className="w-full">
+          <DialogContent className="w-fit">
             <iframe
-              src="https://player.vimeo.com/video/880633911?h=1bba3547a9"
+              src="https://player.vimeo.com/video/875784142?h=3ed6db7c17"
+              // src="https://player.vimeo.com/video/907817049?h=c7688b4aa1"
               title="video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              className={cn("rounded-[24px] border border-neutral-6 w-full max-w-[628px] lg:w-[628px] aspect-video z-10 mx-auto")}
+              className={cn("rounded-[24px] border border-neutral-6 h-[90vh] aspect-video z-10 mx-auto overflow-hidden")}
             />
           </DialogContent>
         </Dialog>
