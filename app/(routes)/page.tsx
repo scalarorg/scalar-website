@@ -2,7 +2,6 @@ import { HeroSolarSystem } from "./_components/hero-solar-system";
 import { BuildingValue } from "./_components/building-value";
 import { Dag } from "./_components/dag";
 import Image from "next/image";
-import MilkyWay from "@/public/milky-way-1.webp";
 import { Cta } from "./_components/cta";
 import { Permissionless } from "./_components/permisstionless";
 import HighlightRight from "@/public/icon/highlight-right.svg";
@@ -17,12 +16,16 @@ export default function HomePage() {
         <Image
           src={HighlightRight}
           alt={"Highlight right"}
-          className={"absolute top-0 -right-[10%] z-50 pointer-events-none"}
+          className={
+            "absolute top-0 -right-[10%] z-10 max-sm:w-[75%] pointer-events-none"
+          }
         />
         <Image
           src={HighlightLeft}
           alt={"Highlight left"}
-          className={"absolute top-0 -left-[10%] z-50 pointer-events-none"}
+          className={
+            "absolute top-0 -left-[10%] z-10 max-sm:w-[75%] pointer-events-none"
+          }
         />
         <BuildingValue />
       </div>

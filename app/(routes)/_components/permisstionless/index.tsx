@@ -14,7 +14,7 @@ import MOON_BACKGROUND from "@/public/moon-background.webp";
 import { FadeIn } from "@/components/motion/fade-in";
 
 const permissionlessVariants = cva(
-  "bg-star bg-no-repeat bg-cover relative lg:h-screen pb-[120px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
+  "bg-star bg-no-repeat bg-cover relative lg:h-screen sm:mb-[200px] pb-[120px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
 );
 
 type permissionlessVariantProps = VariantProps<typeof permissionlessVariants>;
