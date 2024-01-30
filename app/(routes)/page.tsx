@@ -17,12 +17,12 @@ export default function HomePage() {
         <Image
           src={HighlightRight}
           alt={"Highlight right"}
-          className={"absolute top-0 -right-[10%] -z-10"}
+          className={"absolute top-0 -right-[10%] z-50 pointer-events-none"}
         />
         <Image
           src={HighlightLeft}
           alt={"Highlight left"}
-          className={"absolute top-0 -left-[10%] -z-10"}
+          className={"absolute top-0 -left-[10%] z-50 pointer-events-none"}
         />
         <BuildingValue />
       </div>

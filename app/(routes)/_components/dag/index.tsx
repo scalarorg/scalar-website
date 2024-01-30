@@ -104,7 +104,7 @@ export function Dag() {
           src={MilkyWay}
           alt={"Milky way"}
           className={
-            "absolute w-full top-0 -translate-y-1/2 -rotate-[10deg] left-1/2 -translate-x-1/2"
+            "absolute w-full top-0 -translate-y-1/2 -rotate-[10deg] left-1/2 -translate-x-1/2 pointer-events-none"
           }
         />
 
@@ -189,7 +189,7 @@ export function Dag() {
                 index === 4 &&
                 "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
                 selected === index &&
-                  "text-neutral-1 scale-[116%] cursor-default select-none !font-semibold",
+                "text-neutral-1 scale-[116%] cursor-default select-none !font-semibold",
               )}
               transition={figmaSlow}
               style={{
