@@ -145,12 +145,12 @@ const config = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: { maxHeight: "0" },
+          to: { maxHeight: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: { maxHeight: "var(--radix-accordion-content-height)" },
+          to: { maxHeight: "0" },
         },
         "center-gradient-show": {
           "0%": { opacity: "0", display: "none" },

@@ -68,10 +68,10 @@ export function Header({
           </div>
         </Link>
 
-        <div className={"flex gap-2 sm:gap-4 md:gap-6 lg:gap-8 items-center"}>
+        <div className={"flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 items-center"}>
           <button
             className={cn(
-              "xl:px-8 hover:shadow-button-hover transition-all rounded-xl active:bg-neutral-12 px-2 sm:px-4 md:px-6 xl:py-3 py-1.5 [border-image-slice:7] sm:[border-image-slice:6] [border-image-width:5px] [border-image-repeat:round] [border-image-source:url(/icon/border-gradient.svg)] font-bold text-sm sm:text-base md:text-lg text-white border-2 flex gap-2 sm:gap-2.5 md:gap-4 lg:gap-6 xl:gap-8 items-center",
+              "xl:px-8 hover:shadow-button-hover transition-all rounded-xl active:bg-neutral-12 px-2 sm:px-4 md:px-6 xl:py-3 py-[5px] [border-image-slice:7] sm:[border-image-slice:6] [border-image-width:4px] sm:[border-image-width:5px] [border-image-repeat:round] [border-image-source:url(/icon/border-gradient.svg)] font-bold text-sm sm:text-base md:text-lg text-white border-2 flex gap-2 sm:gap-2.5 md:gap-4 lg:gap-6 xl:gap-8 items-center",
             )}
           >
             <div>Explore more</div>
