@@ -10,7 +10,7 @@ import { FooterWithLogo } from "./components/footer-with-logo";
  * ------------------------------------------------------------------------------------------------------------------ */
 
 const footerVariants = cva(
-  "bg-star_dark w-full bg-cover bg-no-repeat bg-center flex flex-col gap-3 xl:gap-[24px] h-full px-[18px] xl:px-[115px] py-[32px] xl:py-[117px]",
+  "container flex flex-col gap-3 xl:gap-[24px] h-full px-[18px] py-[32px] xl:py-[117px] px-[26px]",
 );
 
 type FooterVariantProps = VariantProps<typeof footerVariants>;
@@ -24,35 +24,37 @@ export function Footer({
   ...props
 }: FooterProps): React.JSX.Element {
   return (
-    <div className={footerVariants({ className })} {...props}>
-      <div
-        className={cn(
-          "flex flex-col gap-6 xl:flex-row xl:gap-[161px] xl:justify-between",
-        )}
-      >
-        {/* Footer column with Logo */}
-        <FooterWithLogo />
-
-        {/* Footer column */}
+    <div className={cn("bg-footer w-full bg-cover bg-no-repeat bg-center")}>
+      <div className={footerVariants({ className })} {...props}>
         <div
           className={cn(
-            "w-full grid grid-cols-2 md:grid-cols-4 pb-3 xl:pb-0 border-b border-neutral-8 xl:border-none xl:flex gap-x-2 gap-y-3 xl:justify-between",
+            "flex flex-col gap-6 xl:flex-row xl:gap-[161px] xl:justify-between",
           )}
         >
-          {FooterContent.map((column: FooterContent, index: number) => (
-            <FooterColumn column={column} key={`column-${index}`} />
-          ))}
-        </div>
-      </div>
+          {/* Footer column with Logo */}
+          <FooterWithLogo />
 
-      {/* Footer copyright */}
-      <div
-        className={cn(
-          "w-full flex gap-1 text-neutral-7 text-xs md:text-[13px] font-bold xl:text-[22px] xl:leading-[33px]",
-        )}
-      >
-        Copyright ©<span className="text-white">Scalar</span>| Designed by
-        Scalar
+          {/* Footer column */}
+          <div
+            className={cn(
+              "w-full grid grid-cols-2 md:grid-cols-4 pb-3 xl:pb-0 border-b border-neutral-8 xl:border-none xl:flex gap-x-2 gap-y-3 xl:justify-between",
+            )}
+          >
+            {FooterContent.map((column: FooterContent, index: number) => (
+              <FooterColumn column={column} key={`column-${index}`} />
+            ))}
+          </div>
+        </div>
+
+        {/* Footer copyright */}
+        <div
+          className={cn(
+            "w-full flex gap-1 text-neutral-7 text-xs md:text-[13px] font-bold xl:text-[22px] xl:leading-[33px]",
+          )}
+        >
+          Copyright ©<span className="text-white">Scalar</span>| Designed by
+          Scalar
+        </div>
       </div>
     </div>
   );

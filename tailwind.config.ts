@@ -181,6 +181,7 @@ const config = {
         star: "url('/star-background.svg')",
         advantage: "url('/background-advantage.svg')",
         star_dark: "url('/background-star-dark.svg')",
+        footer: "url('/background-footer.webp')",
       },
       textShadow: {
         h1: "4px 4px 4px rgba(0, 0, 0, 0.25)",
