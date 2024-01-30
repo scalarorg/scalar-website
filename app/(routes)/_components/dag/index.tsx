@@ -97,21 +97,15 @@ export function Dag() {
           "relative w-full z-0 2xl:h-[1458px] xl:h-[1200px] lg:h-[1000px] md:h-[800px] max-md:hidden"
         }
       >
-        {/*Background*/}
+        {/* Line Milky Way Background */}
         <Image
-          src={DagBackground}
-          sizes="100vw"
-          alt={"Dag background"}
-          className={"absolute w-full left-0 -z-10"}
-        />
-        <Image
-          src={DagBackground}
-          sizes="100vw"
-          alt={"Dag background"}
-          className={"absolute w-full left-0 -z-10"}
+          src={MilkyWay}
+          alt={"Milky way"}
+          className={
+            "absolute w-full top-0 -translate-y-1/2 -rotate-[10deg] left-1/2 -translate-x-1/2"
+          }
         />
 
-        {/* Line Milky Way Background */}
         <Image
           src={MilkyWay}
           alt={"Milky Way Line"}
@@ -185,15 +179,15 @@ export function Dag() {
                 "2xl:text-[28px] xl:text-xl lg:text-lg",
                 "2xl:max-w-[330px] xl:max-w-[210px] lg:max-w-[190px] md:max-w-[170px]",
                 index === 0 &&
-                  "md:translate-x-[80%] md:-translate-y-[120%] lg:translate-x-[85%] lg:-translate-y-[140%] lg:max-w-[190px] xl:translate-x-[90%] xl:-translate-y-[120%] 2xl:max-w-[325px] xl:max-w-[260px]",
+                "md:translate-x-[80%] md:-translate-y-[120%] lg:translate-x-[85%] lg:-translate-y-[140%] lg:max-w-[190px] xl:translate-x-[90%] xl:-translate-y-[120%] 2xl:max-w-[325px] xl:max-w-[260px]",
                 index === 1 && "translate-x-[130%] -translate-y-[80%]",
                 index === 2 && "translate-x-[125%] -translate-y-[5%]",
                 index === 3 &&
-                  "translate-x-[115%] translate-y-[60%] 2xl:max-w-[300px]",
+                "translate-x-[115%] translate-y-[60%] 2xl:max-w-[300px]",
                 index === 4 &&
-                  "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
+                "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
                 selected === index &&
-                  "text-neutral-1 scale-[105%] cursor-default select-none",
+                "text-neutral-1 scale-[105%] cursor-default select-none",
               )}
               transition={figmaSlow}
               style={{

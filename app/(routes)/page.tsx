@@ -7,7 +7,7 @@ import { Cta } from "./_components/cta";
 import { Permissionless } from "./_components/permisstionless";
 import HighlightRight from "@/public/icon/highlight-right.svg";
 import HighlightLeft from "@/public/icon/highlight-left.svg";
-import Framework from "./_components/framework";
+import Revealed from "./_components/revealed";
 
 export default function HomePage() {
   return (
@@ -17,25 +17,23 @@ export default function HomePage() {
         <Image
           src={HighlightRight}
           alt={"Highlight right"}
-          className={"absolute top-0 -right-[10%]"}
+          className={"absolute top-0 -right-[10%] -z-10"}
         />
         <Image
           src={HighlightLeft}
           alt={"Highlight left"}
-          className={"absolute top-0 -left-[10%]"}
+          className={"absolute top-0 -left-[10%] -z-10"}
         />
         <BuildingValue />
-        <Image
-          src={MilkyWay}
-          alt={"Milky way"}
-          className={
-            "absolute w-full bottom-0 translate-y-1/2 -rotate-[10deg] left-1/2 -translate-x-1/2"
-          }
-        />
-        <Framework />
       </div>
-      <Dag />
+
+      <div className="bg-star_dark bg-cover bg-no-repeat">
+        <Revealed />
+        <Dag />
+      </div>
+
       <Permissionless />
+
       <Cta />
     </div>
   );
