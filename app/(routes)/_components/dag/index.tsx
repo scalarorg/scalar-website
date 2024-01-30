@@ -195,7 +195,7 @@ export function Dag() {
                 index === 4 &&
                   "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
                 selected === index &&
-                  "text-neutral-1 scale-[116%] cursor-default select-none !font-semibold",
+                  "text-neutral-1 scale-[116%] cursor-default select-none !font-medium",
               )}
               transition={figmaSlow}
               style={{

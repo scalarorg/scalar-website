@@ -64,7 +64,7 @@ export function BuildingValue() {
       />
       <div
         className={
-          "pt-[40vw] container pb-[60px] sm:pb-[80px] md:pb-[100px] lg:pb-[120px] xl:pb-[140px] 2xl:pb-[150px] space-y-5 sm:space-y-12 md:space-y-16 lg:space-y-20 xl:space-y-24 2xl:space-y-32"
+          "pt-[40vw] container pb-[60px] sm:pb-[80px] md:pb-[100px] lg:pb-[120px] xl:pb-[140px] 2xl:pb-[150px] space-y-[22px] sm:space-y-12 md:space-y-16 lg:space-y-20 xl:space-y-24 2xl:space-y-32"
         }
       >
         <div id={"intro"} className={"max-sm:hidden sm:pb-[21px]"}></div>
