@@ -9,7 +9,7 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "20px",
       screens: {
         "2xl": "1400px",
       },
@@ -181,6 +181,7 @@ const config = {
         star: "url('/star-background.svg')",
         advantage: "url('/background-advantage.svg')",
         star_dark: "url('/background-star-dark.svg')",
+        footer: "url('/background-footer.webp')",
       },
       textShadow: {
         h1: "4px 4px 4px rgba(0, 0, 0, 0.25)",

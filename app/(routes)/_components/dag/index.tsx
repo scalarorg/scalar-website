@@ -65,30 +65,32 @@ export function Dag() {
           "md:hidden bg-[url(/hero-background-bottom.webp)] object-cover object-center z-0 relative"
         }
       >
-        <Accordion
-          type="multiple"
-          defaultValue={["item-0"]}
-          className="w-full px-5 text-neutral-1 py-14"
-        >
-          {CONTENTS.map(({ title, description }, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger>
-                <div className={"flex items-center gap-4"}>
-                  <div className={"font-normal"}>0{index + 1}</div>
-                  <div>{title}</div>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent
-                className={cn(
-                  "text-sm leading-tight",
-                  index === selected && "opacity-100",
-                )}
-              >
-                <div dangerouslySetInnerHTML={{ __html: description }} />
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className={"container"}>
+          <Accordion
+            type="multiple"
+            defaultValue={["item-0"]}
+            className="w-full text-neutral-1 py-14"
+          >
+            {CONTENTS.map(({ title, description }, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger>
+                  <div className={"flex items-center gap-4"}>
+                    <div className={"font-normal"}>0{index + 1}</div>
+                    <div>{title}</div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent
+                  className={cn(
+                    "text-sm leading-tight",
+                    index === selected && "opacity-100",
+                  )}
+                >
+                  <div dangerouslySetInnerHTML={{ __html: description }} />
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
 
       {/*Desktop*/}
@@ -123,7 +125,7 @@ export function Dag() {
             translateY: "-50%",
           }}
           style={{
-            rotate: `-38deg`,
+            rotate: `-39deg`,
             animationDuration: "800ms",
           }}
           animate={{
@@ -157,7 +159,7 @@ export function Dag() {
             className="absolute inset-0 border-neutral-7 rounded-full border-dotted border-[3px]"
             transition={figmaSlow}
             style={{
-              rotate: `-38deg`,
+              rotate: `-39deg`,
               animationDuration: "800ms",
             }}
             animate={{
@@ -175,9 +177,9 @@ export function Dag() {
             <motion.div
               key={index}
               className={cn(
-                "absolute leading-tight text-neutral-7 font-bold cursor-pointer ease-in aspect-square right-0 top-1/2",
+                "absolute text-neutral-7 !leading-snug font-normal cursor-pointer ease-in aspect-square right-0 top-1/2",
                 "2xl:text-[28px] xl:text-xl lg:text-lg",
-                "2xl:max-w-[330px] xl:max-w-[210px] lg:max-w-[190px] md:max-w-[170px]",
+                "2xl:max-w-[340px] xl:max-w-[210px] lg:max-w-[190px] md:max-w-[170px]",
                 index === 0 &&
                 "md:translate-x-[80%] md:-translate-y-[120%] lg:translate-x-[85%] lg:-translate-y-[140%] lg:max-w-[190px] xl:translate-x-[90%] xl:-translate-y-[120%] 2xl:max-w-[325px] xl:max-w-[260px]",
                 index === 1 && "translate-x-[130%] -translate-y-[80%]",
@@ -187,11 +189,11 @@ export function Dag() {
                 index === 4 &&
                 "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
                 selected === index &&
-                "text-neutral-1 scale-[105%] cursor-default select-none",
+                  "text-neutral-1 scale-[116%] cursor-default select-none !font-semibold",
               )}
               transition={figmaSlow}
               style={{
-                transitionDuration: "650ms",
+                transitionDuration: "550ms",
               }}
               onClick={() => setSelected(index)}
             >

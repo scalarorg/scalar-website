@@ -1,9 +1,8 @@
 import XTwitter from "@/public/icon/x-twitter.svg";
-import Github from "@/public/icon/github.svg";
 import Discord from "@/public/icon/discord.svg";
-import Medium from "@/public/icon/medium.svg";
 import Telegram from "@/public/icon/telegram.svg";
 import { StaticImageData } from "next/image";
+import { DISCORD_URL, TELEGRAM_URL, X_URL } from "@/lib/constants/links";
 
 export interface FooterLink {
   name: string;
@@ -118,22 +117,22 @@ export interface FooterSocialLink {
 export const FooterSocialLink: FooterSocialLink[] = [
   {
     icon: XTwitter,
-    link: "/",
+    link: X_URL,
   },
-  {
-    icon: Github,
-    link: "/",
-  },
+  // {
+  //   icon: Github,
+  //   link: "/",
+  // },
   {
     icon: Discord,
-    link: "/",
+    link: DISCORD_URL,
   },
-  {
-    icon: Medium,
-    link: "/",
-  },
+  // {
+  //   icon: Medium,
+  //   link: "/",
+  // },
   {
     icon: Telegram,
-    link: "/",
+    link: TELEGRAM_URL,
   },
 ];

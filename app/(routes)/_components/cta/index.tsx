@@ -12,7 +12,7 @@ import { AlertTriangleIcon } from "lucide-react";
 import { FadeIn } from "@/components/motion/fade-in";
 
 const ctaVariants = cva(
-  "relative z-0 py-[117px] gap-[60px] w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col items-center justify-around",
+  "relative z-0 py-[117px] w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col gap-[120px] lg:gap-[240px] items-center justify-around",
 );
 
 type CtaVariantProps = VariantProps<typeof ctaVariants>;
@@ -29,11 +29,11 @@ const resolver: Resolver<FormValues> = async (values) => {
     values: values.email ? values : {},
     errors: !values.email
       ? {
-          email: {
-            type: "required",
-            message: "This is required.",
-          },
-        }
+        email: {
+          type: "required",
+          message: "Email is required!",
+        },
+      }
       : {},
   };
 };
@@ -72,11 +72,7 @@ export function Cta({ className }: CtaProps) {
       </div>
 
       {/* Team Background */}
-      <div
-        className={cn(
-          "w-full flex flex-col gap-[24px] lg:gap-[20px] items-center",
-        )}
-      >
+      <div className={cn("w-full flex flex-col gap-[24px] lg:gap-[20px] items-center",)}>
         <SectionTitle>Team Background</SectionTitle>
 
         {/* Carousel Brand*/}
@@ -112,9 +108,7 @@ export function Cta({ className }: CtaProps) {
               delay: 0.1,
             }}
           >
-            <label
-              className={cn("text-lg leading-[27px] text-neutral-4 text-left")}
-            >
+            <label className={cn("text-lg leading-[27px] text-neutral-4 text-left")}>
               Stay updated and be among the first to receive exciting
               announcements, exclusive updates, and special offers from our
               project. Join us at the forefront of new discoveries!
@@ -147,20 +141,12 @@ export function Cta({ className }: CtaProps) {
               <button
                 type="submit"
                 className={cn(
-                  `absolute top-1/2 -translate-y-1/2 right-[16px] py-[6px] px-[20px] lg:py-[14px] lg:px-[32px] bg-primary-cyan-500 text-white rounded-lg border border-primary-cyan-500 hover:text-white hover:bg-black font-bold hover:transition-all duration-500 lg:text-neutral-10 lg:hover:text-primary-cyan-500 hover:shadow-button-hover
-                ${
-                  errors.email &&
-                  "bg-accent-warning-50 border-accent-warning-50 hover:bg-accent-warning-50 lg:hover:text-neutral-10"
-                }                
-                `,
-                )}
+                  `absolute top-1/2 -translate-y-1/2 right-2.5 lg:right-[16px] py-[6px] px-[20px] lg:py-[14px] lg:px-[32px] bg-primary-cyan-500 text-white rounded-lg border border-primary-cyan-500 hover:text-white hover:bg-black font-bold hover:transition-all duration-500 lg:text-neutral-10 lg:hover:text-primary-cyan-500 hover:shadow-button-hover
+                ${errors.email && "bg-accent-warning-50 border-accent-warning-50 hover:bg-accent-warning-50 lg:hover:text-neutral-10 hover:shadow-none"}                
+                `)}
                 disabled={errors.email && true}
               >
-                <span
-                  className={`lg:text-[22px] lg:leading-[33px
-                ${errors.email && "hover:text-neutral-10"} 
-                `}
-                >
+                <span className={`lg:text-[22px] lg:leading-[33px ${errors.email && "text-neutral-10"}`}>
                   Subscribe
                 </span>
               </button>

@@ -18,13 +18,23 @@ const VALUES = [
     description: "& EVM Compatible",
   },
   {
+    icon: "/icon/blockchain.svg",
+    value: "L0 & L1",
+    description: "A hybrid",
+  },
+  {
     icon: "/icon/hybrid.svg",
-    value: "A hybrid",
-    description: "Layer 0 & layer 1 blockchain",
+    value: "< $0.0001",
+    description: "Gas fees",
   },
   {
     icon: "/icon/dag.svg",
-    value: "Novel DAG Structure",
+    value: "240,000",
+    description: "Transactions per second",
+  },
+  {
+    icon: "/icon/chart.svg",
+    value: "Novel DAG",
     description: "& Ultra-Light Client",
   },
 ];
@@ -92,7 +102,7 @@ export function BuildingValue() {
           >
             <p
               className={
-                "text-[13px] sm:text-base md:text-lg lg:text-xl xl:text-2xl text-neutral-1 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
+                "text-[13px] sm:text-base md:text-lg lg:text-xl xl:text-2xl text-neutral-1 max-w-xs sm:max-w-xl md:max-w-2xl xl:max-w-4xl"
               }
             >
               <span className={"text-primary-cyan-500"}>
@@ -103,10 +113,10 @@ export function BuildingValue() {
             </p>
           </FadeIn>
         </div>
-        <div className={"flex justify-center items-center"}>
+        <div className={"flex sm:justify-center items-center"}>
           <div
             className={
-              "grid grid-cols-2 sm:gap-y-10 max-sm:gap-x-3 gap-y-4 md:gap-y-16 lg:gap-y-20 xl:gap-y-24 2xl:gap-y-32"
+              "grid grid-cols-[55%_45%] sm:grid-cols-3 max-sm:w-full sm:gap-y-10 gap-x-2 lg:gap-x-10 md:gap-x-8 sm:gap-x-6 xl:gap-x-12 2xl:gap-x-14 gap-y-7 md:gap-y-16 lg:gap-y-20 xl:gap-y-28 2xl:gap-y-32"
             }
           >
             {VALUES.map((value, index) => (
@@ -118,9 +128,16 @@ export function BuildingValue() {
                   delay: index % 2 === 0 ? 0.3 : 0.4,
                 }}
                 key={value.value}
+                className={cn(
+                  index === 0 && "max-sm:order-1",
+                  index === 1 && "max-sm:order-2",
+                  index === 2 && "max-sm:order-6",
+                  index === 3 && "max-sm:order-3",
+                  index === 4 && "max-sm:order-5",
+                  index === 5 && "max-sm:order-4",
+                )}
               >
                 <ValueItem
-                  className={cn(index % 2 === 0 && "md:justify-self-center")}
                   icon={value.icon}
                   value={value.value}
                   description={value.description}

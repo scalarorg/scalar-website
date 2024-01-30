@@ -98,6 +98,13 @@ export function InfoCarousel({
 
   return (
     <div {...props} className={infoCarouselVariants({ className })}>
+      {!showNavigation && (
+        <div
+          className={
+            "absolute pointer-events-none -z-10 top-1/2 bg-[rgba(5,5,5,0.3)] -translate-y-1/2 left-1/2 -translate-x-1/2 w-[1105px] h-[300px] blur-[100px]"
+          }
+        ></div>
+      )}
       <div
         className={
           "relative z-0 [mask-image:linear-gradient(90deg,rgba(196,196,196,0.00)_2.82%,rgba(196,196,196,0.40)_28.13%,#C4C4C4_33.19%,#C4C4C4_65.55%,rgba(196,196,196,0.40)_70.83%,rgba(196,196,196,0.00)_97.48%)]"
@@ -120,13 +127,6 @@ export function InfoCarousel({
             ))}
           </div>
         </div>
-        {!showNavigation && (
-          <div
-            className={
-              "absolute -z-10 w-[150%] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 inset-0 h-[150%] bg-[rgba(5,5,5,30%)] blur-[100px]"
-            }
-          ></div>
-        )}
       </div>
       {showNavigation && (
         <div className={"flex gap-14 mt-10 justify-center"}>
