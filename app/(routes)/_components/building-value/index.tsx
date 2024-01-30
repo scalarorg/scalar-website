@@ -125,7 +125,7 @@ export function BuildingValue() {
                   direction: "right",
                   duration: 0.6,
                   type: "tween",
-                  delay: index % 2 === 0 ? 0.3 : 0.4,
+                  delay: index % 3 === 0 ? 0.3 : index % 3 === 1 ? 0.4 : 0.5,
                 }}
                 key={value.value}
                 className={cn(

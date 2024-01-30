@@ -9,7 +9,13 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "20px",
+      padding: {
+        DEFAULT: "20px",
+        sm: "2rem",
+        lg: "2rem",
+        xl: "2rem",
+        "2xl": "2rem",
+      },
       screens: {
         "2xl": "1400px",
       },

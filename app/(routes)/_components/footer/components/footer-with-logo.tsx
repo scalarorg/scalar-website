@@ -60,6 +60,7 @@ export function FooterWithLogo({
           <Link
             key={index}
             href={item.link}
+            target={"_blank"}
             className={cn(
               "hover:opacity-90 hover:scale-110 transition-all ease-in",
             )}
