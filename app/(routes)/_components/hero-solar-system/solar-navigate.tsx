@@ -14,6 +14,7 @@ const solarNavigateVariants = cva(
 
 type SolarNavigateVariantProps = VariantProps<typeof solarNavigateVariants> & {
   variant?: NavigateVariant;
+  large?: boolean;
 };
 
 type SolarNavigateProps = SolarNavigateVariantProps &
@@ -23,6 +24,7 @@ export function SolarNavigate({
   className,
   children,
   variant = "back",
+  large = false,
   ...props
 }: SolarNavigateProps): React.JSX.Element {
   return (
@@ -47,9 +49,12 @@ export function SolarNavigate({
       )}
       {variant === "back" && (
         <div
-          className={
-            "text-white opacity-0 mr-2.5 absolute left-0 font-dm group-hover/explore:-left-3 whitespace-nowrap group-hover/explore:opacity-100 transition-all"
-          }
+          className={cn(
+            "text-white opacity-0 mr-2.5 absolute left-0 font-dm whitespace-nowrap group-hover/explore:opacity-100 transition-all",
+            large
+              ? "group-hover/explore:-left-0.5"
+              : "group-hover/explore:-left-3",
+          )}
         >
           &lt;&lt;
         </div>
@@ -57,7 +62,10 @@ export function SolarNavigate({
       <div
         className={cn(
           "text-white font-dm opacity-80 whitespace-nowrap group-hover/explore:opacity-100 transition-all",
-          variant === "back" && "group-hover/explore:translate-x-4",
+          variant === "back" &&
+            (!large
+              ? "group-hover/explore:translate-x-4"
+              : "group-hover/explore:translate-x-8"),
           variant === "next" && "group-hover/explore:-translate-x-4",
         )}
       >
@@ -66,16 +74,22 @@ export function SolarNavigate({
       {variant === "back" && (
         <Fragment>
           <div
-            className={
-              "text-white ml-2.5 font-dm -translate-y-[1px] opacity-80 whitespace-nowrap group-hover/explore:translate-x-4 group-hover/explore:opacity-100 transition-opacity"
-            }
+            className={cn(
+              "text-white ml-2.5 font-dm -translate-y-[1px] opacity-80 whitespace-nowrap group-hover/explore:translate-x-4 group-hover/explore:opacity-100 transition-opacity",
+              large
+                ? "group-hover/explore:translate-x-8"
+                : "group-hover/explore:translate-x-4",
+            )}
           >
             &gt;
           </div>
           <div
-            className={
-              "text-white opacity-0 font-dm -translate-y-[1px] whitespace-nowrap group-hover/explore:translate-x-4 group-hover/explore:opacity-100 transition-opacity"
-            }
+            className={cn(
+              "text-white opacity-0 font-dm -translate-y-[1px] whitespace-nowrap group-hover/explore:opacity-100 transition-opacity",
+              large
+                ? "group-hover/explore:translate-x-8"
+                : "group-hover/explore:translate-x-4",
+            )}
           >
             &gt;
           </div>

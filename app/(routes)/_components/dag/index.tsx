@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import DagBackground from "@/public/dag-background.webp";
 import EarthDag from "@/public/earth-dag.webp";
 import { cn } from "@/lib/utils";
 import { Fragment, useState } from "react";
@@ -181,13 +180,13 @@ export function Dag() {
                 "2xl:text-[28px] xl:text-xl lg:text-lg",
                 "2xl:max-w-[320px] xl:max-w-[210px] lg:max-w-[190px] md:max-w-[170px]",
                 index === 0 &&
-                "md:translate-x-[80%] md:-translate-y-[120%] lg:translate-x-[85%] lg:-translate-y-[140%] lg:max-w-[190px] xl:translate-x-[90%] xl:-translate-y-[120%] 2xl:max-w-[325px] xl:max-w-[260px]",
+                  "md:translate-x-[80%] md:-translate-y-[120%] lg:translate-x-[85%] lg:-translate-y-[140%] lg:max-w-[190px] xl:translate-x-[90%] xl:-translate-y-[120%] 2xl:max-w-[325px] xl:max-w-[260px]",
                 index === 1 && "translate-x-[130%] -translate-y-[80%]",
                 index === 2 && "translate-x-[125%] -translate-y-[5%]",
                 index === 3 &&
-                "translate-x-[115%] translate-y-[60%] 2xl:max-w-[300px]",
+                  "translate-x-[115%] translate-y-[60%] 2xl:max-w-[300px]",
                 index === 4 &&
-                "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
+                  "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
                 selected === index &&
                   "text-neutral-1 scale-[116%] cursor-default select-none !font-medium",
               )}
@@ -231,6 +230,7 @@ export function Dag() {
             className={
               "text-lg lg:text-xl xl:text-2xl text-neutral-1 absolute lg:-bottom-[80px] -bottom-[110px]"
             }
+            large
           >
             Learn more
           </SolarNavigate>
