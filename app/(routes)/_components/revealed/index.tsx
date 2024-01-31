@@ -88,7 +88,7 @@ export default function Revealed({ className }: RevealedProps) {
 
           <DialogContent>
             <iframe
-              src="https://www.youtube.com/embed/OO4BN1Eol7g?controls=0&autoplay=1&&playsinline=1&loop=1&showinfo=0&playlist=OO4BN1Eol7g"
+              src="https://www.youtube.com/embed/OO4BN1Eol7g?autoplay=1&&playsinline=1&loop=1&showinfo=0&playlist=OO4BN1Eol7g"
               title="video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
