@@ -355,13 +355,17 @@ export function HeroSolarSystem({ className }: { className?: string }) {
                 }}
                 className={cn("relative")}
               >
-                <img
+                <Image
+                  width={index === 0 ? 1710 : 2434}
+                  height={index === 0 ? 1760 : 2434}
                   className={cn(
                     "block object-contain transition-all",
                     index === 0 ? "scale-[60%]" : "scale-[80%]",
                   )}
                   src={image}
-                  alt="Your alt text"
+                  quality={100}
+                  priority
+                  alt="Planet"
                 />
                 <AnimatePresence initial>
                   {step === 1 && index === PLANET_CONTENT_INDEX && (
