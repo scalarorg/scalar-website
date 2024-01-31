@@ -67,7 +67,7 @@ export default function Revealed({ className }: RevealedProps) {
 
           <DialogContent>
             <iframe
-              src="https://player.vimeo.com/video/907817049?h=c7688b4aa1"
+              src="https://www.youtube.com/embed/OO4BN1Eol7g?si=e6PiQzDmukMSiifG"
               title="video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
