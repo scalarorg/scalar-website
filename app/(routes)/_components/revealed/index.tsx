@@ -64,14 +64,13 @@ export default function Revealed({ className }: RevealedProps) {
             </button>
           </DialogTrigger>
 
-          <DialogContent className="">
+          <DialogContent>
             <iframe
-              src="https://player.vimeo.com/video/875784142?h=3ed6db7c17"
-              // src="https://player.vimeo.com/video/907817049?h=c7688b4aa1"
+              src="https://player.vimeo.com/video/907817049?h=c7688b4aa1"
               title="video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              className={cn("w-[80vw] rounded-[24px] border border-neutral-6 aspect-video mx-auto overflow-hidden")}
+              className={cn("w-[80vw] rounded-[24px] border-2 border-neutral-6 aspect-video mx-auto overflow-hidden bg-black")}
             />
           </DialogContent>
         </Dialog>
