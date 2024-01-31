@@ -14,7 +14,7 @@ import MOON_BACKGROUND from "@/public/moon-background.webp";
 import { FadeIn } from "@/components/motion/fade-in";
 
 const permissionlessVariants = cva(
-  "bg-star bg-no-repeat bg-cover relative lg:h-screen pb-[120px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
+  "bg-star bg-no-repeat bg-cover relative lg:h-screen my-[84px] md:my-[192px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
 );
 
 type permissionlessVariantProps = VariantProps<typeof permissionlessVariants>;
@@ -154,10 +154,9 @@ export function Permissionless({ className }: permissionlessProps) {
               width={20}
               height={30}
               className={cn(
-                `pt-0.5 ${
-                  isHovered
-                    ? "block transition-all ease-in-out delay-500"
-                    : "hidden"
+                `pt-0.5 ${isHovered
+                  ? "block transition-all ease-in-out delay-500"
+                  : "hidden"
                 }`,
               )}
             />
@@ -171,10 +170,9 @@ export function Permissionless({ className }: permissionlessProps) {
               width={20}
               height={30}
               className={cn(
-                `pt-0.5 ${
-                  isHovered
-                    ? "block transition-all ease-in-out delay-500"
-                    : "hidden"
+                `pt-0.5 ${isHovered
+                  ? "block transition-all ease-in-out delay-500"
+                  : "hidden"
                 }`,
               )}
             />
