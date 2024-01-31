@@ -7,7 +7,7 @@ import React, { HTMLAttributes } from "react";
 import REVEALED__VIDEO_PREVIEW from "@/public/scalar-revealed-preview.svg";
 
 const RevealedVariants = cva(
-  "w-full flex flex-col lg:flex-row gap-[60px] lg:items-center justify-center px-5 py-[192px] z-0",
+  "w-full flex flex-col lg:flex-row gap-[60px] lg:items-center justify-center px-5 py-[60px] sm:py-[192px] z-0",
 );
 
 type RevealedVariantProps = VariantProps<typeof RevealedVariants>;
@@ -40,7 +40,9 @@ export default function Revealed({ className }: RevealedProps) {
             <br />
             Immerse
           </span>{" "}
-          yourself in our product demo
+          yourself
+          <br />
+          in our product demo
         </FadeIn>
       </label>
 
@@ -70,20 +72,15 @@ export default function Revealed({ className }: RevealedProps) {
 
               <div
                 className={cn(
-                  "flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[126px] h-[126px] rounded-full bg-primary-cyan-50 shadow-inner hover:scale-105 transition-all duration-300",
+                  "flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-16 sm:w-[126px] aspect-square rounded-full bg-primary-cyan-50/50 shadow-inner hover:scale-105 transition-all duration-300",
                 )}
               >
                 <div
                   className={cn(
-                    "flex items-center justify-center w-[67.85px] h-[67.85px]",
+                    "flex items-center relative justify-center w-6 sm:w-[40px] aspect-[34/25]",
                   )}
                 >
-                  <Image
-                    width={33}
-                    height={25.21}
-                    src="/icon/play.svg"
-                    alt="Play icon"
-                  />
+                  <Image fill src="/icon/play.svg" alt="Play icon" />
                 </div>
               </div>
             </button>
@@ -91,7 +88,7 @@ export default function Revealed({ className }: RevealedProps) {
 
           <DialogContent>
             <iframe
-              src="https://www.youtube.com/embed/OO4BN1Eol7g?si=e6PiQzDmukMSiifG"
+              src="https://www.youtube.com/embed/OO4BN1Eol7g?controls=0&autoplay=1&&playsinline=1&loop=1&showinfo=0&playlist=OO4BN1Eol7g"
               title="video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

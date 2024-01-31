@@ -111,7 +111,7 @@ const NAVIGATOR = [
   },
 ];
 
-const navigatorVariants = cva("space-y-6");
+const navigatorVariants = cva("max-sm:space-y-6 space-y-7");
 
 type NavigatorVariantProps = VariantProps<typeof navigatorVariants>;
 
@@ -190,7 +190,7 @@ export function Navigator({
                   height: 0,
                 }}
                 transition={{ type: "tween", duration: 0.35 }}
-                animate={{ opacity: 100, height: "auto", marginTop: 20 }}
+                animate={{ opacity: 100, height: "auto", marginTop: 28 }}
                 exit={{
                   opacity: 0,
                   height: 0,

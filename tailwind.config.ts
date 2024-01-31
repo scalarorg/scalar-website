@@ -14,10 +14,12 @@ const config = {
         sm: "2rem",
         lg: "2rem",
         xl: "2rem",
-        "2xl": "2rem",
+        "2xl": "116px",
+        "3xl": "116px",
       },
       screens: {
-        "2xl": "1400px",
+        "2xl": "1440px",
+        "3xl": "1920px",
       },
     },
     extend: {

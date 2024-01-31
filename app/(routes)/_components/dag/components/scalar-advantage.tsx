@@ -43,7 +43,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
   return (
     <div
       className={cn(
-        "w-full h-[100vh] bg-advantage bg-center bg-no-repeat bg-cover mb-[250px]",
+        "w-full bg-advantage bg-center bg-no-repeat bg-cover mb-[60px] sm:mb-[200px]",
       )}
     >
       <div className={ScalarAdvantageVariants({ className })}>
@@ -115,7 +115,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
         />
 
         {/* Block content */}
-        <div className="px-5 lg:px-0 py-[60px] w-full flex flex-col items-center gap-[16px] lg:gap-[64px] 2xl:gap-0 z-10 container lg:relative">
+        <div className="lg:px-0 sm:py-[60px] w-full flex flex-col items-center gap-[16px] lg:gap-[64px] 2xl:gap-0 z-10 container lg:relative">
           <SectionTitle className="z-10">Scalar Advantage</SectionTitle>
 
           {/* Content Mobile */}
@@ -129,7 +129,12 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           >
             <div className="lg:hidden w-full flex flex-col justify-between gap-[24px]">
               {ScalarAdvantageContentMobile.map((item, index) => (
-                <AdvantageItem item={item} key={index} size={widthScreen} />
+                <AdvantageItem
+                  item={item}
+                  key={index}
+                  size={widthScreen}
+                  isLast={index === ScalarAdvantageContentMobile.length - 1}
+                />
               ))}
             </div>
           </FadeIn>

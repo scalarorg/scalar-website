@@ -34,9 +34,9 @@ export interface ScalarAdvantageContentItem {
 export const ScalarAdvantageContentMobile: ScalarAdvantageContentItem[] = [
   {
     image: {
-      image: LOGO_COLOR,
-      width: 50.29,
-      height: 40,
+      image: SUI_MARK_SMALL,
+      width: 31,
+      height: 39,
     },
     data: [
       {
@@ -60,9 +60,9 @@ export const ScalarAdvantageContentMobile: ScalarAdvantageContentItem[] = [
   },
   {
     image: {
-      image: SUI_MARK_SMALL,
-      width: 31,
-      height: 39,
+      image: LOGO_COLOR,
+      width: 50.29,
+      height: 40,
     },
     data: [
       {

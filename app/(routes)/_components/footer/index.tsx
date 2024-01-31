@@ -10,7 +10,7 @@ import { FooterWithLogo } from "./components/footer-with-logo";
  * ------------------------------------------------------------------------------------------------------------------ */
 
 const footerVariants = cva(
-  "container flex flex-col gap-3 xl:gap-[24px] h-full px-[18px] py-[32px] xl:py-[117px] px-[26px]",
+  "container flex flex-col gap-3 xl:gap-[24px] h-full py-[32px] xl:py-[117px]",
 );
 
 type FooterVariantProps = VariantProps<typeof footerVariants>;

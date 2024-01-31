@@ -175,43 +175,43 @@ export function HeroSolarSystem({ className }: { className?: string }) {
       />
 
       {/*Title*/}
-      <div
-        className={cn(
-          "absolute bottom-28 w-full z-20",
-          step === 0
-            ? "animate-center-gradient-show"
-            : "animate-center-gradient-hide",
-        )}
-      >
-        <div className={"flex items-center justify-between gap-12"}>
-          <div
-            className={cn(
-              "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",
-              (tweenValues[PLANET_CONTENT_INDEX] > 0.9 || step !== 0) && "w-0",
-            )}
-          ></div>
-          <div
-            className={cn(
-              "opacity-100 transition-opacity duration-500",
-              step !== 0 && "opacity-0",
-            )}
-          >
-            <div
-              className={
-                "font-dm z-20 text-center whitespace-nowrap font-bold text-3xl text-white"
-              }
-            >
-              The Future of Scalable
-            </div>
-          </div>
-          <div
-            className={cn(
-              "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",
-              (tweenValues[PLANET_CONTENT_INDEX] > 0.9 || step !== 0) && "w-0",
-            )}
-          ></div>
-        </div>
-      </div>
+      {/*<div*/}
+      {/*  className={cn(*/}
+      {/*    "absolute bottom-28 w-full z-20",*/}
+      {/*    step === 0*/}
+      {/*      ? "animate-center-gradient-show"*/}
+      {/*      : "animate-center-gradient-hide",*/}
+      {/*  )}*/}
+      {/*>*/}
+      {/*  <div className={"flex items-center justify-between gap-12"}>*/}
+      {/*    <div*/}
+      {/*      className={cn(*/}
+      {/*        "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",*/}
+      {/*        (tweenValues[PLANET_CONTENT_INDEX] > 0.9 || step !== 0) && "w-0",*/}
+      {/*      )}*/}
+      {/*    ></div>*/}
+      {/*    <div*/}
+      {/*      className={cn(*/}
+      {/*        "opacity-100 transition-opacity duration-500",*/}
+      {/*        step !== 0 && "opacity-0",*/}
+      {/*      )}*/}
+      {/*    >*/}
+      {/*      <div*/}
+      {/*        className={*/}
+      {/*          "font-dm z-20 text-center whitespace-nowrap font-bold text-3xl text-white"*/}
+      {/*        }*/}
+      {/*      >*/}
+      {/*        The Future of Scalable*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
+      {/*    <div*/}
+      {/*      className={cn(*/}
+      {/*        "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",*/}
+      {/*        (tweenValues[PLANET_CONTENT_INDEX] > 0.9 || step !== 0) && "w-0",*/}
+      {/*      )}*/}
+      {/*    ></div>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
       <div
         className={cn(
           "absolute bottom-28 left-32 hidden z-30",

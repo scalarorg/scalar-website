@@ -89,11 +89,11 @@ export function Sidebar({
               className={"aspect-[35/27.84]"}
               alt={"Scalar logo"}
             />
-            <div className={"text-[11px] font-bold text-neutral-3"}>
-              The Future of
-              <br />
-              Scalable
-            </div>
+            {/*<div className={"text-[11px] font-bold text-neutral-3"}>*/}
+            {/*  The Future of*/}
+            {/*  <br />*/}
+            {/*  Scalable*/}
+            {/*</div>*/}
           </div>
         </Link>
 

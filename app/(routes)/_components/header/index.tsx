@@ -43,13 +43,13 @@ export function Header({
               alt={"Scalar logo"}
             />
           </Link>
-          <div
-            className={
-              "absolute translate-y-4 lg:translate-y-5 text-lg lg:text-xl whitespace-nowrap left-0 text-neutral-1"
-            }
-          >
-            The Future of Scalable
-          </div>
+          {/*<div*/}
+          {/*  className={*/}
+          {/*    "absolute translate-y-4 lg:translate-y-5 text-lg lg:text-xl whitespace-nowrap left-0 text-neutral-1"*/}
+          {/*  }*/}
+          {/*>*/}
+          {/*  The Future of Scalable*/}
+          {/*</div>*/}
         </div>
         <Link href={"/"} className={"sm:hidden"}>
           <div className={"flex gap-2 items-center"}>
@@ -60,11 +60,11 @@ export function Header({
               className={"aspect-[35/27.84]"}
               alt={"Scalar logo"}
             />
-            <div className={"text-[11px] font-bold text-neutral-3"}>
-              The Future of
-              <br />
-              Scalable
-            </div>
+            {/*<div className={"text-[11px] font-bold text-neutral-3"}>*/}
+            {/*  The Future of*/}
+            {/*  <br />*/}
+            {/*  Scalable*/}
+            {/*</div>*/}
           </div>
         </Link>
 
