@@ -37,6 +37,7 @@ export default function Revealed({ className }: RevealedProps) {
           type: "tween",
           delay: .6,
         }}
+        className="flex justify-center"
       >
         <Dialog>
           <DialogTrigger asChild>
