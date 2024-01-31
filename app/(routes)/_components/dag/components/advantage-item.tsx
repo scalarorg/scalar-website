@@ -28,7 +28,7 @@ const AdvantageItem = ({ item, size, isLast }: AdditionalProps) => {
         />
 
         {item.data.map((content, i) => (
-          <div className={cn("flex flex-col")}>
+          <div className={cn("flex flex-col")} key={i}>
             <p
               className={cn(
                 "font-normal text-[16px] leading-[24px] text-neutral-6",
