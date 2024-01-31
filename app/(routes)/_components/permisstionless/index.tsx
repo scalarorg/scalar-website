@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { HTMLAttributes, useState } from "react";
 import SectionTitle from "@/components/ui/section-title";
-import { ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
 import Image from "next/image";
 import MASSBIT from "@/public/massbit.webp";
 import MASSBIT_BACKGROUND_2 from "@/public/massbit-background-2.webp";
@@ -12,7 +11,7 @@ import MASSBIT_BACKGROUND_LARGE from "@/public/massbit-background-large.webp";
 import STAR_BACKGROUND from "@/public/star.webp";
 import MOON_BACKGROUND from "@/public/moon-background.webp";
 import { FadeIn } from "@/components/motion/fade-in";
-import { SolarNavigate } from "../hero-solar-system/solar-navigate";
+import { PermissionlessNavigate } from "@/app/(routes)/_components/permisstionless/permissionless-navigate";
 
 const permissionlessVariants = cva(
   "bg-star bg-no-repeat bg-cover relative lg:h-screen my-[84px] md:my-[192px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
@@ -144,15 +143,15 @@ export function Permissionless({ className }: permissionlessProps) {
             delay: 0.1,
           }}
         >
-          <SolarNavigate
+          <PermissionlessNavigate
             className={
               "text-neutral-1 text-[18px] leading-[27px] lg:text-[34px] lg:leading-[47px] h-[27px] w-fit lg:w-[260px] flex gap-[10px] items-center border-none bg-transparent p-0 hover:transition-all hover:ease-in-out hover:delay-500"
             }
           >
             Learn more
-          </SolarNavigate>
+          </PermissionlessNavigate>
         </FadeIn>
       </div>
-    </div >
+    </div>
   );
 }

@@ -31,14 +31,14 @@ export function SolarNavigate({
         <Fragment>
           <div
             className={
-              "text-white font-dm -translate-y-[1px] opacity-80 whitespace-nowrap group-hover/explore:-translate-x-1/4 group-hover/explore:opacity-100 transition-opacity"
+              "text-white font-dm -translate-y-[1px] opacity-80 whitespace-nowrap group-hover/explore:-translate-x-4 group-hover/explore:opacity-100 transition-opacity"
             }
           >
             &lt;
           </div>
           <div
             className={
-              "text-white -translate-y-[1px] opacity-0 font-dm whitespace-nowrap group-hover/explore:-translate-x-1/4 group-hover/explore:opacity-100 transition-opacity"
+              "text-white mr-2.5 -translate-y-[1px] opacity-0 font-dm whitespace-nowrap group-hover/explore:-translate-x-4 group-hover/explore:opacity-100 transition-opacity"
             }
           >
             &lt;
@@ -48,7 +48,7 @@ export function SolarNavigate({
       {variant === "back" && (
         <div
           className={
-            "text-white opacity-0 mr-2.5 absolute left-0 font-dm group-hover/explore:left-0 whitespace-nowrap group-hover/explore:opacity-100 transition-all"
+            "text-white opacity-0 mr-2.5 absolute left-0 font-dm group-hover/explore:-left-3 whitespace-nowrap group-hover/explore:opacity-100 transition-all"
           }
         >
           &lt;&lt;
@@ -57,8 +57,8 @@ export function SolarNavigate({
       <div
         className={cn(
           "text-white font-dm opacity-80 whitespace-nowrap group-hover/explore:opacity-100 transition-all",
-          variant === "back" && "group-hover/explore:translate-x-[22%]",
-          variant === "next" && "group-hover/explore:-translate-x-[22%]",
+          variant === "back" && "group-hover/explore:translate-x-4",
+          variant === "next" && "group-hover/explore:-translate-x-4",
         )}
       >
         {children}
@@ -67,14 +67,14 @@ export function SolarNavigate({
         <Fragment>
           <div
             className={
-              "text-white font-dm ml-4 translate-y-0 opacity-80 whitespace-nowrap group-hover/explore:translate-x-full group-hover/explore:opacity-100 transition-opacity"
+              "text-white ml-2.5 font-dm -translate-y-[1px] opacity-80 whitespace-nowrap group-hover/explore:translate-x-4 group-hover/explore:opacity-100 transition-opacity"
             }
           >
             &gt;
           </div>
           <div
             className={
-              "text-white opacity-0 font-dm translate-y-0 whitespace-nowrap group-hover/explore:translate-x-full group-hover/explore:opacity-100 transition-opacity"
+              "text-white opacity-0 font-dm -translate-y-[1px] whitespace-nowrap group-hover/explore:translate-x-4 group-hover/explore:opacity-100 transition-opacity"
             }
           >
             &gt;
@@ -84,7 +84,7 @@ export function SolarNavigate({
       {variant === "next" && (
         <div
           className={
-            "text-white opacity-0 mr-0 absolute right-0 font-dm group-hover/explore:-right-1/4 whitespace-nowrap group-hover/explore:opacity-100 transition-all"
+            "text-white opacity-0 mr-2.5 absolute right-0 font-dm group-hover/explore:-right-6 whitespace-nowrap group-hover/explore:opacity-100 transition-all"
           }
         >
           &gt;&gt;
