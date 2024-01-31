@@ -1,8 +1,6 @@
-"use client";
-
 import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
-import { HTMLAttributes, useState } from "react";
+import { HTMLAttributes } from "react";
 import SectionTitle from "@/components/ui/section-title";
 import Image from "next/image";
 import MASSBIT from "@/public/massbit.webp";
@@ -23,8 +21,6 @@ type permissionlessProps = permissionlessVariantProps &
   Omit<HTMLAttributes<HTMLDivElement>, keyof permissionlessVariantProps>;
 
 export function Permissionless({ className }: permissionlessProps) {
-  const [isHovered, setHovered] = useState(false);
-
   return (
     <div className={permissionlessVariants({ className })}>
       {/* Background Mobile */}
