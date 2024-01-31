@@ -2,11 +2,11 @@ import { HeroSolarSystem } from "./_components/hero-solar-system";
 import { BuildingValue } from "./_components/building-value";
 import { Dag } from "./_components/dag";
 import Image from "next/image";
-import MilkyWay from "@/public/milky-way-1.webp";
 import { Cta } from "./_components/cta";
 import { Permissionless } from "./_components/permisstionless";
 import HighlightRight from "@/public/icon/highlight-right.svg";
 import HighlightLeft from "@/public/icon/highlight-left.svg";
+import Revealed from "./_components/revealed";
 
 export default function HomePage() {
   return (
@@ -16,24 +16,27 @@ export default function HomePage() {
         <Image
           src={HighlightRight}
           alt={"Highlight right"}
-          className={"absolute top-0 -right-[10%]"}
+          className={
+            "absolute top-0 -right-[10%] z-10 max-sm:w-[75%] pointer-events-none"
+          }
         />
         <Image
           src={HighlightLeft}
           alt={"Highlight left"}
-          className={"absolute top-0 -left-[10%]"}
-        />
-        <BuildingValue />
-        <Image
-          src={MilkyWay}
-          alt={"Milky way"}
           className={
-            "absolute w-full bottom-0 translate-y-1/2 -rotate-[10deg] left-1/2 -translate-x-1/2"
+            "absolute top-0 -left-[10%] z-10 max-sm:w-[75%] pointer-events-none"
           }
         />
+        <BuildingValue />
       </div>
-      <Dag />
+
+      <div className="bg-star_dark bg-cover bg-no-repeat">
+        <Revealed />
+        <Dag />
+      </div>
+
       <Permissionless />
+
       <Cta />
     </div>
   );

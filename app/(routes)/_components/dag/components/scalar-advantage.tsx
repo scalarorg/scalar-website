@@ -43,7 +43,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
   return (
     <div
       className={cn(
-        "w-full h-[100vh] bg-advantage bg-center bg-no-repeat bg-cover",
+        "w-full h-[100vh] bg-advantage bg-center bg-no-repeat bg-cover mb-[250px]",
       )}
     >
       <div className={ScalarAdvantageVariants({ className })}>
