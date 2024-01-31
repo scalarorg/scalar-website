@@ -38,7 +38,7 @@ export function SolarNavigate({
           </div>
           <div
             className={
-              "text-white mr-2.5 -translate-y-[1px] opacity-0 font-dm whitespace-nowrap group-hover/explore:-translate-x-1/4 group-hover/explore:opacity-100 transition-opacity"
+              "text-white -translate-y-[1px] opacity-0 font-dm whitespace-nowrap group-hover/explore:-translate-x-1/4 group-hover/explore:opacity-100 transition-opacity"
             }
           >
             &lt;
@@ -74,7 +74,7 @@ export function SolarNavigate({
           </div>
           <div
             className={
-              "text-white opacity-0 font-dm translate-y-0 whitespace-nowrap group-hover/explore:translate-x-1/2 group-hover/explore:opacity-100 transition-opacity"
+              "text-white opacity-0 font-dm translate-y-0 whitespace-nowrap group-hover/explore:translate-x-full group-hover/explore:opacity-100 transition-opacity"
             }
           >
             &gt;
