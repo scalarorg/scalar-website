@@ -12,7 +12,7 @@ import { AlertTriangleIcon } from "lucide-react";
 import { FadeIn } from "@/components/motion/fade-in";
 
 const ctaVariants = cva(
-  "relative z-0 py-[117px] w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col gap-[120px] lg:gap-[240px] items-center justify-around",
+  "relative z-0 py-[192px] md:pt-0 w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col gap-[192px] items-center justify-center",
 );
 
 type CtaVariantProps = VariantProps<typeof ctaVariants>;
@@ -80,7 +80,7 @@ export function Cta({ className }: CtaProps) {
       </div>
 
       {/* Form Submit Email */}
-      <div className="flex flex-col container gap-[44px] bg-transparent border-none md:w-[750px] md:px-0">
+      <div className="flex flex-col container gap-[44px] bg-transparent border-none md:w-[750px] lg:px-0">
         <div className={cn("flex flex-col gap-[28px]")}>
           <FadeIn
             options={{
@@ -141,12 +141,12 @@ export function Cta({ className }: CtaProps) {
               <button
                 type="submit"
                 className={cn(
-                  `absolute top-1/2 -translate-y-1/2 right-2.5 lg:right-[16px] py-[6px] px-[20px] lg:py-[14px] lg:px-[32px] bg-primary-cyan-500 text-white rounded-lg border border-primary-cyan-500 hover:text-white hover:bg-black font-bold hover:transition-all duration-500 lg:text-neutral-10 lg:hover:text-primary-cyan-500 hover:shadow-button-hover
+                  `absolute top-1/2 -translate-y-1/2 right-2.5 md:right-[16px] py-[6px] px-[20px] md:py-[14px] md:px-[32px] bg-primary-cyan-500 text-white rounded-lg border border-primary-cyan-500 hover:text-white hover:bg-black font-bold hover:transition-all duration-500 lg:text-neutral-10 lg:hover:text-primary-cyan-500 hover:shadow-button-hover
                 ${errors.email && "bg-accent-warning-50 border-accent-warning-50 hover:bg-accent-warning-50 lg:hover:text-neutral-10 hover:shadow-none"}                
                 `)}
                 disabled={errors.email && true}
               >
-                <span className={`lg:text-[22px] lg:leading-[33px ${errors.email && "text-neutral-10"}`}>
+                <span className={`md:text-[22px] md:leading-[33px] ${errors.email && "text-neutral-10"}`}>
                   Subscribe
                 </span>
               </button>
