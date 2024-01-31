@@ -20,7 +20,7 @@ const VALUES = [
   {
     icon: "/icon/blockchain.svg",
     value: "L0 & L1",
-    description: "A hybrid",
+    description: "Hybrid Blockchain",
   },
   {
     icon: "/icon/hybrid.svg",
