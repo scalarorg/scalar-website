@@ -12,6 +12,7 @@ import MASSBIT_BACKGROUND_LARGE from "@/public/massbit-background-large.webp";
 import STAR_BACKGROUND from "@/public/star.webp";
 import MOON_BACKGROUND from "@/public/moon-background.webp";
 import { FadeIn } from "@/components/motion/fade-in";
+import { SolarNavigate } from "../hero-solar-system/solar-navigate";
 
 const permissionlessVariants = cva(
   "bg-star bg-no-repeat bg-cover relative lg:h-screen my-[84px] md:my-[192px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
@@ -143,42 +144,15 @@ export function Permissionless({ className }: permissionlessProps) {
             delay: 0.1,
           }}
         >
-          <button
-            className={cn(
-              "text-neutral-1 text-[18px] leading-[27px] lg:text-[34px] lg:leading-[47px] h-[27px] w-fit lg:w-[260px] flex gap-[10px] items-center border-none bg-transparent p-0 hover:transition-all hover:ease-in-out hover:delay-500",
-            )}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+          <SolarNavigate
+            className={
+              "text-neutral-1 text-[18px] leading-[27px] lg:text-[34px] lg:leading-[47px] h-[27px] w-fit lg:w-[260px] flex gap-[10px] items-center border-none bg-transparent p-0 hover:transition-all hover:ease-in-out hover:delay-500"
+            }
           >
-            <ChevronsLeft
-              width={20}
-              height={30}
-              className={cn(
-                `pt-0.5 ${isHovered
-                  ? "block transition-all ease-in-out delay-500"
-                  : "hidden"
-                }`,
-              )}
-            />
             Learn more
-            <ChevronRight
-              width={11}
-              height={13}
-              className={cn(`pt-0.5 ${isHovered && "hidden"}`)}
-            />
-            <ChevronsRight
-              width={20}
-              height={30}
-              className={cn(
-                `pt-0.5 ${isHovered
-                  ? "block transition-all ease-in-out delay-500"
-                  : "hidden"
-                }`,
-              )}
-            />
-          </button>
+          </SolarNavigate>
         </FadeIn>
       </div>
-    </div>
+    </div >
   );
 }
