@@ -118,6 +118,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
         <div className="px-5 lg:px-0 py-[60px] w-full flex flex-col items-center gap-[16px] lg:gap-[64px] 2xl:gap-0 z-10 container lg:relative">
           <SectionTitle className="z-10">Scalar Advantage</SectionTitle>
 
+          {/* Content Mobile */}
           <FadeIn
             options={{
               direction: "up",
@@ -133,6 +134,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
             </div>
           </FadeIn>
 
+          {/* Content Desktop */}
           <FadeIn
             className={"relative w-full"}
             options={{
