@@ -7,9 +7,9 @@ import React, { HTMLAttributes, useEffect, useState } from "react";
 import ADVANTAGE_EARTH_SMALL from "@/public/advantage-earth-small.webp";
 import ADVANTAGE_MARS_SMALL from "@/public/advantage-mars-small.webp";
 import GROW_EFFECT from "@/public/grow-effect.svg";
-import ADVANTAGE_MARS_LARGE from "@/public/advantage-mars-large.svg";
-import ADVANTAGE_EARTH_LARGE from "@/public/advantage-earth-large.svg";
-import ADVANTAGE_MOON_LARGE from "@/public/advantage-moon-large.svg";
+import ADVANTAGE_MARS_LARGE from "@/public/advantage-mars-large.webp";
+import ADVANTAGE_EARTH_LARGE from "@/public/advantage-earth-large.webp";
+import ADVANTAGE_MOON_LARGE from "@/public/advantage-moon-large.webp";
 import Image from "next/image";
 import {
   ScalarAdvantageContentDesktop,

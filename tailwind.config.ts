@@ -186,9 +186,9 @@ const config = {
         "button-active": "0px 0px 10px 0px #FFF",
       },
       backgroundImage: {
-        star: "url('/star-background.svg')",
-        advantage: "url('/background-advantage.svg')",
-        star_dark: "url('/background-star-dark.svg')",
+        star: "url('/star-background.webp')",
+        advantage: "url('/background-advantage.webp')",
+        star_dark: "url('/background-star-dark.webp')",
         footer: "url('/background-footer.webp')",
       },
       textShadow: {
