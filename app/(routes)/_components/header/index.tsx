@@ -39,7 +39,9 @@ export function Header({
               width={280}
               height={30.86}
               src={Logo}
-              className={"aspect-[280/30.86] max-md:w-[200px]"}
+              className={
+                "aspect-[280/30.86] max-md:w-[200px] max-2xl:w-[221px]"
+              }
               alt={"Scalar logo"}
             />
           </Link>
@@ -68,10 +70,14 @@ export function Header({
           </div>
         </Link>
 
-        <div className={"flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 items-center"}>
+        <div
+          className={
+            "flex gap-3 sm:gap-4 md:gap-5 lg:gap-8 xl:gap-6 2xl:gap-[38px] 3xl:gap-[46px] items-center"
+          }
+        >
           <button
             className={cn(
-              "xl:px-8 hover:shadow-button-hover transition-all rounded-xl active:bg-neutral-12 px-2 sm:px-4 md:px-6 xl:py-3 py-[5px] [border-image-slice:7] sm:[border-image-slice:6] [border-image-width:4px] sm:[border-image-width:5px] [border-image-repeat:round] [border-image-source:url(/icon/border-gradient.svg)] font-bold text-sm sm:text-base md:text-lg text-white border-2 flex gap-2 sm:gap-2.5 md:gap-4 lg:gap-6 xl:gap-8 items-center",
+              "3xl:px-8 2xl:px-6 hover:shadow-button-hover !leading-snug transition-all rounded-xl active:bg-neutral-12 px-2 sm:px-4 md:px-5 3xl:py-3 xl:py-[10px] py-[5px] [border-image-slice:7] sm:[border-image-slice:6] [border-image-width:4px] sm:[border-image-width:5px] [border-image-repeat:round] [border-image-source:url(/icon/border-gradient.svg)] font-medium 3xl:font-semibold text-sm sm:text-base3xl:text-lg text-white border-2 flex gap-2 sm:gap-2.5 md:gap-4 lg:gap-6 2xl:gap-7 3xl:gap-8 items-center",
             )}
           >
             <div>Explore more</div>

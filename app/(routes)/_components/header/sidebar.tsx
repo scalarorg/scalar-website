@@ -36,7 +36,9 @@ export function Sidebar({
     <Fragment>
       <HamburgerAnimateIcon
         onClick={() => setSelected((selected) => !selected)}
-        className={cn("text-white aspect-square max-sm:w-5 cursor-pointer")}
+        className={cn(
+          "text-white aspect-square w-4 2xl:w-5 3xl:w-[27px] cursor-pointer",
+        )}
       />
       <div
         className={cn(

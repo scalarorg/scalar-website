@@ -50,9 +50,9 @@ export function Permissionless({ className }: permissionlessProps) {
         src={MASSBIT_BACKGROUND_2}
         sizes="100vw"
         className={cn(
-          "absolute hidden lg:block select-none left-0 top-1/2 -translate-y-1/2 -z-10",
+          "absolute hidden max-2xl:scale-[78%] lg:block select-none max-2xl:-left-10 left-0 top-1/2 -translate-y-1/2 -z-10",
         )}
-        alt=""
+        alt="Planet"
       />
 
       {/* Background Star */}
@@ -63,7 +63,7 @@ export function Permissionless({ className }: permissionlessProps) {
         className={cn(
           "absolute hidden lg:block select-none left-[268px] top-1/2 -translate-y-[187px] -z-10",
         )}
-        alt=""
+        alt="Star background"
       />
       <Image
         src={STAR_BACKGROUND}
@@ -72,7 +72,7 @@ export function Permissionless({ className }: permissionlessProps) {
         className={cn(
           "absolute hidden lg:block select-none right-[720px] top-1/2 -translate-y-[570px] -z-10",
         )}
-        alt=""
+        alt="Star background"
       />
       <Image
         src={STAR_BACKGROUND}
@@ -81,7 +81,7 @@ export function Permissionless({ className }: permissionlessProps) {
         className={cn(
           "absolute hidden lg:block select-none right-[588px] bottom-1/2 translate-y-[490px] -z-10",
         )}
-        alt=""
+        alt="Star background"
       />
 
       {/* Background Right */}
@@ -89,19 +89,22 @@ export function Permissionless({ className }: permissionlessProps) {
         src={MASSBIT_BACKGROUND_LARGE}
         sizes="100vw"
         className={cn(
-          "absolute hidden lg:block lg:w-1/2 select-none right-0 top-1/2 -translate-y-1/2 -z-10",
+          "absolute hidden lg:block lg:w-[47%] 3xl:w-1/2 select-none right-0 top-1/2 -translate-y-1/2 -z-10",
         )}
-        alt=""
+        alt="Planet"
       />
 
       {/* Block Content */}
       <div
         className={cn(
-          "lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-[278px] xl:left-[328px] md:w-[750px] flex flex-col gap-[16px] lg:gap-[45px]",
+          "lg:absolute lg:top-[46%] 2xl:top-1/2 lg:-translate-y-1/2 lg:left-[278px] xl:left-[257px] 2xl:left-[328px] max-w-[600px] 2xl:w-[750px] flex flex-col gap-[16px] lg:gap-[30px] 2xl:gap-[45px]",
         )}
       >
         <SectionTitle className="text-left">
-          Permissionless Interoperability{" "}
+          Permissionless
+          <br />
+          Interoperability
+          <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3760F2] to-[#0EF1F1]">
             Massbit
           </span>
@@ -115,7 +118,7 @@ export function Permissionless({ className }: permissionlessProps) {
             delay: 0.1,
           }}
         >
-          <p className="text-[16px] leading-[24.5px] text-neutral-6 lg:text-[18px] lg:leading-[28px] xl:text-[20px] xl:leading-[30px]">
+          <p className="text-[15px] leading-[24.5px] text-neutral-6 lg:text-[16px] lg:leading-[27px] 2xl:text-[20px] 2xl:leading-[30px]">
             Scalar’s massbit serves as an interoperability protocol with planned
             support to connect{" "}
             <span className={cn("text-primary-cyan-500")}>over 20+ EVM</span>{" "}

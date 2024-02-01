@@ -139,6 +139,8 @@ export function Navigator({
             transition={{ type: "tween", duration: 0.35 }}
             animate={{ opacity: 100, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
+            onHoverStart={() => setSelected(index)}
+            // onHoverEnd={() => setSelected(false)}
             onClick={() =>
               setSelected((selected) => (index === selected ? false : index))
             }

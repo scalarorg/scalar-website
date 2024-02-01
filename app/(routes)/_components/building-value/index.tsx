@@ -70,7 +70,7 @@ export function BuildingValue() {
         <div id={"intro"} className={"max-sm:hidden sm:pb-[21px]"}></div>
         <div
           className={
-            "space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 xl:space-y-10 text-center flex flex-col items-center"
+            "space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 xl:space-y-8 2xl:space-y-10 text-center flex flex-col items-center"
           }
         >
           <FadeIn
@@ -83,7 +83,7 @@ export function BuildingValue() {
           >
             <h1
               className={
-                "text-shadow-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-4xl !leading-normal sm:leading-normal"
+                "text-shadow-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[65px] 2xl:text-[84px] xl:!leading-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-4xl !leading-normal sm:leading-normal"
               }
             >
               The Future of
@@ -102,7 +102,7 @@ export function BuildingValue() {
           >
             <p
               className={
-                "text-[13px] sm:text-base md:text-lg lg:text-xl xl:text-2xl text-neutral-1 max-w-xs sm:max-w-xl md:max-w-2xl xl:max-w-4xl"
+                "text-[13px] sm:text-base font-medium md:text-lg lg:text-xl xl:text-2xl text-neutral-1 max-w-xs sm:max-w-xl md:max-w-2xl xl:max-w-4xl"
               }
             >
               <span className={"text-primary-cyan-500"}>
@@ -116,7 +116,7 @@ export function BuildingValue() {
         <div className={"flex sm:justify-center items-center"}>
           <div
             className={
-              "grid grid-cols-[55%_45%] sm:grid-cols-3 max-sm:w-full sm:gap-y-10 gap-x-2 lg:gap-x-10 md:gap-x-8 sm:gap-x-6 xl:gap-x-12 2xl:gap-x-14 gap-y-7 md:gap-y-16 lg:gap-y-20 xl:gap-y-28 2xl:gap-y-32"
+              "grid grid-cols-[55%_45%] sm:grid-cols-3 max-sm:w-full sm:gap-y-10 gap-x-2 lg:gap-x-10 md:gap-x-8 sm:gap-x-6 xl:gap-x-12 2xl:gap-x-14 gap-y-7 md:gap-y-16 lg:gap-y-20 xl:gap-y-[98px] 2xl:gap-y-28 3xl:gap-y-32"
             }
           >
             {VALUES.map((value, index) => (

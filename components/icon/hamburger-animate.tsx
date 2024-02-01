@@ -7,9 +7,10 @@ import { useState } from "react";
 export const HamburgerAnimateIcon = ({ className, ...props }: any) => {
   const [isHover, setIsHover] = useState(false);
   const line = cn(
-    "rounded-[10px] h-[3px] sm:h-1 bg-white w-full transition-colors duration-700",
+    "rounded-[10px] h-[2px] 2xl:h-[3px] 3xl:h-1 bg-white w-full transition-colors duration-700",
     isHover && "!bg-[linear-gradient(265deg,#00FFBD_-5.84%,#025B8C_111.58%)]",
   );
+
   return (
     <motion.div
       className={cn(

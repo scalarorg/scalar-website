@@ -17,14 +17,14 @@ export default function HomePage() {
           src={HighlightRight}
           alt={"Highlight right"}
           className={
-            "absolute top-0 -right-[10%] z-10 max-sm:w-[75%] pointer-events-none"
+            "absolute top-0 -right-[10%] z-10 max-sm:w-[75%] max-2xl:w-[60%] pointer-events-none"
           }
         />
         <Image
           src={HighlightLeft}
           alt={"Highlight left"}
           className={
-            "absolute top-0 -left-[10%] z-10 max-sm:w-[75%] pointer-events-none"
+            "absolute top-0 -left-[10%] z-10 max-sm:w-[75%] max-2xl:w-[60%] pointer-events-none"
           }
         />
         <BuildingValue />

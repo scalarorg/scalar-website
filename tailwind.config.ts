@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+import defaultTheme from "tailwindcss/defaulttheme";
+
 const config = {
   // darkMode: ["class"],
   content: [
@@ -13,18 +15,21 @@ const config = {
         DEFAULT: "20px",
         sm: "2rem",
         lg: "2rem",
-        xl: "2rem",
-        "2xl": "116px",
+        xl: "50px",
+        "2xl": "53px",
         "3xl": "116px",
       },
       screens: {
+        ...defaultTheme.screens,
         "2xl": "1440px",
-        "3xl": "1920px",
       },
     },
     extend: {
       fontFamily: {
         dm: ["var(--font-dm)"],
+      },
+      screens: {
+        "3xl": "1920px",
       },
       colors: {
         primary: {

@@ -66,7 +66,9 @@ export function Cta({ className }: CtaProps) {
           }}
           className={"w-full"}
         >
-          <Hackathon className={"max-lg:hidden container"} />
+          <Hackathon
+            className={"max-lg:hidden container max-2xl:max-w-[1100px]"}
+          />
           <HackathonMobile className={"lg:hidden container"} />
         </FadeIn>
       </div>
@@ -96,7 +98,7 @@ export function Cta({ className }: CtaProps) {
           >
             <label
               className={cn(
-                "font-bold text-[31px] md:[text-34px] leading-[46.5px] md:leading-[47.6px] text-neutral-1",
+                "font-bold text-[31px] md:text-[27px] 2xl:[text-34px] leading-[46.5px] md:leading-[47.6px] text-neutral-1",
               )}
             >
               Don't Miss Out,{" "}
@@ -113,7 +115,9 @@ export function Cta({ className }: CtaProps) {
             }}
           >
             <label
-              className={cn("text-lg leading-[27px] text-neutral-4 text-left")}
+              className={cn(
+                "text-base 2xl:text-lg leading-[27px] text-neutral-4 text-left",
+              )}
             >
               Stay updated and be among the first to receive exciting
               announcements, exclusive updates, and special offers from our

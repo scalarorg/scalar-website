@@ -7,7 +7,7 @@ import React, { HTMLAttributes } from "react";
 import REVEALED__VIDEO_PREVIEW from "@/public/scalar-revealed-preview.svg";
 
 const RevealedVariants = cva(
-  "w-full flex flex-col lg:flex-row gap-[60px] lg:items-center justify-center px-5 py-[60px] sm:py-[192px] z-0",
+  "w-full flex flex-col lg:flex-row gap-[60px] xl:gap-[120px] lg:items-center justify-center px-5 py-[60px] 3xl:py-[192px] sm:py-[100px] xl:py-[135px] z-0",
 );
 
 type RevealedVariantProps = VariantProps<typeof RevealedVariants>;
@@ -20,7 +20,7 @@ export default function Revealed({ className }: RevealedProps) {
     <div className={RevealedVariants({ className })}>
       <label
         className={cn(
-          "font-bold text-[30px] leading-[45px] lg:text-[43px] lg:leading-[55.9px] max-w-[631px]",
+          "font-bold text-[30px] leading-[45px] xl:text-[37px] xl:leading-[51px] 3xl:text-[43px] 3xl:leading-[55.9px] max-w-[631px]",
         )}
       >
         <FadeIn
@@ -60,7 +60,7 @@ export default function Revealed({ className }: RevealedProps) {
             <button
               title="video player"
               className={cn(
-                "relative rounded-[24px] border border-neutral-6 w-full max-w-[628px] lg:w-[628px] aspect-video z-10 mx-auto overflow-hidden hover:scale-105 transition-all duration-300",
+                "relative rounded-[24px] border border-neutral-6 w-full max-w-[628px] 3xl:w-[628px] lg:w-[500px] aspect-[628/386] z-10 mx-auto overflow-hidden hover:scale-105 transition-all duration-300",
               )}
             >
               <Image

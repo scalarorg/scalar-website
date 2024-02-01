@@ -73,13 +73,13 @@ function HackathonItem({
       style={{ flex: selected ? 2 : 1, animationDuration: "0.8s" }}
       onClick={onClick}
     >
-      <div className={"p-16 pb-32"}>
+      <div className={"p-[52px] 2xl:p-16 pb-32"}>
         <Image src={icon} alt={title} width={54} height={54} />
         <div className={cn("mt-12", !selected && "max-w-full")}>
           <div className={"text-3xl font-bold text-neutral-1"}>{title}</div>
           <div
             className={cn(
-              "text-xl text-neutral-6 mt-2.5",
+              "text-base 2xl:text-xl text-neutral-6 mt-2.5",
               !selected && "min-w-[500px]",
             )}
           >

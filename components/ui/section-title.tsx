@@ -3,7 +3,7 @@ import React, { HTMLAttributes } from "react";
 import { FadeIn } from "@/components/motion/fade-in";
 
 const sectionTitleVariants = cva(
-  "text-white text-[31px] leading-[46.5px] lg:text-[48px] lg:leading-[66px] xl:text-[67px] xl:leading-[83.75px] font-bold",
+  "text-white text-[31px] leading-[46.5px] lg:text-[48px] lg:leading-[66px] xl:text-[51px] xl:leading-[63.75px] 2xl:text-[67px] 2xl:leading-[83.75px] font-bold",
 );
 
 type sectionTitleVariantProps = VariantProps<typeof sectionTitleVariants>;
@@ -21,7 +21,7 @@ const SectionTitle = ({ children, className }: sectionTitleProps) => {
         delay: 0,
       }}
     >
-      <label className={sectionTitleVariants({ className })}>{children}</label>
+      <h2 className={sectionTitleVariants({ className })}>{children}</h2>
     </FadeIn>
   );
 };

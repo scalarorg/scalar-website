@@ -176,9 +176,9 @@ export function Dag() {
             <motion.div
               key={index}
               className={cn(
-                "absolute text-neutral-7 !leading-snug font-normal cursor-pointer ease-in aspect-square right-0 top-1/2",
+                "absolute text-neutral-7 !leading-snug font-medium cursor-pointer ease-in aspect-square right-0 top-1/2",
                 "2xl:text-[28px] xl:text-xl lg:text-lg",
-                "2xl:max-w-[320px] xl:max-w-[210px] lg:max-w-[190px] md:max-w-[170px]",
+                "2xl:max-w-[320px] xl:max-w-[206px] lg:max-w-[190px] md:max-w-[170px]",
                 index === 0 &&
                   "md:translate-x-[80%] md:-translate-y-[120%] lg:translate-x-[85%] lg:-translate-y-[140%] lg:max-w-[190px] xl:translate-x-[90%] xl:-translate-y-[120%] 2xl:max-w-[325px] xl:max-w-[260px]",
                 index === 1 && "translate-x-[130%] -translate-y-[80%]",
@@ -188,7 +188,7 @@ export function Dag() {
                 index === 4 &&
                   "md:translate-x-[70%] md:translate-y-[110%] lg:translate-x-[80%] lg:translate-y-[120%] 2xl:translate-x-[80%] 2xl:translate-y-[106%] xl:translate-x-[80%] xl:translate-y-[130%]",
                 selected === index &&
-                  "text-neutral-1 scale-[116%] cursor-default select-none !font-medium",
+                  "text-neutral-1 scale-[116%] cursor-default select-none !font-semibold",
               )}
               transition={figmaSlow}
               style={{
@@ -211,7 +211,7 @@ export function Dag() {
             <motion.p
               key={index}
               className={cn(
-                "text-neutral-6 text-lg xl:text-xl absolute -translate-y-1/2",
+                "text-neutral-6 text-base xl:text-lg 3xl:text-xl absolute -translate-y-1/2",
                 index === selected && "opacity-100",
               )}
               transition={figmaSlow}
@@ -228,7 +228,7 @@ export function Dag() {
 
           <SolarNavigate
             className={
-              "text-lg lg:text-xl xl:text-2xl text-neutral-1 absolute lg:-bottom-[80px] -bottom-[110px]"
+              "text-lg lg:text-xl xl:text-[21px] 3xl:text-2xl text-neutral-1 absolute lg:-bottom-[80px] -bottom-[110px]"
             }
             large
           >

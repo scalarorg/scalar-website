@@ -110,19 +110,19 @@ export function HeroSolarSystem({ className }: { className?: string }) {
       {/*Colorful background*/}
       <div
         className={
-          "w-[1920px] absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-0 h-[1201px] bg-[radial-gradient(21.01%_31.39%_at_64.95%_44.09%,#0047FF_0%,rgba(0,22,78,0.00)_100%),radial-gradient(46.26%_45.3%_at_48.8%_51.72%,#1755F4_0%,rgba(28,83,224,0.00)_100%)]"
+          "3xl:w-[1920px] w-[1600px] aspect-[1920/1201] absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-0 bg-[radial-gradient(21.01%_31.39%_at_64.95%_44.09%,#0047FF_0%,rgba(0,22,78,0.00)_100%),radial-gradient(46.26%_45.3%_at_48.8%_51.72%,#1755F4_0%,rgba(28,83,224,0.00)_100%)]"
         }
       ></div>
       <div
         className={cn(
-          "w-[732px] absolute z-0 -left-[3vw] top-1/2 -translate-y-1/2 h-[1302px] bg-[radial-gradient(62.5%_42.22%_at_30.37%_43.82%,#00B2FF_0%,rgba(0,61,133,0.00)_100%),radial-gradient(48.7%_76.75%_at_3.79%_58.45%,#001AFF_0%,rgba(0,61,133,0.00)_100%)] transition-transform duration-500",
+          "w-[670px] max-2xl:opacity-80 3xl:w-[732px] aspect-[732/1302] absolute z-0 -left-[6vw] 3xl:-left-[3vw] top-1/2 -translate-y-1/2 bg-[radial-gradient(62.5%_42.22%_at_30.37%_43.82%,#00B2FF_0%,rgba(0,61,133,0.00)_100%),radial-gradient(48.7%_76.75%_at_3.79%_58.45%,#001AFF_0%,rgba(0,61,133,0.00)_100%)] transition-transform duration-500",
           tweenValues[PLANET_CONTENT_INDEX] > 0.9 &&
             (step === 0 ? "-translate-x-1/2" : "-translate-x-full"),
         )}
       ></div>
       <div
         className={cn(
-          "transition-transform duration-500 w-[805px] absolute z-0 -right-[4vw] top-1/2 -translate-y-1/2 h-[1302px] bg-[radial-gradient(65.96%_46.34%_at_73.79%_42.51%,#0038FF_0%,rgba(2,83,178,0.00)_89.69%),radial-gradient(53.33%_43.35%_at_86.02%_56.87%,#001AFF_0%,rgba(0,61,133,0.00)_100%)]",
+          "transition-transform duration-500 3xl:w-[805px] w-[700px] max-2xl:opacity-80 aspect-[805/1302] absolute z-0 -right-[4vw] top-1/2 -translate-y-1/2 bg-[radial-gradient(65.96%_46.34%_at_73.79%_42.51%,#0038FF_0%,rgba(2,83,178,0.00)_89.69%),radial-gradient(53.33%_43.35%_at_86.02%_56.87%,#001AFF_0%,rgba(0,61,133,0.00)_100%)]",
           tweenValues[PLANET_CONTENT_INDEX] > 0.9 &&
             (step === 0 ? "translate-x-[30%]" : "translate-x-full"),
         )}
@@ -152,6 +152,7 @@ export function HeroSolarSystem({ className }: { className?: string }) {
           }}
           src={STARS_BACKGROUND}
           alt={"Star background"}
+          priority
         />
       </motion.div>
 
@@ -171,47 +172,8 @@ export function HeroSolarSystem({ className }: { className?: string }) {
             scrollProgress * (step === 0 ? 300 : 330)
           }%) translateY(-50%)`,
         }}
-        priority={true}
       />
 
-      {/*Title*/}
-      {/*<div*/}
-      {/*  className={cn(*/}
-      {/*    "absolute bottom-28 w-full z-20",*/}
-      {/*    step === 0*/}
-      {/*      ? "animate-center-gradient-show"*/}
-      {/*      : "animate-center-gradient-hide",*/}
-      {/*  )}*/}
-      {/*>*/}
-      {/*  <div className={"flex items-center justify-between gap-12"}>*/}
-      {/*    <div*/}
-      {/*      className={cn(*/}
-      {/*        "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",*/}
-      {/*        (tweenValues[PLANET_CONTENT_INDEX] > 0.9 || step !== 0) && "w-0",*/}
-      {/*      )}*/}
-      {/*    ></div>*/}
-      {/*    <div*/}
-      {/*      className={cn(*/}
-      {/*        "opacity-100 transition-opacity duration-500",*/}
-      {/*        step !== 0 && "opacity-0",*/}
-      {/*      )}*/}
-      {/*    >*/}
-      {/*      <div*/}
-      {/*        className={*/}
-      {/*          "font-dm z-20 text-center whitespace-nowrap font-bold text-3xl text-white"*/}
-      {/*        }*/}
-      {/*      >*/}
-      {/*        The Future of Scalable*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-      {/*    <div*/}
-      {/*      className={cn(*/}
-      {/*        "w-full h-[1px] bg-[#8BC1FF] transition-all duration-500",*/}
-      {/*        (tweenValues[PLANET_CONTENT_INDEX] > 0.9 || step !== 0) && "w-0",*/}
-      {/*      )}*/}
-      {/*    ></div>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
       <div
         className={cn(
           "absolute bottom-28 left-32 hidden z-30",
@@ -326,7 +288,6 @@ export function HeroSolarSystem({ className }: { className?: string }) {
                 <Image
                   width={1309}
                   height={1310}
-                  priority={true}
                   className={cn(
                     "cursor-pointer transition-all !ease-[cubic-bezier(0.31,0.01,0.44,0.99)] object-center duration-1000 absolute z-20 left-1/2 w-[1309px] h-[1310px] top-1/2 -translate-y-1/2 -translate-x-1/2",
                     tweenValues[PLANET_CONTENT_INDEX] > 0.9 && step === 0
@@ -364,7 +325,6 @@ export function HeroSolarSystem({ className }: { className?: string }) {
                   )}
                   src={image}
                   quality={100}
-                  priority
                   alt="Planet"
                 />
                 <AnimatePresence initial>
