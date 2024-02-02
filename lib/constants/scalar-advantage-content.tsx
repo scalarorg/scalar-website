@@ -203,7 +203,7 @@ export const ADVANTAGE_CONTENT = [
       },
       {
         title: "Average fee per transaction",
-        value: "2.000$",
+        value: "$2",
       },
       {
         title: "Time to Finality",
@@ -239,7 +239,7 @@ export const ADVANTAGE_CONTENT = [
       },
       {
         title: "Average fee per transaction",
-        value: "$0.0100",
+        value: "$0.1",
       },
       {
         title: "Time to Finality",
@@ -259,13 +259,13 @@ export const ADVANTAGE_CONTENT = [
       },
       {
         title: "EVM Compatible",
-        value: "Yes",
+        value: "No",
       },
     ],
   },
   {
     image: Scalar,
-    width: 368,
+    width: 408,
     height: 137,
     title: "Scalar",
     content: [

@@ -34,17 +34,25 @@ export function ScalarAdvantageTable({
       <Table>
         <TableHeader>
           <TableRow className={"border-none"}>
-            <TableHead className="w-[350px] 2xl:w-[384px]"></TableHead>
+            <TableHead className="w-[330px] 2xl:w-[384px]"></TableHead>
             {ADVANTAGE_CONTENT.map((item, index) => (
-              <TableHead key={index}>
+              <TableHead
+                className={cn(
+                  index === 2 && "max-2xl:w-[181px] last:pr-0",
+                  index === 1 && "pl-0 pr-8",
+                  index === 0 && "pr-0",
+                )}
+                key={index}
+              >
                 <div className={"relative z-0 bg-transparent"}>
                   <Image
                     src={item.image}
                     alt={item.title}
                     className={cn(
                       `aspect-[${item.width}/${item.height}]`,
-                      index === 1 ? "w-[80%]" : "w-[75%]",
-                      index === 0 && "mix-blend-luminosity",
+                      index === 1 && "w-[70%]",
+                      index === 0 && "w-[65%]",
+                      index === 2 && "w-[90%] 2xl:w-[80%] -translate-x-1",
                     )}
                   />
                   {index === 0 && (
@@ -70,7 +78,11 @@ export function ScalarAdvantageTable({
               </TableCell>
               {ADVANTAGE_CONTENT.map((item, indexInner) => (
                 <TableCell
-                  className={"font-medium text-neutral-1 text-lg 2xl:text-xl"}
+                  className={cn(
+                    "font-medium text-neutral-1 text-lg 2xl:text-xl last:pr-0",
+                    indexInner === 1 && "pl-0 pr-8",
+                    indexInner === 0 && "pr-0",
+                  )}
                   key={indexInner}
                 >
                   {item.content[index].value}
