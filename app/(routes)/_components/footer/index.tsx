@@ -10,7 +10,7 @@ import { FooterWithLogo } from "./components/footer-with-logo";
  * ------------------------------------------------------------------------------------------------------------------ */
 
 const footerVariants = cva(
-  "container flex flex-col gap-3 xl:gap-[24px] h-full py-[32px] xl:py-[117px]",
+  "container flex flex-col gap-3 xl:gap-[24px] h-full py-[32px] xl:py-[90px] 2xl:py-[117px]",
 );
 
 type FooterVariantProps = VariantProps<typeof footerVariants>;
@@ -49,7 +49,7 @@ export function Footer({
         {/* Footer copyright */}
         <div
           className={cn(
-            "w-full flex gap-1 text-neutral-7 text-xs md:text-[13px] font-bold xl:text-[22px] xl:leading-[33px]",
+            "w-full flex gap-1 text-neutral-7 text-xs md:text-[13px] font-medium 2xl:font-bold xl:text-[18px] 2xl:text-[22px] xl:leading-[33px]",
           )}
         >
           Copyright ©<span className="text-white">Scalar</span>| Designed by

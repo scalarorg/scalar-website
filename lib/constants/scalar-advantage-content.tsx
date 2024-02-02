@@ -4,6 +4,9 @@ import APTOS_MARK_SMALL from "@/public/aptos-mark-small.webp";
 import LOGO from "@/public/icon/logo.svg";
 import SUI_MARK from "@/public/sui-mark.svg";
 import APTOS_MARK from "@/public/aptos-mark.svg";
+import Avalanche from "@/public/blockchain/avalanche.webp";
+import Cosmos from "@/public/blockchain/cosmos.webp";
+import Scalar from "@/public/blockchain/scalar.webp";
 import { StaticImageData } from "next/image";
 
 export interface PositionItem {
@@ -184,5 +187,117 @@ export const ScalarAdvantageContentDesktop: ScalarAdvantageContentItem[] = [
       top: "212px",
       right: "0",
     },
+  },
+];
+
+export const ADVANTAGE_CONTENT = [
+  {
+    image: Cosmos,
+    width: 262,
+    height: 82,
+    title: "Cosmos",
+    content: [
+      {
+        title: "Transactions per second",
+        value: "10,000",
+      },
+      {
+        title: "Average fee per transaction",
+        value: "$0.0100",
+      },
+      {
+        title: "Time to Finality",
+        value: "6 seconds",
+      },
+      {
+        title: "Consensus",
+        value: "PoS",
+      },
+      {
+        title: "Parallel Transactions",
+        value: "No",
+      },
+      {
+        title: "Natively Interoperable",
+        value: "Yes",
+      },
+      {
+        title: "EVM Compatible",
+        value: "Yes",
+      },
+    ],
+  },
+
+  {
+    image: Avalanche,
+    width: 434,
+    height: 82,
+    title: "Avalanche",
+    content: [
+      {
+        title: "Transactions per second",
+        value: "4,500",
+      },
+      {
+        title: "Average fee per transaction",
+        value: "2.000$",
+      },
+      {
+        title: "Time to Finality",
+        value: "3 seconds",
+      },
+      {
+        title: "Consensus",
+        value: "PoS",
+      },
+      {
+        title: "Parallel Transactions",
+        value: "No",
+      },
+      {
+        title: "Natively Interoperable",
+        value: "No",
+      },
+      {
+        title: "EVM Compatible",
+        value: "Yes",
+      },
+    ],
+  },
+  {
+    image: Scalar,
+    width: 368,
+    height: 137,
+    title: "Scalar",
+    content: [
+      {
+        title: "Transactions per second",
+        value: "240,000",
+      },
+      {
+        title: "Average fee per transaction",
+        value: "<$0.0001",
+      },
+      {
+        title: "Time to Finality",
+        value: "< 1 second",
+      },
+      {
+        title: "Consensus",
+        value: "DAG-based DPoS",
+      },
+      {
+        title: "Parallel Transactions",
+        value: "Yes",
+      },
+      {
+        title: "Natively Interoperable",
+        value: "Yes",
+      },
+      {
+        title: "EVM Compatible",
+        value: "Yes",
+      },
+    ],
   },
 ];

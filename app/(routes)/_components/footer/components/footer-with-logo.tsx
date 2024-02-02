@@ -28,13 +28,13 @@ export function FooterWithLogo({
     <div className={footerWithLogoVariants({ className })} {...props}>
       <div
         className={cn(
-          "w-full flex flex-col font-normal gap-3 xl:gap-[22px] text-neutral-7",
+          "w-full flex flex-col font-normal gap-3 lg:gap-[18px] 2xl:gap-[22px] text-neutral-7",
         )}
       >
         <Link href="/">
           <Image
             sizes="100vw"
-            className="w-[188px] h-[21px] xl:w-[280px] xl:h-[32px] hover:cursor-pointer"
+            className="w-[188px] aspect-[280/31] lg:w-[232px] 2xl:w-[280px] hover:cursor-pointer"
             src={Logo}
             alt={"Scalar logo"}
           />
@@ -42,7 +42,7 @@ export function FooterWithLogo({
 
         <p
           className={cn(
-            "text-[11px] leading-4 xl:w-[394px] xl:text-[18px] xl:leading-[27px]",
+            "text-[11px] leading-4 lg:!leading-[23px] lg:min-w-[310px] w-full 2xl:w-[394px] lg:text-[14px] 2xl:text-[18px] 2xl:!leading-[27px]",
           )}
         >
           Scalar Protocol is the next gen L1 blockchain built from the ground up
@@ -53,7 +53,7 @@ export function FooterWithLogo({
 
       <div
         className={cn(
-          "w-[188px] xl:w-[280px] flex xl:gap-x-[38px] items-center justify-between xl:justify-start",
+          "w-[188px] xl:w-[280px] flex gap-x-[24px] 2xl:gap-x-[38px] items-center justify-between xl:justify-start",
         )}
       >
         {FooterSocialLink.map((item, index) => (
@@ -68,7 +68,7 @@ export function FooterWithLogo({
             <Image
               src={item.icon}
               sizes="100vw"
-              className="w-[20px] h-[19px] xl:w-[33px] xl:h-[33px]"
+              className="w-[20px] h-[19px] 2xl:w-[33px] 2xl:h-[33px]"
               key={index}
               alt="icon"
             />

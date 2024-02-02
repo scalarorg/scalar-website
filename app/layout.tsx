@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { dm_sans } from "@/fonts";
 import { WEBSITE_URL } from "@/lib/constants/links";
+import { Toaster } from "@/components/ui/toaster";
 
 const title = "Scalar - The Future of Scalable Blockchain";
 const description =
@@ -81,6 +82,7 @@ export default function RootLayout({
         className={`${dm_sans.variable} font-dm bg-neutral-900 text-neutral-1 scrollbar-thumb-primary-blue-900 scrollbar-track-accent-info-900/90 scrollbar-thin`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );

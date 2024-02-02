@@ -102,9 +102,8 @@ function HackathonItem({
                 animate={{ height: "auto" }}
                 exit={{ height: 0 }}
                 transition={figmaGentle}
-              >
-                {description}
-              </motion.div>
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
             )}
           </AnimatePresence>
         </div>

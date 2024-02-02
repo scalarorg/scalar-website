@@ -4,7 +4,9 @@ import { cva, VariantProps } from "class-variance-authority";
 import Link from "next/link";
 import { HTMLAttributes } from "react";
 
-const footerColumnVariants = cva("flex flex-col gap-2 xl:gap-[18px]");
+const footerColumnVariants = cva(
+  "flex flex-col gap-2 xl:gap-[10px] 2xl:gap-[18px]",
+);
 
 interface AdditionalProps {
   column: FooterContent;
@@ -24,7 +26,7 @@ export default function FooterColumn({
     <div className={footerColumnVariants({ className })}>
       <label
         className={cn(
-          "capitalize text-[16px] xl:text-[22px] leading-6 xl:leading-[33px] font-bold text-gray-100 hover:text-primary-cyan-500 cursor-pointer",
+          "capitalize text-[16px] lg:text-[18px] 2xl:text-[22px] leading-6 xl:leading-[33px] font-bold text-gray-100 hover:text-primary-cyan-500 cursor-pointer",
         )}
       >
         {column.title}
@@ -36,7 +38,7 @@ export default function FooterColumn({
             key={`footer-column-${i}-${item.name}`}
             href={item.link}
             className={cn(
-              "capitalize text-[13px] xl:text-[22px] leading-5 xl:leading-[33px] text-neutral-6 hover:text-primary-cyan-800 ease-linear transition-all",
+              "capitalize text-[13px] xl:text-[17px] 2xl:text-[22px] leading-5 xl:leading-[24px] 2xl:leading-[33px] text-neutral-6 hover:text-primary-cyan-800 ease-linear transition-all",
             )}
           >
             {item.name}

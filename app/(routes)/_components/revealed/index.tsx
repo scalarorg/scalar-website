@@ -20,7 +20,7 @@ export default function Revealed({ className }: RevealedProps) {
     <div className={RevealedVariants({ className })}>
       <label
         className={cn(
-          "font-bold text-[30px] leading-[45px] xl:text-[37px] xl:leading-[51px] 3xl:text-[43px] 3xl:leading-[55.9px] max-w-[631px]",
+          "font-semibold text-[30px] leading-[45px] xl:text-[37px] xl:leading-[51px] 3xl:text-[43px] 3xl:leading-[55.9px] max-w-[631px]",
         )}
       >
         <FadeIn
@@ -34,7 +34,7 @@ export default function Revealed({ className }: RevealedProps) {
           Scalar revealed:{" "}
           <span
             className={cn(
-              "font-bold bg-gradient-to-tr bg-clip-text text-transparent from-primary-blue-500 to-[#0EF1F1]",
+              "font-semibold bg-gradient-to-tr bg-clip-text from-[60%] text-transparent from-primary-blue-500 to-[#0EF1F1]",
             )}
           >
             <br />
@@ -72,7 +72,7 @@ export default function Revealed({ className }: RevealedProps) {
 
               <div
                 className={cn(
-                  "flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-16 sm:w-[126px] aspect-square rounded-full bg-primary-cyan-50/50 shadow-inner hover:scale-105 transition-all duration-300",
+                  "flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-16 sm:w-20 lg:w-[100px] 2xl:w-[126px] aspect-square rounded-full bg-primary-cyan-50/50 shadow-inner hover:scale-105 transition-all duration-300",
                 )}
               >
                 <div

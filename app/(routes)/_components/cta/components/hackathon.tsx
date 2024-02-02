@@ -24,6 +24,7 @@ export function Hackathon({ className }: HTMLAttributes<HTMLDivElement>) {
             <HackathonItem
               key={index}
               icon={item.icon}
+              index={index}
               title={item.title}
               selected={selected === index}
               description={item.description}
@@ -49,6 +50,7 @@ type HackathonItemVariantProps = VariantProps<typeof hackathonItemVariants> & {
   description: string;
   selected?: boolean;
   onClick?: () => void;
+  index: number;
 };
 
 type HackathonItemProps = HackathonItemVariantProps &
@@ -61,6 +63,7 @@ function HackathonItem({
   description,
   selected = false,
   onClick,
+  index,
 }: HackathonItemProps): React.JSX.Element {
   return (
     <motion.div
@@ -80,11 +83,14 @@ function HackathonItem({
           <div
             className={cn(
               "text-base 2xl:text-xl text-neutral-6 mt-2.5",
-              !selected && "min-w-[500px]",
+              !selected
+                ? index === 0
+                  ? "max-2xl:min-w-[350px] 2xl:min-w-[500px]"
+                  : "min-w-[500px]"
+                : index === 0 && "max-2xl:max-w-[95%]",
             )}
-          >
-            {description}
-          </div>
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
       </div>
       <Image

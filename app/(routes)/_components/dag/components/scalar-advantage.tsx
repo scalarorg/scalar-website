@@ -11,15 +11,13 @@ import ADVANTAGE_MARS_LARGE from "@/public/advantage-mars-large.webp";
 import ADVANTAGE_EARTH_LARGE from "@/public/advantage-earth-large.webp";
 import ADVANTAGE_MOON_LARGE from "@/public/advantage-moon-large.webp";
 import Image from "next/image";
-import {
-  ScalarAdvantageContentDesktop,
-  ScalarAdvantageContentMobile,
-} from "@/lib/constants/scalar-advantage-content";
+import { ScalarAdvantageContentMobile } from "@/lib/constants/scalar-advantage-content";
 import AdvantageItem from "./advantage-item";
 import { FadeIn } from "@/components/motion/fade-in";
+import { ScalarAdvantageTable } from "@/app/(routes)/_components/dag/components/scalar-advantage-table";
 
 const ScalarAdvantageVariants = cva(
-  "relative flex z-0 justify-center mb-[60px] lg:h-[90vh] lg:pb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[160%]",
+  "relative flex z-0 justify-center mb-[60px] lg:h-[120vh] xl:h-[110dvh] 2xl:h-[130dvh] lg:pb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[160%]",
 );
 
 type ScalarAdvantageVariantProps = VariantProps<typeof ScalarAdvantageVariants>;
@@ -100,7 +98,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           width={477}
           height={456}
           className={cn(
-            "hidden lg:block w-[341px] h-[327px] 2xl:w-[477px] 2xl:h-[456px] absolute select-none -z-10 left-[283px] 2xl:left-[593px] -bottom-[18%] 2xl:-bottom-[24%]",
+            "hidden lg:block w-[341px] aspect-[1110/1104] 2xl:w-[477px] absolute select-none -z-10 left-[283px] lg:left-[30%] 2xl:left-[593px] -bottom-[18%] 2xl:-bottom-[24%]",
           )}
         />
 
@@ -110,12 +108,12 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           width={392}
           height={404}
           className={cn(
-            "hidden lg:block w-[322px] h-[347px] 2xl:w-[392px] 2xl:h-[404px] absolute select-none -z-10 -right-[64px] top-[18%]",
+            "hidden lg:block w-[282px] lg:w-[240px] aspect-[558/808] 2xl:w-[392px] absolute select-none -z-10 -right-[64px] top-[18%]",
           )}
         />
 
         {/* Block content */}
-        <div className="lg:px-0 sm:py-[60px] w-full flex flex-col items-center gap-[16px] lg:gap-[64px] 2xl:gap-0 z-10 container lg:relative">
+        <div className="lg:px-0 sm:py-[60px] w-full flex flex-col items-center gap-[16px] lg:gap-[64px] xl:gap-[36px] 2xl:gap-[16px] z-10 container lg:relative">
           <SectionTitle className="z-10">Scalar Advantage</SectionTitle>
 
           {/* Content Mobile */}
@@ -149,10 +147,17 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
               delay: 0.2,
             }}
           >
-            <div className="hidden w-full lg:flex flex-row justify-between lg:gap-0 2xl:relative">
-              {ScalarAdvantageContentDesktop.map((item, index) => (
-                <AdvantageItem item={item} key={index} size={widthScreen} />
-              ))}
+            {/*<div className="hidden w-full lg:flex flex-row justify-between lg:gap-0 2xl:relative">*/}
+            {/*  {ScalarAdvantageContentDesktop.map((item, index) => (*/}
+            {/*    <AdvantageItem item={item} key={index} size={widthScreen} />*/}
+            {/*  ))}*/}
+            {/*</div>*/}
+            <div
+              className={
+                "hidden lg:block container xl:max-w-[1097px] 3xl:max-w-[1262px]"
+              }
+            >
+              <ScalarAdvantageTable />
             </div>
           </FadeIn>
         </div>
