@@ -43,11 +43,11 @@ export function ScalarAdvantageTable({
                     alt={item.title}
                     className={cn(
                       `aspect-[${item.width}/${item.height}]`,
-                      index === 0 ? "w-[80%]" : "w-[75%]",
-                      index === 1 && "mix-blend-luminosity",
+                      index === 1 ? "w-[80%]" : "w-[75%]",
+                      index === 0 && "mix-blend-luminosity",
                     )}
                   />
-                  {index === 1 && (
+                  {index === 0 && (
                     <div
                       className={
                         "absolute inset-0 w-full h-full mix-blend-luminosity z-10"

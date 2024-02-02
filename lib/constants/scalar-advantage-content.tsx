@@ -192,43 +192,6 @@ export const ScalarAdvantageContentDesktop: ScalarAdvantageContentItem[] = [
 
 export const ADVANTAGE_CONTENT = [
   {
-    image: Cosmos,
-    width: 262,
-    height: 82,
-    title: "Cosmos",
-    content: [
-      {
-        title: "Transactions per second",
-        value: "10,000",
-      },
-      {
-        title: "Average fee per transaction",
-        value: "$0.0100",
-      },
-      {
-        title: "Time to Finality",
-        value: "6 seconds",
-      },
-      {
-        title: "Consensus",
-        value: "PoS",
-      },
-      {
-        title: "Parallel Transactions",
-        value: "No",
-      },
-      {
-        title: "Natively Interoperable",
-        value: "Yes",
-      },
-      {
-        title: "EVM Compatible",
-        value: "Yes",
-      },
-    ],
-  },
-
-  {
     image: Avalanche,
     width: 434,
     height: 82,
@@ -257,6 +220,42 @@ export const ADVANTAGE_CONTENT = [
       {
         title: "Natively Interoperable",
         value: "No",
+      },
+      {
+        title: "EVM Compatible",
+        value: "Yes",
+      },
+    ],
+  },
+  {
+    image: Cosmos,
+    width: 262,
+    height: 82,
+    title: "Cosmos",
+    content: [
+      {
+        title: "Transactions per second",
+        value: "10,000",
+      },
+      {
+        title: "Average fee per transaction",
+        value: "$0.0100",
+      },
+      {
+        title: "Time to Finality",
+        value: "6 seconds",
+      },
+      {
+        title: "Consensus",
+        value: "PoS",
+      },
+      {
+        title: "Parallel Transactions",
+        value: "No",
+      },
+      {
+        title: "Natively Interoperable",
+        value: "Yes",
       },
       {
         title: "EVM Compatible",
