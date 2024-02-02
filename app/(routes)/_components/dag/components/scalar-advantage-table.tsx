@@ -38,6 +38,7 @@ export function ScalarAdvantageTable({
             {ADVANTAGE_CONTENT.map((item, index) => (
               <TableHead
                 className={cn(
+                  "pb-6",
                   index === 2 && "max-2xl:w-[181px] last:pr-0",
                   index === 1 && "pl-0 pr-8",
                   index === 0 && "pr-0",
