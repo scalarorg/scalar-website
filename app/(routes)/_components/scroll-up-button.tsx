@@ -8,7 +8,7 @@ import { ArrowUpIcon } from "lucide-react";
  * Component: ScrollUpButton
  * ------------------------------------------------------------------------------------------------------------------ */
 
-const scrollUpButtonVariants = cva("fixed bottom-[10%] right-[5%] z-50");
+const scrollUpButtonVariants = cva("fixed bottom-[7%] right-[5%] z-50");
 
 type ScrollUpButtonVariantProps = VariantProps<typeof scrollUpButtonVariants>;
 
