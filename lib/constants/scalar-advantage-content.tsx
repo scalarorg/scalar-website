@@ -1,6 +1,4 @@
 import LOGO_COLOR from "@/public/icon/logo-color.svg";
-import SUI_MARK_SMALL from "@/public/sui-mark-small.webp";
-import APTOS_MARK_SMALL from "@/public/aptos-mark-small.webp";
 import LOGO from "@/public/icon/logo.svg";
 import SUI_MARK from "@/public/sui-mark.svg";
 import APTOS_MARK from "@/public/aptos-mark.svg";
@@ -8,6 +6,8 @@ import Avalanche from "@/public/blockchain/avalanche.webp";
 import Cosmos from "@/public/blockchain/cosmos.webp";
 import Scalar from "@/public/blockchain/scalar.webp";
 import { StaticImageData } from "next/image";
+import COSMOS_SMALL from "@/public/blockchain/cosmos-sm.webp";
+import AVALANCHE_SMALL from "@/public/blockchain/avalanche-sm.webp";
 
 export interface PositionItem {
   left?: string;
@@ -37,32 +37,6 @@ export interface ScalarAdvantageContentItem {
 export const ScalarAdvantageContentMobile: ScalarAdvantageContentItem[] = [
   {
     image: {
-      image: SUI_MARK_SMALL,
-      width: 31,
-      height: 39,
-    },
-    data: [
-      {
-        title: "Transactions per second",
-        data: "120,000",
-      },
-      {
-        title: "Average fee per transaction",
-        data: "<$0.015",
-      },
-      {
-        title: "New blockchain deployable",
-        data: "No",
-      },
-    ],
-    position: {
-      top: "72px",
-      left: "50%",
-      transform: "translateX(-50%)",
-    },
-  },
-  {
-    image: {
       image: LOGO_COLOR,
       width: 50.29,
       height: 40,
@@ -77,8 +51,66 @@ export const ScalarAdvantageContentMobile: ScalarAdvantageContentItem[] = [
         data: "<$0.0001",
       },
       {
-        title: "New blockchain deployable",
+        title: "Time to Finality",
+        data: "<1 second",
+      },
+      {
+        title: "Consensus",
+        data: "DAG-based DPoS",
+      },
+      {
+        title: "Parallel Transactions",
         data: "Yes",
+      },
+      {
+        title: "Natively Interoperable",
+        data: "Yes",
+      },
+      {
+        title: "EVM Compatible",
+        data: "Yes",
+      },
+    ],
+    position: {
+      top: "72px",
+      left: "50%",
+      transform: "translateX(-50%)",
+    },
+  },
+  {
+    image: {
+      image: COSMOS_SMALL,
+      width: 40,
+      height: 40,
+    },
+    data: [
+      {
+        title: "Transactions per second",
+        data: "10,000",
+      },
+      {
+        title: "Average fee per transaction",
+        data: "$0.1",
+      },
+      {
+        title: "Time to Finality",
+        data: "6 seconds",
+      },
+      {
+        title: "Consensus",
+        data: "PoS",
+      },
+      {
+        title: "Parallel Transactions",
+        data: "No",
+      },
+      {
+        title: "Natively Interoperable",
+        data: "Yes",
+      },
+      {
+        title: "EVM Compatible",
+        data: "No",
       },
     ],
     position: {
@@ -87,22 +119,38 @@ export const ScalarAdvantageContentMobile: ScalarAdvantageContentItem[] = [
   },
   {
     image: {
-      image: APTOS_MARK_SMALL,
-      width: 40,
-      height: 39,
+      image: AVALANCHE_SMALL,
+      width: 39,
+      height: 40,
     },
     data: [
       {
         title: "Transactions per second",
-        data: "160,000",
+        data: "4,500",
       },
       {
         title: "Average fee per transaction",
-        data: "<$0.0003",
+        data: "$2",
       },
       {
-        title: "New blockchain deployable",
+        title: "Time to Finality",
+        data: "3 seconds",
+      },
+      {
+        title: "Consensus",
+        data: "PoS",
+      },
+      {
+        title: "Parallel Transactions",
         data: "No",
+      },
+      {
+        title: "Natively Interoperable",
+        data: "No",
+      },
+      {
+        title: "EVM Compatible",
+        data: "Yes",
       },
     ],
     position: {

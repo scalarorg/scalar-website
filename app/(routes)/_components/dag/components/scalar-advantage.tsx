@@ -17,7 +17,7 @@ import { FadeIn } from "@/components/motion/fade-in";
 import { ScalarAdvantageTable } from "@/app/(routes)/_components/dag/components/scalar-advantage-table";
 
 const ScalarAdvantageVariants = cva(
-  "relative flex z-0 justify-center mb-[60px] lg:h-[120vh] xl:h-[110dvh] 2xl:h-[130dvh] lg:pb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[160%]",
+  "relative flex z-0 justify-center mb-[60px] lg:pb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[160%]",
 );
 
 type ScalarAdvantageVariantProps = VariantProps<typeof ScalarAdvantageVariants>;
@@ -87,7 +87,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           alt=""
           sizes="100vw"
           className={cn(
-            "hidden lg:block w-[234px] h-[247px] 2xl:w-[354px] 2xl:h-[367px] absolute select-none -z-10 -left-[30px] bottom-0",
+            "hidden lg:block w-[234px] h-[247px] 2xl:w-[354px] 2xl:h-[367px] absolute select-none -z-10 -left-[30px] bottom-32",
           )}
         />
 
@@ -98,7 +98,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           width={477}
           height={456}
           className={cn(
-            "hidden lg:block w-[341px] aspect-[1110/1104] 2xl:w-[477px] absolute select-none -z-10 left-[283px] lg:left-[30%] 2xl:left-[593px] -bottom-[18%] 2xl:-bottom-[24%]",
+            "hidden lg:block w-[341px] xl:scale-[130%] aspect-[1110/1104] 2xl:w-[477px] absolute select-none -z-10 left-[283px] lg:left-[35%] 2xl:left-[593px] -bottom-[18%] 2xl:-bottom-[24%]",
           )}
         />
 
@@ -108,7 +108,7 @@ const ScalarAdvantage = ({ className }: ScalarAdvantageProps) => {
           width={392}
           height={404}
           className={cn(
-            "hidden lg:block w-[282px] lg:w-[240px] aspect-[558/808] 2xl:w-[392px] absolute select-none -z-10 -right-[64px] top-[18%]",
+            "hidden lg:block w-[282px] xl:scale-90 lg:w-[240px] aspect-[558/808] 2xl:w-[332px] absolute select-none -z-10 -right-[64px] bottom-[20%]",
           )}
         />
 
