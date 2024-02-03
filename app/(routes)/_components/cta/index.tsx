@@ -7,11 +7,12 @@ import SectionTitle from "@/components/ui/section-title";
 import { CarouselLogo } from "./components/carousel";
 import { Hackathon } from "./components/hackathon";
 import { HackathonMobile } from "@/app/(routes)/_components/cta/components/hackathon-mobile";
-import { Resolver, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { AlertTriangleIcon } from "lucide-react";
 import { FadeIn } from "@/components/motion/fade-in";
 import { toast } from "@/components/ui/use-toast";
 import * as z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const ctaVariants = cva(
   "relative z-0 max-sm:pb-[60px] max-sm:pt-[60px] sm:py-[160px] lg:py-[100px] 3xl:py-[192px] md:pt-0 w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col gap-[60px] sm:gap-[192px] items-center justify-center",
@@ -32,26 +33,12 @@ const schema = z.object({
 
 export type SchemaSubscribeForm = z.infer<typeof schema>;
 
-const resolver: Resolver<FormValues> = async (values) => {
-  return {
-    values: values.email ? values : {},
-    errors: !values.email
-      ? {
-          email: {
-            type: "required",
-            message: "Email is required!",
-          },
-        }
-      : {},
-  };
-};
-
 export function Cta({ className }: CtaProps) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm<FormValues>({ resolver });
+    formState: { errors, isSubmitting },
+  } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
   const onSubmit = handleSubmit(async ({ email }) => {
     const result = await fetch("/api/subscribe", {
@@ -188,14 +175,14 @@ export function Cta({ className }: CtaProps) {
                 }                
                 `,
                 )}
-                disabled={errors.email && true}
+                disabled={(errors.email && true) || isSubmitting}
               >
                 <span
                   className={`md:text-[18px] md:leading-[22px] 2xl:text-[22px] 2xl:leading-[33px] ${
                     errors.email && "text-neutral-10"
                   }`}
                 >
-                  Subscribe
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
                 </span>
               </button>
             </div>
@@ -203,10 +190,10 @@ export function Cta({ className }: CtaProps) {
             {errors?.email && (
               <p
                 className={cn(
-                  "flex gap-6 2xl:gap-[10px] font-normal text-base 2xl:text-[18px] leading-[27px] text-accent-warning-500",
+                  "flex gap-2 2xl:gap-[10px] font-normal text-base 2xl:text-[18px] leading-[27px] text-accent-warning-500",
                 )}
               >
-                <AlertTriangleIcon />
+                <AlertTriangleIcon className={"w-4"} />
                 {errors.email.message}
               </p>
             )}
