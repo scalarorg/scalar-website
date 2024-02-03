@@ -1,3 +1,4 @@
+"use client";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
@@ -88,12 +89,13 @@ export default function Revealed({ className }: RevealedProps) {
 
           <DialogContent>
             <iframe
-              src="https://www.youtube.com/embed/OO4BN1Eol7g?autoplay=1&&playsinline=1&loop=1&showinfo=0&playlist=OO4BN1Eol7g"
+              src="https://www.youtube.com/embed/OO4BN1Eol7g?autoplay=1&loop=1&showinfo=0&playlist=OO4BN1Eol7g"
               title="video player"
+              loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className={cn(
-                "w-[80vw] rounded-[24px] border-2 border-neutral-6 aspect-video mx-auto overflow-hidden bg-black",
+                "w-[80vw] rounded-[24px] data-[aria-hidden=true]:hidden border-2 border-neutral-6 aspect-video mx-auto overflow-hidden bg-black",
               )}
             />
           </DialogContent>
