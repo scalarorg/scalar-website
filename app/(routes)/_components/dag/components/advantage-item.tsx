@@ -15,7 +15,7 @@ const AdvantageItem = ({ item, size, isLast }: AdditionalProps) => {
       {/* Mobile */}
       <div
         className={cn(
-          `grid grid-cols-2 lg:hidden gap-[14px] px-[20px] sm:px-[30px] py-[18px] border-dashed border-b border-neutral-12 z-10`,
+          `grid grid-cols-2 lg:hidden gap-[14px] sm:gap-8 px-[20px] sm:px-[24px] md:px-[30px] py-[18px] border-dashed border-b border-neutral-12 z-10`,
           isLast && "border-none",
         )}
       >
