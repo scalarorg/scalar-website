@@ -19,30 +19,58 @@ const AdvantageItem = ({ item, size, isLast }: AdditionalProps) => {
           isLast && "border-none",
         )}
       >
-        <Image
-          src={item.image.image}
-          width={item.image.width}
-          height={item.image.height}
-          alt="Logo"
-          className={cn("lg:hidden select-none")}
-        />
+        <div className={"space-y-[14px]"}>
+          <Image
+            src={item.image.image}
+            width={item.image.width}
+            height={item.image.height}
+            alt="Logo"
+            className={cn("lg:hidden select-none")}
+          />
+          {item.data
+            .filter((_, index) => index % 2 !== 0)
+            .map((content, i) => (
+              <div className={cn("flex flex-col")} key={i}>
+                <p
+                  className={cn(
+                    "font-normal text-[16px] leading-[24px] text-neutral-6",
+                  )}
+                >
+                  {content.title}
+                </p>
+                <label
+                  className={cn(
+                    "font-bold text-[18px] leading-[28px] text-white",
+                  )}
+                >
+                  {content.data}
+                </label>
+              </div>
+            ))}
+        </div>
 
-        {item.data.map((content, i) => (
-          <div className={cn("flex flex-col")} key={i}>
-            <p
-              className={cn(
-                "font-normal text-[16px] leading-[24px] text-neutral-6",
-              )}
-            >
-              {content.title}
-            </p>
-            <label
-              className={cn("font-bold text-[18px] leading-[28px] text-white")}
-            >
-              {content.data}
-            </label>
-          </div>
-        ))}
+        <div className={"flex flex-col justify-between"}>
+          {item.data
+            .filter((_, index) => index % 2 === 0)
+            .map((content, i) => (
+              <div className={cn("flex flex-col")} key={i}>
+                <p
+                  className={cn(
+                    "font-normal text-[16px] leading-[24px] text-neutral-6",
+                  )}
+                >
+                  {content.title}
+                </p>
+                <label
+                  className={cn(
+                    "font-bold text-[18px] leading-[28px] text-white",
+                  )}
+                >
+                  {content.data}
+                </label>
+              </div>
+            ))}
+        </div>
       </div>
 
       {/* Desktop */}
