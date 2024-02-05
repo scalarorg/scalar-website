@@ -24,12 +24,12 @@ const VALUES = [
   },
   {
     icon: "/icon/hybrid.svg",
-    value: "< $0.0001",
+    value: "< $0.001",
     description: "Gas fees",
   },
   {
     icon: "/icon/dag.svg",
-    value: "240,000",
+    value: "160,000",
     description: "Transactions per second",
   },
   {

@@ -44,11 +44,11 @@ export const ScalarAdvantageContentMobile: ScalarAdvantageContentItem[] = [
     data: [
       {
         title: "Transactions per second",
-        data: "240,000",
+        data: "160,000",
       },
       {
         title: "Average fee per transaction",
-        data: "<$0.0001",
+        data: "<$0.001",
       },
       {
         title: "Time to Finality",
@@ -194,11 +194,11 @@ export const ScalarAdvantageContentDesktop: ScalarAdvantageContentItem[] = [
     data: [
       {
         title: "Transactions per second",
-        data: "240,000",
+        data: "160,000",
       },
       {
         title: "Average fee per transaction",
-        data: "<$0.0001",
+        data: "<$0.001",
       },
       {
         title: "New blockchain deployable",
@@ -319,11 +319,11 @@ export const ADVANTAGE_CONTENT = [
     content: [
       {
         title: "Transactions per second",
-        value: "240,000",
+        value: "160,000",
       },
       {
         title: "Average fee per transaction",
-        value: "<$0.0001",
+        value: "<$0.001",
       },
       {
         title: "Time to Finality",
