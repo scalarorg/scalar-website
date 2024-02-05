@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-import { baumans, inter } from "@/fonts";
+import { dm_sans } from "@/fonts";
 import { WEBSITE_URL } from "@/lib/constants/links";
+import { Toaster } from "@/components/ui/toaster";
 
 const title = "Scalar - The Future of Scalable Blockchain";
 const description =
@@ -78,9 +79,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${baumans.variable} font-sans bg-neutral-900 text-neutral-0`}
+        className={`${dm_sans.variable} font-dm bg-neutral-900 text-neutral-1 scrollbar-thumb-primary-blue-900 scrollbar-track-accent-info-900/90 scrollbar-thin`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );
