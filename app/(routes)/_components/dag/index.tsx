@@ -17,6 +17,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const ScalarAdvantage = dynamic(() => import("./components/scalar-advantage"), {
   ssr: false,
@@ -226,14 +227,16 @@ export function Dag() {
             />
           ))}
 
-          <SolarNavigate
-            className={
-              "text-lg lg:text-xl xl:text-[21px] 3xl:text-2xl text-neutral-1 absolute lg:-bottom-[80px] -bottom-[110px]"
-            }
-            large
-          >
-            Learn more
-          </SolarNavigate>
+          <Link href={"/404"} passHref>
+            <SolarNavigate
+              className={
+                "text-lg lg:text-xl xl:text-[21px] 3xl:text-2xl text-neutral-1 absolute lg:-bottom-[80px] -bottom-[110px]"
+              }
+              large
+            >
+              Learn more
+            </SolarNavigate>
+          </Link>
         </div>
       </div>
 

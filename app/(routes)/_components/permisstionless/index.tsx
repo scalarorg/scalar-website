@@ -10,6 +10,7 @@ import STAR_BACKGROUND from "@/public/star.webp";
 import MOON_BACKGROUND from "@/public/moon-background.webp";
 import { FadeIn } from "@/components/motion/fade-in";
 import { SolarNavigate } from "@/app/(routes)/_components/hero-solar-system/solar-navigate";
+import Link from "next/link";
 
 const permissionlessVariants = cva(
   "bg-star bg-no-repeat bg-cover relative lg:h-screen my-[84px] md:my-[192px] z-0 gap-[16px] lg:gap-[45px] w-full flex flex-col items-start px-5 lg:px-0",
@@ -142,12 +143,14 @@ export function Permissionless({ className }: permissionlessProps) {
             delay: 0.1,
           }}
         >
-          <SolarNavigate
-            className={"text-lg lg:text-xl xl:text-2xl text-neutral-1"}
-            large
-          >
-            Learn more
-          </SolarNavigate>
+          <Link href={"/404"} passHref>
+            <SolarNavigate
+              className={"text-lg lg:text-xl xl:text-2xl text-neutral-1"}
+              large
+            >
+              Learn more
+            </SolarNavigate>
+          </Link>
           {/*<PermissionlessNavigate*/}
           {/*  className={*/}
           {/*    "text-neutral-1 text-[18px] leading-[27px] lg:text-[34px] lg:leading-[47px] h-[27px] w-fit lg:w-[260px] flex gap-[10px] items-center border-none bg-transparent p-0 hover:transition-all hover:ease-in-out hover:delay-500"*/}

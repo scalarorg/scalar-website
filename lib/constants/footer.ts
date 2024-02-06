@@ -20,19 +20,19 @@ export const FooterContent: FooterContent[] = [
     links: [
       {
         name: "consensus",
-        link: "/",
+        link: "/404",
       },
       {
         name: "interoperable layer",
-        link: "/",
+        link: "/404",
       },
       {
         name: "EVM compatibility",
-        link: "/",
+        link: "/404",
       },
       {
         name: "network scan",
-        link: "/",
+        link: "/404",
       },
     ],
   },
@@ -41,19 +41,19 @@ export const FooterContent: FooterContent[] = [
     links: [
       {
         name: "decentralized API's",
-        link: "/",
+        link: "/404",
       },
       {
         name: "wallet",
-        link: "/",
+        link: "/404",
       },
       {
         name: "bridge",
-        link: "/",
+        link: "/404",
       },
       {
         name: "RWA protocol",
-        link: "/",
+        link: "/404",
       },
     ],
   },
@@ -62,19 +62,19 @@ export const FooterContent: FooterContent[] = [
     links: [
       {
         name: "get started",
-        link: "/",
+        link: "/404",
       },
       {
         name: "docs",
-        link: "/",
+        link: "/404",
       },
       {
         name: "examples & tutorials",
-        link: "/",
+        link: "/404",
       },
       {
         name: "grants",
-        link: "/",
+        link: "/404",
       },
     ],
   },
@@ -83,27 +83,27 @@ export const FooterContent: FooterContent[] = [
     links: [
       {
         name: "governance",
-        link: "/",
+        link: "/404",
       },
       {
         name: "social",
-        link: "/",
+        link: "/404",
       },
       {
         name: "blog",
-        link: "/",
+        link: "/404",
       },
       {
         name: "whitepaper",
-        link: "/",
+        link: "/404",
       },
       {
         name: "careers",
-        link: "/",
+        link: "/404",
       },
       {
         name: "contact us",
-        link: "/",
+        link: "/404",
       },
     ],
   },

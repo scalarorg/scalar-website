@@ -3,6 +3,7 @@ import Image from "next/image";
 import HeroBackgroundBottom from "@/public/hero-background-bottom.webp";
 import { Subscription } from "@/app/(routes)/_components/cta/components/subscription";
 import { SolarNavigate } from "@/app/(routes)/_components/hero-solar-system/solar-navigate";
+import Link from "next/link";
 
 export function HeroNotFound() {
   return (
@@ -63,12 +64,14 @@ export function HeroNotFound() {
               <br />
               Please come back later
             </p>
-            <SolarNavigate
-              className={"text-lg lg:text-xl xl:text-2xl text-neutral-1"}
-              large
-            >
-              Go Home
-            </SolarNavigate>
+            <Link href={"/"} passHref>
+              <SolarNavigate
+                className={"text-lg lg:text-xl xl:text-2xl text-neutral-1"}
+                large
+              >
+                Go Home
+              </SolarNavigate>
+            </Link>
           </div>
         </div>
       </div>
