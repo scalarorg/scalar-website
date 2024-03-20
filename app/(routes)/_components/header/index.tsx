@@ -75,7 +75,7 @@ export function Header({
             "flex gap-3 sm:gap-4 md:gap-5 lg:gap-8 xl:gap-6 2xl:gap-[38px] 3xl:gap-[46px] items-center"
           }
         >
-          <Link href={"/404"}>
+          <Link href={"/"}>
             <button
               className={cn(
                 "3xl:px-8 2xl:px-6 hover:shadow-button-hover !leading-snug transition-all rounded-xl active:bg-neutral-12 px-2 sm:px-4 md:px-5 3xl:py-3 xl:py-[10px] py-[5px] [border-image-slice:7] md:[border-image-slice:6] sm:[border-image-slice:8] [border-image-width:4px] sm:[border-image-width:5px] [border-image-repeat:round] [border-image-source:url(/icon/border-gradient.svg)] font-medium 3xl:font-semibold text-sm sm:text-base3xl:text-lg text-white border-2 flex gap-2 sm:gap-2.5 md:gap-4 lg:gap-6 2xl:gap-7 3xl:gap-8 items-center",
