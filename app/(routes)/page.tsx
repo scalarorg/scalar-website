@@ -11,7 +11,7 @@ import Revealed from "./_components/revealed";
 export default function HomePage() {
   return (
     <div className={"bg-black relative overflow-hidden"}>
-      <HeroSolarSystem className={"max-xl:hidden"} />
+      {/* <HeroSolarSystem className={"max-xl:hidden"} /> */}
       <div className={"relative"}>
         <Image
           src={HighlightRight}
