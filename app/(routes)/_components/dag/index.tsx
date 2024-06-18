@@ -30,7 +30,7 @@ const CONTENTS = [
       "Our blockchain boasts a novel <span class='text-primary-cyan-500'>Directed Acyclic Graph (DAG)</span> structure supporting parallel transactions, ensuring lightning-fast transactions. With an ultra-light client, resource efficiency is maximized, ensuring seamless operation across devices.",
   },
   {
-    title: "Low to No Gas Fees",
+    title: "Gas-Free Future",
     description:
       "Say goodbye to exorbitant gas fees. Scalar <span class='text-primary-cyan-500'>prioritizes</span> user <span class='text-primary-cyan-500'>accessibility</span> by keeping transaction costs low, ensuring that participating in the ecosystem remains accessible to all.",
   },
@@ -230,7 +230,7 @@ export function Dag() {
           <Link href={"/404"} passHref>
             <SolarNavigate
               className={
-                "text-lg lg:text-xl xl:text-[21px] 3xl:text-2xl text-neutral-1 absolute lg:-bottom-[80px] -bottom-[110px]"
+                "text-lg lg:text-xl xl:text-[21px] 3xl:text-2xl text-neutral-1 absolute -bottom-[110px]"
               }
               large
             >

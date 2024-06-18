@@ -50,7 +50,7 @@ export function Subscription() {
   });
   return (
     <div className="flex flex-col container gap-[44px] bg-transparent border-none w-full lg:w-[590px] 2xl:w-[750px] lg:px-0">
-      <div className={cn("flex flex-col gap-[28px]")}>
+      {/* <div className={cn("flex flex-col gap-[28px]")}>
         <FadeIn
           options={{
             direction: "right",
@@ -87,7 +87,7 @@ export function Subscription() {
             project. Join us at the forefront of new discoveries!
           </label>
         </FadeIn>
-      </div>
+      </div> */}
 
       {/* Form */}
       <FadeIn
@@ -102,19 +102,19 @@ export function Subscription() {
           <div className={cn("relative")}>
             <input
               className={cn(
-                `w-full bg-transparent h-[48px] lg:h-[75px] 2xl:h-[93px] outline-none text-neutral-5 text-[18px] leading-[27px] px-[16px] lg:py-[16px] border border-primary-cyan-500 hover:border-primary-cyan-800 rounded-xl select:hidden hover:transition focus:border-2 fo focus:shadow-button-active focus:border-primary-cyan-500
+                `placeholder-neutral-7 placeholder-xl w-full bg-transparent h-[48px] lg:h-[75px] 2xl:h-[93px] outline-none text-neutral-5 text-[18px] leading-[27px] px-[16px] lg:py-[16px] border-none  border-[#96979C] rounded-xl select:hidden hover:transition focus:border-2
                 ${errors.email && "border-accent-warning-500"}
                 `,
               )}
-              placeholder="Your email"
+              placeholder="Subscribe to our newsletter"
               type="email"
               {...register("email")}
             />
-
+            <hr className="border-t-1 border-[#96979C]" />
             <button
               type="submit"
               className={cn(
-                `absolute top-1/2 -translate-y-1/2 right-2.5 md:right-[16px] py-[6px] px-[20px] md:py-[10px] md:px-[24px] 2xl:py-[14px] 2xl:px-[32px] bg-primary-cyan-500 text-white rounded-lg border border-primary-cyan-500 hover:text-white hover:bg-black font-bold hover:transition-all duration-500 lg:text-neutral-10 lg:hover:text-primary-cyan-500 hover:shadow-button-hover
+                `absolute top-1/2 -translate-y-1/2 right-2.5 md:right-[16px] py-[6px] px-[20px] md:py-[10px] md:px-[24px] 2xl:py-[14px] 2xl:px-[32px] bg-primary-cyan-500 text-white rounded-xl border border-primary-cyan-500 hover:text-white hover:bg-black font-bold hover:transition-all duration-500 lg:text-neutral-10 lg:hover:text-primary-cyan-500 hover:shadow-button-hover
                 ${
                   errors.email &&
                   "bg-accent-warning-50 border-accent-warning-50 hover:bg-accent-warning-50 lg:hover:text-neutral-10 hover:shadow-none"
