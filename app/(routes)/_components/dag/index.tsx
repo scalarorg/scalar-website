@@ -42,7 +42,7 @@ const CONTENTS = [
   {
     title: "Dev-Friendly & Hack-Resistant",
     description:
-      "Scalar minimizes the potential for developer errors and vulnerabilities. This enables <span class='text-primary-cyan-500'>faster iteration</span> and a <span class='text-primary-cyan-500'>more secure</span> environment for building cutting-edge applications.",
+      "With a novel approach to horizontal scalability, Scalar minimizes the potential for developer errors and vulnerabilities. This enables <span class='text-primary-cyan-500'>faster iteration</span> and a <span class='text-primary-cyan-500'>more secure</span> environment for building cutting-edge applications.",
   },
   {
     title: "Seamless Interoperability",

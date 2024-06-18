@@ -141,7 +141,7 @@ export function Permissionless({ className }: permissionlessProps) {
             facilitate the transfer of censorship-resistant messages/data/assets
             between various chains.
           </p> */}
-          <div className="grid grid-cols-3 max-2xl:grid-cols-2 max-md:grid-cols-1 gap-y-7 gap-x-[34px]">
+          <div className="grid grid-cols-3 max-xl:grid-cols-2 max-md:grid-cols-1 gap-y-7 gap-x-[34px]">
             {
               cardValues.map(cardValue => (
                 <Card title={cardValue.title} description={cardValue.description} hasGradientBg={cardValue.hasGradientBg} />
