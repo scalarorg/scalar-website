@@ -6,6 +6,8 @@ import { Cta } from "./_components/cta";
 import { Dag } from "./_components/dag";
 import { Permissionless } from "./_components/permisstionless";
 import Revealed from "./_components/revealed";
+import Problem from "./_components/problem";
+import Solution from "./_components/solution";
 
 export default function HomePage() {
   return (
@@ -35,6 +37,12 @@ export default function HomePage() {
       </div>
 
       <Permissionless />
+
+      {/* Problems */}
+      <Problem />
+
+      {/* Solutions */}
+      <Solution />
 
       <Cta />
     </div>
