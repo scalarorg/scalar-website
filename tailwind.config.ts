@@ -195,6 +195,8 @@ const config = {
         'solution-card': 'linear-gradient(42deg, rgba(55,96,242,0.20) -2.86%, rgba(14,241,241,0.20) 102.86%)',
         'custom-gradient': 'linear-gradient(64deg, #3760F2 7.99%, #0EF1F1 28.68%)',
         'gradient-card': 'linear-gradient(42deg, rgba(55,96,242,0.20) -2.86%, rgba(14,241,241,0.20) 102.86%)',
+        'custom-text': 'linear-gradient(43deg, #3760F2 -8.45%, #0EF1F1 63.44%)',
+        'custom-border': 'linear-gradient(90deg, rgba(102, 254, 203, 0.2), rgba(137, 64, 255, 0.2))',
         star: "url('/star-background.webp')",
         advantage: "url('/background-advantage.webp')",
         star_dark: "url('/background-star-dark.webp')",
