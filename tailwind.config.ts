@@ -187,12 +187,14 @@ const config = {
       },
       boxShadow: {
         title: "0px 4px 4px 0px #00000040",
+        "solution": "0px 0px 8px 0px #0EADF1CC",
         "button-hover": "0px 0px 10px 0px #0EF1F1",
         "button-active": "0px 0px 10px 0px #FFF",
       },
       backgroundImage: {
-       'custom-gradient': 'linear-gradient(64deg, #3760F2 7.99%, #0EF1F1 28.68%)',
-       'gradient-card': 'linear-gradient(42deg, rgba(55,96,242,0.20) -2.86%, rgba(14,241,241,0.20) 102.86%)',
+        'solution-card': 'linear-gradient(42deg, rgba(55,96,242,0.20) -2.86%, rgba(14,241,241,0.20) 102.86%)',
+        'custom-gradient': 'linear-gradient(64deg, #3760F2 7.99%, #0EF1F1 28.68%)',
+        'gradient-card': 'linear-gradient(42deg, rgba(55,96,242,0.20) -2.86%, rgba(14,241,241,0.20) 102.86%)',
         star: "url('/star-background.webp')",
         advantage: "url('/background-advantage.webp')",
         star_dark: "url('/background-star-dark.webp')",
