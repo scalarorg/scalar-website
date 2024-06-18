@@ -319,7 +319,7 @@ export const ADVANTAGE_CONTENT = [
     content: [
       {
         title: "Transactions per second",
-        value: "160,000",
+        value: "400,000",
       },
       {
         title: "Average fee per transaction",

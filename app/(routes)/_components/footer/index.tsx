@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import FooterColumn from "./components/footer-column";
 import { FooterContent } from "@/lib/constants/footer";
 import { FooterWithLogo } from "./components/footer-with-logo";
+import { Subscription } from "../cta/components/subscription";
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Footer
@@ -43,6 +44,10 @@ export function Footer({
             {FooterContent.map((column: FooterContent, index: number) => (
               <FooterColumn column={column} key={`column-${index}`} />
             ))}
+          </div>
+
+          <div className="w-full">
+            <Subscription />
           </div>
         </div>
 

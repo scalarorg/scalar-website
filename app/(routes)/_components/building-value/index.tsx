@@ -20,7 +20,7 @@ const VALUES = [
   {
     icon: "/icon/blockchain.svg",
     value: "L0 & L1",
-    description: "Hybrid Blockchain",
+    description: "A Hybrid Blockchain",
   },
   {
     icon: "/icon/hybrid.svg",
@@ -29,7 +29,7 @@ const VALUES = [
   },
   {
     icon: "/icon/dag.svg",
-    value: "160,000",
+    value: "400,000",
     description: "Transactions per second",
   },
   {
@@ -83,16 +83,17 @@ export function BuildingValue() {
           >
             <h1
               className={
-                "text-shadow-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[65px] 2xl:text-[84px] xl:!leading-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-4xl !leading-normal sm:leading-normal"
+                "text-shadow-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[65px] xl:!leading-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-7xl !leading-normal sm:leading-normal"
               }
             >
-              The Future of
-              <br />
-              Scalable{" "}
-              <span className={"text-primary-cyan-500"}>Blockchain</span>
+              Fulfilling the unrealized 
+              {" "}
+              <span className={"text-primary-cyan-500"}>Cosmos dream</span>
+              {" "}
+              of shared security and liquidity
             </h1>
           </FadeIn>
-          <FadeIn
+          {/* <FadeIn
             options={{
               direction: "right",
               duration: 0.6,
@@ -111,7 +112,7 @@ export function BuildingValue() {
               with limitless scalability, interconnectivity and unrivaled
               throughput.
             </p>
-          </FadeIn>
+          </FadeIn> */}
         </div>
         <div className={"flex sm:justify-center items-center"}>
           <div

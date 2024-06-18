@@ -1,11 +1,10 @@
-import { HeroSolarSystem } from "./_components/hero-solar-system";
-import { BuildingValue } from "./_components/building-value";
-import { Dag } from "./_components/dag";
-import Image from "next/image";
-import { Cta } from "./_components/cta";
-import { Permissionless } from "./_components/permisstionless";
-import HighlightRight from "@/public/icon/highlight-right.svg";
 import HighlightLeft from "@/public/icon/highlight-left.svg";
+import HighlightRight from "@/public/icon/highlight-right.svg";
+import Image from "next/image";
+import { BuildingValue } from "./_components/building-value";
+import { Cta } from "./_components/cta";
+import { Dag } from "./_components/dag";
+import { Permissionless } from "./_components/permisstionless";
 import Revealed from "./_components/revealed";
 
 export default function HomePage() {
