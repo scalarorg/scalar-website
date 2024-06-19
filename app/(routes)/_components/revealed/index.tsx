@@ -35,7 +35,7 @@ export default function Revealed({ className }: RevealedProps) {
           Scalar revealed:{" "}
           <span
             className={cn(
-              "font-semibold bg-gradient-to-tr bg-clip-text from-[60%] text-transparent from-primary-blue-500 to-[#0EF1F1]",
+              "font-semibold bg-clip-text text-transparent bg-custom-gradient"
             )}
           >
             <br />
