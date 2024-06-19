@@ -227,7 +227,7 @@ export function Dag() {
             />
           ))}
 
-          <Link href={"/404"} passHref>
+          <Link href={"/"} passHref>
             <SolarNavigate
               className={
                 "text-lg lg:text-xl xl:text-[21px] 3xl:text-2xl text-neutral-1 absolute -bottom-[110px]"

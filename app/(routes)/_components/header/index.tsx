@@ -4,7 +4,6 @@ import Image from "next/image";
 import Logo from "@/public/icon/logo-white-large.svg";
 import LogoSmall from "@/public/icon/logo-small.svg";
 import { cn } from "@/lib/utils";
-import { Sidebar } from "@/app/(routes)/_components/header/sidebar";
 import Link from "next/link";
 import { ArrowTopRightIcon } from "@/components/icon/arrow-top-right";
 

@@ -158,7 +158,7 @@ export function Permissionless({ className }: permissionlessProps) {
             delay: 0.1,
           }}
         >
-          <Link href={"/404"} passHref>
+          <Link href={"/"} passHref>
             <SolarNavigate
               className={"text-lg lg:text-xl xl:text-2xl text-neutral-1"}
               large
