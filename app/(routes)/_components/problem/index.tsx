@@ -7,7 +7,7 @@ import ProblemCard from "./problem-card";
 
 function Problem() {
     return (
-        <div className="relative w-full bg-star bg-center bg-cover">
+        <div className="relative w-full bg-star bg-center bg-cover container">
             <Image
                 src={ProblemBackground}
                 alt={"problem background"}
@@ -15,12 +15,12 @@ function Problem() {
                     "absolute inset-x-0 w-full object-cover object-center aspect-[1920/2196]"
                 }
             />
-            <SectionTitle className="pt-[190px] mx-auto text-center">Current Industry Problems</SectionTitle>
+            <SectionTitle className="pt-[190px] max-md:pt-0 mx-auto text-center">Current Industry Problems</SectionTitle>
 
-            <div className="w-full flex flex-col items-center mt-[90px]">
+            <div className="w-full flex flex-col items-center mt-[90px] max-md:mt-4 px-4">
                 <ProblemCard className="xl:self-start 2xl:ml-[380px] xl:ml-40" content={"$1T+ in unusable assets on Bitcoin"} />
-                <ProblemCard className="xl:self-end 2xl:mr-[380px] xl:mr-40 -mt-20 max-xl:mt-20" content={"$3T+ in siloed liquidity with 100+ chains"} />
-                <ProblemCard className="mt-20" content={"$1B+/year in MEV attacks, taxes users"} />
+                <ProblemCard className="xl:self-end 2xl:mr-[380px] xl:mr-40 -mt-20 max-xl:mt-20 max-md:mt-2" content={"$3T+ in siloed liquidity with 100+ chains"} />
+                <ProblemCard className="mt-20 max-md:mt-2" content={"$1B+/year in MEV attacks, taxes users"} />
             </div>
 
             <Image

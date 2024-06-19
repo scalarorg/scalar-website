@@ -10,7 +10,7 @@ import Navigator1 from '@/public/icon/navigator-1.svg'
 
 function Solution() {
     return (
-        <div className="relative w-full bg-star">
+        <div className="relative w-full bg-star max-md:mt-40">
             <Image
                 src={GROW_EFFECT}
                 alt=""
