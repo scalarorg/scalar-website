@@ -7,7 +7,7 @@ import ProblemCard from "./problem-card";
 
 function Problem() {
     return (
-        <div className="relative w-full bg-star bg-center bg-cover container">
+        <div className="relative w-full bg-star bg-center bg-cover">
             <Image
                 src={ProblemBackground}
                 alt={"problem background"}
