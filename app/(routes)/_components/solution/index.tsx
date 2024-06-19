@@ -35,7 +35,7 @@ function Solution() {
                         <div className="bg-black/70 rounded-xl px-[28px] py-[18px] text-neutral-6 text-[22px] max-lg:text-xl font-medium w-[242px]">
                             Unusable assets:
                             <br />
-                            Bitcoins
+                            Bitcoin
                         </div>
                     </div>
                     <div className="relative inline-block p-0.5 bg-custom-border rounded-xl z-20 w-fit">
