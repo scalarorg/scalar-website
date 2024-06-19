@@ -37,6 +37,7 @@ export default function FooterColumn({
           <Link
             key={`footer-column-${i}-${item.name}`}
             href={item.link}
+            target="blank"
             className={cn(
               "capitalize text-[13px] xl:text-[17px] 2xl:text-[22px] leading-5 xl:leading-[24px] 2xl:leading-[33px] text-neutral-6 hover:text-primary-cyan-800 ease-linear transition-all",
             )}
