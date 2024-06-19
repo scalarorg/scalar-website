@@ -45,9 +45,7 @@ export function FooterWithLogo({
             "text-[11px] leading-4 lg:!leading-[23px] lg:min-w-[310px] w-full 2xl:w-[394px] lg:text-[14px] 2xl:text-[18px] 2xl:!leading-[27px]",
           )}
         >
-          Scalar Protocol is the next gen L1 blockchain built from the ground up
-          with limitless scalability, high throughput by separating consensus
-          and computation.
+          Scalar - The most performant EVM and Move compatible, high throughput, interoperable smart contract platform in the space ever seen to date
         </p>
       </div>
 

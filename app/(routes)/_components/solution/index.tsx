@@ -5,12 +5,13 @@ import Navigator from "@/public/icon/navigator.svg";
 import MilkyWay2 from "@/public/milky-way-2.png";
 import { cn } from "@/lib/utils";
 import GROW_EFFECT from "@/public/grow-effect-1.svg";
-import Globe from '@/public/globe-removebg-preview.png'
+import Globe from '@/public/globe.png'
 import Navigator1 from '@/public/icon/navigator-1.svg'
+import Highlight from '@/public/solution-highlight.png'
 
 function Solution() {
     return (
-        <div className="relative w-full bg-star max-md:mt-40">
+        <div className="relative w-full bg-star max-md:mt-40 pb-20">
             <Image
                 src={GROW_EFFECT}
                 alt=""
@@ -21,24 +22,31 @@ function Solution() {
             />
             <SectionTitle className="text-center">Solutions We Offer</SectionTitle>
 
-            <div className="max-w-7xl mx-auto items-center justify-between flex mt-[150px]">
-                <div className="flex flex-col gap-y-[64px] ml-20">
-                    <div className="relative inline-block p-0.5 bg-custom-border rounded-xl mt-[44px] z-20 w-fit">
-                        <div className="bg-black rounded-xl px-[28px] py-[18px] text-neutral-6 text-[22px] font-medium w-[242px]">
+            <div className="relative w-full px-80 max-3xl:px-40 max-2xl:px-20 max-xl:px-0 mx-auto flex items-center justify-between mt-[150px] max-lg:mt-4">
+                <Image
+                    src={Highlight}
+                    alt={"Highlight"}
+                    className={
+                        "absolute -top-100 -left-20 z-20 pointer-events-none"
+                    }
+                />
+                <div className="flex flex-col gap-y-[64px]">
+                    <div className="relative inline-block p-0.5 bg-custom-border rounded-xl z-20 w-fit">
+                        <div className="bg-black/70 rounded-xl px-[28px] py-[18px] text-neutral-6 text-[22px] max-lg:text-xl font-medium w-[242px]">
                             Unusable assets:
                             <br />
                             Bitcoins
                         </div>
                     </div>
-                    <div className="relative inline-block p-0.5 bg-custom-border rounded-xl mt-[44px] z-20 w-fit">
-                        <div className="bg-black rounded-xl px-[28px] py-[18px] text-neutral-6 text-[22px] font-medium w-[242px]">
+                    <div className="relative inline-block p-0.5 bg-custom-border rounded-xl z-20 w-fit">
+                        <div className="bg-black/70 rounded-xl px-[28px] py-[18px] text-neutral-6 text-[22px] max-lg:text-xl font-medium w-[242px]">
                             TVL / Assets
                             <br />
                             from siloed
                         </div>
                     </div>
-                    <div className="relative inline-block p-0.5 bg-custom-border rounded-xl mt-[44px] z-20 w-fit">
-                        <div className="bg-black rounded-xl px-[28px] py-[18px] text-neutral-6 text-[22px] font-medium w-[242px]">
+                    <div className="relative inline-block p-0.5 bg-custom-border rounded-xl z-20 w-fit">
+                        <div className="bg-black/70 rounded-xl px-[28px] py-[18px] text-neutral-6 text-[22px] max-lg:text-xl font-medium w-[242px]">
                             Staking Collateral
                             <br />
                             Receipts
@@ -47,12 +55,12 @@ function Solution() {
                 </div>
 
                 <div className="relative flex justify-center">
-                    {/* <Image src={Globe} alt={""} width={1000} /> */}
-                    <div className="w-[400px]">
-                        <span className="text-transparent bg-clip-text bg-custom-text text-[43px] font-bold">
+                    <Image src={Globe} alt={"earth"} className="absolute -top-[420px] min-w-[2000px] max-lg:min-w-[1000px] z-20 max-lg:-top-[200px]" />
+                    <div className="w-[400px] z-20 mt-4">
+                        <p className="text-transparent bg-clip-text bg-custom-text text-[43px] text-center max-lg:text-xl font-bold">
                             Scalar main-chain
-                        </span>
-                        <p className="text-center text-[22px] font-medium">
+                        </p>
+                        <p className="text-center text-[22px] max-lg:text-base font-medium">
                             Shared Liquidity Layer, Move
                             <br />
                             and EVM supported
@@ -60,8 +68,8 @@ function Solution() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-y-[190px] ml-20">
-                    <div className="relative shadow-solution bg-gradient-card rounded-lg py-4 px-7 w-fit text-[22px] text-neutral-6 font-medium">
+                <div className="flex flex-col justify-between gap-y-[64px]">
+                    <div className="relative shadow-solution bg-gradient-card rounded-lg py-4 px-7 w-fit text-[22px] max-lg:text-xl text-neutral-6 font-medium">
                         <Image
                             className={"absolute -left-[27px] top-1"}
                             src={Navigator1}
@@ -69,7 +77,7 @@ function Solution() {
                         />
                         Defi
                     </div>
-                    <div className="relative shadow-solution bg-gradient-card rounded-lg py-4 px-7 text-[22px] text-neutral-6 font-medium w-[242px]">
+                    <div className="relative shadow-solution bg-gradient-card rounded-lg py-4 px-7 text-[22px] max-lg:text-xl text-neutral-6 font-medium w-[242px]">
                         <Image
                             className={"absolute -left-[27px] top-6"}
                             src={Navigator1}
@@ -79,7 +87,7 @@ function Solution() {
                         <br />
                         for yield
                     </div>
-                    <div className="relative shadow-solution bg-gradient-card rounded-lg py-4 px-7 w-fit text-[22px] text-neutral-6 font-medium">
+                    <div className="relative shadow-solution bg-gradient-card rounded-lg py-4 px-7 w-fit text-[22px] max-lg:text-xl text-neutral-6 font-medium">
                         <Image
                             className={"absolute -left-[27px] top-1"}
                             src={Navigator1}

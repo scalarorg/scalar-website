@@ -27,19 +27,19 @@ export function ScrollUpButton({
   // check if the user has scrolled down screen height from the top of the document
   const [showScroll, setShowScroll] = useState(false);
 
-  useEffect(() => {
-    const checkScrollTop = () => {
-      const isScroll = window.scrollY > window.innerHeight / 2;
+  // useEffect(() => {
+  //   const checkScrollTop = () => {
+  //     const isScroll = window.scrollY > window.innerHeight / 2;
 
-      if (isScroll !== showScroll) {
-        setShowScroll(isScroll);
-      }
-    };
+  //     if (isScroll !== showScroll) {
+  //       setShowScroll(isScroll);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", checkScrollTop);
+  //   window.addEventListener("scroll", checkScrollTop);
 
-    return () => window.removeEventListener("scroll", checkScrollTop);
-  }, [showScroll]);
+  //   return () => window.removeEventListener("scroll", checkScrollTop);
+  // }, [showScroll]);
   return (
     <div {...props} className={scrollUpButtonVariants({ className })}>
       <button

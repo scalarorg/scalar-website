@@ -20,7 +20,7 @@ const VALUES = [
   {
     icon: "/icon/blockchain.svg",
     value: "L0 & L1",
-    description: "A Hybrid Blockchain",
+    description: "Hybrid Blockchain",
   },
   {
     icon: "/icon/hybrid.svg",
@@ -86,11 +86,9 @@ export function BuildingValue() {
                 "text-shadow-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[65px] xl:!leading-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-7xl !leading-normal sm:leading-normal"
               }
             >
-              Fulfilling the unrealized 
+              Fulfilling the unrealized Cosmos dream of 
               {" "}
-              <span className={"text-primary-cyan-500"}>Cosmos dream</span>
-              {" "}
-              of shared security and liquidity
+              <span className={"text-primary-cyan-500"}>shared security and liquidity</span>
             </h1>
           </FadeIn>
           {/* <FadeIn
