@@ -25,6 +25,7 @@ export function Header({
   children,
   ...props
 }: HeaderProps): React.JSX.Element {
+
   return (
     <div {...props} className={headerVariants({ className })}>
       <div
