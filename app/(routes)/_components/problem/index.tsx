@@ -18,7 +18,7 @@ function Problem() {
             <SectionTitle className="pt-[190px] max-md:pt-0 mx-auto text-center">Current Industry Problems</SectionTitle>
 
             <div className="w-full flex flex-col items-center mt-[90px] max-md:mt-4 px-4">
-                <ProblemCard className="xl:self-start 2xl:ml-[380px] xl:ml-40" content={"$1T+ in unusable assets on Bitcoin"} />
+                <ProblemCard className="xl:self-start 3xl:ml-[380px] xl:ml-40" content={"$1T+ in unusable assets on Bitcoin"} />
                 <ProblemCard className="xl:self-end 2xl:mr-[380px] xl:mr-40 -mt-20 max-xl:mt-20 max-md:mt-2" content={"$3T+ in siloed liquidity with 100+ chains"} />
                 <ProblemCard className="mt-20 max-md:mt-2" content={"$1B+/year in MEV attacks, taxes users"} />
             </div>

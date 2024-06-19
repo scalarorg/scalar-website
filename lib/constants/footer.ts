@@ -1,10 +1,8 @@
-import XTwitter from "@/public/icon/x-twitter.svg";
+import { DISCORD_URL, TELEGRAM_URL, X_URL } from "@/lib/constants/links";
 import Discord from "@/public/icon/discord.svg";
 import Telegram from "@/public/icon/telegram.svg";
-import Github from "@/public/icon/github.svg";
-import Medium from '@/public/icon/medium.svg';
+import XTwitter from "@/public/icon/x-twitter.svg";
 import { StaticImageData } from "next/image";
-import { DISCORD_URL, TELEGRAM_URL, X_URL } from "@/lib/constants/links";
 
 export interface FooterLink {
   name: string;
@@ -114,15 +112,15 @@ export const FooterContent: FooterContent[] = [
     links: [
       {
         name: "Community",
-        link: "/",
+        link: "https://discord.com/invite/7FFhERZwB7",
       },
       {
         name: "News",
-        link: "/",
+        link: "https://scalarprotocolnews.substack.com/",
       },
       {
         name: "Docs V1",
-        link: "/404",
+        link: "https://scalar.gitbook.io/scalar",
       },
     ]
   }
@@ -138,18 +136,18 @@ export const FooterSocialLink: FooterSocialLink[] = [
     icon: XTwitter,
     link: X_URL,
   },
-  {
-    icon: Github,
-    link: "/",
-  },
+  // {
+  //   icon: Github,
+  //   link: "/",
+  // },
   {
     icon: Discord,
     link: DISCORD_URL,
   },
-  {
-    icon: Medium,
-    link: "/",
-  },
+  // {
+  //   icon: Medium,
+  //   link: "/",
+  // },
   {
     icon: Telegram,
     link: TELEGRAM_URL,
