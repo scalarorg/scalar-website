@@ -45,7 +45,7 @@ export function BuildingValue() {
         src={BuildingValueBackground}
         alt={"Building value background"}
         className={
-          "absolute top-0 left-1/2 inset-x-0 -translate-x-1/2 w-full -z-[9] object-cover object-center aspect-[1920/2196]"
+          "absolute -top-20 max-md:top-0 left-1/2 inset-x-0 -translate-x-1/2 w-full -z-[9] object-cover object-center aspect-[1920/2196]"
         }
       />
       <Image
@@ -83,12 +83,14 @@ export function BuildingValue() {
           >
             <h1
               className={
-                "text-shadow-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[65px] xl:!leading-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-7xl !leading-normal sm:leading-normal"
+                "-mt-60 max-md:-mt-20 first-line:text-shadow-h1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[65px] xl:!leading-[84px] 2xl:leading-[125px] font-bold max-w-2xl xl:max-w-3xl 2xl:max-w-7xl !leading-normal sm:leading-normal"
               }
             >
-              Fulfilling the unrealized Cosmos dream of 
+              Unified and
               {" "}
               <span className={"text-primary-cyan-500"}>shared security and liquidity</span>
+              {" "}
+              to secure blockchains & aggregate siloed TVL
             </h1>
           </FadeIn>
           {/* <FadeIn

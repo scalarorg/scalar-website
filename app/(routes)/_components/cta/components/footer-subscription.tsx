@@ -18,7 +18,7 @@ const schema = z.object({
 
 export type SchemaSubscribeForm = z.infer<typeof schema>;
 
-export function Subscription() {
+export function FooterSubscription() {
   const {
     register,
     handleSubmit,
@@ -49,46 +49,7 @@ export function Subscription() {
     }
   });
   return (
-    <div className="flex flex-col container gap-[44px] bg-transparent border-none w-full lg:w-[590px] 2xl:w-[750px] lg:px-0">
-      <div className={cn("flex flex-col gap-[28px]")}>
-        <FadeIn
-          options={{
-            direction: "right",
-            duration: 0.65,
-            type: "tween",
-            delay: 0,
-          }}
-        >
-          <label
-            className={cn(
-              "font-bold text-[31px] md:text-[27px] 2xl:[text-34px] leading-[46.5px] md:leading-[47.6px] text-neutral-1",
-            )}
-          >
-            Don't Miss Out,{" "}
-            <span className={cn("text-primary-cyan-500")}>Subscribe</span>{" "}
-            Today!
-          </label>
-        </FadeIn>
-        <FadeIn
-          options={{
-            direction: "right",
-            duration: 0.65,
-            type: "tween",
-            delay: 0.1,
-          }}
-        >
-          <label
-            className={cn(
-              "text-[14px] leading-[20px] 2xl:text-lg 2xl:leading-[27px] text-neutral-4 text-left",
-            )}
-          >
-            Stay updated and be among the first to receive exciting
-            announcements, exclusive updates, and special offers from our
-            project. Join us at the forefront of new discoveries!
-          </label>
-        </FadeIn>
-      </div>
-
+    <div className="flex flex-col gap-[44px] bg-transparent border-none w-full xl:w-[450px] 2xl:w-[550px] lg:px-0">
       {/* Form */}
       <FadeIn
         options={{
@@ -102,7 +63,7 @@ export function Subscription() {
           <div className={cn("relative")}>
             <input
               className={cn(
-                `placeholder-neutral-7 placeholder-xl w-full bg-transparent h-[48px] lg:h-[75px] 2xl:h-[93px] outline-none text-neutral-5 text-[18px] leading-[27px] px-[16px] lg:py-[16px] border-none  border-[#96979C] rounded-xl select:hidden hover:transition focus:border-2
+                `placeholder-neutral-7 max-sm:placeholder:text-xs w-full bg-transparent h-[48px] lg:h-[75px] 2xl:h-[93px] outline-none text-neutral-5 text-[18px] leading-[27px] px-[16px] lg:py-[16px] border-none rounded-xl select:hidden hover:transition focus:border-2
                 ${errors.email && "border-accent-warning-500"}
                 `,
               )}
