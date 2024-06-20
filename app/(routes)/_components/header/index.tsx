@@ -62,7 +62,7 @@ export function Header({
               className={"aspect-[35/27.84]"}
               alt={"Scalar logo"}
             />
-            <div className={"text-[11px] font-bold text-neutral-3"}>
+            <div className={"text-[11px] font-bold text-neutral-3 hidden"}>
               The Future of
               <br />
               Scalable

@@ -18,8 +18,8 @@ const cardValues = [
   { title: 'Parallel', description: 'Execution', hasGradientBg: true },
   { title: 'Faster', description: 'Throughput', hasGradientBg: false },
   { title: 'MEV', description: 'Mitigation', hasGradientBg: false },
-  { title: 'Accessible', description: 'liquidity', hasGradientBg: true },
-  { title: 'Accessible', description: 'to security', hasGradientBg: false },
+  { title: 'Shared', description: 'Liquidity', hasGradientBg: true },
+  { title: 'Shared', description: 'Security', hasGradientBg: false },
 ]
 
 const permissionlessVariants = cva(
