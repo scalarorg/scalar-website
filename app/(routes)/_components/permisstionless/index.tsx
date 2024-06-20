@@ -1,22 +1,20 @@
-import { cn } from "@/lib/utils";
-import { cva, VariantProps } from "class-variance-authority";
-import { HTMLAttributes } from "react";
+import { FadeIn } from "@/components/motion/fade-in";
 import SectionTitle from "@/components/ui/section-title";
-import Image from "next/image";
-import MASSBIT from "@/public/massbit.webp";
+import { cn } from "@/lib/utils";
 import MASSBIT_BACKGROUND_2 from "@/public/massbit-background-2.webp";
 import MASSBIT_BACKGROUND_LARGE from "@/public/massbit-background-large.webp";
-import STAR_BACKGROUND from "@/public/star.webp";
+import MASSBIT from "@/public/massbit.webp";
 import MOON_BACKGROUND from "@/public/moon-background.webp";
-import { FadeIn } from "@/components/motion/fade-in";
-import { SolarNavigate } from "@/app/(routes)/_components/hero-solar-system/solar-navigate";
-import Link from "next/link";
+import STAR_BACKGROUND from "@/public/star.webp";
+import { cva, VariantProps } from "class-variance-authority";
+import Image from "next/image";
+import { HTMLAttributes } from "react";
 import Card from "./card";
 
 const cardValues = [
   { title: 'Parallel', description: 'Consensus', hasGradientBg: true },
   { title: 'Parallel', description: 'Execution', hasGradientBg: true },
-  { title: 'Faster', description: 'Throughput', hasGradientBg: false },
+  { title: 'Fast', description: 'Throughput', hasGradientBg: false },
   { title: 'MEV', description: 'Mitigation', hasGradientBg: false },
   { title: 'Shared', description: 'Liquidity', hasGradientBg: true },
   { title: 'Shared', description: 'Security', hasGradientBg: false },
