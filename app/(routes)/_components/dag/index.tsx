@@ -40,12 +40,12 @@ const CONTENTS = [
       "Scalar introduces <span class='text-primary-cyan-500'>non-sequential</span> transaction processing, unlocking the potential for higher throughput. Imagine two individuals sending funds simultaneously to two recipients, all executed optimistically and validated post-execution.",
   },
   {
-    title: "Dev-Friendly & Hack-Resistant",
+    title: "Dev-Friendly & MEV-resistant",
     description:
       "With a novel approach to horizontal scalability, Scalar minimizes the potential for developer errors and vulnerabilities. This enables <span class='text-primary-cyan-500'>faster iteration</span> and a <span class='text-primary-cyan-500'>more secure</span> environment for building cutting-edge applications.",
   },
   {
-    title: "Seamless Interoperability",
+    title: "Native Interoperability",
     description:
       "Scalar bridges the gap between <span class='text-primary-cyan-500'>EVM</span> and <span class='text-primary-cyan-500'>non-EVM</span> chains, offering a unified experience across different blockchain ecosystems. Achieve true interoperability with seamless cross chain messaging.",
   },
@@ -227,7 +227,7 @@ export function Dag() {
             />
           ))}
 
-          <Link href={"/"} passHref>
+          <Link href={"https://scalar.gitbook.io/scalar"} target="blank" passHref>
             <SolarNavigate
               className={
                 "text-lg lg:text-xl xl:text-[21px] 3xl:text-2xl text-neutral-1 absolute -bottom-[110px]"

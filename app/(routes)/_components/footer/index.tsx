@@ -1,10 +1,10 @@
+import { FooterContent } from "@/lib/constants/footer";
+import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { HTMLAttributes } from "react";
-import { cn } from "@/lib/utils";
+import { FooterSubscription } from "../cta/components/footer-subscription";
 import FooterColumn from "./components/footer-column";
-import { FooterContent } from "@/lib/constants/footer";
 import { FooterWithLogo } from "./components/footer-with-logo";
-import { Subscription } from "../cta/components/subscription";
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Footer
@@ -47,7 +47,7 @@ export function Footer({
           </div>
 
           <div className="w-full">
-            <Subscription />
+            <FooterSubscription />
           </div>
         </div>
 

@@ -10,7 +10,7 @@ export const HEART_ITEMS = [
       "Scalar introduces non-sequential transaction processing, unlocking the potential for higher throughput. Imagine two individuals sending funds simultaneously to two recipients, all executed optimistically and validated post-execution.",
   },
   {
-    title: "Dev-Friendly & Hack-Resistant",
+    title: "Dev-Friendly & MEV-resistant",
     description:
       "Scalar minimizes the potential for developer errors and vulnerabilities. This enables faster iteration and a more secure environment for building cutting-edge applications.",
   },
