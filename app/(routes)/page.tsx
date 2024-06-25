@@ -8,11 +8,12 @@ import { Permissionless } from "./_components/permisstionless";
 import Revealed from "./_components/revealed";
 import Problem from "./_components/problem";
 import Solution from "./_components/solution";
+import { HeroSolarSystem } from "./_components/hero-solar-system";
 
 export default function HomePage() {
   return (
     <div className={"bg-black relative overflow-hidden"}>
-      {/* <HeroSolarSystem className={"max-xl:hidden"} /> */}
+      <HeroSolarSystem className={"max-xl:hidden"} />
       <div className={"relative"}>
         <Image
           src={HighlightRight}
