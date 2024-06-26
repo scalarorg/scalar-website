@@ -5,9 +5,9 @@ import { WEBSITE_URL } from "@/lib/constants/links";
 import { Toaster } from "@/components/ui/toaster";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const title = "Scalar - The Future of Scalable Blockchain";
+const title = "Scalar | Next Gen L1 Blockchain";
 const description =
-  "Redefine what’s possible with limitless scalability, interconnectivity and unrivaled throughput";
+  "Scalar unifies and shares security and liquidity to secure blockchains and aggregate siloed TVL.";
 const openGraphImage = {
   images: [
     {
