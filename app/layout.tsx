@@ -8,16 +8,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const title = "Scalar | Next Gen L1 Blockchain";
 const description =
   "Scalar unifies and shares security and liquidity to secure blockchains and aggregate siloed TVL.";
-const openGraphImage = {
-  images: [
-    {
-      url: "/scalar-protocol.png",
-      alt: "Scalar Protocol",
-      width: 558,
-      height: 373,
-    },
-  ],
-};
 
 export const metadata: Metadata = {
   title: {
@@ -58,14 +48,28 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    ...openGraphImage,
+    images: [
+      {
+        url: "/thumbnail.webp",
+        alt: "Scalar Protocol",
+        width: 1600,
+        height: 900,
+      },
+    ],
     type: "website",
     title,
     description,
     url: "/",
   },
   twitter: {
-    ...openGraphImage,
+    images: [
+      {
+        url: "/thumbnail.webp",
+        alt: "Scalar Protocol",
+        width: 1600,
+        height: 900,
+      },
+    ],
     title,
     description,
     card: "summary",
