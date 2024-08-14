@@ -16,7 +16,7 @@ import ADVANTAGE_EARTH_SMALL from '@/public/advantage-earth-small.webp';
 import ADVANTAGE_MARS_LARGE from '@/public/advantage-mars-large.webp';
 import ADVANTAGE_MARS_SMALL from '@/public/advantage-mars-small.webp';
 import ADVANTAGE_MOON_LARGE from '@/public/advantage-moon-large.webp';
-import GROW_EFFECT from '@/public/grow-effect.svg';
+import GROW_EFFECT from '@/public/grow-effect.svg?url';
 
 const ScalarAdvantageVariants = cva(
   'relative flex z-0 justify-center mb-[60px] lg:pb-[220px] border-0 border-dashed lg:border-2 lg:border-neutral-11 lg:border-t-0 lg:border-l-0 lg:border-r-0 lg:rounded-[160%]',

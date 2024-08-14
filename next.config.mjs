@@ -1,3 +1,10 @@
+import nextra from 'nextra';
+
+const withNextra = nextra({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.tsx',
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack(config) {
@@ -5,7 +12,6 @@ const nextConfig = {
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg'),
     );
-
     config.module.rules.push(
       // Reapply the existing rule, but only for svg imports ending in ?url
       {
@@ -16,6 +22,7 @@ const nextConfig = {
       // Convert all other *.svg imports to React components
       {
         test: /\.svg$/i,
+        include: /assets/,
         issuer: fileLoaderRule.issuer,
         resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
         use: [
@@ -30,7 +37,6 @@ const nextConfig = {
         ],
       },
     );
-
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
 
@@ -38,4 +44,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default withNextra(nextConfig);

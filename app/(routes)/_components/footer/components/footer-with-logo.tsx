@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import { FooterSocialLink } from '@/lib/constants/footer';
 import { cn } from '@/lib/utils';
-import Logo from '@/public/icon/logo.svg';
+import Logo from '@/public/icon/logo.svg?url';
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Footer

@@ -1,14 +1,14 @@
 import { StaticImageData } from 'next/image';
 
-import APTOS_MARK from '@/public/aptos-mark.svg';
+import APTOS_MARK from '@/public/aptos-mark.svg?url';
 import AVALANCHE_SMALL from '@/public/blockchain/avalanche-sm.webp';
 import Avalanche from '@/public/blockchain/avalanche.webp';
 import COSMOS_SMALL from '@/public/blockchain/cosmos-sm.webp';
 import Cosmos from '@/public/blockchain/cosmos.webp';
 import Scalar from '@/public/blockchain/scalar.webp';
-import LOGO_COLOR from '@/public/icon/logo-color.svg';
-import LOGO from '@/public/icon/logo.svg';
-import SUI_MARK from '@/public/sui-mark.svg';
+import LOGO_COLOR from '@/public/icon/logo-color.svg?url';
+import LOGO from '@/public/icon/logo.svg?url';
+import SUI_MARK from '@/public/sui-mark.svg?url';
 
 export interface PositionItem {
   left?: string;

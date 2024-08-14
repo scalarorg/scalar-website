@@ -3,8 +3,8 @@ import Image from 'next/image';
 import SectionTitle from '@/components/ui/section-title';
 import { cn } from '@/lib/utils';
 import Globe from '@/public/globe.png';
-import GROW_EFFECT from '@/public/grow-effect-1.svg';
-import Navigator1 from '@/public/icon/navigator-1.svg';
+import GROW_EFFECT from '@/public/grow-effect-1.svg?url';
+import Navigator1 from '@/public/icon/navigator-1.svg?url';
 import Highlight from '@/public/solution-highlight.png';
 
 function Solution() {

@@ -1,7 +1,7 @@
 import { DISCORD_URL, TELEGRAM_URL, X_URL } from '@/lib/constants/links';
-import Discord from '@/public/icon/discord.svg';
-import Telegram from '@/public/icon/telegram.svg';
-import XTwitter from '@/public/icon/x-twitter.svg';
+import Discord from '@/public/icon/discord.svg?url';
+import Telegram from '@/public/icon/telegram.svg?url';
+import XTwitter from '@/public/icon/x-twitter.svg?url';
 
 export interface FooterLink {
   name: string;

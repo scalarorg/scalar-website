@@ -8,8 +8,8 @@ import { Permissionless } from './_components/permisstionless';
 import Problem from './_components/problem';
 import Revealed from './_components/revealed';
 import Solution from './_components/solution';
-import HighlightLeft from '@/public/icon/highlight-left.svg';
-import HighlightRight from '@/public/icon/highlight-right.svg';
+import HighlightLeft from '@/public/icon/highlight-left.svg?url';
+import HighlightRight from '@/public/icon/highlight-right.svg?url';
 
 export default function HomePage() {
   return (

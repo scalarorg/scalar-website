@@ -18,7 +18,7 @@ import { cn } from '@/lib/utils';
 import EarthBacklight from '@/public/earth-backlight.webp';
 import EarthDag from '@/public/earth-dag.webp';
 import EarthLight from '@/public/earth-light.webp';
-import Navigator from '@/public/icon/navigator.svg';
+import Navigator from '@/public/icon/navigator.svg?url';
 import MilkyWay from '@/public/milky-way-1.webp';
 
 const ScalarAdvantage = dynamic(() => import('./components/scalar-advantage'), {

@@ -14,8 +14,8 @@ import { figmaSlow } from '@/components/motion/transition';
 import { EXPLORE_ONE, EXPLORE_THREE } from '@/lib/constants/hero-explore';
 import { cn } from '@/lib/utils';
 import CENTER_RADIANT from '@/public/center-gradient.webp';
-import MouseWhite from '@/public/icon/mouse-white.svg';
-import Mouse from '@/public/icon/mouse.svg';
+import MouseWhite from '@/public/icon/mouse-white.svg?url';
+import Mouse from '@/public/icon/mouse.svg?url';
 import Mars from '@/public/mars.webp';
 import STARS_BACKGROUND from '@/public/stars.webp';
 

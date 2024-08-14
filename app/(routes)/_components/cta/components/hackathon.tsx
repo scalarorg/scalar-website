@@ -9,7 +9,7 @@ import { figmaGentle } from '@/components/motion/transition';
 import { HACKATHON_CONTENT } from '@/lib/constants/hackathon';
 import { cn } from '@/lib/utils';
 import HackathonBackground from '@/public/hackathon.webp';
-import Expand from '@/public/icon/expand.svg';
+import Expand from '@/public/icon/expand.svg?url';
 
 export function Hackathon({ className }: HTMLAttributes<HTMLDivElement>) {
   const [selected, setSelected] = useState(0);

@@ -12,7 +12,7 @@ import { TelegramIcon } from '@/components/icon/telegram';
 import { XIcon } from '@/components/icon/x';
 import { DISCORD_URL, TELEGRAM_URL, X_URL } from '@/lib/constants/links';
 import { cn } from '@/lib/utils';
-import ArrowLeftGradient from '@/public/icon/arrow-left-gradient.svg';
+import ArrowLeftGradient from '@/public/icon/arrow-left-gradient.svg?url';
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Navigator
