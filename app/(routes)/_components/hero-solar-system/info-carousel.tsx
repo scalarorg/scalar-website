@@ -1,10 +1,12 @@
-"use client";
-import { cva, VariantProps } from "class-variance-authority";
-import { HTMLAttributes, useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import { flushSync } from "react-dom";
-import { cn } from "@/lib/utils";
-import { EmblaCarouselType } from "embla-carousel";
+'use client';
+import { HTMLAttributes, useCallback, useEffect, useState } from 'react';
+
+import { cva, VariantProps } from 'class-variance-authority';
+import { EmblaCarouselType } from 'embla-carousel';
+import useEmblaCarousel from 'embla-carousel-react';
+import { flushSync } from 'react-dom';
+
+import { cn } from '@/lib/utils';
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: InfoCarousel
@@ -15,7 +17,7 @@ const TWEEN_FACTOR = 1.2;
 const numberWithinRange = (number: number, min: number, max: number): number =>
   Math.min(Math.max(number, min), max);
 
-const infoCarouselVariants = cva("");
+const infoCarouselVariants = cva('');
 
 type InfoCarouselVariantProps = VariantProps<typeof infoCarouselVariants> & {
   content: { title: string; description: string }[];
@@ -33,7 +35,7 @@ export function InfoCarousel({
   ...props
 }: InfoCarouselProps): React.JSX.Element {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "center",
+    align: 'center',
     loop: true,
     startIndex: 1,
   });
@@ -70,10 +72,10 @@ export function InfoCarousel({
     if (!emblaApi) return;
 
     onScroll();
-    emblaApi.on("scroll", () => {
+    emblaApi.on('scroll', () => {
       flushSync(() => onScroll());
     });
-    emblaApi.on("reInit", onScroll);
+    emblaApi.on('reInit', onScroll);
   }, [emblaApi, onScroll]);
 
   const onThumbClick = useCallback(
@@ -92,8 +94,8 @@ export function InfoCarousel({
     if (!emblaApi) return;
 
     onSelect(emblaApi);
-    emblaApi.on("reInit", onSelect);
-    emblaApi.on("select", onSelect);
+    emblaApi.on('reInit', onSelect);
+    emblaApi.on('select', onSelect);
   }, [emblaApi, onSelect]);
 
   return (
@@ -101,13 +103,13 @@ export function InfoCarousel({
       {!showNavigation && (
         <div
           className={
-            "absolute pointer-events-none -z-10 top-1/2 bg-[rgba(5,5,5,0.3)] -translate-y-1/2 left-1/2 -translate-x-1/2 w-[1105px] h-[300px] blur-[100px]"
+            'absolute pointer-events-none -z-10 top-1/2 bg-[rgba(5,5,5,0.3)] -translate-y-1/2 left-1/2 -translate-x-1/2 w-[1105px] h-[300px] blur-[100px]'
           }
         ></div>
       )}
       <div
         className={
-          "relative z-0 [mask-image:linear-gradient(90deg,rgba(196,196,196,0.00)_2.82%,rgba(196,196,196,0.40)_28.13%,#C4C4C4_33.19%,#C4C4C4_65.55%,rgba(196,196,196,0.40)_70.83%,rgba(196,196,196,0.00)_97.48%)]"
+          'relative z-0 [mask-image:linear-gradient(90deg,rgba(196,196,196,0.00)_2.82%,rgba(196,196,196,0.40)_28.13%,#C4C4C4_33.19%,#C4C4C4_65.55%,rgba(196,196,196,0.40)_70.83%,rgba(196,196,196,0.00)_97.48%)]'
         }
       >
         <div className="overflow-hidden max-w-5xl" ref={emblaRef}>
@@ -115,32 +117,35 @@ export function InfoCarousel({
             {content.map((content, index) => (
               <div
                 className="flex-[0_0_90%] cursor-pointer min-w-0 pl-4 text-white space-y-2.5 max-w-sm"
+                // eslint-disable-next-line react/no-array-index-key
                 key={index}
                 style={{
                   ...(tweenValues.length && { opacity: tweenValues[index] }),
                 }}
                 onClick={() => onThumbClick(index)}
+                aria-hidden
               >
-                <div className={"text-2xl font-semibold"}>{content.title}</div>
-                <div className={"text-sm"}>{content.description}</div>
+                <div className={'text-2xl font-semibold'}>{content.title}</div>
+                <div className={'text-sm'}>{content.description}</div>
               </div>
             ))}
           </div>
         </div>
       </div>
       {showNavigation && (
-        <div className={"flex gap-14 mt-10 justify-center"}>
+        <div className={'flex gap-14 mt-10 justify-center'}>
           {Array.from(Array(Math.ceil(content.length / 2))).map((_, index) => {
-            let navigationLength = Math.ceil(content.length / 2);
+            const navigationLength = Math.ceil(content.length / 2);
 
             return (
               <div
                 className={cn(
-                  "cursor-pointer transition-colors text-neutral-1/30 text-3xl font-bold",
+                  'cursor-pointer transition-colors text-neutral-1/30 text-3xl font-bold',
                   (index === selectedIndex ||
                     index === selectedIndex - navigationLength) &&
-                    "text-neutral-1",
+                    'text-neutral-1',
                 )}
+                // eslint-disable-next-line react/no-array-index-key
                 key={index}
                 onClick={() => {
                   if (index === selectedIndex) return;
@@ -150,6 +155,7 @@ export function InfoCarousel({
                   }
                   onThumbClick(index + navigationLength);
                 }}
+                aria-hidden
               >
                 {index + 1}
               </div>

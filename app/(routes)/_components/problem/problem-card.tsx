@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Navigator from "@/public/icon/navigator.svg";
+
 import { cn } from "@/lib/utils";
+import Navigator from "@/public/icon/navigator.svg";
 
 type ProblemCardProps = {
     className?: string,

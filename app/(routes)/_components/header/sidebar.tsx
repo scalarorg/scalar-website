@@ -1,18 +1,20 @@
 "use client";
-import { motion } from "framer-motion";
-import { cva, VariantProps } from "class-variance-authority";
 import { Fragment, HTMLAttributes, useState } from "react";
-import { cn } from "@/lib/utils";
+
+import { cva, VariantProps } from "class-variance-authority";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import SidebarClose from "@/public/icon/sidebar-close.svg";
-import LogoWhite from "@/public/icon/logo-white.svg";
-import { Navigator } from "@/app/(routes)/_components/header/navigator";
-import Logo from "@/public/icon/logo.svg";
-import LogoSmall from "@/public/icon/logo-small.svg";
-import CloseMobile from "@/public/icon/close-mobile.svg";
 import Link from "next/link";
+
+import { Navigator } from "@/app/(routes)/_components/header/navigator";
 import { ArrowTopRightIcon } from "@/components/icon/arrow-top-right";
 import { HamburgerAnimateIcon } from "@/components/icon/hamburger-animate";
+import { cn } from "@/lib/utils";
+import CloseMobile from "@/public/icon/close-mobile.svg";
+import LogoSmall from "@/public/icon/logo-small.svg";
+import LogoWhite from "@/public/icon/logo-white.svg";
+import Logo from "@/public/icon/logo.svg";
+import SidebarClose from "@/public/icon/sidebar-close.svg";
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Sidebar

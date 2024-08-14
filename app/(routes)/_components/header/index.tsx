@@ -1,11 +1,13 @@
-import { cva, VariantProps } from "class-variance-authority";
 import { HTMLAttributes } from "react";
+
+import { cva, VariantProps } from "class-variance-authority";
 import Image from "next/image";
-import Logo from "@/public/icon/logo-white-large.svg";
-import LogoSmall from "@/public/icon/logo-small.svg";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
+
 import { ArrowTopRightIcon } from "@/components/icon/arrow-top-right";
+import { cn } from "@/lib/utils";
+import LogoSmall from "@/public/icon/logo-small.svg";
+import Logo from "@/public/icon/logo-white-large.svg";
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Header

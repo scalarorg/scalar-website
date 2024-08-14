@@ -1,10 +1,12 @@
 "use client";
+import React, { HTMLAttributes } from "react";
+
+import { cva, VariantProps } from "class-variance-authority";
+import Image from "next/image";
+
 import { FadeIn } from "@/components/motion/fade-in";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import { cva, VariantProps } from "class-variance-authority";
-import Image from "next/image";
-import React, { HTMLAttributes } from "react";
 import REVEALED__VIDEO_PREVIEW from "@/public/scalar-revealed-preview.svg";
 
 const RevealedVariants = cva(

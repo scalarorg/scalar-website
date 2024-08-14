@@ -1,8 +1,9 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { textContainer, textVariant2, textVariant3 } from "@/styles/motion";
-import { cx } from "class-variance-authority";
+import { cx } from 'class-variance-authority';
+import { motion } from 'framer-motion';
+
+import { textContainer, textVariant2, textVariant3 } from '@/styles/motion';
 
 export function TypingText({
   title,
@@ -18,15 +19,16 @@ export function TypingText({
       whileInView="show"
       viewport={{ once: true }}
       variants={textContainer}
-      className={cx("font-bold text-neutral-500 text-sm", className)}
+      className={cx('font-bold text-neutral-500 text-sm', className)}
     >
       {Array.from(title).map((letter, index) => (
         <motion.span
           custom={index}
           variants={textVariant2}
+          // eslint-disable-next-line react/no-array-index-key
           key={`${title}-${index}-${letter}`}
         >
-          {letter === " " ? "\u00A0" : letter}
+          {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}
     </motion.p>

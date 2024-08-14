@@ -1,5 +1,7 @@
-import { cva, VariantProps } from "class-variance-authority";
 import { HTMLAttributes } from "react";
+
+import { cva, VariantProps } from "class-variance-authority";
+
 import { IconProps } from "@/lib/types/icon";
 
 /* ---------------------------------------------------------------------------------------------------------------------

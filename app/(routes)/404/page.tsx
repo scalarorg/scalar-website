@@ -1,7 +1,8 @@
 import Image from "next/image";
-import HighlightRight from "@/public/icon/highlight-right.svg";
-import HighlightLeft from "@/public/icon/highlight-left.svg";
+
 import { HeroNotFound } from "./_components/hero-not-found";
+import HighlightLeft from "@/public/icon/highlight-left.svg";
+import HighlightRight from "@/public/icon/highlight-right.svg";
 
 export default function NotFound() {
   return (

@@ -1,10 +1,11 @@
-import { ValueItem } from "./value-item";
-import BuildingValueBackground from "@/public/building-value.webp";
-import MilkyWay from "@/public/milky-way-1.webp";
 import Image from "next/image";
-import HeroBackgroundBottom from "@/public/hero-background-bottom.webp";
-import { cn } from "@/lib/utils";
+
+import { ValueItem } from "./value-item";
 import { FadeIn } from "@/components/motion/fade-in";
+import { cn } from "@/lib/utils";
+import BuildingValueBackground from "@/public/building-value.webp";
+import HeroBackgroundBottom from "@/public/hero-background-bottom.webp";
+import MilkyWay from "@/public/milky-way-1.webp";
 
 const VALUES = [
   {

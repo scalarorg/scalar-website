@@ -1,5 +1,7 @@
-import { cva, VariantProps } from "class-variance-authority";
 import React, { HTMLAttributes } from "react";
+
+import { cva, VariantProps } from "class-variance-authority";
+
 import { FadeIn } from "@/components/motion/fade-in";
 
 const sectionTitleVariants = cva(
