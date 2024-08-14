@@ -1,0 +1,37 @@
+{
+  "-- Introduction": {
+    "type": "separator",
+    "title": "Introduction"
+  },
+  "index": "What is Scalar?",
+  "what_is_scalaris": "What is Scalaris?",
+  "blockchain_problems": "Current blockchain problems and Scalar's solutions",
+  "technology": "Technology",
+  "scalars_key_features": "Scalar's key features",
+  "dapps_on_scalar_benefit": "How Dapps on Scalar benefit from liquidity?",
+
+  "-- SCALAR TESTNET": {
+    "type": "separator",
+    "title": "SCALAR TESTNET"
+  },
+  "bitcoin_staking_testnet_v1": "Bitcoin Staking Testnet v1",
+  "move_dapps_testnet": "Move Dapps Testnet",
+
+  "-- NATIVE DAPPS": {
+    "type": "separator",
+    "title": "NATIVE DAPPS"
+  },
+  "dex": "DEX",
+  "lend": "Lend",
+  "perps": "Perps",
+  "faucet": "Faucet",
+  "swap": "Swap",
+  "block_explorer": "Block Explorer",
+
+  "-- HELP": {
+    "type": "separator",
+    "title": "HELP"
+  },
+  "faqs": "FAQs",
+  "community": "Community"
+}

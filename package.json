@@ -23,6 +23,8 @@
     "googleapis": "^131.0.0",
     "lucide-react": "^0.309.0",
     "next": "14.0.4",
+    "nextra": "^2.13.4",
+    "nextra-theme-docs": "^2.13.4",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.49.3",

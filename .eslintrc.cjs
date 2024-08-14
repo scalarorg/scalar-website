@@ -14,7 +14,13 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'tailwind.config.ts'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', 'prettier', '@typescript-eslint', 'simple-import-sort', 'import'],
+  plugins: [
+    'react-refresh',
+    'prettier',
+    '@typescript-eslint',
+    'simple-import-sort',
+    'import',
+  ],
   // rules: {
   //   'react-hooks/rules-of-hooks': 0, // Turn off rules of hooks
   //   'no-console': 'warn', // Warn on console usage
@@ -65,7 +71,7 @@ module.exports = {
       2,
       {
         patterns: [
-          '@/features/*/*',
+          // '@/features/*/*',
           // '@/components/*',
           // '@/hooks/*',
           // '@/utils/*',
