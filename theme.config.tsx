@@ -11,6 +11,21 @@ const config: DocsThemeConfig = {
       <ScalarSmallLogo className="sm:hidden" width={39} height={31} />
     </>
   ),
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – Scalar',
+    };
+  },
+  head: (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Scalar documentation." />
+
+      <meta name="og:image" content="/docs/blue-logo.png" />
+      <meta name="og:description" content="Scalar documentation." />
+      <link rel="icon" href="/favicon.png" type="image/png" />
+    </>
+  ),
   navbar: {
     extraContent: <ExtraSocial />,
   },
