@@ -9,7 +9,8 @@
 
     :is(html[class~='dark'] body) {
       background-image: url('/docs/docs-background.png');
-      background-position: bottom right;
+      background-position: bottom left;
+      background-size: cover;
       background-repeat: no-repeat;
     }
 
@@ -28,5 +29,14 @@
     word-break: break-word;
     overflow: auto;
     height: 100%;
+  }
+
+  footer {
+    background-color: transparent !important;
+    @apply border-t dark:border-neutral-800;
+  }
+
+  footer > div:last-child {
+    @apply py-4;
   }
 }

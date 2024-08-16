@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+
+  border-radius: 36px;
+
+  &.button__blue {
+    background: linear-gradient(90deg, #3760f2 0%, #0028b8 100%);
+  }
+
+  &.button__ghost {
+    border: 1px solid white;
+  }
+}
+
+.card {
+  padding: 29.16px 38px 46px 36px;
+  box-sizing: content-box;
+  @apply space-y-2;
+
+  border-radius: 8px;
+  background: rgba(40, 42, 52, 0.4);
+  backdrop-filter: blur(27.5px);
+
+  flex: 1;
+}

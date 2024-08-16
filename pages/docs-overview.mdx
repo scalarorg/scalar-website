@@ -1,0 +1,83 @@
+import styles from './docs-overview.module.scss';
+
+import { Cards } from 'nextra/components';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+import AboutIcon from '@/assets/icons/about.svg';
+import DatabaseIcon from '@/assets/icons/database.svg';
+import DappsIcon from '@/assets/icons/dapps.svg';
+import NetworkIcon from '@/assets/icons/network.svg';
+
+export function Hero() {
+    return (
+    <div className="flex justify-between items-center min-h-[600px]">
+      <div className="space-y-10">
+        <Image
+          src="/docs/blue-logo.png"
+          alt="logo"
+          width={(46 * 1743) / 192}
+          height={46}
+        />
+        <p className="text-40">
+          Unified shared <strong>Security & liquidity</strong> <br />
+          to secure <strong>Blockchains & Aggregate TVL</strong>
+        </p>
+
+        <div className="flex text-lg gap-10">
+          <Button className={cn(styles.button, styles.button__blue)}>
+            <Link href="/docs">Let's build</Link>
+          </Button>
+          <Button className={cn(styles.button, styles.button__ghost)} asChild>
+            <Link href="/docs">Introduction</Link>
+          </Button>
+        </div>
+      </div>
+
+      <Image
+        src="/docs/earth.png"
+        alt="graphic"
+        width={600}
+        height={600}
+        className="overflow-hidden rounded-full shrink-0 max-lg:hidden"
+      />
+    </div>
+
+);
+}
+
+export function Card({ Icon, title, description }) {
+  return (
+    <div className={styles.card}>
+      {Icon}
+      <p className="font-medium text-34">{title}</p>
+      <p className="text-lg">{description}</p>
+    </div>
+  );
+}
+
+<Hero />
+<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+  <Card
+    Icon={<AboutIcon width={51} height={43} />}
+    title="Learn about Scalar"
+    description="Understand the fundamentals of Scalar"
+  />
+  <Card
+    Icon={<DatabaseIcon width={50} height={43} />}
+    title="BTC Staking Protocol"
+    description="A secure, efficient way to stake Bitcoin on PoS chains"
+  />
+  <Card
+    Icon={<DappsIcon width={42} height={43} />}
+    title="Dapps"
+    description="Discover fantastic Dapps on Scalar"
+  />
+  <Card
+    Icon={<NetworkIcon width={43} height={43} />}
+    title="Community"
+    description="Connect, collaborate and shape the future of blockchain technology"
+  />
+</div>

@@ -3,7 +3,7 @@ import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config = {
-  // darkMode: ["class"],
+  darkMode: ['class', 'html[class~="dark"]'],
   content: [
     './pages/**/*.{js,jsx,ts,tsx,md,mdx}',
     './components/**/*.{ts,tsx,html,js,jsx}',
@@ -25,6 +25,11 @@ const config = {
         ...defaultTheme.screens,
         '2xl': '1440px',
       },
+    },
+    fontSize: {
+      ...defaultTheme.fontSize,
+      34: ['2.125rem', '2.5rem'],
+      40: ['2.5rem', 'normal'],
     },
     extend: {
       fontFamily: {

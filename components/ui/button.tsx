@@ -1,20 +1,20 @@
-import { HTMLAttributes } from "react";
+import { HTMLAttributes } from 'react';
 
-import { cva, VariantProps } from "class-variance-authority";
+import { cva, VariantProps } from 'class-variance-authority';
 
-import { IconProps } from "@/lib/types/icon";
+import { IconProps } from '@/lib/types/icon';
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Button
  * ------------------------------------------------------------------------------------------------------------------ */
 
 const buttonVariants = cva(
-  "px-4 sm:px-8 py-2 sm:py-4 flex rounded-lg items-center font-medium text-base sm:text-lg gap-x-2 hover:opacity-80 transition-opacity cursor-pointer",
+  'px-4 sm:px-8 py-2 sm:py-4 flex rounded-lg items-center font-medium text-base sm:text-lg gap-x-2 hover:opacity-80 transition-opacity cursor-pointer',
   {
     variants: {
       variant: {
-        contained: "bg-neutral-100 text-[#181818]",
-        outlined: "border border-neutral-500 text-neutral-0",
+        contained: 'bg-neutral-100 text-[#181818]',
+        outlined: 'border border-neutral-500 text-neutral-0',
       },
     },
   },

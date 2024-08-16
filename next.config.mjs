@@ -1,4 +1,5 @@
 import nextra from 'nextra';
+import path from 'path';
 
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
@@ -7,6 +8,9 @@ const withNextra = nextra({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  sassOptions: {
+    includePaths: [path.join('/', 'styles')],
+  },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
