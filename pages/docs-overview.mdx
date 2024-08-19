@@ -13,37 +13,40 @@ import NetworkIcon from '@/assets/icons/network.svg';
 
 export function Hero() {
     return (
-    <div className="flex justify-between items-center min-h-[600px]">
-      <div className="space-y-10">
-        <Image
-          src="/docs/blue-logo.png"
-          alt="logo"
-          width={(46 * 1743) / 192}
-          height={46}
-        />
-        <p className="text-40">
-          Unified shared <strong>Security & liquidity</strong> <br />
-          to secure <strong>Blockchains & Aggregate TVL</strong>
-        </p>
+      <section className={styles.hero_section}>
+        <div className="space-y-5 lg:space-y-10 whitespace-nowrap py-12 lg:pb-4">
+          <div className="relative aspect-[1743/192] w-[220px] sm:w-[300px] lg:w-[420px]">
+            <Image
+              src="/docs/blue-logo.png"
+              alt="logo"
+              fill
+              sizes="420px"
+            />
+          </div>
+          <p className="text-base sm:text-2xl md:text-3xl lg:text-2xl xl:text-4xl 2xl:text-40">
+            Unified shared <strong>Liquidity & Security Layer</strong> <br />
+            to secure <strong>Blockchains & Aggregate TVL</strong>
+          </p>
 
-        <div className="flex text-lg gap-10">
-          <Button className={cn(styles.button, styles.button__blue)}>
-            <Link href="/docs">Let's build</Link>
-          </Button>
-          <Button className={cn(styles.button, styles.button__ghost)} asChild>
-            <Link href="/docs">Introduction</Link>
-          </Button>
+          <div className="flex flex-wrap text-lg gap-x-10 gap-y-5">
+            <Button className={cn(styles.button, styles.button__blue)}>
+              <Link href="/docs">Let's build</Link>
+            </Button>
+            <Button className={cn(styles.button, styles.button__ghost)} asChild>
+              <Link href="/docs">Introduction</Link>
+            </Button>
+          </div>
         </div>
-      </div>
-
-      <Image
-        src="/docs/earth.png"
-        alt="graphic"
-        width={600}
-        height={600}
-        className="overflow-hidden rounded-full shrink-0 max-lg:hidden"
-      />
-    </div>
+        <div className="relative aspect-square shrink-0 w-[300px] sm:w-[400px] lg:w-[600px]">
+          <Image
+            src="/docs/earth.png"
+            alt="graphic"
+            className="overflow-hidden rounded-full"
+            fill
+            sizes="600px"
+          />
+        </div>
+      </section>
 
 );
 }
@@ -52,32 +55,38 @@ export function Card({ Icon, title, description }) {
   return (
     <div className={styles.card}>
       {Icon}
-      <p className="font-medium text-34">{title}</p>
-      <p className="text-lg">{description}</p>
+      <p className="font-medium text-2xl lg:text-34">{title}</p>
+      <p className="text-base lg:text-lg">{description}</p>
     </div>
   );
 }
 
-<Hero />
-<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
-  <Card
-    Icon={<AboutIcon width={51} height={43} />}
-    title="Learn about Scalar"
-    description="Understand the fundamentals of Scalar"
-  />
-  <Card
-    Icon={<DatabaseIcon width={50} height={43} />}
-    title="BTC Staking Protocol"
-    description="A secure, efficient way to stake Bitcoin on PoS chains"
-  />
-  <Card
-    Icon={<DappsIcon width={42} height={43} />}
-    title="Dapps"
-    description="Discover fantastic Dapps on Scalar"
-  />
-  <Card
-    Icon={<NetworkIcon width={43} height={43} />}
-    title="Community"
-    description="Connect, collaborate and shape the future of blockchain technology"
-  />
-</div>
+<main className="px-0 sm:px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-20 3xl:px-24">
+  <Hero />
+  <section className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-5 lg:gap-8">
+    <Card
+      Icon={<AboutIcon className="w-[36px] h-[30px] lg:w-[51px] lg:h-[43px]" />}
+      title="Learn about Scalar"
+      description="Understand the fundamentals of Scalar"
+    />
+    <Card
+      Icon={
+        <DatabaseIcon className="on w-[36px] h-[30px] on lg:w-[50px] lg:h-[43px]" />
+      }
+      title="BTC Staking Protocol"
+      description="A secure, efficient way to stake Bitcoin on PoS chains"
+    />
+    <Card
+      Icon={<DappsIcon className="w-[30px] h-[30px] lg:w-[42px] lg:h-[43px]" />}
+      title="Dapps"
+      description="Discover fantastic Dapps on Scalar"
+    />
+    <Card
+      Icon={
+        <NetworkIcon className="w-[30px] h-[30px] lg:w-[43px] lg:h-[43px]" />
+      }
+      title="Community"
+      description="Connect, collaborate and shape the future of blockchain technology"
+    />
+  </section>
+</main>

@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  body {
+    scroll-behavior: smooth;
+    word-break: break-word;
+    overflow: auto;
+    height: 100%;
+  }
+
+  footer {
+    background-color: transparent !important;
+    @apply border-t dark:border-neutral-800;
+  }
+
+  footer > div:last-child {
+    @apply py-4;
+  }
+}
+
+html {
+  &.dark {
+    body {
+      background-image: url('/docs/docs-background.png');
+      background-position: bottom left;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .nextra-nav-container-blur {
+      background: transparent !important;
+    }
+  }
+
+  nav.nextra-toc > div > div:last-child {
+    display: none !important;
+  }
+}

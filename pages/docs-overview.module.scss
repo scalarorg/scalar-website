@@ -1,18 +1,31 @@
+.hero_section {
+  @apply flex;
+
+  @media (screen(max-lg)) {
+    @apply flex-col;
+  }
+
+  @media (screen(lg)) {
+    @apply justify-between items-center;
+  }
+}
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 180px;
   height: 50px;
-
   border-radius: 36px;
 
   &.button__blue {
     background: linear-gradient(90deg, #3760f2 0%, #0028b8 100%);
+    color: white;
   }
 
   &.button__ghost {
-    border: 1px solid white;
+    border: 1px solid;
+    @apply dark:border-white border-black;
   }
 }
 
@@ -22,7 +35,10 @@
   @apply space-y-2;
 
   border-radius: 8px;
-  background: rgba(40, 42, 52, 0.4);
+  background-color: #f3f4f6;
+  :is(html[class~='dark'] &) {
+    background-color: rgba(40, 42, 52, 0.4);
+  }
   backdrop-filter: blur(27.5px);
 
   flex: 1;

@@ -36,6 +36,21 @@ const config = {
         dm: ['var(--font-dm)'],
       },
       screens: {
+        'max-xs': {
+          max: 'calc(399em/16)',
+        },
+        'max-sm': {
+          max: 'calc(639em/16)',
+        },
+        'max-md': {
+          max: 'calc(767em/16)',
+        },
+        'max-lg': {
+          max: 'calc(1023em/16)',
+        },
+        'max-xl': {
+          max: 'calc(1279em/16)',
+        },
         '3xl': '1920px',
       },
       colors: {
