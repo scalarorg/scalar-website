@@ -14,8 +14,8 @@ import NetworkIcon from '@/assets/icons/network.svg';
 export function Hero() {
     return (
       <section className={styles.hero_section}>
-        <div className="space-y-5 lg:space-y-10 whitespace-nowrap py-12 lg:pb-4">
-          <div className="relative aspect-[1743/192] w-[220px] sm:w-[300px] lg:w-[420px]">
+        <div className="space-y-5 lg:space-y-10 py-12 lg:pb-4">
+          <div className="relative aspect-[1743/192] w-[220px] sm:w-[300px] lg:w-[360px] 2xl:w-[420px]">
             <Image
               src="/docs/blue-logo.png"
               alt="logo"
@@ -23,12 +23,18 @@ export function Hero() {
               sizes="420px"
             />
           </div>
-          <p className="text-base sm:text-2xl md:text-3xl lg:text-2xl xl:text-4xl 2xl:text-40">
-            Unified shared <strong>Liquidity & Security Layer</strong> <br />
-            to secure <strong>Blockchains & Aggregate TVL</strong>
+          <div className='space-y-3'>
+          <p className="text-base sm:text-2xl md:text-3xl lg:text-2xl xl:text-3xl 2xl:text-40 xl:whitespace-nowrap">
+            A Unified Shared <strong>Liquidity & Security Layer</strong>
           </p>
+          <p className='text-sm xl:text-base 3xl:text-lg'>
+          <span className='xl:whitespace-nowrap'>Scalar - Fulfilling the unrealized Cosmos dream of shared security and liquidity</span> <br/>
+          Scalar - The most performant EVM and Move compatible, high throughput,
+          interoperable smart contract platform in the space ever seen to date
+          </p>
+          </div>
 
-          <div className="flex flex-wrap text-lg gap-x-10 gap-y-5">
+          <div className="flex flex-wrap text-lg gap-x-7 lg:gap-x-10 gap-y-5">
             <Button className={cn(styles.button, styles.button__blue)}>
               <Link href="/docs">Let's build</Link>
             </Button>
@@ -37,7 +43,7 @@ export function Hero() {
             </Button>
           </div>
         </div>
-        <div className="relative aspect-square shrink-0 w-[300px] sm:w-[400px] lg:w-[600px]">
+        <div className="relative aspect-square shrink-0 w-[350px] xl:w-[500px] max-lg:hidden">
           <Image
             src="/docs/earth.png"
             alt="graphic"
@@ -55,15 +61,17 @@ export function Card({ Icon, title, description }) {
   return (
     <div className={styles.card}>
       {Icon}
-      <p className="font-medium text-2xl lg:text-34">{title}</p>
-      <p className="text-base lg:text-lg">{description}</p>
+      <p className="font-medium text-lg 2xl:text-xl whitespace-nowrap">
+        {title}
+      </p>
+      <p className="text-sm 2xl:text-base 3xl:text-lg">{description}</p>
     </div>
   );
 }
 
-<main className="px-0 sm:px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-20 3xl:px-24">
+<main className="px-0 sm:px-4 md:px-8 lg:px-20 xl:px-28">
   <Hero />
-  <section className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-5 lg:gap-8">
+  <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-8">
     <Card
       Icon={<AboutIcon className="w-[36px] h-[30px] lg:w-[51px] lg:h-[43px]" />}
       title="Learn about Scalar"

@@ -1,5 +1,6 @@
 import { DocsThemeConfig } from 'nextra-theme-docs';
 
+import { cn } from './lib/utils';
 import ScalarLogo from '@/assets/icons/logo-large.svg';
 import ScalarSmallLogo from '@/assets/icons/logo-small.svg';
 import { ExtraSocial, Footer } from '@/features/docs';
@@ -7,7 +8,15 @@ import { ExtraSocial, Footer } from '@/features/docs';
 const config: DocsThemeConfig = {
   logo: (
     <>
-      <ScalarLogo width={190} height={21} className="max-sm:hidden" />
+      <ScalarLogo
+        width={190}
+        height={21}
+        className={cn(
+          'max-sm:hidden',
+          'w-[150px] h-[16px]',
+          '3xl:w-[190px] 3xl:h-[21px]',
+        )}
+      />
       <ScalarSmallLogo className="sm:hidden" width={39} height={31} />
     </>
   ),

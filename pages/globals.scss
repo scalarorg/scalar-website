@@ -37,6 +37,11 @@ html {
     .nextra-nav-container-blur {
       background: transparent !important;
     }
+
+    aside > div:last-child {
+      background: transparent !important;
+      box-shadow: none;
+    }
   }
 
   nav.nextra-toc > div > div:last-child {

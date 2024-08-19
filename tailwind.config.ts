@@ -29,13 +29,30 @@ const config = {
     fontSize: {
       ...defaultTheme.fontSize,
       34: ['2.125rem', '2.5rem'],
-      40: ['2.5rem', 'normal'],
+      40: ['2.5rem', '1.1'],
     },
     extend: {
       fontFamily: {
         dm: ['var(--font-dm)'],
       },
       screens: {
+        sm: '40em',
+        // => @media (min-width: 640px) { ... }
+
+        md: '48em',
+        // => @media (min-width: 768px) { ... }
+
+        lg: '64em',
+        // => @media (min-width: 1024px) { ... }
+
+        xl: '80em',
+        // => @media (min-width: 1280px) { ... }
+
+        '2xl': '96em',
+        // => @media (min-width: 1536px) { ... }
+        '3xl': '120em',
+        // => @media (min-width: 1920px) { ... }
+
         'max-xs': {
           max: 'calc(399em/16)',
         },
@@ -51,7 +68,12 @@ const config = {
         'max-xl': {
           max: 'calc(1279em/16)',
         },
-        '3xl': '1920px',
+        'max-2xl': {
+          max: 'calc(1535em/16)',
+        },
+        'max-3xl': {
+          max: 'calc(1919em/16)',
+        },
       },
       colors: {
         primary: {
