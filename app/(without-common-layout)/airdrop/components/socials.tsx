@@ -64,7 +64,7 @@ const items = [
     icon: Discord,
   },
   {
-    href: 'ttps://t.me/scalarchat',
+    href: 'https://t.me/scalarchat',
     icon: Telegram,
     isLast: true,
   },
