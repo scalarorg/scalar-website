@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 import defaultTheme from 'tailwindcss/defaultTheme';
+const { withTV } = require('tailwind-variants/transformer');
 
 const config = {
   darkMode: ['class', 'html[class~="dark"]'],
@@ -20,10 +21,6 @@ const config = {
         xl: '50px',
         '2xl': '53px',
         '3xl': '116px',
-      },
-      screens: {
-        ...defaultTheme.screens,
-        '2xl': '1440px',
       },
     },
     fontSize: {
@@ -262,4 +259,4 @@ const config = {
   ],
 } satisfies Config;
 
-export default config;
+export default withTV(config);

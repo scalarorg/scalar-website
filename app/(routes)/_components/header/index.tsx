@@ -35,7 +35,7 @@ export function Header({
         }
       >
         <div className={'relative max-sm:hidden'}>
-          <Link href={'/'}>
+          <Link href="/">
             <Image
               width={280}
               height={30.86}
@@ -54,7 +54,7 @@ export function Header({
             The Future of Scalable
           </div>
         </div>
-        <Link href={'/'} className={'sm:hidden'}>
+        <Link href="/" className={'sm:hidden'}>
           <div className={'flex gap-2 items-center'}>
             <Image
               width={35}
@@ -73,26 +73,28 @@ export function Header({
 
         <div
           className={
-            'flex gap-3 sm:gap-4 md:gap-5 lg:gap-8 xl:gap-6 2xl:gap-[38px] 3xl:gap-[46px] items-center'
+            'flex gap-1 sm:gap-4 md:gap-5 lg:gap-8 xl:gap-6 2xl:gap-[38px] 3xl:gap-[46px] items-center'
           }
         >
-          <Link
-            href={'https://scalarprotocolnews.substack.com/'}
-            target="blank"
-          >
+          <Link href="https://scalarprotocolnews.substack.com/" target="blank">
             News
           </Link>
-          <Link href={'https://discord.com/invite/7FFhERZwB7'} target="blank">
+          <Link href="https://discord.com/invite/7FFhERZwB7" target="blank">
             Community
           </Link>
-          <Link href={'/docs-overview'} target="_blank">
+          <Link href="/docs-overview">Docs V1</Link>
+          <Link href="/airdrop">
             <button
               className={cn(
-                '3xl:px-8 2xl:px-6 hover:shadow-button-hover !leading-snug transition-all rounded-xl active:bg-neutral-12 px-2 sm:px-4 md:px-5 3xl:py-3 xl:py-[10px] py-[5px] [border-image-slice:7] md:[border-image-slice:6] sm:[border-image-slice:8] [border-image-width:4px] sm:[border-image-width:5px] [border-image-source:url(/icon/border-gradient.svg)] font-medium 3xl:font-semibold text-sm sm:text-base3xl:text-lg text-white border-2 flex gap-2 sm:gap-2.5 md:gap-4 lg:gap-6 2xl:gap-7 3xl:gap-8 items-center',
+                'flex gap-2 sm:gap-2.5 md:gap-4 lg:gap-6 2xl:gap-7 3xl:gap-8 items-center',
+                '3xl:px-8 2xl:px-6 px-2 sm:px-4 md:px-5 3xl:py-3 xl:py-[10px] py-[5px]',
+                'rounded-xl border-2',
+                'font-medium 3xl:font-semibold text-sm sm:text-base3xl:text-lg text-white !leading-snug',
+                'hover:shadow-button-hover transition-all active:bg-neutral-12 [border-image-slice:7] md:[border-image-slice:6] sm:[border-image-slice:8] [border-image-width:4px] sm:[border-image-width:5px] [border-image-source:url(/icon/border-gradient.svg)] ',
               )}
             >
-              <div>Docs V1</div>
-              <ArrowTopRightIcon className={'w-2.5 sm:w-3 aspect-square'} />
+              <p>Airdrop</p>
+              <ArrowTopRightIcon className="w-2.5 sm:w-3 aspect-square" />
             </button>
           </Link>
           {/* <Sidebar /> */}
