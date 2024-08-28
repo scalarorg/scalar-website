@@ -1,9 +1,11 @@
-import BuildingValueBackground from "@/public/building-value.webp";
 import Image from "next/image";
-import HeroBackgroundBottom from "@/public/hero-background-bottom.webp";
+import Link from "next/link";
+
 import { Subscription } from "@/app/(routes)/_components/cta/components/subscription";
 import { SolarNavigate } from "@/app/(routes)/_components/hero-solar-system/solar-navigate";
-import Link from "next/link";
+import BuildingValueBackground from "@/public/building-value.webp";
+import HeroBackgroundBottom from "@/public/hero-background-bottom.webp";
+
 
 export function HeroNotFound() {
   return (

@@ -1,0 +1,170 @@
+.main {
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  background-image: url('./public/mobile-info-bg.png');
+  @media (screen(sm)) {
+    background-image: url('./public/desktop-info-bg.png');
+  }
+}
+
+.main_container {
+  max-width: 120em;
+  min-height: 100dvh;
+  @apply w-full m-auto;
+
+  @apply flex flex-col;
+
+  @apply px-3 py-5;
+  @media (screen(sm)) {
+    @apply px-12 py-8;
+  }
+  @media (screen(lg)) {
+    @apply pl-[150px] pr-[118px] py-[50px];
+  }
+  @media (screen(3xl)) {
+    @apply pr-[217px] py-[97px];
+  }
+}
+
+.inside_container {
+  @apply grow;
+  position: relative;
+  & > * {
+    position: relative;
+    z-index: 10;
+  }
+
+  @apply px-7 pt-9;
+  @media (screen(lg)) {
+    @apply px-[50px] py-[45px];
+  }
+  @media (screen(3xl)) {
+    @apply px-[65px];
+  }
+
+  &::before {
+    content: '';
+    @apply absolute inset-y-0 left-0 w-full xl:w-[70%] 3xl:w-3/5;
+    border-radius: 8px;
+    border: 1px rgba(255, 255, 255, 0.3);
+
+    background: rgba(255, 255, 255, 0.12);
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(9px);
+  }
+}
+
+/* --------------------------------- Header --------------------------------- */
+.header {
+  @apply flex items-center justify-between;
+  @apply mb-[92px] lg:mb-[114px] 3xl:mb-[173px];
+}
+
+.logo {
+  @apply aspect-[280/31] h-auto;
+  @apply w-[110px] lg:w-[146px] 3xl:w-[201px];
+
+  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.7));
+}
+
+/* --------------------------------- Content -------------------------------- */
+.content_wrapper {
+  @apply space-y-5 sm:space-y-6 lg:space-y-7 mb-16;
+}
+
+.title {
+  @apply text-[30px] sm:text-[40px] lg:text-[50px] 3xl:text-[60px];
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.description {
+  @apply text-sm sm:text-base lg:text-xl 3xl:text-2xl;
+}
+
+@mixin gradient {
+  background: linear-gradient(to right, #e9d242, #f17fad, #5858f0);
+}
+
+.text_gradient {
+  @include gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.button {
+  @apply flex items-center justify-center;
+
+  width: 158px;
+  height: 33px;
+  border-radius: 32px;
+
+  @include gradient;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  @media (screen(sm)) {
+    width: 200px;
+    height: 40px;
+
+    font-size: 20px;
+  }
+
+  @media (screen(lg)) {
+    width: 238.889px;
+    height: 50px;
+
+    font-size: 25px;
+  }
+
+  @apply transition-colors duration-300;
+
+  @media (hover: hover) {
+    &:hover {
+      background: linear-gradient(to right, #9bb1ff 0%, #1d4aea 100%);
+    }
+  }
+}
+
+/* -------------------------------- Statistic ------------------------------- */
+.statistic_container {
+  @apply flex sm:gap-[67px];
+  @media (screen(max-sm)) {
+    @apply justify-between max-w-[280px];
+  }
+}
+
+.statistic_value {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 36px */
+  letter-spacing: 1.2px;
+
+  @media (screen(sm)) {
+    font-size: 30px;
+    letter-spacing: 1.8px;
+  }
+
+  @media (screen(lg)) {
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+
+  @media (screen(3xl)) {
+    font-size: 50px;
+    letter-spacing: 2.5px;
+  }
+}
+
+.statistic_label {
+  @extend .text_gradient;
+  font-weight: 500;
+  @apply text-sm sm:text-base lg:text-lg 3xl:text-2xl;
+}

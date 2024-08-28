@@ -1,0 +1,14 @@
+{
+  "docs-overview": {
+    "type": "page",
+    "title": "Scalar",
+    "display": "hidden",
+    "theme": {
+      "layout": "full"
+    }
+  },
+  "docs": {
+    "title": "Documentation",
+    "type": "page"
+  }
+}

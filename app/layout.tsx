@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
-import "@/styles/globals.css";
-import { dm_sans } from "@/fonts";
-import { WEBSITE_URL } from "@/lib/constants/links";
-import { Toaster } from "@/components/ui/toaster";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics } from '@next/third-parties/google';
+import type { Metadata } from 'next';
 
-const title = "Scalar | Next Gen L1 Blockchain";
+import '@/styles/globals.css';
+import { Toaster } from '@/components/ui/toaster';
+import { dm_sans } from '@/fonts';
+import { WEBSITE_URL } from '@/lib/constants/links';
+
+const title = 'Scalar | Next Gen L1 Blockchain';
 const description =
-  "Scalar unifies and shares security and liquidity to secure blockchains and aggregate siloed TVL.";
+  'Scalar unifies and shares security and liquidity to secure blockchains and aggregate siloed TVL.';
 
 export const metadata: Metadata = {
   title: {
@@ -17,29 +18,29 @@ export const metadata: Metadata = {
   description,
   metadataBase: new URL(WEBSITE_URL),
   alternates: {
-    canonical: "/",
+    canonical: '/',
   },
-  generator: "Scalar",
+  generator: 'Scalar',
   icons: {
     apple: [
       {
-        url: "/favicon.png",
-        sizes: "16x16",
-        type: "image/png",
+        url: '/favicon.png',
+        sizes: '16x16',
+        type: 'image/png',
       },
     ],
     icon: [
       {
-        url: "/favicon.png",
-        sizes: "16x16",
-        type: "image/png",
+        url: '/favicon.png',
+        sizes: '16x16',
+        type: 'image/png',
       },
     ],
     shortcut: [
       {
-        url: "/favicon.png",
-        sizes: "16x16",
-        type: "image/png",
+        url: '/favicon.png',
+        sizes: '16x16',
+        type: 'image/png',
       },
     ],
   },
@@ -50,29 +51,29 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "/thumbnail.webp",
-        alt: "Scalar Protocol",
+        url: '/thumbnail.webp',
+        alt: 'Scalar Protocol',
         width: 1600,
         height: 900,
       },
     ],
-    type: "website",
+    type: 'website',
     title,
     description,
-    url: "/",
+    url: '/',
   },
   twitter: {
     images: [
       {
-        url: "/thumbnail.webp",
-        alt: "Scalar Protocol",
+        url: '/thumbnail.webp',
+        alt: 'Scalar Protocol',
         width: 1600,
         height: 900,
       },
     ],
     title,
     description,
-    card: "summary",
+    card: 'summary',
   },
 };
 

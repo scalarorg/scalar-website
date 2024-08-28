@@ -1,0 +1,50 @@
+.hero_section {
+  @apply flex;
+
+  @media (screen(max-lg)) {
+    @apply flex-col;
+  }
+
+  @media (screen(lg)) {
+    @apply justify-between items-center;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  border-radius: 36px;
+
+  @media (screen(sm)) {
+    width: 180px;
+    height: 50px;
+  }
+
+  &.button__blue {
+    background: linear-gradient(90deg, #3760f2 0%, #0028b8 100%);
+    color: white;
+  }
+
+  &.button__ghost {
+    border: 1px solid;
+    @apply dark:border-white border-black;
+  }
+}
+
+.card {
+  padding: 29.16px 38px 46px 36px;
+  box-sizing: content-box;
+  @apply space-y-2;
+
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  :is(html[class~='dark'] &) {
+    background-color: rgba(40, 42, 52, 0.4);
+  }
+  backdrop-filter: blur(27.5px);
+
+  flex: 1;
+}

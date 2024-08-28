@@ -1,17 +1,19 @@
-import { cva, VariantProps } from "class-variance-authority";
-import { HTMLAttributes } from "react";
-import Image from "next/image";
-import Logo from "@/public/icon/logo.svg";
-import { cn } from "@/lib/utils";
-import { FooterSocialLink } from "@/lib/constants/footer";
-import Link from "next/link";
+import { HTMLAttributes } from 'react';
+
+import { cva, VariantProps } from 'class-variance-authority';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { FooterSocialLink } from '@/lib/constants/footer';
+import { cn } from '@/lib/utils';
+import Logo from '@/public/icon/logo.svg?url';
 
 /* ---------------------------------------------------------------------------------------------------------------------
  * Component: Footer
  * ------------------------------------------------------------------------------------------------------------------ */
 
 const footerWithLogoVariants = cva(
-  "flex flex-col gap-3 xl:gap-[28px] xl:w-[394px] w-full border-b border-neutral-8 pb-3 xl:pb-0 xl:border-none",
+  'flex flex-col gap-3 xl:gap-[28px] xl:w-[394px] w-full border-b border-neutral-8 pb-3 xl:pb-0 xl:border-none',
 );
 
 type FooterVariantProps = VariantProps<typeof footerWithLogoVariants>;
@@ -28,7 +30,7 @@ export function FooterWithLogo({
     <div className={footerWithLogoVariants({ className })} {...props}>
       <div
         className={cn(
-          "w-full flex flex-col font-normal gap-3 lg:gap-[18px] 2xl:gap-[22px] text-neutral-7",
+          'w-full flex flex-col font-normal gap-3 lg:gap-[18px] 2xl:gap-[22px] text-neutral-7',
         )}
       >
         <Link href="/">
@@ -36,37 +38,40 @@ export function FooterWithLogo({
             sizes="100vw"
             className="w-[188px] aspect-[280/31] lg:w-[232px] 2xl:w-[280px] hover:cursor-pointer"
             src={Logo}
-            alt={"Scalar logo"}
+            alt={'Scalar logo'}
           />
         </Link>
 
         <p
           className={cn(
-            "text-[11px] leading-4 lg:!leading-[23px] lg:min-w-[310px] w-full 2xl:w-[394px] lg:text-[14px] 2xl:text-[18px] 2xl:!leading-[27px]",
+            'text-[11px] leading-4 lg:!leading-[23px] lg:min-w-[310px] w-full 2xl:w-[394px] lg:text-[14px] 2xl:text-[18px] 2xl:!leading-[27px]',
           )}
         >
-          Scalar - The most performant EVM and Move compatible, high throughput, interoperable smart contract platform in the space ever seen to date
+          Scalar - The most performant EVM and Move compatible, high throughput,
+          interoperable smart contract platform in the space ever seen to date
         </p>
       </div>
 
       <div
         className={cn(
-          "w-[188px] xl:w-[280px] flex gap-x-[24px] 2xl:gap-x-[38px] items-center justify-between xl:justify-start",
+          'w-[188px] xl:w-[280px] flex gap-x-[24px] 2xl:gap-x-[38px] items-center justify-between xl:justify-start',
         )}
       >
         {FooterSocialLink.map((item, index) => (
           <Link
+            // eslint-disable-next-line react/no-array-index-key
             key={index}
             href={item.link}
-            target={"_blank"}
+            target={'_blank'}
             className={cn(
-              "hover:opacity-90 hover:scale-110 transition-all ease-in",
+              'hover:opacity-90 hover:scale-110 transition-all ease-in',
             )}
           >
             <Image
               src={item.icon}
               sizes="100vw"
               className="w-[20px] h-[19px] 2xl:w-[33px] 2xl:h-[33px]"
+              // eslint-disable-next-line react/no-array-index-key
               key={index}
               alt="icon"
             />

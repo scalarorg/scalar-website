@@ -1,8 +1,8 @@
-"use client";
-import { Variants } from "framer-motion";
+'use client';
+import { Variants } from 'framer-motion';
 
-type Direction = "left" | "right" | "up" | "down";
-type Type = "spring" | "tween";
+type Direction = 'left' | 'right' | 'up' | 'down';
+type Type = 'spring' | 'tween';
 export type FadeInProps = {
   direction: Direction;
   type: Type;
@@ -29,8 +29,8 @@ export const textVariant2 = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "tween",
-      ease: "easeIn",
+      type: 'tween',
+      ease: 'easeIn',
     },
   },
 };
@@ -44,8 +44,8 @@ export const textVariant3 = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "tween",
-      ease: "easeIn",
+      type: 'tween',
+      ease: 'easeIn',
       delay: 0.2,
     },
   },
@@ -53,8 +53,8 @@ export const textVariant3 = {
 
 export const fadeIn = ({ direction, type, delay, duration }: FadeInProps) => ({
   hidden: {
-    x: direction === "left" ? 30 : direction === "right" ? -30 : 0,
-    y: direction === "up" ? 50 : direction === "down" ? -50 : 0,
+    x: direction === 'left' ? 30 : direction === 'right' ? -30 : 0,
+    y: direction === 'up' ? 50 : direction === 'down' ? -50 : 0,
     opacity: 0,
   },
   show: {
@@ -65,7 +65,7 @@ export const fadeIn = ({ direction, type, delay, duration }: FadeInProps) => ({
       type,
       delay,
       duration,
-      ease: "easeOut",
+      ease: 'easeOut',
     },
   },
 });
