@@ -36,7 +36,7 @@ const Page = () => {
 
             <Button className={styles.button} asChild>
               <a
-                href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__TRppuRUOVo3Sk1aWDRYNzJWMkg0MEhNM1hNRkw0MS4u&route=shorturl"
+                href="https://forms.gle/mqnzXNn4fENCjxHE9"
                 target="_blank"
                 rel="noreferrer"
               >
