@@ -1,4 +1,4 @@
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 
 import '@/styles/globals.css';
@@ -6,7 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { dm_sans } from '@/fonts';
 import { WEBSITE_URL } from '@/lib/constants/links';
 
-const title = 'Scalar | Next Gen L1 Blockchain';
+const title = 'Scalar | Bitcoin Native Infrastructure';
 const description =
   'Scalar unifies and shares security and liquidity to secure blockchains and aggregate siloed TVL.';
 
@@ -90,6 +90,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <GoogleAnalytics gaId="G-RDKX0ZPEQH" />
+        <GoogleTagManager gtmId="GTM-PX5W7239" />
       </body>
     </html>
   );
