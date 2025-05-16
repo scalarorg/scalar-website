@@ -51,7 +51,7 @@ export function Header({
               'absolute translate-y-4 lg:translate-y-5 text-lg lg:text-xl whitespace-nowrap left-0 text-neutral-1'
             }
           >
-            The Future of Scalable
+            Bitcoin Native Infrastructure
           </div>
         </div>
         <Link href="/" className={'sm:hidden'}>
@@ -64,9 +64,9 @@ export function Header({
               alt={'Scalar logo'}
             />
             <div className={'text-[11px] font-bold text-neutral-3 hidden'}>
-              The Future of
+              Bitcoin Native
               <br />
-              Scalable
+              Infrastructure
             </div>
           </div>
         </Link>
