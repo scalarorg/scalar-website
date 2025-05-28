@@ -89,7 +89,7 @@ export default function RootLayout({
       >
         {children}
         <Toaster />
-        <GoogleAnalytics gaId="G-RDKX0ZPEQH" />
+        <GoogleAnalytics gaId="G-5VK7Y06L5E" />
         <GoogleTagManager gtmId="GTM-PX5W7239" />
       </body>
     </html>
