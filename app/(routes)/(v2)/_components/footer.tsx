@@ -100,9 +100,7 @@ export function Footer() {
         </div>
 
         {/* Footer copyright */}
-        <div
-          className='w-full flex gap-1 text-sm md:text-base'
-        >
+        <div className="w-full flex gap-1 text-sm md:text-base">
           Copyright ©<span className="text-primary-blue-500">Scalar</span>|
           Designed by Scalar
         </div>

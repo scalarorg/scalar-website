@@ -69,6 +69,6 @@ export function Header({ className, children, ...props }: Props) {
           ))}
         </div>
       </div>
-    </div >
+    </div>
   );
 }
