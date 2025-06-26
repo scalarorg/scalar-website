@@ -36,7 +36,7 @@ export function Hero({
           MozAnimationDuration: '100ms',
         }}
         className={cn(
-          'mx-auto flex flex-1 flex-col items-center justify-center gap-10 duration-800 md:flex-row md:gap-12 xl:gap-14',
+          'mx-auto flex flex-1 flex-col items-center justify-center gap-10 duration-700 md:flex-row md:gap-12 xl:gap-14',
           {
             ['animate-in fade-in zoom-in-90 slide-in-from-top-24']: animate,
           },
