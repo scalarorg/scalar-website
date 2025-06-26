@@ -15,7 +15,7 @@ const config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '20px',
+        DEFAULT: '1rem',
         sm: '2rem',
         lg: '2rem',
         xl: '50px',
@@ -73,6 +73,12 @@ const config = {
         },
       },
       colors: {
+        background: {
+          DEFAULT: '#FFF',
+        },
+        foreground: {
+          DEFAULT: '#222',
+        },
         primary: {
           cyan: {
             50: '#E7FEFE',
@@ -231,6 +237,7 @@ const config = {
         solution: '0px 0px 8px 0px #0EADF1CC',
         'button-hover': '0px 0px 10px 0px #0EF1F1',
         'button-active': '0px 0px 10px 0px #FFF',
+        '1': '0px 2px 2px 0px rgba(0, 0, 0, 0.15)',
       },
       backgroundImage: {
         'solution-card':
@@ -246,9 +253,19 @@ const config = {
         advantage: "url('/background-advantage.webp')",
         star_dark: "url('/background-star-dark.webp')",
         footer: "url('/background-footer.webp')",
+        'defi-potential': "url('/v2/defi-potential-background.png')",
+        'grid-tile': "url('/v2/grid-tile.png')",
       },
       textShadow: {
         h1: '4px 4px 4px rgba(0, 0, 0, 0.25)',
+      },
+      dropShadow: {
+        '1': [
+          '0px 50px 15px rgba(57, 98, 241, 0.05)',
+          '0px 30px 13px rgba(57, 98, 241, 0.05)',
+          '0px 15px 12px rgba(57, 98, 241, 0.05)',
+          '0px 2px 6px rgba(57, 98, 241, 0.15)',
+        ],
       },
     },
   },
