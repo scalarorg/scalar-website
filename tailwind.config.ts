@@ -224,6 +224,11 @@ const config = {
             transform: 'translateX(-100%)',
           },
         },
+        ripple: {
+          '0%': { transform: 'translate(-50%, -50%) scale(1)' },
+          '50%': { transform: 'translate(-50%, -50%) scale(0.9)' },
+          '100%': { transform: 'translate(-50%, -50%) scale(1)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-in-out',
@@ -231,6 +236,7 @@ const config = {
         'center-gradient-show': '0.2s center-gradient-show ease-out both',
         'center-gradient-hide': '0.2s center-gradient-hide ease-out both',
         'infinity-scroll': 'infinity-scroll linear infinite 30s',
+        ripple: 'ripple 2s ease-in-out infinite',
       },
       boxShadow: {
         title: '0px 4px 4px 0px #00000040',
