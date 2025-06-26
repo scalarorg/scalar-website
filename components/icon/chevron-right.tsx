@@ -1,4 +1,4 @@
-export const ChevronRightIcon = (props: React.ComponentProps<"svg">) => {
+export const ChevronRightIcon = (props: React.ComponentProps<'svg'>) => {
   return (
     <svg
       width="24"

@@ -1,11 +1,11 @@
-import React, { HTMLAttributes } from "react";
+import React, { HTMLAttributes } from 'react';
 
-import { cva, VariantProps } from "class-variance-authority";
+import { cva, VariantProps } from 'class-variance-authority';
 
-import { FadeIn } from "@/components/motion/fade-in";
+import { FadeIn } from '@/components/motion/fade-in';
 
 const sectionTitleVariants = cva(
-  "text-white text-[31px] leading-[46.5px] lg:text-[48px] lg:leading-[66px] xl:text-[51px] xl:leading-[63.75px] 2xl:text-[67px] 2xl:leading-[83.75px] font-bold",
+  'text-white text-[31px] leading-[46.5px] lg:text-[48px] lg:leading-[66px] xl:text-[51px] xl:leading-[63.75px] 2xl:text-[67px] 2xl:leading-[83.75px] font-bold',
 );
 
 type sectionTitleVariantProps = VariantProps<typeof sectionTitleVariants>;
@@ -17,9 +17,9 @@ const SectionTitle = ({ children, className }: sectionTitleProps) => {
   return (
     <FadeIn
       options={{
-        direction: "right",
+        direction: 'right',
         duration: 0.65,
-        type: "tween",
+        type: 'tween',
         delay: 0,
       }}
     >

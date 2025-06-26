@@ -1,4 +1,4 @@
-export const XIcon = (props: React.ComponentProps<"svg">) => {
+export const XIcon = (props: React.ComponentProps<'svg'>) => {
   return (
     <svg
       width="21"

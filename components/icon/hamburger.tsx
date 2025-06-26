@@ -1,4 +1,4 @@
-export const HamburgerIcon = (props: React.ComponentProps<"svg">) => {
+export const HamburgerIcon = (props: React.ComponentProps<'svg'>) => {
   return (
     <svg
       width="28"

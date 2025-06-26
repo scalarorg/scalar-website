@@ -1,4 +1,4 @@
-export const DiscordIcon = (props: React.ComponentProps<"svg">) => {
+export const DiscordIcon = (props: React.ComponentProps<'svg'>) => {
   return (
     <svg
       width="26"
