@@ -5,6 +5,7 @@ import '@/styles/globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { dm_sans } from '@/fonts';
 import { WEBSITE_URL } from '@/lib/constants/links';
+import { cn } from '@/lib/utils';
 
 const title = 'Scalar | Bitcoin Native Infrastructure';
 const description =
@@ -85,7 +86,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dm_sans.variable} font-dm bg-neutral-900 text-neutral-1 scrollbar-thumb-primary-blue-900 scrollbar-track-accent-info-900/90 scrollbar-thin`}
+        className={cn(
+          dm_sans.variable,
+          'font-dm scrollbar-thumb-primary-blue-900 scrollbar-track-accent-info-900/90 scrollbar-thin',
+        )}
       >
         {children}
         <Toaster />

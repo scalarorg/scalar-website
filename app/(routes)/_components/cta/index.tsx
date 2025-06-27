@@ -1,16 +1,15 @@
-"use client";
+'use client';
 
-import { HTMLAttributes } from "react";
+import { HTMLAttributes } from 'react';
 
-import { cva, VariantProps } from "class-variance-authority";
+import { cva, VariantProps } from 'class-variance-authority';
 
-import { CarouselLogo } from "./components/carousel";
-import SectionTitle from "@/components/ui/section-title";
-import { cn } from "@/lib/utils";
-
+import { CarouselLogo } from './components/carousel';
+import SectionTitle from '@/components/ui/section-title';
+import { cn } from '@/lib/utils';
 
 const ctaVariants = cva(
-  "relative z-0 max-sm:pb-[60px] max-sm:pt-[60px] sm:py-[160px] lg:py-[100px] 3xl:py-[192px] md:pt-0 w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col gap-[60px] sm:gap-[192px] items-center justify-center",
+  'relative z-0 max-sm:pb-[60px] max-sm:pt-[60px] sm:py-[160px] lg:py-[100px] 3xl:py-[192px] md:pt-0 w-full overflow-hidden bg-star bg-center bg-no-repeat bg-cover flex flex-col gap-[60px] sm:gap-[192px] items-center justify-center',
 );
 
 type CtaVariantProps = VariantProps<typeof ctaVariants>;
@@ -47,7 +46,7 @@ export function Cta({ className }: CtaProps) {
       {/* Team Background */}
       <div
         className={cn(
-          "w-full flex flex-col gap-[24px] lg:gap-[20px] items-center",
+          'w-full flex flex-col gap-[24px] lg:gap-[20px] items-center',
         )}
       >
         <SectionTitle>Team Background</SectionTitle>

@@ -1,16 +1,14 @@
-import { Fragment } from "react";
+import { ReactNode } from 'react';
 
-import { Footer } from "./_components/footer";
-import { Header } from "@/app/(routes)/_components/header";
-import { ScrollUpButton } from "@/app/(routes)/_components/scroll-up-button";
+import { Footer } from './(v2)/_components/footer';
+import { Header } from './(v2)/_components/header';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <Fragment>
+    <div className="flex min-h-dvh flex-col">
       <Header />
-      {children}
+      <main className="flex grow flex-col">{children}</main>
       <Footer />
-      <ScrollUpButton />
-    </Fragment>
+    </div>
   );
 }

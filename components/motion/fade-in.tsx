@@ -1,7 +1,7 @@
-"use client";
-import { motion } from "framer-motion";
+'use client';
+import { motion } from 'framer-motion';
 
-import { fadeIn, FadeInProps } from "@/styles/motion";
+import { fadeIn, FadeInProps } from '@/styles/motion';
 
 export function FadeIn({
   children,

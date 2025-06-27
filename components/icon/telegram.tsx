@@ -1,4 +1,4 @@
-export const TelegramIcon = (props: React.ComponentProps<"svg">) => {
+export const TelegramIcon = (props: React.ComponentProps<'svg'>) => {
   return (
     <svg
       width="21"

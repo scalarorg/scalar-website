@@ -1,4 +1,4 @@
-export const MediumIcon = (props: React.ComponentProps<"svg">) => {
+export const MediumIcon = (props: React.ComponentProps<'svg'>) => {
   return (
     <svg
       width="27"

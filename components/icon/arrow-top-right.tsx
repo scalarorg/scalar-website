@@ -1,4 +1,4 @@
-export const ArrowTopRightIcon = (props: React.ComponentProps<"svg">) => {
+export const ArrowTopRightIcon = (props: React.ComponentProps<'svg'>) => {
   return (
     <svg
       width="15"
