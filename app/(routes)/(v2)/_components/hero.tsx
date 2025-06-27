@@ -19,7 +19,7 @@ export function Hero() {
           title={
             <span>
               Supercharge ⚡ Your Bitcoin <br className="max-md:hidden" />
-              with <span className="text-blue-600">Scalar</span>
+              with <span className="text-primary">Scalar</span>
             </span>
           }
           subtitle="The first full-stack Bitcoin DeFi suite. Earn yields, unlock liquidity, and customize solutions—all secured by native BTC."
@@ -27,7 +27,7 @@ export function Hero() {
         />
       </div>
       <div className="z-10 absolute bottom-2 left-0 right-0 w-full flex justify-center">
-        <p className="text-center text-sm md:text-base tracking-tighter text-primary-blue-400">
+        <p className="text-center text-sm md:text-base tracking-tighter text-primary">
           Secured by Multi-Signature Vaults
         </p>
       </div>

@@ -70,7 +70,7 @@ export function Footer() {
               >
                 <p
                   className={cn(
-                    'capitalize text-sm lg:text-base 2xl:text-lg leading-6 xl:leading-[33px] font-bold hover:text-primary-blue-500',
+                    'capitalize text-sm lg:text-base 2xl:text-lg leading-6 xl:leading-[33px] font-bold hover:text-primary',
                   )}
                 >
                   {column.title}
@@ -83,7 +83,7 @@ export function Footer() {
                       href={item.link}
                       target="blank"
                       className={cn(
-                        'capitalize text-sm lg:text-base 2xl:text-lg leading-5 xl:leading-[24px] 2xl:leading-[33px] text-black hover:text-primary-blue-500 ease-linear transition-all',
+                        'capitalize text-sm lg:text-base 2xl:text-lg leading-5 xl:leading-[24px] 2xl:leading-[33px] text-black hover:text-primary ease-linear transition-all',
                       )}
                     >
                       {item.name}
@@ -100,8 +100,8 @@ export function Footer() {
         </div>
 
         {/* Footer copyright */}
-        <div className="w-full flex gap-1 text-sm md:text-base">
-          Copyright ©<span className="text-primary-blue-500">Scalar</span>|
+        <div className="w-full flex gap-1 text-sm md:text-base text-muted-foreground">
+          Copyright ©<span className="text-primary">Scalar</span>|
           Designed by Scalar
         </div>
       </div>

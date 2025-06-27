@@ -80,6 +80,7 @@ const config = {
           DEFAULT: '#222',
         },
         primary: {
+          DEFAULT: '#3760F2',
           cyan: {
             50: '#E7FEFE',
             100: '#C5FCFC',

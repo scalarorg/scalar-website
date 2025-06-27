@@ -29,7 +29,7 @@ export const Features = () => {
           <div className="flex flex-col gap-4 md:gap-7 max-w-lg">
             <Heading level={2} className="text-3xl lg:text-4xl">
               Scalar: Native{' '}
-              <span className="text-primary-blue-500">Bitcoin DeFi</span>
+              <span className="text-primary">Bitcoin DeFi</span>
               <br />
               Unleashed
             </Heading>

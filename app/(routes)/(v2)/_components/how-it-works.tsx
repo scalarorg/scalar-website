@@ -35,7 +35,7 @@ export function HowItWorks() {
             </Heading>
             <p className="text-sm md:text-base">
               From Native Bitcoin to DeFi in{' '}
-              <span className="font-semibold text-primary-blue-500 text-xl md:text-2xl">
+              <span className="font-semibold text-primary text-xl md:text-2xl">
                 3 Steps
               </span>
             </p>
@@ -45,7 +45,7 @@ export function HowItWorks() {
             {STEPS.map(({ icon, title, description }) => (
               <Card
                 key={title}
-                className="hover:shadow-lg transition-shadow hover:border-primary-blue-500 hover:drop-shadow-1"
+                className="hover:shadow-lg transition-shadow hover:border-primary hover:drop-shadow-1"
               >
                 <CardContent className="p-5 flex flex-col gap-5 md:flex-row">
                   <Image src={icon} alt={title} width={30} height={30} />
